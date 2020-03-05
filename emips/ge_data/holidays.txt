@@ -1,0 +1,266 @@
+000000  01 01 1990  Sunday   ! New Year's Day
+000000  04 13 1990  Sunday   ! Good Friday
+000000  05 28 1990  Sunday   ! Memorial Day
+000000  07 04 1990  Sunday   ! July 4th
+000000  09 03 1990  Sunday   ! Labor Day
+000000  11 22 1990  Sunday   ! Thanksgiving Thurs
+000000  11 23 1990  Sunday   ! Thanksgiving Fri
+000000  12 24 1990  Sunday   ! Christmas Eve 
+000000  12 25 1990  Sunday   ! Christmas Day
+
+000000  01 01 1991  Sunday   ! New Year's Day
+000000  03 29 1991  Sunday   ! Good Friday
+000000  05 27 1991  Sunday   ! Memorial Day
+000000  07 04 1991  Sunday   ! July 4th
+000000  09 02 1991  Sunday   ! Labor Day
+000000  11 28 1991  Sunday   ! Thanksgiving Thurs
+000000  11 29 1991  Sunday   ! Thanksgiving Fri
+000000  12 24 1991  Sunday   ! Christmas Eve 
+000000  12 25 1991  Sunday   ! Christmas Day
+
+000000  01 01 1992  Sunday   ! New Year's Day
+000000  04 17 1992  Sunday   ! Good Friday
+000000  05 25 1992  Sunday   ! Memorial Day
+000000  07 03 1992  Sunday   ! July 3th
+000000  07 04 1992  Sunday   ! July 4th
+000000  09 07 1992  Sunday   ! Labor Day
+000000  11 26 1992  Sunday   ! Thanksgiving Thurs
+000000  11 27 1992  Sunday   ! Thanksgiving Fri
+000000  12 24 1992  Sunday   ! Christmas Eve 
+000000  12 25 1992  Sunday   ! Christmas Day
+
+000000  01 01 1993  Sunday   ! New Year's Day
+000000  04 09 1993  Sunday   ! Good Friday
+000000  05 31 1993  Sunday   ! Memorial Day
+000000  07 04 1993  Sunday   ! July 4th
+000000  09 06 1993  Sunday   ! Labor Day
+000000  11 25 1993  Sunday   ! Thanksgiving Thurs
+000000  11 26 1993  Sunday   ! Thanksgiving Fri
+000000  12 24 1993  Sunday   ! Christmas Eve 
+000000  12 25 1993  Sunday   ! Christmas Day
+
+000000  01 01 1994  Sunday   ! New Year's Day
+000000  04 01 1994  Sunday   ! Good Friday
+000000  05 30 1994  Sunday   ! Memorial Day
+000000  07 04 1994  Sunday   ! July 4th
+000000  09 05 1994  Sunday   ! Labor Day
+000000  11 24 1994  Sunday   ! Thanksgiving Thurs
+000000  11 25 1994  Sunday   ! Thanksgiving Fri
+000000  12 24 1994  Sunday   ! Christmas Eve 
+000000  12 25 1994  Sunday   ! Christmas Day
+
+000000  01 01 1995  Sunday   ! New Year's Day
+000000  04 14 1995  Sunday   ! Good Friday
+000000  05 29 1995  Sunday   ! Memorial Day
+000000  07 04 1995  Sunday   ! July 4th
+000000  09 04 1995  Sunday   ! Labor Day
+000000  11 23 1995  Sunday   ! Thanksgiving Thurs
+000000  11 24 1995  Sunday   ! Thanksgiving Fri
+000000  12 24 1995  Sunday   ! Christmas Eve 
+000000  12 25 1995  Sunday   ! Christmas Day
+
+000000  01 01 1996  Sunday   ! New Year's Day
+000000  04 05 1996  Sunday   ! Good Friday
+000000  05 27 1996  Sunday   ! Memorial Day
+000000  07 04 1996  Sunday   ! July 4th
+000000  09 02 1996  Sunday   ! Labor Day
+000000  11 28 1996  Sunday   ! Thanksgiving Thurs
+000000  11 29 1996  Sunday   ! Thanksgiving Fri
+000000  12 24 1996  Sunday   ! Christmas Eve 
+000000  12 25 1996  Sunday   ! Christmas Day
+
+000000  01 01 1997  Sunday   ! New Year's Day
+000000  03 28 1997  Sunday   ! Good Friday
+000000  05 26 1997  Sunday   ! Memorial Day
+000000  07 04 1997  Sunday   ! July 4th
+000000  09 01 1997  Sunday   ! Labor Day
+000000  11 27 1997  Sunday   ! Thanksgiving Thurs
+000000  11 28 1997  Sunday   ! Thanksgiving Fri
+000000  12 24 1997  Sunday   ! Christmas Eve 
+000000  12 25 1997  Sunday   ! Christmas Day
+
+000000  01 01 1998  Sunday   ! New Year's Day
+000000  04 10 1998  Sunday   ! Good Friday
+000000  05 25 1998  Sunday   ! Memorial Day
+000000  07 03 1998  Sunday   ! July 3th
+000000  07 04 1998  Sunday   ! July 4th
+000000  09 07 1998  Sunday   ! Labor Day
+000000  11 26 1998  Sunday   ! Thanksgiving Thurs
+000000  11 27 1998  Sunday   ! Thanksgiving Fri
+000000  12 24 1998  Sunday   ! Christmas Eve 
+000000  12 25 1998  Sunday   ! Christmas Day
+
+000000  01 01 1999  Sunday   ! New Year's Day
+000000  04 02 1999  Sunday   ! Good Friday
+000000  05 31 1999  Sunday   ! Memorial Day
+000000  07 04 1999  Sunday   ! July 4th
+000000  07 05 1999  Sunday   ! July 5th
+000000  09 06 1999  Sunday   ! Labor Day
+000000  11 25 1999  Sunday   ! Thanksgiving Thurs
+000000  11 26 1999  Sunday   ! Thanksgiving Fri
+000000  12 24 1999  Sunday   ! Christmas Eve 
+000000  12 25 1999  Sunday   ! Christmas Day
+
+000000  01 01 2000  Sunday   ! New Year's Day
+000000  04 21 2000  Sunday   ! Good Friday
+000000  05 29 2000  Sunday   ! Memorial Day
+000000  07 04 2000  Sunday   ! July 4th
+000000  09 04 2000  Sunday   ! Labor Day
+000000  11 23 2000  Sunday   ! Thanksgiving Thurs
+000000  11 24 2000  Sunday   ! Thanksgiving Fri
+000000  12 24 2000  Sunday   ! Christmas Eve 
+000000  12 25 2000  Sunday   ! Christmas Day
+
+000000  01 01 2001  Sunday   ! New Year's Day
+000000  04 13 2001  Sunday   ! Good Friday
+000000  05 28 2001  Sunday   ! Memorial Day
+000000  07 04 2001  Sunday   ! July 4th
+000000  09 03 2001  Sunday   ! Labor Day
+000000  11 22 2001  Sunday   ! Thanksgiving Thurs
+000000  11 23 2001  Sunday   ! Thanksgiving Fri
+000000  12 24 2001  Sunday   ! Christmas Eve 
+000000  12 25 2001  Sunday   ! Christmas Day
+
+000000  01 01 2002  Sunday   ! New Year's Day
+000000  03 29 2002  Sunday   ! Good Friday
+000000  05 27 2002  Sunday   ! Memorial Day
+000000  07 04 2002  Sunday   ! July 4th
+000000  09 02 2002  Sunday   ! Labor Day
+000000  11 28 2002  Sunday   ! Thanksgiving Thurs
+000000  11 29 2002  Sunday   ! Thanksgiving Fri
+000000  12 24 2002  Sunday   ! Christmas Eve 
+000000  12 25 2002  Sunday   ! Christmas Day
+
+000000  01 01 2003  Sunday   ! New Year's Day
+000000  04 18 2003  Sunday   ! Good Friday
+000000  05 26 2003  Sunday   ! Memorial Day
+000000  07 04 2003  Sunday   ! July 4th
+000000  09 01 2003  Sunday   ! Labor Day
+000000  11 27 2003  Sunday   ! Thanksgiving Thurs
+000000  11 28 2003  Sunday   ! Thanksgiving Fri
+000000  12 24 2003  Sunday   ! Christmas Eve 
+000000  12 25 2003  Sunday   ! Christmas Day
+
+000000  01 01 2004  Sunday   ! New Year's Day
+000000  04 09 2004  Sunday   ! Good Friday
+000000  05 31 2004  Sunday   ! Memorial Day
+000000  07 04 2004  Sunday   ! July 4th
+000000  07 05 2004  Sunday   ! July 5th
+000000  09 06 2004  Sunday   ! Labor Day
+000000  11 25 2004  Sunday   ! Thanksgiving Thurs
+000000  11 26 2004  Sunday   ! Thanksgiving Fri
+000000  12 24 2004  Sunday   ! Christmas Eve 
+000000  12 25 2004  Sunday   ! Christmas Day
+
+000000  01 01 2005  Sunday   ! New Year's Day
+000000  03 24 2005  Sunday   ! Good Friday
+000000  05 30 2005  Sunday   ! Memorial Day
+000000  07 04 2005  Sunday   ! July 4th
+000000  09 05 2005  Sunday   ! Labor Day
+000000  11 24 2005  Sunday   ! Thanksgiving Thurs
+000000  11 25 2005  Sunday   ! Thanksgiving Fri
+000000  12 24 2005  Sunday   ! Christmas Eve 
+000000  12 25 2005  Sunday   ! Christmas Day
+
+000000  01 01 2006  Sunday   ! New Year's Day
+000000  04 14 2006  Sunday   ! Good Friday
+000000  05 29 2006  Sunday   ! Memorial Day
+000000  07 04 2006  Sunday   ! July 4th
+000000  09 04 2006  Sunday   ! Labor Day
+000000  11 23 2006  Sunday   ! Thanksgiving Thurs
+000000  11 24 2006  Sunday   ! Thanksgiving Fri
+000000  12 24 2006  Sunday   ! Christmas Eve 
+000000  12 25 2006  Sunday   ! Christmas Day
+
+000000  01 01 2007  Sunday   ! New Year's Day
+000000  04 06 2007  Sunday   ! Good Friday
+000000  05 28 2007  Sunday   ! Memorial Day
+000000  07 04 2007  Sunday   ! July 4th
+000000  09 03 2007  Sunday   ! Labor Day
+000000  11 22 2007  Sunday   ! Thanksgiving Thurs
+000000  11 23 2007  Sunday   ! Thanksgiving Fri
+000000  12 24 2007  Sunday   ! Christmas Eve 
+000000  12 25 2007  Sunday   ! Christmas Day
+
+000000  01 01 2008  Sunday   ! New Year's Day
+000000  03 21 2008  Sunday   ! Good Friday
+000000  05 26 2008  Sunday   ! Memorial Day
+000000  07 04 2008  Sunday   ! July 4th
+000000  09 01 2008  Sunday   ! Labor Day
+000000  11 27 2008  Sunday   ! Thanksgiving Thurs
+000000  11 28 2008  Sunday   ! Thanksgiving Fri
+000000  12 24 2008  Sunday   ! Christmas Eve 
+000000  12 25 2008  Sunday   ! Christmas Day
+
+000000  01 01 2009  Sunday   ! New Year's Day
+000000  04 10 2009  Sunday   ! Good Friday
+000000  05 25 2009  Sunday   ! Memorial Day
+000000  07 03 2009  Sunday   ! July 3th
+000000  07 04 2009  Sunday   ! July 4th
+000000  09 07 2009  Sunday   ! Labor Day
+000000  11 26 2009  Sunday   ! Thanksgiving Thurs
+000000  11 27 2009  Sunday   ! Thanksgiving Fri
+000000  12 24 2009  Sunday   ! Christmas Eve 
+000000  12 25 2009  Sunday   ! Christmas Day
+
+000000  01 01 2010  Sunday   ! New Year's Day
+000000  04 02 2010  Sunday   ! Good Friday
+000000  05 31 2010  Sunday   ! Memorial Day
+000000  07 04 2010  Sunday   ! July 4th
+000000  07 05 2010  Sunday   ! July 5th
+000000  09 06 2010  Sunday   ! Labor Day
+000000  11 25 2010  Sunday   ! Thanksgiving Thurs
+000000  11 26 2010  Sunday   ! Thanksgiving Fri
+000000  12 24 2010  Sunday   ! Christmas Eve 
+000000  12 25 2010  Sunday   ! Christmas Day
+
+000000  01 01 2011  Sunday   ! New Year's Day
+000000  04 22 2011  Sunday   ! Good Friday
+000000  05 30 2011  Sunday   ! Memorial Day
+000000  07 04 2011  Sunday   ! July 4th
+000000  09 05 2011  Sunday   ! Labor Day
+000000  11 24 2011  Sunday   ! Thanksgiving Thurs
+000000  11 25 2011  Sunday   ! Thanksgiving Fri
+000000  12 24 2011  Sunday   ! Christmas Eve 
+000000  12 25 2011  Sunday   ! Christmas Day
+
+000000  01 01 2012  Sunday   ! New Year's Day
+000000  04 06 2012  Sunday   ! Good Friday
+000000  05 28 2012  Sunday   ! Memorial Day
+000000  07 04 2012  Sunday   ! July 4th
+000000  09 03 2012  Sunday   ! Labor Day
+000000  11 22 2012  Sunday   ! Thanksgiving Thurs
+000000  11 23 2012  Sunday   ! Thanksgiving Fri
+000000  12 24 2012  Sunday   ! Christmas Eve 
+000000  12 25 2012  Sunday   ! Christmas Day
+
+000000  01 01 2013  Sunday   ! New Year's Day
+000000  03 29 2013  Sunday   ! Good Friday
+000000  05 27 2013  Sunday   ! Memorial Day
+000000  07 04 2013  Sunday   ! July 4th
+000000  09 02 2013  Sunday   ! Labor Day
+000000  11 28 2013  Sunday   ! Thanksgiving Thurs
+000000  11 29 2013  Sunday   ! Thanksgiving Fri
+000000  12 24 2013  Sunday   ! Christmas Eve 
+000000  12 25 2013  Sunday   ! Christmas Day
+
+000000  01 01 2014  Sunday   ! New Year's Day
+000000  04 18 2014  Sunday   ! Good Friday
+000000  05 26 2014  Sunday   ! Memorial Day
+000000  07 04 2014  Sunday   ! July 4th
+000000  09 01 2014  Sunday   ! Labor Day
+000000  11 27 2014  Sunday   ! Thanksgiving Thurs
+000000  11 28 2014  Sunday   ! Thanksgiving Fri
+000000  12 24 2014  Sunday   ! Christmas Eve 
+000000  12 25 2014  Sunday   ! Christmas Day
+
+000000  01 01 2015  Sunday   ! New Year's Day
+000000  04 03 2015  Sunday   ! Good Friday
+000000  05 25 2015  Sunday   ! Memorial Day
+000000  07 03 2015  Sunday   ! July 3th
+000000  07 04 2015  Sunday   ! July 4th
+000000  09 07 2015  Sunday   ! Labor Day
+000000  11 26 2015  Sunday   ! Thanksgiving Thurs
+000000  11 27 2015  Sunday   ! Thanksgiving Fri
+000000  12 24 2015  Sunday   ! Christmas Eve 
+000000  12 25 2015  Sunday   ! Christmas Day

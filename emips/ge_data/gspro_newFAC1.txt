@@ -1,0 +1,25 @@
+22101 PM2_5            PMFINE           0.9671        1.0000        0.9671  ! AXQ  find for pow
+22101 PM2_5            PNO3             0.0000        1.0000        0.0000
+22101 PM2_5            POA              0.0121        1.0000        0.0121
+22101 PM2_5            PSO4             0.0000        1.0000        0.0000
+
+21000 PM2_5            PEC              0.0742        1.0000        0.0742 ! added AXQ for bm
+21000 PM2_5            PMFINE           0.2874        1.0000        0.2874 ! added AXQ
+21000 PM2_5            PNO3             0.0038        1.0000        0.0038 ! added AXQ
+21000 PM2_5            POA              0.6248        1.0000        0.6248 ! added AXQ
+21000 PM2_5            PSO4             0.0097        1.0000        0.0097 ! added AXQ
+21001 PM2_5            PEC              0.4002        1.0000        0.4002 ! added AXQ for tra 
+21001 PM2_5            PMFINE           0.1588        1.0000        0.1588 ! added AXQ
+21001 PM2_5            PNO3             0.0030        1.0000        0.0030 ! added AXQ
+21001 PM2_5            POA              0.4103        1.0000        0.4103 ! added AXQ
+21001 PM2_5            PSO4             0.0274        1.0000        0.0274 ! added AXQ
+21002 PM2_5            PEC              0.0208        1.0000        0.0208 ! added AXQ for ind
+21002 PM2_5            PMFINE           0.9671        1.0000        0.9671 ! added AXQ
+21002 PM2_5            PNO3             0.0000        1.0000        0.0000 ! added AXQ
+21002 PM2_5            POA              0.0121        1.0000        0.0121 ! added AXQ
+21002 PM2_5            PSO4             0.0000        1.0000        0.0000 ! added AXQ
+21003 PM2_5            PEC              0.0100        1.0000        0.0100 ! added AXQ for liv
+21003 PM2_5            PMFINE           0.6250        1.0000        0.6250 ! added AXQ
+21003 PM2_5            PNO3             0.0050        1.0000        0.0050 ! added AXQ
+21003 PM2_5            POA              0.2000        1.0000        0.2000 ! added AXQ
+21003 PM2_5            PSO4             0.1600        1.0000        0.1600 ! added AXQ

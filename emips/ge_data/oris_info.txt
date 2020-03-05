@@ -1,0 +1,1069 @@
+# ORIS facility list - from acid rain division web site - reformatted
+# Defintions of codes in column 11
+#     P1 = Phase I Generator regulation began in 1995-1999
+#     P1.5 = Phase II Generator in which source opted to begin early regulation prior to the year 2000.
+#     P2 = Phase II Generator - generator regulation began in year 2000.
+#     If blank then plant is likely in a non-generating status (such as retired, deferred, exempt, or future.)
+# ORISPL,FIPS Code,Latitude,Longitude,"Plant Name","Operating Company",EPA Region,"State Name","County Name",North American Electric Reliability Council Region,Acid Rain Program Phase,,,
+     3,001097,31.0069,-88.0103,"BARRY                                   ","ALABAMA POWER CO                        ",4,"ALABAMA","MOBILE",SERC,P2
+     5,001097,30.7633,-88.0606,"CHICKASAW                               ","ALABAMA POWER CO                        ",4,"ALABAMA","MOBILE",SERC,P2
+     7,001055,34.0136,-85.9703,"GADSDEN                                 ","ALABAMA POWER CO                        ",4,"ALABAMA","ETOWAH",SERC,P1.5
+     8,001127,33.5111,-87.2350,"GORGAS                                  ","ALABAMA POWER CO                        ",4,"ALABAMA","WALKER",SERC,P2
+    10,001063,32.6000,-87.7667,"GREENE COUNTY                           ","ALABAMA POWER CO                        ",4,"ALABAMA","GREENE",SERC,P2
+    26,001117,33.2442,-86.4567,"E C GASTON                              ","ALABAMA POWER CO                        ",4,"ALABAMA","SHELBY",SERC,P1
+    47,001033,34.7439,-87.8486,"COLBERT                                 ","TENNESSEE VALLEY AUTHORITY              ",4,"ALABAMA","COLBERT",SERC,P1
+    50,001071,34.8825,-85.7547,"WIDOWS CREEK                            ","TENNESSEE VALLEY AUTHORITY              ",4,"ALABAMA","JACKSON",SERC,P2
+    51,022031,32.0308,-93.5644,"DOLET HILLS                             ","CENTRAL LOUISIANA ELEC CO INC           ",6,"LOUISIANA","DE SOTO",SPP,P2
+    54,021000,37.9741,-84.1565,"J K SMITH                               ","EAST KENTUCKY POWER COOP INC            ",4,"KENTUCKY","CLARK",ECAR,
+    56,001129,31.4875,-87.9125,"CHARLES R LOWMAN                        ","ALABAMA ELECTRIC COOP INC               ",4,"ALABAMA","WASHINGTON",SERC,P2
+    59,031079,40.8536,-98.4022,"PLATTE                                  ","GRAND ISLAND CITY OF                    ",7,"NEBRASKA","HALL",MAPP,P2
+    60,031001,40.5814,-98.3169,"GERALD WHELAN ENERGY CENTER             ","HASTINGS CITY OF                        ",7,"NEBRASKA","ADAMS",MAPP,P2
+    87,035031,35.4144,-108.0825,"ESCALANTE                               ","PLAINS ELEC GEN&TRANS COOP INC          ",6,"NEW MEXICO","MCKINLEY",WSCC,P2
+   108,020055,37.9319,-100.9719,"HOLCOMB                                 ","SUNFLOWER ELECTRIC POWER CORP           ",7,"KANSAS","FINNEY",SPP,P2
+   113,004017,34.9414,-110.3003,"CHOLLA                                  ","ARIZONA PUBLIC SERVICE CO               ",9,"ARIZONA","NAVAJO",WSCC,P2
+   116,004013,33.4467,-111.9417,"OCOTILLO                                ","ARIZONA PUBLIC SERVICE CO               ",9,"ARIZONA","MARICOPA",WSCC,P2
+   117,004013,33.4428,-112.1536,"WEST PHOENIX                            ","ARIZONA PUBLIC SERVICE CO               ",9,"ARIZONA","MARICOPA",WSCC,P2
+   118,004021,32.5522,-111.2992,"SAGUARO                                 ","ARIZONA PUBLIC SERVICE CO               ",9,"ARIZONA","PINAL",WSCC,P2
+   120,004027,33.2200,-113.9400,"YUMA AXIS                               ","ARIZONA PUBLIC SERVICE CO               ",9,"ARIZONA","YUMA",WSCC,P2
+   124,004019,32.2500,-110.9833,"DE MOSS PETRIE                          ","TUCSON ELECTRIC POWER CO                ",9,"ARIZONA","PIMA",WSCC,P2
+   126,004019,32.1600,-110.9044,"IRVINGTON                               ","TUCSON ELECTRIC POWER CO                ",9,"ARIZONA","PIMA",WSCC,P2
+   127,048487,34.0825,-99.1753,"OKLAUNION                               ","WEST TEXAS UTILITIES CO                 ",6,"TEXAS","WILBARGER",ERCOT,P2
+   130,045015,33.3694,-80.1119,"CROSS                                   ","SOUTH CAROLINA PUB SERV AUTH            ",4,"SOUTH CAROLINA","BERKELEY",SERC,P2
+   136,012107,29.7336,-81.6339,"SEMINOLE                                ","SEMINOLE ELECTRIC COOP INC              ",4,"FLORIDA","PUTNAM",SERC,P2
+   141,004013,33.5569,-112.2175,"AGUA FRIA                               ","SALT RIVER PROJ AG I & P DIST           ",9,"ARIZONA","MARICOPA",WSCC,P2
+   143,004013,33.2765,-111.8758,"CROSSCUT                                ","SALT RIVER PROJ AG I & P DIST           ",9,"ARIZONA","MARICOPA",WSCC,P2
+   147,004013,33.3547,-111.9364,"KYRENE                                  ","SALT RIVER PROJ AG I & P DIST           ",9,"ARIZONA","MARICOPA",WSCC,P2
+   160,004003,32.0556,-109.8861,"APACHE STATION                          ","ARIZONA ELECTRIC PWR COOP INC           ",9,"ARIZONA","COCHISE",WSCC,P2
+   165,040097,36.1889,-95.2892,"GRDA                                    ","GRAND RIVER DAM AUTHORITY               ",6,"OKLAHOMA","MAYES",SPP,P2
+   167,005119,34.7520,-92.3924,"CECIL LYNCH                             ","ARKANSAS POWER & LIGHT CO               ",6,"ARKANSAS","PULASKI", ,P2
+   168,005123,35.0082,-90.7757,"HAMILTON MOSES                          ","ARKANSAS POWER & LIGHT CO               ",6,"ARKANSAS","ST FRANCIS", ,P2
+   169,005073,33.3667,-93.4833,"HARVEY COUCH                            ","ARKANSAS POWER & LIGHT CO               ",6,"ARKANSAS","LAFAYETTE",SPP,P2
+   170,005059,34.4417,-92.9125,"LAKE CATHERINE                          ","ARKANSAS POWER & LIGHT CO               ",6,"ARKANSAS","HOT SPRING",SPP,P2
+   173,005107,34.4667,-90.6000,"ROBERT E RITCHIE                        ","ARKANSAS POWER & LIGHT CO               ",6,"ARKANSAS","PHILLIPS",SPP,P2
+   201,005047,35.4869,-93.8887,"THOMAS FITZHUGH                         ","ARKANSAS ELECTRIC COOP CORP             ",6,"ARKANSAS","FRANKLIN",SPP,P2
+   202,005147,35.2572,-91.3708,"CARL BAILEY                             ","ARKANSAS ELECTRIC COOP CORP             ",6,"ARKANSAS","WOODRUFF",SPP,P2
+   203,005103,33.5642,-92.7875,"MCCLELLAN                               ","ARKANSAS ELECTRIC COOP CORP             ",6,"ARKANSAS","OUACHITA",SPP,P2
+   207,012031,30.4308,-81.5508,"ST JOHNS RIVER POWER                    ","JACKSONVILLE ELECTRIC AUTH              ",4,"FLORIDA","DUVAL",SERC,P2
+   212,029037,38.6472,-94.3384,"RG 1 & 2                                ","UTILICORP UNITED INC                    ",7,"MISSOURI","CASS", ,P2
+   216,006013,37.9099,-121.9981,"AVON                                    ","PACIFIC GAS & ELECTRIC CO               ",9,"CALIFORNIA","CONTRA COSTA", ,P2
+   228,006013,38.0192,-121.7622,"CONTRA COSTA                            ","PACIFIC GAS & ELECTRIC CO               ",9,"CALIFORNIA","CONTRA COSTA",WSCC,P2
+   246,006023,40.7425,-124.2083,"HUMBOLDT BAY                            ","PACIFIC GAS & ELECTRIC CO               ",9,"CALIFORNIA","HUMBOLDT",WSCC,P2
+   247,006075,37.7383,-122.3756,"HUNTERS POINT                           ","PACIFIC GAS & ELECTRIC CO               ",9,"CALIFORNIA","SAN FRANCISCO",WSCC,P2
+   251,006029,35.3800,-118.9867,"KERN                                    ","PACIFIC GAS & ELECTRIC CO               ",9,"CALIFORNIA","KERN", ,P2
+   256,006013,37.9099,-121.9981,"MARTINEZ                                ","PACIFIC GAS & ELECTRIC CO               ",9,"CALIFORNIA","CONTRA COSTA", ,P2
+   259,006079,35.3708,-120.8528,"MORRO BAY                               ","PACIFIC GAS & ELECTRIC CO               ",9,"CALIFORNIA","SAN LUIS OBISPO",WSCC,P2
+   260,006053,36.8042,-121.8042,"MOSS LANDING                            ","PACIFIC GAS & ELECTRIC CO               ",9,"CALIFORNIA","MONTEREY",WSCC,P2
+   263,006013,37.9099,-121.9981,"OLEUM                                   ","PACIFIC GAS & ELECTRIC CO               ",9,"CALIFORNIA","CONTRA COSTA", ,P2
+   271,006013,38.0394,-121.9011,"PITTSBURG                               ","PACIFIC GAS & ELECTRIC CO               ",9,"CALIFORNIA","CONTRA COSTA",WSCC,P2
+   273,006075,37.7556,-122.3786,"POTRERO                                 ","PACIFIC GAS & ELECTRIC CO               ",9,"CALIFORNIA","SAN FRANCISCO",WSCC,P2
+   298,048293,31.4222,-96.2525,"LIMESTONE                               ","HOUSTON LIGHTING & POWER CO             ",6,"TEXAS","LIMESTONE",ERCOT,P2
+   302,006073,33.1367,-117.3358,"ENCINA                                  ","SAN DIEGO GAS & ELECTRIC CO             ",9,"CALIFORNIA","SAN DIEGO",WSCC,P2
+   309,006073,33.0197,-116.8378,"SILVER GATE                             ","SAN DIEGO GAS & ELECTRIC CO             ",9,"CALIFORNIA","SAN DIEGO", ,P2
+   310,006073,32.6142,-117.1125,"SOUTH BAY                               ","SAN DIEGO GAS & ELECTRIC CO             ",9,"CALIFORNIA","SAN DIEGO",WSCC,P2
+   311,006073,33.0197,-116.8378,"STATION B                               ","SAN DIEGO GAS & ELECTRIC CO             ",9,"CALIFORNIA","SAN DIEGO", ,P2
+   312,039049,39.9142,-83.0122,"REFUSE & COAL                           ","COLUMBUS CITY OF                        ",5,"OHIO","FRANKLIN", ,P2
+   315,006037,33.7686,-118.1008,"ALAMITOS                                ","SOUTHERN CALIFORNIA EDISON CO           ",9,"CALIFORNIA","LOS ANGELES",WSCC,P2
+   329,006071,34.8583,-116.8875,"COOL WATER                              ","SOUTHERN CALIFORNIA EDISON CO           ",9,"CALIFORNIA","SAN BERNARDINO",WSCC,P2
+   330,006037,33.9106,-118.4231,"EL SEGUNDO                              ","SOUTHERN CALIFORNIA EDISON CO           ",9,"CALIFORNIA","LOS ANGELES",WSCC,P2
+   331,006071,34.0911,-117.5256,"ETIWANDA                                ","SOUTHERN CALIFORNIA EDISON CO           ",9,"CALIFORNIA","SAN BERNARDINO",WSCC,P2
+   334,006071,34.0225,-117.3325,"HIGHGROVE                               ","SOUTHERN CALIFORNIA EDISON CO           ",9,"CALIFORNIA","RIVERSIDE",WSCC,P2
+   335,006059,33.6439,-117.9792,"HUNTINGTON BEACH                        ","SOUTHERN CALIFORNIA EDISON CO           ",9,"CALIFORNIA","ORANGE",WSCC,P2
+   345,006111,34.2144,-119.2478,"MANDALAY/OCEAN VISTA POWER              ","SOUTHERN CALIFORNIA EDISON CO           ",9,"CALIFORNIA","VENTURA",WSCC,P2
+   350,006111,34.1314,-119.1514,"ORMOND BEACH                            ","SOUTHERN CALIFORNIA EDISON CO           ",9,"CALIFORNIA","VENTURA",WSCC,P2
+   356,006037,33.8467,-118.4022,"REDONDO BEACH                           ","SOUTHERN CALIFORNIA EDISON CO           ",9,"CALIFORNIA","LOS ANGELES",WSCC,P2
+   358,006071,34.0836,-117.2408,"SAN BERNARDINO                          ","SOUTHERN CALIFORNIA EDISON CO           ",9,"CALIFORNIA","SAN BERNARDINO",WSCC,P2
+   370,048213,32.1824,-95.9409,"MALAKOFF                                ","HOUSTON LIGHTING & POWER CO             ",6,"TEXAS","HENDERSON", ,P2
+   375,006037,34.1781,-118.3139,"MAGNOLIA                                ","BURBANK CITY OF                         ",9,"CALIFORNIA","LOS ANGELES",WSCC,P2
+   377,006037,34.1597,-118.2758,"GRAYSON                                 ","GLENDALE CITY OF                        ",9,"CALIFORNIA","LOS ANGELES",WSCC,P2
+   384,017197,41.4892,-88.0844,"JOLIET 29                               ","COMMONWEALTH EDISON CO                  ",5,"ILLINOIS","WILL",MAIN,P2
+   389,006025,32.8025,-115.5894,"EL CENTRO                               ","IMPERIAL IRRIGATION DISTRICT            ",9,"CALIFORNIA","IMPERIAL",WSCC,P2
+   399,006037,33.7667,-118.2667,"HARBOR GEN STATION                      ","LOS ANGELES CITY OF                     ",9,"CALIFORNIA","LOS ANGELES",WSCC,P2
+   400,006037,33.4667,-118.1500,"HAYNES GEN STATION                      ","LOS ANGELES CITY OF                     ",9,"CALIFORNIA","LOS ANGELES",WSCC,P2
+   404,006037,33.9189,-118.4264,"SCATTERGOOD GEN STA                     ","LOS ANGELES CITY OF                     ",9,"CALIFORNIA","LOS ANGELES",WSCC,P2
+   408,006037,34.2422,-118.3903,"VALLEY GEN STATION                      ","LOS ANGELES CITY OF                     ",9,"CALIFORNIA","LOS ANGELES", ,P2
+   420,006037,34.1167,-118.1167,"BROADWAY                                ","PASADENA CITY OF                        ",9,"CALIFORNIA","LOS ANGELES",WSCC,P2
+   422,006037,34.2635,-118.2982,"GLENARM                                 ","PASADENA CITY OF                        ",9,"CALIFORNIA","LOS ANGELES",WSCC,P2
+   460,008101,38.1700,-104.5100,"PUEBLO                                  ","UTILICORP UNITED                        ",8,"COLORADO","PUEBLO",SPP,P2
+   462,008043,38.4700,-105.4400,"W N CLARK                               ","UTILICORP UNITED                        ",8,"COLORADO","FREMONT",SPP,P2
+   464,008003,37.5541,-105.7477,"ALAMOSA                                 ","PUBLIC SERVICE CO OF COLORADO           ",8,"COLORADO","ALAMOSA",WSCC,P2
+   465,008031,39.6700,-105.0028,"ARAPAHOE                                ","PUBLIC SERVICE CO OF COLORADO           ",8,"COLORADO","DENVER",WSCC,P2
+   468,008077,39.1333,-108.3167,"CAMEO                                   ","PUBLIC SERVICE CO OF COLORADO           ",8,"COLORADO","MESA",WSCC,P2
+   469,008001,39.8083,-105.9664,"CHEROKEE                                ","PUBLIC SERVICE CO OF COLORADO           ",8,"COLORADO","ADAMS",WSCC,P2
+   470,008101,38.2081,-104.5747,"COMANCHE                                ","PUBLIC SERVICE CO OF COLORADO           ",8,"COLORADO","PUEBLO",WSCC,P2
+   477,008013,40.0694,-105.2022,"VALMONT                                 ","PUBLIC SERVICE CO OF COLORADO           ",8,"COLORADO","BOULDER",WSCC,P2
+   478,008031,39.7375,-105.0181,"ZUNI                                    ","PUBLIC SERVICE CO OF COLORADO           ",8,"COLORADO","DENVER",WSCC,P2
+   492,008041,38.8244,-104.8331,"MARTIN DRAKE                            ","COLORADO SPRINGS CITY OF                ",8,"COLORADO","EL PASO",WSCC,P2
+   493,008041,38.8300,-104.5200,"GEORGE BIRDSALL                         ","COLORADO SPRINGS CITY OF                ",8,"COLORADO","EL PASO",WSCC,P2
+   502,008099,37.9561,-102.3944,"HOLLY                                   ","HOLLY CITY OF                           ",8,"COLORADO","PROWERS", ,
+   508,008099,37.9500,-102.4000,"LAMAR                                   ","LAMAR CITY OF                           ",8,"COLORADO","PROWERS",WSCC,P2
+   511,008071,37.4052,-104.1145,"TRINIDAD                                ","TRINIDAD CITY OF                        ",8,"COLORADO","LAS ANIMAS",WSCC,P2
+   525,008107,40.4856,-107.1850,"HAYDEN                                  ","PUBLIC SERVICE CO OF COLORADO           ",8,"COLORADO","ROUTT",WSCC,P2
+   527,008085,38.2386,-108.5072,"NUCLA                                   ","TRI-STATE G & T ASSN INC                ",8,"COLORADO","MONTROSE",WSCC,P2
+   533,001039,31.4097,-86.3731,"MCWILLIAMS                              ","ALABAMA ELECTRIC COOP INC               ",4,"ALABAMA","COVINGTON",SERC,P2
+   544,009009,41.2081,-73.1092,"DEVON                                   ","CONNECTICUT LIGHT & POWER CO            ",1,"CONNECTICUT","NEW HAVEN",NPCC,P2
+   546,009011,41.3856,-72.0858,"MONTVILLE                               ","CONNECTICUT LIGHT & POWER CO            ",1,"CONNECTICUT","NEW LONDON",NPCC,P2
+   548,009001,41.0694,-73.4056,"NORWALK HARBOR                          ","CONNECTICUT LIGHT & POWER CO            ",1,"CONNECTICUT","FAIRFIELD",NPCC,P2
+   550,053065,48.4129,-117.9017,"KETTLE FALLS                            ","WASHINGTON WATER POWER CO               ",10,"WASHINGTON","STEVENS",WSCC,P2
+   562,009007,41.5547,-72.5814,"MIDDLETOWN                              ","CONNECTICUT LIGHT & POWER CO            ",1,"CONNECTICUT","MIDDLESEX",NPCC,P2
+   563,009003,41.8100,-72.7300,"MID-CONN/S. MEADOW                      ","CONNECTICUT LIGHT & POWER CO            ",1,"CONNECTICUT","HARTFORD",NPCC,P2
+   564,012095,28.4822,-81.1678,"STANTON ENERGY                          ","ORLANDO UTILITIES COMM                  ",4,"FLORIDA","ORANGE",SERC,P2
+   568,009001,41.1714,-73.1833,"BRIDGEPORT HARBOR                       ","UNITED ILLUMINATING CO                  ",1,"CONNECTICUT","FAIRFIELD",NPCC,P2
+   569,009009,41.3075,-72.9072,"ENGLISH                                 ","UNITED ILLUMINATING CO                  ",1,"CONNECTICUT","NEW HAVEN", ,P2
+   589,050007,44.4933,-73.2089,"J C MCNEIL                              ","BURLINGTON CITY OF                      ",1,"VERMONT","CHITTENDEN",NPCC,P2
+   592,010003,39.6000,-75.6167,"DELAWARE CITY                           ","DELMARVA POWER & LIGHT CO               ",3,"DELAWARE","NEW CASTLE",MAAC,P2
+   593,010003,39.7336,-75.5008,"EDGE MOOR                               ","DELMARVA POWER & LIGHT CO               ",3,"DELAWARE","NEW CASTLE",MAAC,P2
+   594,010005,38.5886,-75.2372,"INDIAN RIVER                            ","DELMARVA POWER & LIGHT CO               ",3,"DELAWARE","SUSSEX",MAAC,P2
+   599,010001,39.1742,-75.5453,"MCKEE RUN                               ","DOVER CITY OF (DE)                      ",3,"DELAWARE","KENT",MAAC,P2
+   602,024003,39.1800,-76.5333,"BRANDON SHORES                          ","BALTIMORE GAS & ELECTRIC CO             ",3,"MARYLAND","ANNE ARUNDEL",MAAC,P2
+   603,011001,38.8961,-76.9664,"BENNING                                 ","POTOMAC ELECTRIC POWER CO               ",3,"DISTRICT OF COLUMBIA","DISTRICT OF COLUMBIA",MAAC,P2
+   609,012009,28.4694,-80.7642,"CAPE CANAVERAL                          ","FLORIDA POWER & LIGHT CO                ",4,"FLORIDA","BREVARD",SERC,P2
+   610,012025,25.6311,-80.2983,"CUTLER                                  ","FLORIDA POWER & LIGHT CO                ",4,"FLORIDA","DADE",SERC,P2
+   612,012071,26.6969,-81.7819,"FORT MYERS                              ","FLORIDA POWER & LIGHT CO                ",4,"FLORIDA","LEE",SERC,P2
+   613,012011,26.0683,-80.2000,"LAUDERDALE                              ","FLORIDA POWER & LIGHT CO                ",4,"FLORIDA","BROWARD",SERC,P2
+   617,012011,26.0856,-80.1253,"PORT EVERGLADES                         ","FLORIDA POWER & LIGHT CO                ",4,"FLORIDA","BROWARD",SERC,P2
+   619,012099,26.7653,-80.0525,"RIVIERA                                 ","FLORIDA POWER & LIGHT CO                ",4,"FLORIDA","PALM BEACH",SERC,P2
+   620,012127,28.8419,-81.3256,"SANFORD                                 ","FLORIDA POWER & LIGHT CO                ",4,"FLORIDA","VOLUSIA",SERC,P2
+   621,012025,25.4356,-80.3308,"TURKEY POINT                            ","FLORIDA POWER & LIGHT CO                ",4,"FLORIDA","DADE",SERC,P2
+   624,012055,27.3391,-81.2525,"AVON PARK                               ","FLORIDA POWER CORP                      ",4,"FLORIDA","HIGHLANDS",SERC,P2
+   628,012017,28.9575,-82.6997,"CRYSTAL RIVER                           ","FLORIDA POWER CORP                      ",4,"FLORIDA","CITRUS",SERC,P2
+   629,012127,28.8686,-81.2728,"G E TURNER                              ","FLORIDA POWER CORP                      ",4,"FLORIDA","VOLUSIA",SERC,P2
+   630,012103,28.0022,-82.6631,"HIGGINS                                 ","FLORIDA POWER CORP                      ",4,"FLORIDA","PINELLAS",SERC,P2
+   634,012103,27.8597,-82.6025,"P L BARTOW                              ","FLORIDA POWER CORP                      ",4,"FLORIDA","PINELLAS",SERC,P2
+   638,012121,30.3764,-83.1803,"SUWANNEE RIVER                          ","FLORIDA POWER CORP                      ",4,"FLORIDA","SUWANNEE",SERC,P2
+   641,012033,30.5658,-87.2239,"CRIST                                   ","GULF POWER CO                           ",4,"FLORIDA","ESCAMBIA",SERC,P1
+   642,012063,30.6794,-84.8872,"SCHOLZ                                  ","GULF POWER CO                           ",4,"FLORIDA","JACKSON",SERC,P1.5
+   643,012005,30.2661,-85.6989,"LANSING SMITH                           ","GULF POWER CO                           ",4,"FLORIDA","BAY",SERC,P2
+   645,012057,27.7944,-82.4036,"BIG BEND                                ","TAMPA ELECTRIC CO                       ",4,"FLORIDA","HILLSBOROUGH",SERC,"P1,P1.5"
+   646,012057,27.9069,-82.4233,"F J GANNON                              ","TAMPA ELECTRIC CO                       ",4,"FLORIDA","HILLSBOROUGH",SERC,P2
+   647,012057,27.9381,-82.4436,"HOOKERS POINT                           ","TAMPA ELECTRIC CO                       ",4,"FLORIDA","HILLSBOROUGH",SERC,P2
+   658,012111,27.4500,-80.3239,"HENRY D KING                            ","FORT PIERCE UTILITIES AUTH              ",4,"FLORIDA","ST LUCIE",SERC,P2
+   663,012001,29.7167,-82.3833,"DEERHAVEN                               ","GAINESVILLE REGIONAL UTILITIES          ",4,"FLORIDA","ALACHUA",SERC,P2
+   664,012001,29.6458,-82.3214,"JOHN R KELLY                            ","GAINESVILLE REGIONAL UTILITIES          ",4,"FLORIDA","ALACHUA",SERC,P2
+   665,012025,25.5582,-80.4962,"G W IVEY                                ","HOMESTEAD CITY OF                       ",4,"FLORIDA","DADE",SERC,P2
+   666,012031,30.3639,-81.6233,"J D KENNEDY                             ","JACKSONVILLE ELECTRIC AUTH              ",4,"FLORIDA","DUVAL",SERC,P2
+   667,012031,30.4178,-81.5525,"NORTHSIDE                               ","JACKSONVILLE ELECTRIC AUTH              ",4,"FLORIDA","DUVAL",SERC,P2
+   668,012031,30.3167,-81.6486,"SOUTHSIDE                               ","JACKSONVILLE ELECTRIC AUTH              ",4,"FLORIDA","DUVAL",SERC,P2
+   673,012099,26.6125,-80.0678,"TOM G SMITH                             ","LAKE WORTH CITY OF                      ",4,"FLORIDA","PALM BEACH",SERC,P2
+   675,012105,28.0333,-81.9167,"LARSEN MEMORIAL                         ","LAKELAND CITY OF                        ",4,"FLORIDA","POLK",SERC,P2
+   676,012105,28.0750,-81.9292,"C D MCINTOSH JR                         ","LAKELAND CITY OF                        ",4,"FLORIDA","POLK",SERC,P2
+   683,012009,28.4933,-80.7800,"INDIAN RIVER                            ","ORLANDO UTILITIES COMM                  ",4,"FLORIDA","BREVARD",SERC,P2
+   688,012073,30.4522,-84.4000,"ARVAH B HOPKINS                         ","TALLAHASSEE CITY OF                     ",4,"FLORIDA","LEON",SERC,P2
+   689,012129,30.1583,-84.2000,"S O PURDOM                              ","TALLAHASSEE CITY OF                     ",4,"FLORIDA","WAKULLA",SERC,P2
+   693,012061,27.6311,-80.3758,"VERO BEACH MUNICIPAL                    ","VERO BEACH CITY OF                      ",4,"FLORIDA","INDIAN RIVER",SERC,P2
+   699,013021,32.9269,-83.6997,"ARKWRIGHT                               ","GEORGIA POWER CO                        ",4,"GEORGIA","BIBB",SERC,P1.5
+   700,013067,33.8244,-84.4750,"ATKINSON                                ","GEORGIA POWER CO                        ",4,"GEORGIA","COBB",SERC,P2
+   703,013015,34.1256,-84.9192,"BOWEN                                   ","GEORGIA POWER CO                        ",4,"GEORGIA","BARTOW",SERC,P1
+   708,013115,34.2653,-84.6269,"HAMMOND                                 ","GEORGIA POWER CO                        ",4,"GEORGIA","FLOYD",SERC,P1
+   709,013237,33.1942,-83.2994,"HARLLEE BRANCH                          ","GEORGIA POWER CO                        ",4,"GEORGIA","PUTNAM",SERC,P1.5
+   710,013067,33.8244,-84.4750,"JACK MCDONOUGH                          ","GEORGIA POWER CO                        ",4,"GEORGIA","COBB",SERC,P1
+   715,013127,31.2125,-81.5458,"MCMANUS                                 ","GEORGIA POWER CO                        ",4,"GEORGIA","GLYNN",SERC,P2
+   727,013095,31.4444,-84.1322,"MITCHELL                                ","GEORGIA POWER CO                        ",4,"GEORGIA","DOUGHERTY",SERC,P1.5
+   728,013077,33.4631,-84.9550,"YATES                                   ","GEORGIA POWER CO                        ",4,"GEORGIA","COWETA",SERC,P1
+   733,013051,32.1333,-81.1333,"KRAFT                                   ","SAVANNAH ELECTRIC & POWER CO            ",4,"GEORGIA","CHATHAM",SERC,P1.5
+   734,013051,32.0833,-81.0958,"RIVERSIDE                               ","SAVANNAH ELECTRIC & POWER CO            ",4,"GEORGIA","CHATHAM",SERC,P2
+   747,012055,27.5069,-81.4375,"SEBRING DINNER                          ","SEBRING UTILITIES COMM                  ",4,"FLORIDA","HIGHLANDS", ,P2
+   753,013321,31.5833,-83.8339,"CRISP                                   ","CRISP COUNTY POWER COMM                 ",4,"GEORGIA","WORTH",SERC,P2
+   762,040071,36.8200,-97.1500,"PONCA                                   ","PONCA CITY CITY OF                      ",6,"OKLAHOMA","KAY",SPP,P2
+   798,040131,36.3364,-95.5701,"INOLA                                   ","PUBLIC SERVICE CO OF OKLAHOMA           ",6,"OKLAHOMA","ROGERS", ,P2
+   856,017143,40.5961,-89.6633,"E D EDWARDS                             ","CENTRAL ILLINOIS LIGHT CO               ",5,"ILLINOIS","PEORIA",MAIN,P2
+   859,017179,40.6853,-84.5847,"R S WALLACE                             ","CENTRAL ILLINOIS LIGHT CO               ",5,"ILLINOIS","TAZEWELL", ,P2
+   861,017135,39.0586,-89.4031,"COFFEEN                                 ","CENTRAL ILLINOIS PUB SERV CO            ",5,"ILLINOIS","MONTGOMERY",MAIN,P1
+   862,017077,37.6575,-89.5119,"GRAND TOWER                             ","CENTRAL ILLINOIS PUB SERV CO            ",5,"ILLINOIS","JACKSON",MAIN,P1
+   863,017033,39.1339,-87.6597,"HUTSONVILLE                             ","CENTRAL ILLINOIS PUB SERV CO            ",5,"ILLINOIS","CRAWFORD",MAIN,P1.5
+   864,017137,39.8225,-90.5681,"MEREDOSIA                               ","CENTRAL ILLINOIS PUB SERV CO            ",5,"ILLINOIS","MORGAN",MAIN,P1
+   867,017031,41.8264,-87.7233,"CRAWFORD                                ","COMMONWEALTH EDISON CO                  ",5,"ILLINOIS","COOK",MAIN,P2
+   874,017197,41.4892,-88.0844,"JOLIET 9                                ","COMMONWEALTH EDISON CO                  ",5,"ILLINOIS","WILL",MAIN,P2
+   876,017021,39.6486,-89.4778,"KINCAID                                 ","COMMONWEALTH EDISON CO                  ",5,"ILLINOIS","CHRISTIAN",MAIN,P1
+   879,017179,40.5514,-89.6781,"POWERTON                                ","COMMONWEALTH EDISON CO                  ",5,"ILLINOIS","TAZEWELL",MAIN,P2
+   883,017097,42.3833,-87.8083,"WAUKEGAN                                ","COMMONWEALTH EDISON CO                  ",5,"ILLINOIS","LAKE",MAIN,P2
+   884,017197,41.6300,-88.0678,"WILL COUNTY                             ","COMMONWEALTH EDISON CO                  ",5,"ILLINOIS","WILL",MAIN,P2
+   886,017031,41.8453,-87.6550,"FISK                                    ","COMMONWEALTH EDISON CO                  ",5,"ILLINOIS","COOK",MAIN,P2
+   887,017127,37.2083,-88.8586,"JOPPA STEAM                             ","ELECTRIC ENERGY INC                     ",5,"ILLINOIS","MASSAC",MAIN,P1
+   889,017157,38.2050,-89.8544,"BALDWIN                                 ","ILLINOIS POWER CO                       ",5,"ILLINOIS","RANDOLPH",MAIN,P1
+   891,017125,40.2797,-90.0800,"HAVANA                                  ","ILLINOIS POWER CO                       ",5,"ILLINOIS","MASON",MAIN,P1.5
+   892,017155,41.3028,-89.3150,"HENNEPIN                                ","ILLINOIS POWER CO                       ",5,"ILLINOIS","PUTNAM",MAIN,"P1,P1.5"
+   897,017183,40.1781,-87.7481,"VERMILION                               ","ILLINOIS POWER CO                       ",5,"ILLINOIS","VERMILION",MAIN,"P1,P1.5"
+   898,017119,38.8639,-90.1347,"WOOD RIVER                              ","ILLINOIS POWER CO                       ",5,"ILLINOIS","MADISON",MAIN,P2
+   899,017161,41.7278,-90.3067,"MOLINE                                  ","IOWA-ILLINOIS GAS&ELECTRIC CO           ",5,"ILLINOIS","ROCK ISLAND",MAPP,P2
+   913,017119,38.6583,-90.1750,"VENICE                                  ","UNION ELECTRIC CO                       ",5,"ILLINOIS","MADISON",MAIN,P2
+   923,004013,33.2765,-111.8758,"GILA BEND                               ","ARIZONA PUBLIC SERVICE CO               ",9,"ARIZONA","MARICOPA", ,P2
+   934,017027,38.5808,-89.4225,"BREESE                                  ","BREESE CITY OF                          ",5,"ILLINOIS","CLINTON",MAIN,P2
+   936,017027,38.5808,-89.4225,"CARLYLE                                 ","CARLYLE CITY OF                         ",5,"ILLINOIS","CLINTON",MAIN,P2
+   940,017191,38.4312,-88.4251,"FAIRFIELD                               ","FAIRFIELD CITY OF                       ",5,"ILLINOIS","WAYNE", ,P2
+   944,017073,41.3669,-90.1469,"GENESEO                                 ","GENESEO CITY OF                         ",5,"ILLINOIS","HENRY", ,
+   955,017099,41.2785,-88.8763,"PERU                                    ","PERU CITY OF (IL)                       ",5,"ILLINOIS","LA SALLE", ,P2
+   961,017141,42.0500,-89.3200,"SOUTH MAIN STREET                       ","ROCHELLE MUNICIPAL UTILITIES            ",5,"ILLINOIS","OGLE",MAIN,P2
+   963,017167,39.7547,-89.6008,"DALLMAN                                 ","SPRINGFIELD CITY OF (IL)                ",5,"ILLINOIS","SANGAMON",MAIN,P2
+   964,017167,39.7500,-89.6000,"LAKESIDE                                ","SPRINGFIELD CITY OF (IL)                ",5,"ILLINOIS","SANGAMON",MAIN,P2
+   972,017031,41.8400,-87.8200,"WINNETKA                                ","WINNETKA VILLAGE OF                     ",5,"ILLINOIS","COOK",MAIN,P2
+   976,017199,37.6167,-88.9500,"MARION                                  ","SOUTHERN ILLINOIS POWER COOP            ",5,"ILLINOIS","WILLIAMSON",MAIN,P2
+   981,018089,41.7078,-87.5186,"STATE LINE                              ","COMMONWEALTH EDISON CO IN INC           ",5,"INDIANA","LAKE",MAIN,P2
+   983,018077,38.7389,-85.4192,"CLIFTY CREEK                            ","INDIANA-KENTUCKY ELECTRIC CORP          ",5,"INDIANA","JEFFERSON",ECAR,P1
+   984,018153,39.2275,-87.5728,"BREED                                   ","INDIANA MICHIGAN POWER CO               ",5,"INDIANA","SULLIVAN", ,P1
+   988,018029,39.0806,-84.8608,"TANNERS CREEK                           ","INDIANA MICHIGAN POWER CO               ",5,"INDIANA","DEARBORN",ECAR,P1
+   990,018097,39.7122,-86.1975,"ELMER W STOUT                           ","INDIANAPOLIS POWER & LIGHT CO           ",5,"INDIANA","MARION",ECAR,P1
+   991,018109,39.4853,-86.4183,"H T PRITCHARD                           ","INDIANAPOLIS POWER & LIGHT CO           ",5,"INDIANA","MORGAN",ECAR,P2
+   992,018097,39.7633,-86.1664,"PERRY K                                 ","INDIANAPOLIS POWER & LIGHT CO           ",5,"INDIANA","MARION", ,P2
+   993,018097,39.7798,-86.1323,"PERRY W                                 ","INDIANAPOLIS POWER & LIGHT CO           ",5,"INDIANA","MARION", ,P2
+   994,018125,38.5267,-87.2522,"PETERSBURG                              ","INDIANAPOLIS POWER & LIGHT CO           ",5,"INDIANA","PIKE",ECAR,P1
+   995,018127,41.6431,-87.1228,"BAILLY                                  ","NORTHERN INDIANA PUB SERV CO            ",5,"INDIANA","PORTER",ECAR,P1
+   996,018089,41.6389,-87.4064,"DEAN H MITCHELL                         ","NORTHERN INDIANA PUB SERV CO            ",5,"INDIANA","LAKE",ECAR,P2
+   997,018091,41.7219,-86.9092,"MICHIGAN CITY                           ","NORTHERN INDIANA PUB SERV CO            ",5,"INDIANA","LA PORTE",ECAR,P2
+  1001,018165,39.9008,-87.4136,"CAYUGA                                  ","PUBLIC SERVICE CO OF IN INC             ",5,"INDIANA","VERMILLION",ECAR,P1
+  1004,018083,38.8067,-87.2472,"EDWARDSPORT                             ","PUBLIC SERVICE CO OF IN INC             ",5,"INDIANA","KNOX",ECAR,P2
+  1007,018057,40.0969,-85.9692,"NOBLESVILLE                             ","PUBLIC SERVICE CO OF IN INC             ",5,"INDIANA","HAMILTON",ECAR,P2
+  1008,018043,38.2631,-85.8378,"R GALLAGHER                             ","PUBLIC SERVICE CO OF IN INC             ",5,"INDIANA","FLOYD",ECAR,P1
+  1010,018167,39.5278,-87.4222,"WABASH RIVER                            ","PUBLIC SERVICE CO OF IN INC             ",5,"INDIANA","VIGO",ECAR,P1
+  1012,018173,37.9100,-87.3267,"F B CULLEY                              ","SOUTHERN INDIANA GAS & ELEC CO          ",5,"INDIANA","WARRICK",ECAR,P1
+  1024,018107,38.9408,-86.9078,"CRAWFORDSVILLE                          ","CRAWFORDSVILLE ELEC LGT&PWR CO          ",5,"INDIANA","MONTGOMERY",ECAR,P2
+  1032,018017,40.7592,-86.3744,"LOGANSPORT                              ","LOGANSPORT CITY OF                      ",5,"INDIANA","CASS",ECAR,P2
+  1037,018103,40.7661,-86.0758,"PERU                                    ","PERU CITY OF (IN)                       ",5,"INDIANA","MIAMI",ECAR,P2
+  1040,018177,39.8028,-84.8950,"WHITEWATER VALLEY                       ","RICHMOND CITY OF                        ",5,"INDIANA","WAYNE",ECAR,P2
+  1043,018125,38.5186,-87.2725,"FRANK E RATTS                           ","HOOSIER ENERGY R E C INC                ",5,"INDIANA","PIKE",ECAR,P1
+  1046,019061,42.4848,-90.8040,"DUBUQUE                                 ","INTERSTATE POWER CO                     ",7,"IOWA","DUBUQUE",MAPP,P2
+  1047,019005,43.3386,-91.1667,"LANSING                                 ","INTERSTATE POWER CO                     ",7,"IOWA","ALLAMAKEE",MAPP,P2
+  1048,019045,41.8075,-90.2333,"MILTON L KAPP                           ","INTERSTATE POWER CO                     ",7,"IOWA","CLINTON",MAPP,P1
+  1056,019015,42.0367,-93.9309,"BOONE                                   ","IES UTILITIES INC                       ",7,"IOWA","BOONE", ,P2
+  1058,019113,42.0794,-91.5989,"SIXTH STREET                            ","IES UTILITIES INC                       ",7,"IOWA","LINN",MAPP,P2
+  1065,019083,42.3831,-93.2500,"IOWA FALLS                              ","IES UTILITIES INC                       ",7,"IOWA","HARDIN",MAPP,P2
+  1073,019113,41.9442,-91.6367,"PRAIRIE CREEK                           ","IES UTILITIES INC                       ",7,"IOWA","LINN",MAPP,P2
+  1077,019127,42.0800,-92.8603,"SUTHERLAND                              ","IES UTILITIES INC                       ",7,"IOWA","MARSHALL",MAPP,P2
+  1081,019163,41.5400,-90.4481,"RIVERSIDE                               ","IOWA-ILLINOIS GAS&ELECTRIC CO           ",7,"IOWA","SCOTT",MAPP,P1
+  1082,019155,41.1800,-95.8408,"COUNCIL BLUFFS                          ","IOWA POWER INC                          ",7,"IOWA","POTTAWATTAMIE",MAPP,P2
+  1083,019153,41.5533,-93.5267,"DES MOINES                              ","IOWA POWER INC                          ",7,"IOWA","POLK", ,
+  1091,019193,42.3167,-96.3667,"GEORGE NEAL NORTH                       ","IOWA PUBLIC SERVICE CO                  ",7,"IOWA","WOODBURY",MAPP,P2
+  1096,019013,42.4698,-92.3092,"MAYNARD STATION                         ","IOWA PUBLIC SERVICE CO                  ",7,"IOWA","BLACK HAWK", ,P2
+  1104,019057,40.7411,-91.1169,"BURLINGTON                              ","IES UTILITIES INC                       ",7,"IOWA","DES MOINES",MAPP,P1
+  1120,019109,43.2041,-94.2071,"ALGONA MUNICIPAL UTILITIES              ","ALGONA CITY OF                          ",7,"IOWA","KOSSUTH",MAPP,P2
+  1122,019169,42.0247,-93.6064,"AMES                                    ","AMES CITY OF                            ",7,"IOWA","STORY",MAPP,P2
+  1124,019015,41.3312,-94.9274,"ATLANTIC                                ","ATLANTIC CITY OF                        ",7,"IOWA","CASS", ,P2
+  1126,019097,42.2074,-90.5268,"BELLEVUE MUNICIPAL U                    ","BELLEVUE CITY OF                        ",7,"IOWA","JACKSON", ,
+  1131,019013,42.4698,-92.3092,"STREETER STATION                        ","CEDAR FALLS CITY OF                     ",7,"IOWA","BLACK HAWK",MAPP,P2
+  1136,019047,42.0372,-95.3814,"DENISON                                 ","DENISON CITY OF                         ",7,"IOWA","CRAWFORD", ,P2
+  1142,019147,43.0821,-94.6784,"GRAETTINGER                             ","GRAETTINGER CITY OF                     ",7,"IOWA","PALO ALTO", ,P2
+  1149,019019,42.4702,-91.8395,"INDEPENDENCE LIGHT & POWER              ","INDEPENDENCE CITY OF (IA)               ",7,"IOWA","BUCHANAN",MAPP,P2
+  1155,019053,40.7361,-93.7867,"LAMONI MUNICIPAL UTILITIES              ","LAMONI CITY OF                          ",7,"IOWA","DECATUR",MAPP,P2
+  1162,019097,42.2074,-90.5268,"MAQUOKETA                               ","MAQUOKETA CITY OF                       ",7,"IOWA","JACKSON",MAPP,P2
+  1164,019059,43.3781,-95.1506,"MILFORD MUNICIPAL UTILITIES             ","MILFORD CITY OF                         ",7,"IOWA","DICKINSON", ,P2
+  1165,019157,41.6861,-92.5325,"MONTEZUMA MUNICIPAL                     ","MONTEZUMA CITY OF                       ",7,"IOWA","POWESHIEK", ,
+  1166,019087,40.9874,-91.5444,"MT PLEASANT                             ","MT PLEASANT CITY OF                     ",7,"IOWA","HENRY",MAPP,P2
+  1167,019139,41.3917,-91.0569,"MUSCATINE                               ","MUSCATINE CITY OF                       ",7,"IOWA","MUSCATINE",MAPP,P2
+  1168,019037,43.0603,-92.3177,"NEW HAMPTON LIGHT PL                    ","NEW HAMPTON CITY OF                     ",7,"IOWA","CHICKASAW", ,
+  1172,019131,43.3564,-92.7887,"OSAGE MUN LIGHT PLNT                    ","OSAGE CITY OF                           ",7,"IOWA","MITCHELL",MAPP,P2
+  1175,019125,41.3346,-93.0979,"PELLA                                   ","PELLA CITY OF                           ",7,"IOWA","MARION",MAPP,P2
+  1177,019141,43.0838,-95.6246,"PRIMGHAR MUNICIPAL LIGHT PLANT          ","PRIMGHAR CITY OF                        ",7,"IOWA","O BRIEN", ,P2
+  1188,019169,42.0362,-93.4649,"STORY CITY MUNICIPAL ELECTRIC           ","STORY CITY CITY OF                      ",7,"IOWA","STORY", ,P2
+  1191,019017,42.7746,-92.3178,"SUMNER MUNICIPAL LIG                    ","SUMNER CITY OF                          ",7,"IOWA","BREMER", ,
+  1194,019011,42.0804,-92.0647,"VINTON MUNICIPAL                        ","VINTON CITY OF                          ",7,"IOWA","BENTON",MAPP,P2
+  1202,019139,41.4660,-91.0763,"WILTON MUNICIPAL                        ","WILTON CITY OF                          ",7,"IOWA","MUSCATINE", ,P2
+  1213,019091,42.7769,-94.2072,"HUMBOLDT                                ","CORN BELT POWER COOP                    ",7,"IOWA","HUMBOLDT", ,P2
+  1217,019041,43.0827,-95.1507,"EARL F WISDOM                           ","CORN BELT POWER COOP                    ",7,"IOWA","CLAY",MAPP,P2
+  1218,019139,41.4660,-91.0763,"FAIR STATION                            ","CENTRAL IOWA POWER COOP                 ",7,"IOWA","MUSCATINE",MAPP,P2
+  1225,020193,39.4061,-101.1267,"COLBY                                   ","MIDWEST ENERGY INC                      ",7,"KANSAS","THOMAS", ,P2
+  1226,020051,38.9100,-99.3200,"HAYS                                    ","MIDWEST ENERGY INC                      ",7,"KANSAS","ELLIS", ,P2
+  1228,020065,39.3922,-99.9117,"ROSS BEACH                              ","MIDWEST ENERGY INC                      ",7,"KANSAS","GRAHAM", ,P2
+  1230,020175,37.0592,-100.9322,"CIMARRON RIVER                          ","UTILICORP UNITED                        ",7,"KANSAS","SEWARD",SPP,P2
+  1233,020057,37.7328,-99.9492,"JUDSON LARGE                            ","UTILICORP UNITED                        ",7,"KANSAS","FORD",SPP,P2
+  1235,020009,38.4053,-98.8694,"ARTHUR MULLERGREN                       ","UTILICORP UNITED                        ",7,"KANSAS","BARTON",SPP,P2
+  1239,020021,37.0667,-94.7000,"RIVERTON                                ","EMPIRE DISTRICT ELECTRIC CO             ",7,"KANSAS","CHEROKEE",SPP,P2
+  1240,020173,37.7903,-97.5217,"GORDON EVANS                            ","KANSAS GAS & ELECTRIC CO                ",7,"KANSAS","SEDGWICK",SPP,P2
+  1241,020107,38.3481,-94.6456,"LA CYGNE                                ","KANSAS CITY POWER & LIGHT CO            ",7,"KANSAS","LINN",SPP,P2
+  1242,020173,37.4283,-97.4136,"MURRAY GILL                             ","KANSAS GAS & ELECTRIC CO                ",7,"KANSAS","SEDGWICK",SPP,P2
+  1243,020099,37.1917,-95.2977,"NEOSHO                                  ","KANSAS GAS & ELECTRIC CO                ",7,"KANSAS","LABETTE", ,P2
+  1244,020173,37.6935,-97.4801,"RIPLEY                                  ","KANSAS GAS & ELECTRIC CO                ",7,"KANSAS","SEDGWICK", ,P2
+  1245,020173,37.6935,-97.4801,"WICHITA                                 ","KANSAS GAS & ELECTRIC CO                ",7,"KANSAS","SEDGWICK", ,P2
+  1248,020155,38.0892,-97.8717,"HUTCHINSON                              ","KPL, A WESTERN RESOURCES CO             ",7,"KANSAS","RENO",SPP,P2
+  1250,020045,39.0078,-95.2681,"LAWRENCE                                ","KPL, A WESTERN RESOURCES CO             ",7,"KANSAS","DOUGLAS",SPP,P2
+  1251,020041,38.8712,-97.1354,"ABILENE                                 ","KPL, A WESTERN RESOURCES CO             ",7,"KANSAS","DICKINSON",SPP,P2
+  1252,020177,39.0528,-95.5683,"TECUMSEH                                ","KPL, A WESTERN RESOURCES CO             ",7,"KANSAS","SHAWNEE",SPP,P2
+  1267,020133,37.5588,-95.3066,"CHANUTE 1                               ","CHANUTE CITY OF                         ",7,"KANSAS","NEOSHO", ,P2
+  1270,020027,39.3495,-97.1649,"CLAY CENTER                             ","CLAY CENTER CITY OF                     ",7,"KANSAS","CLAY",SPP,P2
+  1271,020125,37.0475,-95.5436,"COFFEYVILLE                             ","COFFEYVILLE CITY OF                     ",7,"KANSAS","MONTGOMERY",SPP,P2
+  1279,020037,37.5065,-94.8525,"CITY OF GIRARD                          ","GIRARD CITY OF                          ",7,"KANSAS","CRAWFORD", ,P2
+  1286,020009,38.4789,-98.7560,"HOISINGTON                              ","HOISINGTON CITY OF                      ",7,"KANSAS","BARTON",SPP,P2
+  1287,020085,39.4346,-95.7998,"HOLTON MUNICIPAL POWER PLANT            ","HOLTON CITY OF                          ",7,"KANSAS","JACKSON",SPP,P2
+  1288,020013,39.8266,-95.5641,"HORTON POWER PLANT                      ","HORTON CITY OF                          ",7,"KANSAS","BROWN", ,P2
+  1291,020001,37.9367,-95.3544,"IOLA #1                                 ","IOLA CITY OF                            ",7,"KANSAS","ALLEN",SPP,P2
+  1294,020209,39.0864,-94.6517,"KAW                                     ","KANSAS CITY CITY OF                     ",7,"KANSAS","WYANDOTTE",SPP,P2
+  1295,020209,39.0878,-94.6464,"QUINDARO                                ","KANSAS CITY CITY OF                     ",7,"KANSAS","WYANDOTTE",SPP,P1
+  1296,020095,37.5589,-98.1355,"KINGMAN                                 ","KINGMAN CITY OF                         ",7,"KANSAS","KINGMAN",SPP,P2
+  1299,020145,38.2072,-99.1428,"LARNED                                  ","LARNED CITY OF                          ",7,"KANSAS","PAWNEE",SPP,P2
+  1304,020113,38.4028,-97.7058,"MCPHERSON 1                             ","MCPHERSON CITY OF                       ",7,"KANSAS","MCPHERSON", ,P2
+  1305,020113,38.3719,-97.6869,"MCPHERSON 2                             ","MCPHERSON CITY OF                       ",7,"KANSAS","MCPHERSON",SPP,P2
+  1308,020173,37.6935,-97.4801,"MULVANE                                 ","MULVANE CITY OF                         ",7,"KANSAS","SEDGWICK",SPP,P2
+  1315,020141,39.3504,-98.7677,"CITY OF OSBORNE LIGHT PLANT             ","OSBORNE CITY OF                         ",7,"KANSAS","OSBORNE",SPP,P2
+  1316,020059,38.5643,-95.2825,"OTTAWA                                  ","OTTAWA CITY OF                          ",7,"KANSAS","FRANKLIN",SPP,P2
+  1317,020151,37.6842,-98.7947,"PRATT                                   ","PRATT CITY OF                           ",7,"KANSAS","PRATT",SPP,P2
+  1319,020167,38.9151,-98.7628,"RUSSELL                                 ","RUSSELL CITY OF                         ",7,"KANSAS","RUSSELL",SPP,P2
+  1320,020131,39.7834,-96.0135,"SABETHA MUNICIPAL POWER PLANT           ","SABETHA CITY OF                         ",7,"KANSAS","NEMAHA",SPP,P2
+  1328,020149,39.3463,-96.3660,"WAMEGO                                  ","WAMEGO CITY OF                          ",7,"KANSAS","POTTAWATOMIE",SPP,P2
+  1330,020191,37.2833,-97.4703,"WELLINGTON                              ","WELLINGTON CITY OF                      ",7,"KANSAS","SUMNER",SPP,P2
+  1332,020035,37.2631,-97.0717,"WEST 14TH STREET                        ","WINFIELD CITY OF                        ",7,"KANSAS","COWLEY",SPP,P2
+  1336,020055,38.0007,-100.6644,"GARDEN CITY                             ","SUNFLOWER ELECTRIC POWER CORP           ",7,"KANSAS","FINNEY",SPP,P2
+  1353,021127,38.1686,-82.6208,"BIG SANDY                               ","KENTUCKY POWER CO                       ",4,"KENTUCKY","LAWRENCE",ECAR,P2
+  1355,021167,37.7911,-84.7147,"E W BROWN                               ","KENTUCKY UTILITIES CO                   ",4,"KENTUCKY","MERCER",ECAR,P1
+  1356,021041,38.7497,-85.0350,"GHENT                                   ","KENTUCKY UTILITIES CO                   ",4,"KENTUCKY","CARROLL",ECAR,P1
+  1357,021177,37.3636,-87.1214,"GREEN RIVER                             ","KENTUCKY UTILITIES CO                   ",4,"KENTUCKY","MUHLENBERG",ECAR,P2
+  1360,021013,36.7967,-83.7614,"PINEVILLE                               ","KENTUCKY UTILITIES CO                   ",4,"KENTUCKY","BELL",ECAR,P2
+  1361,021239,38.8003,-84.8517,"TYRONE                                  ","KENTUCKY UTILITIES CO                   ",4,"KENTUCKY","WOODFORD",ECAR,P2
+  1363,021111,38.1833,-85.8886,"CANE RUN                                ","LOUISVILLE GAS & ELECTRIC CO            ",4,"KENTUCKY","JEFFERSON",ECAR,P2
+  1364,021111,38.0531,-85.9100,"MILL CREEK                              ","LOUISVILLE GAS & ELECTRIC CO            ",4,"KENTUCKY","JEFFERSON",ECAR,P2
+  1372,021101,37.8450,-87.5908,"HENDERSON I                             ","HENDERSON CITY UTILITY COMM             ",4,"KENTUCKY","HENDERSON",ECAR,P2
+  1374,021059,37.7942,-87.0608,"ELMER SMITH                             ","OWENSBORO CITY OF                       ",4,"KENTUCKY","DAVIESS",ECAR,P1
+  1378,021177,37.2608,-86.9783,"PARADISE                                ","TENNESSEE VALLEY AUTHORITY              ",4,"KENTUCKY","MUHLENBERG",SERC,P1
+  1379,021145,37.1517,-88.7750,"SHAWNEE                                 ","TENNESSEE VALLEY AUTHORITY              ",4,"KENTUCKY","MCCRACKEN",SERC,P2
+  1381,021091,37.9636,-86.7903,"COLEMAN                                 ","BIG RIVERS ELECTRIC CORP                ",4,"KENTUCKY","HANCOCK",ECAR,P1
+  1382,021101,37.6333,-87.5233,"HMP&L STATION 2                         ","BIG RIVERS ELECTRIC CORP                ",4,"KENTUCKY","HENDERSON",ECAR,P1
+  1383,021233,37.6461,-87.5019,"ROBERT REID                             ","BIG RIVERS ELECTRIC CORP                ",4,"KENTUCKY","HENDERSON",ECAR,P2
+  1384,021199,37.0000,-84.5917,"COOPER                                  ","EAST KENTUCKY POWER COOP INC            ",4,"KENTUCKY","PULASKI",ECAR,P1
+  1385,021049,37.8750,-84.2500,"DALE                                    ","EAST KENTUCKY POWER COOP INC            ",4,"KENTUCKY","CLARK",ECAR,P2
+  1391,022033,30.4903,-91.1875,"LOUISIANA 1                             ","GULF STATES UTILITIES CO                ",6,"LOUISIANA","EAST BATON ROUGE",SPP,P2
+  1392,022033,30.5162,-91.0750,"LOUISIANA 2                             ","GULF STATES UTILITIES CO                ",6,"LOUISIANA","EAST BATON ROUGE", ,P2
+  1393,022019,30.2861,-93.2917,"R S NELSON                              ","GULF STATES UTILITIES CO                ",6,"LOUISIANA","CALCASIEU",SPP,P2
+  1394,022047,30.2742,-91.1333,"WILLOW GLEN                             ","GULF STATES UTILITIES CO                ",6,"LOUISIANA","IBERVILLE",SPP,P2
+  1396,022039,30.8756,-92.2608,"COUGHLIN                                ","CENTRAL LOUISIANA ELEC CO INC           ",6,"LOUISIANA","EVANGELINE",SPP,P2
+  1400,022101,29.8222,-91.5417,"TECHE                                   ","CENTRAL LOUISIANA ELEC CO INC           ",6,"LOUISIANA","ST MARY",SPP,P2
+  1402,022089,30.0033,-90.4611,"LITTLE GYPSY                            ","LOUISIANA POWER & LIGHT CO              ",6,"LOUISIANA","ST CHARLES",SPP,P2
+  1403,022051,29.9472,-90.1458,"NINEMILE POINT                          ","LOUISIANA POWER & LIGHT CO              ",6,"LOUISIANA","JEFFERSON",SPP,P2
+  1404,022073,32.7047,-92.0792,"STERLINGTON                             ","LOUISIANA POWER & LIGHT CO              ",6,"LOUISIANA","OUACHITA",SPP,P2
+  1407,022071,30.0158,-90.0258,"A B PATERSON                            ","NEW ORLEANS PUBLIC SERVICE INC          ",6,"LOUISIANA","ORLEANS",SPP,P2
+  1409,022071,30.0081,-89.9372,"MICHOUD                                 ","NEW ORLEANS PUBLIC SERVICE INC          ",6,"LOUISIANA","ORLEANS",SPP,P2
+  1416,022017,32.5181,-93.7611,"ARSENAL HILL                            ","SOUTHWESTERN ELECTRIC POWER CO          ",6,"LOUISIANA","CADDO",SPP,P2
+  1417,022017,32.7047,-93.9594,"LIEBERMAN                               ","SOUTHWESTERN ELECTRIC POWER CO          ",6,"LOUISIANA","CADDO",SPP,P2
+  1439,022109,29.4300,-90.8400,"HOUMA                                   ","TERREBONNE PARISH CONSOL GOV'T          ",6,"LOUISIANA","TERREBONNE",SPP,P2
+  1443,022055,30.2375,-92.0461,"DOC BONIN                               ","LAFAYETTE CITY OF                       ",6,"LOUISIANA","LAFAYETTE",SPP,P2
+  1445,022055,30.2100,-92.0600,"RODEMACHER                              ","LAFAYETTE CITY OF                       ",6,"LOUISIANA","LAFAYETTE", ,P2
+  1447,022119,32.7200,-93.3400,"MINDEN                                  ","MINDEN CITY OF                          ",6,"LOUISIANA","WEBSTER",SPP,P2
+  1448,022073,32.0278,-92.1297,"MONROE                                  ","LOUISIANA POWER & LIGHT CO              ",6,"LOUISIANA","OUACHITA", ,P2
+  1449,022101,29.7200,-91.4400,"MORGAN CITY                             ","MORGAN CITY CITY OF                     ",6,"LOUISIANA","ST MARY",SPP,P2
+  1450,022069,31.7300,-93.0900,"NATCHITOCHES                            ","NATCHITOCHES CITY OF                    ",6,"LOUISIANA","NATCHITOCHES", ,P2
+  1454,022097,30.6000,-92.0100,"OPELOUSAS                               ","OPELOUSAS CITY OF                       ",6,"LOUISIANA","ST LANDRY", ,P2
+  1455,022047,30.2600,-91.3600,"PLAQUEMINE                              ","PLAQUEMINE CITY OF                      ",6,"LOUISIANA","IBERVILLE",SPP,P2
+  1458,022061,32.6100,-92.6600,"RUSTON                                  ","RUSTON CITY OF                          ",6,"LOUISIANA","LINCOLN",SPP,P2
+  1464,022077,32.6758,-91.3136,"BIG CAJUN 1                             ","CAJUN ELECTRIC POWER COOP INC           ",6,"LOUISIANA","POINTE COUPEE",SPP,P2
+  1470,023019,44.8208,-68.7228,"GRAHAM STATION                          ","BANGOR HYDRO-ELECTRIC CO                ",1,"MAINE","PENOBSCOT", ,P2
+  1496,023015,43.9911,-69.6708,"MASON STEAM                             ","CENTRAL MAINE POWER CO                  ",1,"MAINE","LINCOLN", ,P2
+  1507,023005,43.7508,-70.1567,"WILLIAM F WYMAN                         ","CENTRAL MAINE POWER CO                  ",1,"MAINE","CUMBERLAND",NPCC,P2
+  1513,023003,46.8503,-67.9967,"CARIBOU                                 ","MAINE PUBLIC SERVICE CO                 ",1,"MAINE","AROOSTOOK",NPCC,P2
+  1552,024005,39.3233,-76.3667,"C P CRANE                               ","BALTIMORE GAS & ELECTRIC CO             ",3,"MARYLAND","BALTIMORE",MAAC,P1
+  1553,024510,39.2667,-76.6167,"GOULD STREET                            ","BALTIMORE GAS & ELECTRIC CO             ",3,"MARYLAND","BALTIMORE CITY",MAAC,P2
+  1554,024003,39.1778,-76.5333,"HERBERT A WAGNER                        ","BALTIMORE GAS & ELECTRIC CO             ",3,"MARYLAND","ANNE ARUNDEL",MAAC,P2
+  1556,024025,39.5102,-76.3232,"PERRYMAN                                ","BALTIMORE GAS & ELECTRIC CO             ",3,"MARYLAND","HARFORD",MAAC,P2
+  1559,024005,39.2333,-76.5167,"RIVERSIDE                               ","BALTIMORE GAS & ELECTRIC CO             ",3,"MARYLAND","BALTIMORE",MAAC,P2
+  1560,024510,39.2667,-76.6333,"WESTPORT                                ","BALTIMORE GAS & ELECTRIC CO             ",3,"MARYLAND","BALTIMORE CITY",MAAC,P2
+  1564,024019,38.4833,-75.8167,"VIENNA                                  ","DELMARVA POWER & LIGHT CO               ",3,"MARYLAND","DORCHESTER",MAAC,P2
+  1570,024043,39.5833,-77.8167,"R P SMITH                               ","POTOMAC EDISON CO                       ",3,"MARYLAND","WASHINGTON",ECAR,P1.5
+  1571,024033,38.5639,-76.6806,"CHALK POINT                             ","POTOMAC ELECTRIC POWER CO               ",3,"MARYLAND","PRINCE GEORGES",MAAC,P1
+  1572,024031,38.2083,-77.4694,"DICKERSON                               ","POTOMAC ELECTRIC POWER CO               ",3,"MARYLAND","MONTGOMERY",MAAC,P2
+  1573,024017,38.3611,-76.9861,"MORGANTOWN                              ","POTOMAC ELECTRIC POWER CO               ",3,"MARYLAND","CHARLES",MAAC,P1
+  1580,024041,38.7583,-76.1431,"EASTON UTILITIES COM. PLANT NO. 1       ","EASTON UTILITIES COMM                   ",3,"MARYLAND","TALBOT",MAAC,P2
+  1581,024043,39.5216,-77.7372,"HAGERSTOWN                              ","HAGERSTOWN CITY OF                      ",3,"MARYLAND","WASHINGTON", ,P2
+  1588,025017,42.3908,-71.0675,"MYSTIC                                  ","BOSTON EDISON CO                        ",1,"MASSACHUSETTS","MIDDLESEX",NPCC,P2
+  1589,025025,42.3406,-71.0350,"NEW BOSTON                              ","BOSTON EDISON CO                        ",1,"MASSACHUSETTS","SUFFOLK",NPCC,P2
+  1594,025017,42.4466,-71.4601,"BLACKSTONE STREET                       ","CAMBRIDGE ELECTRIC LIGHT CO             ",1,"MASSACHUSETTS","MIDDLESEX",NPCC,P2
+  1595,025017,42.4874,-71.3929,"KENDALL SQUARE                          ","CAMBRIDGE ELECTRIC LIGHT CO             ",1,"MASSACHUSETTS","MIDDLESEX",NPCC,P2
+  1599,025001,41.7697,-70.5097,"CANAL                                   ","CANAL ELECTRIC CO                       ",1,"MASSACHUSETTS","BARNSTABLE",NPCC,P2
+  1606,025013,42.2806,-72.6056,"MOUNT TOM                               ","HOLYOKE WATER POWER CO                  ",1,"MASSACHUSETTS","HAMPDEN",NPCC,P1.5
+  1613,025005,41.7333,-71.1333,"SOMERSET                                ","MONTAUP ELECTRIC CO                     ",1,"MASSACHUSETTS","BRISTOL",NPCC,P2
+  1616,025005,41.6303,-70.9194,"CANNON STREET                           ","COMMONWEALTH ELECTRIC CO                ",1,"MASSACHUSETTS","BRISTOL", ,P2
+  1619,025005,41.7103,-71.1931,"BRAYTON POINT                           ","NEW ENGLAND POWER CO                    ",1,"MASSACHUSETTS","BRISTOL",NPCC,P2
+  1626,025009,42.5256,-70.8772,"SALEM HARBOR                            ","NEW ENGLAND POWER CO                    ",1,"MASSACHUSETTS","ESSEX",NPCC,P2
+  1642,025013,42.0944,-72.5975,"WEST SPRINGFIELD                        ","WESTERN MASSACHUSETTS ELEC CO           ",1,"MASSACHUSETTS","HAMPDEN",NPCC,P2
+  1678,025009,42.6466,-70.9259,"WATERS RIVER                            ","PEABODY CITY OF                         ",1,"MASSACHUSETTS","ESSEX",NPCC,P2
+  1682,025005,41.8653,-71.1064,"CLEARY FLOOD                            ","TAUNTON CITY OF                         ",1,"MASSACHUSETTS","BRISTOL",NPCC,P2
+  1695,026121,43.2631,-86.2406,"B C COBB                                ","CONSUMERS POWER CO                      ",5,"MICHIGAN","MUSKEGON",ECAR,P2
+  1702,026017,43.6450,-83.8414,"DAN E KARN                              ","CONSUMERS POWER CO                      ",5,"MICHIGAN","BAY",ECAR,P2
+  1710,026139,42.9103,-86.2031,"J H CAMPBELL                            ","CONSUMERS POWER CO                      ",5,"MICHIGAN","OTTAWA",ECAR,P1.5
+  1720,026017,43.6392,-83.8442,"J C WEADOCK                             ","CONSUMERS POWER CO                      ",5,"MICHIGAN","BAY",ECAR,P1.5
+  1723,026115,41.7914,-83.4486,"J R WHITING                             ","CONSUMERS POWER CO                      ",5,"MICHIGAN","MONROE",ECAR,P1.5
+  1724,026163,42.3000,-83.2800,"BEACON HEATING                          ","DETROIT EDISON CO                       ",5,"MICHIGAN","WAYNE",ECAR,P2
+  1726,026163,42.3592,-82.9597,"CONNERS CREEK                           ","DETROIT EDISON CO                       ",5,"MICHIGAN","WAYNE", ,P2
+  1728,026163,42.2931,-83.1008,"DELRAY                                  ","DETROIT EDISON CO                       ",5,"MICHIGAN","WAYNE", ,P2
+  1731,026063,43.8519,-82.6436,"HARBOR BEACH                            ","DETROIT EDISON CO                       ",5,"MICHIGAN","HURON",ECAR,P2
+  1732,026147,42.9253,-82.4606,"MARYSVILLE                              ","DETROIT EDISON CO                       ",5,"MICHIGAN","ST CLAIR",ECAR,P2
+  1733,026115,41.8911,-83.3444,"MONROE                                  ","DETROIT EDISON CO                       ",5,"MICHIGAN","MONROE",ECAR,P2
+  1736,026163,42.2399,-83.2111,"PENNSALT                                ","DETROIT EDISON CO                       ",5,"MICHIGAN","WAYNE", ,P2
+  1738,026147,42.8434,-82.7047,"PORT HURON                              ","DETROIT EDISON CO                       ",5,"MICHIGAN","ST CLAIR", ,P2
+  1740,026163,42.2739,-83.1119,"RIVER ROUGE                             ","DETROIT EDISON CO                       ",5,"MICHIGAN","WAYNE",ECAR,P2
+  1743,026147,42.7617,-82.4722,"ST CLAIR                                ","DETROIT EDISON CO                       ",5,"MICHIGAN","ST CLAIR",ECAR,P2
+  1745,026163,42.1225,-83.1811,"TRENTON CHANNEL                         ","DETROIT EDISON CO                       ",5,"MICHIGAN","WAYNE",ECAR,P2
+  1769,026103,46.5694,-87.3933,"PRESQUE ISLE                            ","WISCONSIN ELECTRIC POWER CO             ",5,"MICHIGAN","MARQUETTE",MAIN,P2
+  1771,026041,45.9300,-86.9400,"ESCANABA                                ","UPPER PENINSULA POWER CO                ",5,"MICHIGAN","DELTA", ,P2
+  1772,026013,46.6600,-88.3800,"JOHN H WARDEN                           ","UPPER PENINSULA POWER CO                ",5,"MICHIGAN","BARAGA", ,P2
+  1819,026023,41.9160,-85.0591,"COLDWATER                               ","COLDWATER BOARD OF PUBLIC UTIL          ",5,"MICHIGAN","BRANCH",ECAR,P2
+  1822,026163,42.3300,-83.0492,"MISTERSKY                               ","DETROIT CITY OF                         ",5,"MICHIGAN","WAYNE",ECAR,P2
+  1825,026139,42.9600,-85.9900,"J B SIMS                                ","GRAND HAVEN CITY OF                     ",5,"MICHIGAN","OTTAWA",ECAR,P2
+  1830,026139,42.9600,-85.9900,"JAMES DE YOUNG                          ","HOLLAND CITY OF                         ",5,"MICHIGAN","OTTAWA",ECAR,P2
+  1831,026065,42.7189,-84.5583,"ECKERT STATION                          ","LANSING BOARD OF WATER & LIGHT          ",5,"MICHIGAN","INGHAM",ECAR,P2
+  1832,026045,42.6919,-84.6572,"ERICKSON                                ","LANSING BOARD OF WATER & LIGHT          ",5,"MICHIGAN","EATON",ECAR,P2
+  1835,026065,42.6000,-84.3700,"OTTAWA STREET                           ","LANSING BOARD OF WATER & LIGHT          ",5,"MICHIGAN","INGHAM", ,P2
+  1843,026103,46.4300,-87.6500,"SHIRAS                                  ","MARQUETTE CITY OF                       ",5,"MICHIGAN","MARQUETTE",MAIN,P2
+  1859,026055,44.6700,-85.5600,"BAYSIDE                                 ","TRAVERSE CITY CITY OF                   ",5,"MICHIGAN","GRAND TRAVERSE",ECAR,P2
+  1866,026163,42.3000,-83.2800,"WYANDOTTE                               ","WYANDOTTE MUNICIPAL SERV COMM           ",5,"MICHIGAN","WAYNE",ECAR,P2
+  1869,026029,45.2300,-85.0300,"ADVANCE                                 ","WOLVERINE PWR SUPPLY COOP INC           ",5,"MICHIGAN","CHARLEVOIX",ECAR,P2
+  1870,026029,45.2409,-85.0607,"BEAVER ISLAND                           ","WOLVERINE PWR SUPPLY COOP INC           ",5,"MICHIGAN","CHARLEVOIX",ECAR,P2
+  1880,026005,42.5938,-85.9084,"CLAUDE VANDYKE                          ","WOLVERINE PWR SUPPLY COOP INC           ",5,"MICHIGAN","ALLEGAN",ECAR,P2
+  1888,027091,43.6725,-94.7069,"FOX LAKE                                ","INTERSTATE POWER CO                     ",5,"MINNESOTA","MARTIN",MAPP,P2
+  1891,027137,47.5300,-92.1617,"SYL LASKIN                              ","MINNESOTA POWER & LIGHT CO              ",5,"MINNESOTA","ST LOUIS",MAPP,P2
+  1893,027061,47.2611,-93.6572,"CLAY BOSWELL                            ","MINNESOTA POWER & LIGHT CO              ",5,"MINNESOTA","ITASCA",MAPP,P2
+  1897,027137,46.7356,-92.1444,"M L HIBBARD                             ","MINNESOTA POWER & LIGHT CO              ",5,"MINNESOTA","ST LOUIS", ,P2
+  1904,027037,44.8167,-93.2500,"BLACK DOG                               ","NORTHERN STATES POWER CO                ",5,"MINNESOTA","DAKOTA",MAPP,P2
+  1912,027123,44.9333,-93.1083,"HIGH BRIDGE                             ","NORTHERN STATES POWER CO                ",5,"MINNESOTA","RAMSEY",MAPP,"P1,P1.5"
+  1913,027037,44.6955,-93.0306,"INVER HILLS                             ","NORTHERN STATES POWER CO                ",5,"MINNESOTA","DAKOTA",MAPP,P2
+  1915,027163,45.0300,-92.7786,"ALLEN S KING                            ","NORTHERN STATES POWER CO                ",5,"MINNESOTA","WASHINGTON",MAPP,P2
+  1918,027173,44.8014,-95.5236,"MINNESOTA VALLEY                        ","NORTHERN STATES POWER CO                ",5,"MINNESOTA","CHIPPEWA",MAPP,P2
+  1926,027049,44.5592,-92.5164,"RED WING                                ","NORTHERN STATES POWER CO                ",5,"MINNESOTA","GOODHUE",MAPP,P2
+  1927,027053,45.0203,-93.2753,"RIVERSIDE                               ","NORTHERN STATES POWER CO                ",5,"MINNESOTA","HENNEPIN",MAPP,P2
+  1934,027013,44.1956,-94.0086,"WILMARTH                                ","NORTHERN STATES POWER CO                ",5,"MINNESOTA","BLUE EARTH",MAPP,P2
+  1943,027111,46.2900,-96.0428,"HOOT LAKE                               ","OTTER TAIL POWER CO                     ",5,"MINNESOTA","OTTER TAIL",MAPP,P2
+  1960,027099,43.7006,-92.9617,"AUSTIN DT                               ","AUSTIN CITY OF (MN)                     ",5,"MINNESOTA","MOWER", ,P2
+  1961,027099,43.7006,-92.9617,"NORTHEAST STATION                       ","AUSTIN CITY OF (MN)                     ",5,"MINNESOTA","MOWER",MAPP,P2
+  1967,027043,43.6739,-93.9480,"BLUE EARTH                              ","BLUE EARTH CITY OF                      ",5,"MINNESOTA","FARIBAULT",MAPP,P2
+  1969,027171,45.2002,-93.8884,"DELANO MUNICIPAL UTILITIES              ","DELANO CITY OF                          ",5,"MINNESOTA","WRIGHT",MAPP,P2
+  1973,027091,43.6578,-94.4647,"FAIRMONT                                ","FAIRMONT PUBLIC UTILITIES COMM          ",5,"MINNESOTA","MARTIN",MAPP,P2
+  1975,027085,44.8049,-94.2557,"GLENCOE                                 ","GLENCOE LIGHT & POWER COMM              ",5,"MINNESOTA","MCLEOD", ,
+  1979,027137,47.4297,-92.9336,"HIBBING                                 ","HIBBING PUBLIC UTILITIES COMM           ",5,"MINNESOTA","ST LOUIS",MAPP,P2
+  1982,027161,44.0222,-93.5870,"JANESVILLE MUNICIPAL                    ","JANESVILLE CITY OF                      ",5,"MINNESOTA","WASECA", ,
+  1983,027049,44.4545,-92.6420,"KENYON MUNICIPAL UTILITIES              ","KENYON MUNICIPAL UTILITIES              ",5,"MINNESOTA","GOODHUE", ,P2
+  1985,027013,44.0560,-94.0695,"LAKE CRYSTAL                            ","LAKE CRYSTAL CITY OF                    ",5,"MINNESOTA","BLUE EARTH", ,
+  1989,027093,45.1093,-94.5093,"LITCHFIELD                              ","LITCHFIELD PUBLIC UTILITY COMM          ",5,"MINNESOTA","MEEKER",MAPP,P2
+  1990,027133,43.6749,-96.2523,"LUVERNE                                 ","LUVERNE CITY OF                         ",5,"MINNESOTA","ROCK", ,P2
+  1995,027027,46.8692,-96.7786,"MOORHEAD                                ","MOORHEAD CITY OF                        ",5,"MINNESOTA","CLAY",MAPP,P2
+  2001,027015,44.3150,-94.4569,"NEW ULM                                 ","NEW ULM PUBLIC UTILITIES COMM           ",5,"MINNESOTA","BROWN",MAPP,P2
+  2003,027147,44.0947,-93.2275,"OWATONNA                                ","OWATONNA CITY OF                        ",5,"MINNESOTA","STEELE",MAPP,P2
+  2008,027109,44.0281,-92.4597,"SILVER LAKE                             ","ROCHESTER PUBLIC UTILITIES              ",5,"MINNESOTA","OLMSTED",MAPP,P2
+  2011,027015,44.3027,-94.7385,"SLEEPY EYE                              ","SLEEPY EYE PUBLIC UTILITY COMM          ",5,"MINNESOTA","BROWN",MAPP,P2
+  2012,027015,44.3027,-94.7385,"SPRINGFIELD                             ","SPRINGFIELD PUBLIC UTILS COMM           ",5,"MINNESOTA","BROWN", ,P2
+  2015,027091,43.6743,-94.5507,"TRUMAN                                  ","TRUMAN PUBLIC UTILITIES COMM            ",5,"MINNESOTA","MARTIN",MAPP,P2
+  2016,027075,47.5730,-91.4103,"TWO HARBORS                             ","TWO HARBORS CITY OF                     ",5,"MINNESOTA","LAKE", ,P2
+  2018,027137,47.5225,-92.5417,"VIRGINIA                                ","VIRGINIA CITY OF                        ",5,"MINNESOTA","ST LOUIS",MAPP,P2
+  2022,027067,45.1600,-95.0000,"WILLMAR                                 ","WILLMAR MUNICIPAL UTILS COMM            ",5,"MINNESOTA","KANDIYOHI",MAPP,P2
+  2039,027071,45.2961,-93.5586,"ELK RIVER                               ","UNITED POWER ASSN                       ",5,"MINNESOTA","SHERBURNE",MAPP,P2
+  2046,028035,31.1718,-89.2950,"EATON                                   ","MISSISSIPPI POWER CO                    ",4,"MISSISSIPPI","FORREST",SERC,P2
+  2047,028059,30.5274,-88.6393,"CHEVRON COGENERATING STATION            ","MISSISSIPPI POWER CO                    ",4,"MISSISSIPPI","JACKSON",SERC,P2
+  2048,028075,32.4011,-88.6519,"SWEATT                                  ","MISSISSIPPI POWER CO                    ",4,"MISSISSIPPI","LAUDERDALE",SERC,P2
+  2049,028047,30.4392,-89.0264,"JACK WATSON                             ","MISSISSIPPI POWER CO                    ",4,"MISSISSIPPI","HARRISON",SERC,P2
+  2050,028149,32.2831,-90.9306,"BAXTER WILSON                           ","MISSISSIPPI POWER & LIGHT CO            ",4,"MISSISSIPPI","WARREN",SPP,P2
+  2051,028001,33.7947,-90.7139,"DELTA                                   ","MISSISSIPPI POWER & LIGHT CO            ",4,"MISSISSIPPI","BOLIVAR",SPP,P2
+  2052,028001,31.4705,-91.4046,"NATCHEZ                                 ","MISSISSIPPI POWER & LIGHT CO            ",4,"MISSISSIPPI","ADAMS", ,P2
+  2053,028049,32.3564,-90.2125,"REX BROWN                               ","MISSISSIPPI POWER & LIGHT CO            ",4,"MISSISSIPPI","HINDS",SPP,P2
+  2059,028027,34.2545,-90.6745,"WILKINS                                 ","CLARKSDALE CITY OF                      ",4,"MISSISSIPPI","COAHOMA",SPP,P2
+  2060,028027,34.2545,-90.6745,"THIRD STREET                            ","CLARKSDALE CITY OF                      ",4,"MISSISSIPPI","COAHOMA", ,P2
+  2062,028083,33.5305,-90.2775,"HENDERSON                               ","GREENWOOD UTILITIES COMM                ",4,"MISSISSIPPI","LEFLORE",MAPP,P2
+  2063,028083,33.5305,-90.2775,"WRIGHT                                  ","GREENWOOD UTILITIES COMM                ",4,"MISSISSIPPI","LEFLORE",MAPP,P2
+  2067,028163,32.7588,-90.3630,"YAZOO                                   ","PUBLIC SERV COMM OF YAZOO CITY          ",4,"MISSISSIPPI","YAZOO", ,P2
+  2070,028067,31.5292,-89.3000,"MOSELLE                                 ","SOUTH MISSISSIPPI EL PWR ASSN           ",4,"MISSISSIPPI","JONES",SERC,P2
+  2073,029069,36.3135,-90.0252,"JIM HILL                                ","ARKANSAS POWER & LIGHT CO               ",7,"MISSOURI","DUNKLIN", ,P2
+  2076,029097,37.3458,-94.6000,"ASBURY                                  ","EMPIRE DISTRICT ELECTRIC CO             ",7,"MISSOURI","JASPER",SPP,P1
+  2078,029095,39.0342,-94.3563,"GRAND AVENUE                            ","KANSAS CITY POWER & LIGHT CO            ",7,"MISSOURI","JACKSON", ,P2
+  2079,029095,39.1306,-94.4778,"HAWTHORN                                ","KANSAS CITY POWER & LIGHT CO            ",7,"MISSOURI","JACKSON",SPP,P1.5
+  2080,029083,38.3033,-93.9364,"MONTROSE                                ","KANSAS CITY POWER & LIGHT CO            ",7,"MISSOURI","HENRY",SPP,P1
+  2094,029095,39.1775,-94.1833,"SIBLEY                                  ","UTILICORP UNITED INC                    ",7,"MISSOURI","JACKSON",SPP,"P1,P1.5"
+  2097,029021,39.6764,-94.8518,"EDMOND STREET                           ","ST JOSEPH LIGHT & POWER CO              ",7,"MISSOURI","BUCHANAN", ,P2
+  2098,029021,39.7250,-94.8778,"LAKE ROAD                               ","ST JOSEPH LIGHT & POWER CO              ",7,"MISSOURI","BUCHANAN",SPP,P2
+  2103,029071,38.5583,-90.8361,"LABADIE                                 ","UNION ELECTRIC CO                       ",7,"MISSOURI","FRANKLIN",MAIN,P1
+  2104,029189,38.3944,-90.3361,"MERAMEC                                 ","UNION ELECTRIC CO                       ",7,"MISSOURI","ST LOUIS",MAIN,P1.5
+  2107,029183,38.9158,-90.2917,"SIOUX                                   ","UNION ELECTRIC CO                       ",7,"MISSOURI","ST CHARLES",MAIN,P1
+  2118,029069,36.3135,-90.0252,"CAMPBELL MUNICIPAL UTILITIES            ","CAMPBELL CITY OF                        ",7,"MISSOURI","DUNKLIN", ,P2
+  2122,029117,39.8017,-93.5547,"CHILLICOTHE                             ","CHILLICOTHE MUNICIPAL UTILS             ",7,"MISSOURI","LIVINGSTON",MAIN,P2
+  2123,029019,38.9658,-92.3167,"COLUMBIA                                ","COLUMBIA CITY OF                        ",7,"MISSOURI","BOONE",MAIN,P2
+  2132,029095,39.0919,-94.3364,"BLUE VALLEY                             ","INDEPENDENCE CITY OF (MO)               ",7,"MISSOURI","JACKSON",SPP,P2
+  2142,029069,36.3135,-90.0252,"MALDEN MUNICIPAL POWER & LIGHT          ","MALDEN CITY OF                          ",7,"MISSOURI","DUNKLIN",SPP,P2
+  2144,029195,39.1244,-93.2014,"MARSHALL MUNICIPAL UTILITIES            ","MARSHALL CITY OF                        ",7,"MISSOURI","SALINE",SPP,P2
+  2157,029205,39.7794,-92.0697,"CITY OF SHELBINA                        ","SHELBINA CITY OF                        ",7,"MISSOURI","SHELBY", ,P2
+  2158,029201,37.0553,-89.5389,"E P COLEMAN                             ","SIKESTON CITY OF                        ",7,"MISSOURI","SCOTT",SPP,P2
+  2161,029077,37.1083,-93.2594,"JAMES RIVER                             ","SPRINGFIELD CITY OF (MO)                ",7,"MISSOURI","GREENE",SPP,"P1,P1.5"
+  2164,029171,40.4665,-93.0275,"UNIONVILLE POWER & LIGHT                ","UNIONVILLE CITY OF                      ",7,"MISSOURI","PUTNAM", ,P2
+  2165,029007,39.2036,-91.8614,"VANDALIA POWER PLANT                    ","VANDALIA CITY OF                        ",7,"MISSOURI","AUDRAIN",MAIN,P2
+  2167,029143,36.5150,-89.5614,"NEW MADRID                              ","ASSOCIATED ELECTRIC COOP INC            ",7,"MISSOURI","NEW MADRID",SPP,P1
+  2168,029175,39.5481,-92.6361,"THOMAS HILL                             ","ASSOCIATED ELECTRIC COOP INC            ",7,"MISSOURI","RANDOLPH",SPP,"P1,P1.5"
+  2169,029151,38.6722,-91.7711,"CHAMOIS                                 ","CENTRAL ELECTRIC POWER COOP             ",7,"MISSOURI","OSAGE",MAIN,P2
+  2171,029047,39.3200,-94.4200,"MISSOURI CITY                           ","INDEPENDENCE CITY OF (MO)               ",7,"MISSOURI","CLAY", ,P2
+  2176,030021,47.3245,-104.8727,"GLENDIVE                                ","MONTANA-DAKOTA UTILITIES CO             ",8,"MONTANA","DAWSON",MAPP,P2
+  2184,030111,45.9783,-108.1948,"FRANK BIRD                              ","MONTANA POWER CO                        ",8,"MONTANA","YELLOWSTONE", ,P2
+  2187,030111,45.7758,-108.4800,"J E CORETTE                             ","MONTANA POWER CO                        ",8,"MONTANA","YELLOWSTONE",WSCC,P2
+  2212,031013,42.2206,-103.0711,"ALLIANCE                                ","ALLIANCE CITY OF                        ",7,"NEBRASKA","BOX BUTTE", ,P2
+  2215,031127,40.4119,-95.8097,"AUBURN                                  ","AUBURN CITY OF                          ",7,"NEBRASKA","NEMAHA", ,P2
+  2226,031073,40.6500,-99.0667,"CANADAY                                 ","CENTRAL NEBRASKA PUB P&I DIST           ",7,"NEBRASKA","GOSPER", ,P2
+  2233,031023,41.2504,-97.1367,"DAVID CITY PLANT                        ","NEBRASKA PUBLIC POWER DISTRICT          ",7,"NEBRASKA","BUTLER",MAPP,P2
+  2236,031095,40.1759,-97.1424,"FAIRBURY                                ","FAIRBURY CITY OF                        ",7,"NEBRASKA","JEFFERSON",MAPP,P2
+  2240,031053,41.4500,-96.5167,"LON WRIGHT                              ","FREMONT CITY OF                         ",7,"NEBRASKA","DODGE",MAPP,P2
+  2241,031079,40.9192,-98.3256,"C W BURDICK                             ","GRAND ISLAND CITY OF                    ",7,"NEBRASKA","HALL",MAPP,P2
+  2244,031001,40.5246,-98.5010,"NORTH DENVER                            ","HASTINGS CITY OF                        ",7,"NEBRASKA","ADAMS",MAPP,P2
+  2249,031027,42.6088,-97.2503,"CITY OF LAUREL POWER PLANT              ","LAUREL CITY OF                          ",7,"NEBRASKA","CEDAR",MAPP,P2
+  2269,031153,41.1483,-95.8836,"HAROLD KRAMER                           ","NEBRASKA PUBLIC POWER DISTRICT          ",7,"NEBRASKA","SARPY", ,P2
+  2276,031157,41.8510,-103.7067,"BLUFFS                                  ","NEBRASKA PUBLIC POWER DISTRICT          ",7,"NEBRASKA","SCOTTS BLUFF", ,P2
+  2277,031109,40.5589,-96.7842,"SHELDON                                 ","NEBRASKA PUBLIC POWER DISTRICT          ",7,"NEBRASKA","LANCASTER",MAPP,P2
+  2290,031055,41.2918,-96.1729,"JONES STREET                            ","OMAHA PUBLIC POWER DISTRICT             ",7,"NEBRASKA","DOUGLAS",MAPP,P2
+  2291,031055,41.3300,-95.9467,"NORTH OMAHA                             ","OMAHA PUBLIC POWER DISTRICT             ",7,"NEBRASKA","DOUGLAS",MAPP,P2
+  2292,031153,41.0955,-96.0973,"SARPY COUNTY STATION                    ","OMAHA PUBLIC POWER DISTRICT             ",7,"NEBRASKA","SARPY",MAPP,P2
+  2301,031037,41.5606,-97.0795,"SCHUYLER PLANT                          ","NEBRASKA PUBLIC POWER DISTRICT          ",7,"NEBRASKA","COLFAX", ,P2
+  2312,031179,42.2212,-97.0951,"WAYNE                                   ","WAYNE CITY OF                           ",7,"NEBRASKA","WAYNE",MAPP,P2
+  2315,031151,40.5241,-97.1404,"WILBER                                  ","WILBER CITY OF                          ",7,"NEBRASKA","SALINE", ,P2
+  2322,032003,36.0872,-115.0467,"CLARK                                   ","NEVADA POWER CO                         ",9,"NEVADA","CLARK",WSCC,P2
+  2324,032003,36.6606,-114.6250,"REID GARDNER                            ","NEVADA POWER CO                         ",9,"NEVADA","CLARK",WSCC,P2
+  2326,032003,36.2200,-115.0200,"SUNRISE                                 ","NEVADA POWER CO                         ",9,"NEVADA","CLARK",WSCC,P2
+  2330,032019,39.1292,-119.1250,"FORT CHURCHILL                          ","SIERRA PACIFIC POWER CO                 ",9,"NEVADA","LYON",WSCC,P2
+  2336,032031,39.5625,-119.5250,"TRACY                                   ","SIERRA PACIFIC POWER CO                 ",9,"NEVADA","STOREY",WSCC,P2
+  2341,032003,35.1667,-114.6000,"MOHAVE                                  ","SOUTHERN CALIFORNIA EDISON CO           ",9,"NEVADA","CLARK",WSCC,P2
+  2364,033013,43.1417,-71.4708,"MERRIMACK                               ","PUBLIC SERVICE CO OF NH                 ",1,"NEW HAMPSHIRE","MERRIMACK",NPCC,P1
+  2367,033015,43.0978,-70.7853,"SCHILLER                                ","PUBLIC SERVICE CO OF NH                 ",1,"NEW HAMPSHIRE","ROCKINGHAM",NPCC,P2
+  2378,034009,39.2900,-74.6339,"B L ENGLAND                             ","ATLANTIC CITY ELECTRIC CO               ",2,"NEW JERSEY","CAPE MAY",MAAC,P1
+  2384,034033,39.6831,-75.5242,"DEEPWATER                               ","ATLANTIC CITY ELECTRIC CO               ",2,"NEW JERSEY","SALEM",MAAC,P2
+  2385,034023,40.4906,-74.2814,"WERNER                                  ","JERSEY CENTRAL POWER&LIGHT CO           ",2,"NEW JERSEY","MIDDLESEX",MAAC,
+  2390,034023,40.4833,-74.3500,"SAYREVILLE                              ","JERSEY CENTRAL POWER&LIGHT CO           ",2,"NEW JERSEY","MIDDLESEX",MAAC,P2
+  2393,034019,40.5500,-75.1500,"GILBERT                                 ","JERSEY CENTRAL POWER&LIGHT CO           ",2,"NEW JERSEY","HUNTERDON",MAAC,P2
+  2398,034003,40.8417,-74.0250,"BERGEN                                  ","PUBLIC SERVICE ELECTRIC&GAS CO          ",2,"NEW JERSEY","BERGEN",MAAC,P2
+  2399,034005,40.0833,-74.8833,"BURLINGTON                              ","PUBLIC SERVICE ELECTRIC&GAS CO          ",2,"NEW JERSEY","BURLINGTON",MAAC,P2
+  2403,034017,40.7500,-74.0750,"HUDSON                                  ","PUBLIC SERVICE ELECTRIC&GAS CO          ",2,"NEW JERSEY","HUDSON",MAAC,P2
+  2404,034017,40.7333,-74.1000,"KEARNY                                  ","PUBLIC SERVICE ELECTRIC&GAS CO          ",2,"NEW JERSEY","HUDSON",MAAC,P2
+  2406,034039,40.6167,-74.2000,"LINDEN                                  ","PUBLIC SERVICE ELECTRIC&GAS CO          ",2,"NEW JERSEY","UNION",MAAC,P2
+  2408,034021,40.1750,-74.7333,"MERCER                                  ","PUBLIC SERVICE ELECTRIC&GAS CO          ",2,"NEW JERSEY","MERCER",MAAC,P2
+  2411,034023,40.5333,-74.2500,"SEWAREN                                 ","PUBLIC SERVICE ELECTRIC&GAS CO          ",2,"NEW JERSEY","MIDDLESEX",MAAC,P2
+  2434,034011,39.4883,-75.0347,"HOWARD DOWN                             ","VINELAND CITY OF                        ",2,"NEW JERSEY","CUMBERLAND",MAAC,
+  2442,035045,36.6906,-108.4822,"FOUR CORNERS                            ","ARIZONA PUBLIC SERVICE CO               ",6,"NEW MEXICO","SAN JUAN",WSCC,P2
+  2443,035023,32.0549,-108.6283,"LORDSBURG                               ","TEXAS-NEW MEXICO POWER CO               ",6,"NEW MEXICO","HIDALGO", ,P2
+  2444,035013,31.8050,-106.5475,"RIO GRANDE                              ","EL PASO ELECTRIC CO                     ",6,"NEW MEXICO","DONA ANA",WSCC,P2
+  2446,035025,32.7131,-103.3017,"MADDOX                                  ","SOUTHWESTERN PUBLIC SERVICE CO          ",6,"NEW MEXICO","LEA",SPP,P2
+  2448,035001,35.0442,-106.6727,"PERSON                                  ","PUBLIC SERVICE CO OF NM                 ",6,"NEW MEXICO","BERNALILLO", ,P2
+  2450,035001,36.3333,-106.5000,"REEVES                                  ","PUBLIC SERVICE CO OF NM                 ",6,"NEW MEXICO","BERNALILLO",WSCC,P2
+  2451,035045,36.8833,-108.4833,"SAN JUAN                                ","PUBLIC SERVICE CO OF NM                 ",6,"NEW MEXICO","SAN JUAN",WSCC,P2
+  2452,035049,35.5212,-105.9815,"SANTA FE                                ","PUBLIC SERVICE CO OF NM                 ",6,"NEW MEXICO","SANTA FE", ,P2
+  2454,035000,32.7131,-103.3533,"CUNNINGHAM                              ","SOUTHWESTERN PUBLIC SERVICE CO          ",6,"NEW MEXICO","LEA",SPP,P2
+  2465,035045,36.5100,-108.3300,"ANIMAS POWER PLANT                      ","FARMINGTON CITY OF                      ",6,"NEW MEXICO","SAN JUAN",WSCC,P2
+  2468,035007,36.6000,-104.6500,"RATON                                   ","RATON PUBLIC SERVICE CO                 ",6,"NEW MEXICO","COLFAX",WSCC,P2
+  2473,035025,32.7853,-103.4330,"NORTH LOVINGTON                         ","LEA COUNTY ELECTRIC COOP INC            ",6,"NEW MEXICO","LEA", ,P2
+  2475,035043,35.7173,-106.9351,"ALGODONES                               ","PLAINS ELEC GEN&TRANS COOP INC          ",6,"NEW MEXICO","SANDOVAL", ,P2
+  2480,036071,41.5719,-73.9664,"DANSKAMMER                              ","CENTRAL HUDSON GAS & ELEC CORP          ",2,"NEW YORK","ORANGE",NPCC,P2
+  2490,036085,40.5911,-74.2003,"ARTHUR KILL                             ","CONSOLIDATED EDISON CO-NY INC           ",2,"NEW YORK","RICHMOND",NPCC,P2
+  2491,036081,40.7889,-73.9083,"CHARLES POLETTI                         ","POWER AUTHORITY OF STATE OF NY          ",2,"NEW YORK","QUEENS",NPCC,P2
+  2493,036061,40.7281,-73.9742,"EAST RIVER                              ","CONSOLIDATED EDISON CO-NY INC           ",2,"NEW YORK","NEW YORK",NPCC,P2
+  2496,036047,40.7039,-73.9814,"HUDSON AVENUE                           ","CONSOLIDATED EDISON CO-NY INC           ",2,"NEW YORK","KINGS",NPCC,
+  2500,036081,40.7589,-73.9472,"RAVENSWOOD                              ","CONSOLIDATED EDISON CO-NY INC           ",2,"NEW YORK","QUEENS",NPCC,P2
+  2502,036061,40.7469,-73.9711,"WATERSIDE                               ","CONSOLIDATED EDISON CO-NY INC           ",2,"NEW YORK","NEW YORK",NPCC,P2
+  2503,036061,40.7719,-73.9936,"59TH STREET                             ","CONSOLIDATED EDISON CO-NY INC           ",2,"NEW YORK","NEW YORK", ,
+  2504,036061,40.7681,-73.9519,"74TH STREET                             ","CONSOLIDATED EDISON CO-NY INC           ",2,"NEW YORK","NEW YORK", ,P2
+  2510,036119,41.1212,-73.7326,"BRONXVILLE                              ","LAWRENCE PARK HEAT LGT&PWR CO           ",2,"NEW YORK","WESTCHESTER", ,P2
+  2511,036059,40.6167,-73.6500,"E F BARRETT                             ","LONG ISLAND LIGHTING CO                 ",2,"NEW YORK","NASSAU",NPCC,P2
+  2513,036081,40.6167,-73.7667,"FAR ROCKAWAY                            ","LONG ISLAND LIGHTING CO                 ",2,"NEW YORK","QUEENS",NPCC,P2
+  2514,036059,40.8333,-73.6500,"GLENWOOD                                ","LONG ISLAND LIGHTING CO                 ",2,"NEW YORK","NASSAU",NPCC,P2
+  2516,036103,40.9333,-73.3500,"NORTHPORT                               ","LONG ISLAND LIGHTING CO                 ",2,"NEW YORK","SUFFOLK",NPCC,"P1,P1.5"
+  2517,036103,40.9500,-73.0833,"PORT JEFFERSON                          ","LONG ISLAND LIGHTING CO                 ",2,"NEW YORK","SUFFOLK",NPCC,P1
+  2526,036007,42.1117,-75.9747,"GOUDEY                                  ","NEW YORK STATE ELEC & GAS CORP          ",2,"NEW YORK","BROOME",NPCC,P2
+  2527,036123,42.6789,-76.9483,"GREENIDGE                               ","NEW YORK STATE ELEC & GAS CORP          ",2,"NEW YORK","YATES",NPCC,P2
+  2529,036101,42.1225,-76.9825,"HICKLING                                ","NEW YORK STATE ELEC & GAS CORP          ",2,"NEW YORK","STEUBEN",NPCC,P2
+  2531,036017,42.2600,-75.4872,"JENNISON                                ","NEW YORK STATE ELEC & GAS CORP          ",2,"NEW YORK","CHENANGO",NPCC,P2
+  2535,036109,42.6014,-76.6356,"MILLIKEN                                ","NEW YORK STATE ELEC & GAS CORP          ",2,"NEW YORK","TOMPKINS",NPCC,P1
+  2539,036001,43.5950,-73.7636,"ALBANY                                  ","NIAGARA MOHAWK POWER CORP               ",2,"NEW YORK","ALBANY",NPCC,P2
+  2549,036029,42.9667,-78.9167,"C R HUNTLEY                             ","NIAGARA MOHAWK POWER CORP               ",2,"NEW YORK","ERIE",NPCC,P2
+  2554,036013,42.4919,-79.3469,"DUNKIRK                                 ","NIAGARA MOHAWK POWER CORP               ",2,"NEW YORK","CHAUTAUQUA",NPCC,P2
+  2594,036075,43.4586,-76.5319,"OSWEGO                                  ","NIAGARA MOHAWK POWER CORP               ",2,"NEW YORK","OSWEGO",NPCC,P2
+  2625,036087,41.2050,-73.9661,"BOWLINE POINT                           ","ORANGE & ROCKLAND UTILS INC             ",2,"NEW YORK","ROCKLAND",NPCC,P2
+  2629,036087,41.2581,-73.9792,"LOVETT                                  ","ORANGE & ROCKLAND UTILS INC             ",2,"NEW YORK","ROCKLAND",NPCC,P2
+  2640,036055,43.1617,-77.6186,"ROCHESTER 3                             ","ROCHESTER GAS & ELECTRIC CORP           ",2,"NEW YORK","MONROE",NPCC,P2
+  2642,036055,43.2694,-77.6308,"ROCHESTER 7, RUSSELL STATION            ","ROCHESTER GAS & ELECTRIC CORP           ",2,"NEW YORK","MONROE",NPCC,P2
+  2682,036013,42.1000,-79.2469,"S A CARLSON                             ","JAMESTOWN CITY OF                       ",2,"NEW YORK","CHAUTAUQUA",NPCC,P2
+  2706,037021,35.4714,-82.5431,"ASHEVILLE                               ","CAROLINA POWER & LIGHT CO               ",4,"NORTH CAROLINA","BUNCOMBE",SERC,P2
+  2708,037037,35.5989,-79.0492,"CAPE FEAR                               ","CAROLINA POWER & LIGHT CO               ",4,"NORTH CAROLINA","CHATHAM",SERC,P2
+  2709,037191,35.3778,-78.1000,"LEE                                     ","CAROLINA POWER & LIGHT CO               ",4,"NORTH CAROLINA","WAYNE",SERC,P2
+  2712,037145,36.4831,-79.0711,"ROXBORO                                 ","CAROLINA POWER & LIGHT CO               ",4,"NORTH CAROLINA","PERSON",SERC,P2
+  2713,037129,34.2831,-77.9867,"L V SUTTON                              ","CAROLINA POWER & LIGHT CO               ",4,"NORTH CAROLINA","NEW HANOVER",SERC,P2
+  2716,037155,34.5889,-78.9750,"W H WEATHERSPOON                        ","CAROLINA POWER & LIGHT CO               ",4,"NORTH CAROLINA","ROBESON",SERC,P2
+  2718,037071,35.1897,-81.0122,"G G ALLEN                               ","DUKE POWER CO                           ",4,"NORTH CAROLINA","GASTON",SERC,P2
+  2720,037159,35.7133,-80.3767,"BUCK                                    ","DUKE POWER CO                           ",4,"NORTH CAROLINA","ROWAN",SERC,P2
+  2721,037045,35.2200,-81.7594,"CLIFFSIDE                               ","DUKE POWER CO                           ",4,"NORTH CAROLINA","CLEVELAND",SERC,P2
+  2723,037157,36.4861,-79.7244,"DAN RIVER                               ","DUKE POWER CO                           ",4,"NORTH CAROLINA","ROCKINGHAM",SERC,P2
+  2727,037035,35.5975,-80.9658,"MARSHALL                                ","DUKE POWER CO                           ",4,"NORTH CAROLINA","CATAWBA",SERC,P2
+  2732,037071,35.3600,-80.9742,"RIVERBEND                               ","DUKE POWER CO                           ",4,"NORTH CAROLINA","GASTON",SERC,P2
+  2783,028087,35.7123,-75.7476,"CALEDONIA POWER I, L                    ","NORTH CAROLINA EL MEMBER CORP           ",4,"MISSISSIPPI","LOWNDES", ,
+  2788,038057,47.2779,-101.7310,"BEULAH                                  ","MONTANA-DAKOTA UTILITIES CO             ",8,"NORTH DAKOTA","MERCER", ,P2
+  2790,038059,46.8669,-100.8839,"R M HESKETT                             ","MONTANA-DAKOTA UTILITIES CO             ",8,"NORTH DAKOTA","MORTON",MAPP,P2
+  2791,038105,48.2960,-103.4373,"WILLISTON                               ","MONTANA-DAKOTA UTILITIES CO             ",8,"NORTH DAKOTA","WILLIAMS",MAPP,P2
+  2817,038057,47.2833,-101.4000,"LELAND OLDS                             ","BASIN ELECTRIC POWER COOP               ",8,"NORTH DAKOTA","MERCER",MAPP,P2
+  2818,038049,48.2400,-100.6284,"WILLIAM J NEAL                          ","BASIN ELECTRIC POWER COOP               ",8,"NORTH DAKOTA","MCHENRY", ,P2
+  2820,038035,47.9334,-97.3946,"G F WOOD                                ","MINNKOTA POWER COOP INC                 ",8,"NORTH DAKOTA","GRAND FORKS", ,P2
+  2823,038065,47.0664,-101.2139,"MILTON R YOUNG                          ","MINNKOTA POWER COOP INC                 ",8,"NORTH DAKOTA","OLIVER",MAPP,P2
+  2824,038057,47.2867,-101.3317,"STANTON                                 ","UNITED POWER ASSN                       ",8,"NORTH DAKOTA","MERCER",MAPP,P2
+  2828,039081,40.2522,-80.6486,"CARDINAL                                ","CARDINAL OPERATING COMPANY              ",5,"OHIO","JEFFERSON",ECAR,P1
+  2830,039025,38.9917,-84.2972,"WALTER C BECKJORD                       ","CINCINNATI GAS & ELECTRIC CO            ",5,"OHIO","CLERMONT",ECAR,P1
+  2832,039061,39.1111,-84.8042,"MIAMI FORT                              ","CINCINNATI GAS & ELECTRIC CO            ",5,"OHIO","HAMILTON",ECAR,P2
+  2835,039007,41.9125,-80.7583,"ASHTABULA                               ","CLEVELAND ELECTRIC ILLUM CO             ",5,"OHIO","ASHTABULA",ECAR,P1
+  2836,039093,41.5042,-82.0500,"AVON LAKE                               ","CLEVELAND ELECTRIC ILLUM CO             ",5,"OHIO","LORAIN",ECAR,"P1,P1.5"
+  2837,039085,41.6708,-81.4792,"EASTLAKE                                ","CLEVELAND ELECTRIC ILLUM CO             ",5,"OHIO","LAKE",ECAR,P1
+  2838,039035,41.5333,-81.6375,"LAKE SHORE                              ","CLEVELAND ELECTRIC ILLUM CO             ",5,"OHIO","CUYAHOGA",ECAR,P1.5
+  2840,039031,40.1842,-81.8811,"CONESVILLE                              ","COLUMBUS SOUTHERN POWER CO              ",5,"OHIO","COSHOCTON",ECAR,P2
+  2843,039129,39.7933,-83.0097,"PICWAY                                  ","COLUMBUS SOUTHERN POWER CO              ",5,"OHIO","PICKAWAY",ECAR,P1
+  2844,039009,39.3814,-82.1797,"POSTON                                  ","COLUMBUS SOUTHERN POWER CO              ",5,"OHIO","ATHENS", ,P1.5
+  2847,039115,39.7505,-84.2684,"FRANK M TAIT                            ","DAYTON POWER & LIGHT CO                 ",5,"OHIO","MONTGOMERY",ECAR,P2
+  2848,039113,39.6000,-84.2833,"O H HUTCHINGS                           ","DAYTON POWER & LIGHT CO                 ",5,"OHIO","MONTGOMERY",ECAR,P2
+  2850,039001,38.6364,-83.7422,"J M STUART                              ","DAYTON POWER & LIGHT CO                 ",5,"OHIO","ADAMS",ECAR,P1.5
+  2857,039093,41.4692,-82.1864,"EDGEWATER                               ","OHIO EDISON CO                          ",5,"OHIO","LORAIN",ECAR,P1
+  2858,039153,41.1197,-81.4906,"GORGE                                   ","OHIO EDISON CO                          ",5,"OHIO","SUMMIT", ,P1.5
+  2860,039023,39.9038,-83.7831,"MAD RIVER                               ","OHIO EDISON CO                          ",5,"OHIO","CLARK",ECAR,P2
+  2861,039155,40.1667,-80.7472,"NILES                                   ","OHIO EDISON CO                          ",5,"OHIO","MAHONING",ECAR,P1
+  2864,039013,39.9092,-80.7606,"R E BURGER                              ","OHIO EDISON CO                          ",5,"OHIO","BELMONT",ECAR,"P1,P1.5"
+  2866,039081,40.5328,-80.6331,"W H SAMMIS                              ","OHIO EDISON CO                          ",5,"OHIO","JEFFERSON",ECAR,P2
+  2867,039081,40.4856,-80.6050,"TORONTO                                 ","OHIO EDISON CO                          ",5,"OHIO","JEFFERSON", ,P1.5
+  2872,039167,39.5908,-81.6797,"MUSKINGUM RIVER                         ","OHIO POWER CO                           ",5,"OHIO","MORGAN",ECAR,P1
+  2876,039053,38.9161,-82.1281,"KYGER CREEK                             ","OHIO VALLEY ELECTRIC CORP               ",5,"OHIO","GALLIA",ECAR,P1
+  2877,039095,41.6550,-83.5158,"ACME                                    ","TOLEDO EDISON CO                        ",5,"OHIO","LUCAS", ,P1.5
+  2878,039095,41.6925,-83.4375,"BAY SHORE                               ","TOLEDO EDISON CO                        ",5,"OHIO","LUCAS",ECAR,P1.5
+  2908,039035,41.4532,-81.6728,"LAKE ROAD                               ","CLEVELAND CITY OF                       ",5,"OHIO","CUYAHOGA", ,P2
+  2910,039049,39.9690,-83.0098,"COLUMBUS                                ","COLUMBUS CITY OF                        ",5,"OHIO","FRANKLIN", ,P2
+  2914,039157,40.5164,-81.4672,"DOVER                                   ","DOVER CITY OF (OH)                      ",5,"OHIO","TUSCARAWAS",ECAR,P2
+  2917,039017,39.4108,-84.5578,"HAMILTON                                ","HAMILTON CITY OF                        ",5,"OHIO","BUTLER",ECAR,P2
+  2933,039093,41.2888,-82.1129,"OBERLIN MUNICIPAL LIGHT & POWER SYS     ","OBERLIN CITY OF                         ",5,"OHIO","LORAIN",ECAR,P2
+  2935,039169,40.8481,-81.7639,"ORRVILLE                                ","ORRVILLE CITY OF                        ",5,"OHIO","WAYNE",ECAR,P2
+  2936,039085,41.7239,-81.2522,"PAINESVILLE                             ","PAINESVILLE CITY OF                     ",5,"OHIO","LAKE",ECAR,P2
+  2937,039109,40.1328,-84.2347,"PIQUA                                   ","PIQUA CITY OF                           ",5,"OHIO","MIAMI",ECAR,P2
+  2942,039011,40.5417,-84.3892,"ST MARYS                                ","ST MARYS CITY OF                        ",5,"OHIO","AUGLAIZE",ECAR,P2
+  2943,039139,40.8836,-82.6567,"SHELBY MUNIC LGT PLT                    ","SHELBY CITY OF                          ",5,"OHIO","RICHLAND",ECAR,P2
+  2947,040099,34.4847,-97.0895,"ARBUCKLE                                ","OKLAHOMA GAS & ELECTRIC CO              ",6,"OKLAHOMA","MURRAY", ,P2
+  2951,040109,35.5089,-97.1875,"HORSESHOE LAKE                          ","OKLAHOMA GAS & ELECTRIC CO              ",6,"OKLAHOMA","OKLAHOMA",SPP,P2
+  2952,040101,35.7653,-95.2883,"MUSKOGEE                                ","OKLAHOMA GAS & ELECTRIC CO              ",6,"OKLAHOMA","MUSKOGEE",SPP,P2
+  2953,040017,35.4814,-97.6750,"MUSTANG                                 ","OKLAHOMA GAS & ELECTRIC CO              ",6,"OKLAHOMA","CANADIAN",SPP,P2
+  2956,040133,34.9664,-96.7258,"SEMINOLE                                ","OKLAHOMA GAS & ELECTRIC CO              ",6,"OKLAHOMA","SEMINOLE",SPP,P2
+  2963,040131,36.4222,-95.7047,"NORTHEASTERN                            ","PUBLIC SERVICE CO OF OKLAHOMA           ",6,"OKLAHOMA","ROGERS",SPP,P2
+  2964,040015,35.1014,-98.3531,"SOUTHWESTERN                            ","PUBLIC SERVICE CO OF OKLAHOMA           ",6,"OKLAHOMA","CADDO",SPP,P2
+  2965,040143,36.1014,-95.9892,"TULSA                                   ","PUBLIC SERVICE CO OF OKLAHOMA           ",6,"OKLAHOMA","TULSA",SPP,P2
+  3000,040119,36.0940,-96.9874,"BOOMER LAKE                             ","STILLWATER UTILITIES AUTHORITY          ",6,"OKLAHOMA","PAYNE",SPP,P2
+  3006,040015,35.0844,-98.2256,"ANADARKO                                ","WESTERN FARMERS ELEC COOP INC           ",6,"OKLAHOMA","CADDO",SPP,P2
+  3008,040153,36.4375,-99.2208,"MOORELAND                               ","WESTERN FARMERS ELEC COOP INC           ",6,"OKLAHOMA","WOODWARD",SPP,P2
+  3098,042125,40.2500,-79.9167,"ELRAMA                                  ","DUQUESNE LIGHT CO                       ",3,"PENNSYLVANIA","WASHINGTON",ECAR,P2
+  3099,042003,40.5692,-80.2333,"F R PHILLIPS                            ","DUQUESNE LIGHT CO                       ",3,"PENNSYLVANIA","ALLEGHENY", ,P2
+  3113,042095,40.7550,-75.0839,"PORTLAND                                ","METROPOLITAN EDISON CO                  ",3,"PENNSYLVANIA","NORTHAMPTON",MAAC,P2
+  3115,042011,40.3047,-75.9072,"TITUS                                   ","METROPOLITAN EDISON CO                  ",3,"PENNSYLVANIA","BERKS",MAAC,P2
+  3118,042063,40.3842,-79.0611,"CONEMAUGH                               ","PENNSYLVANIA ELECTRIC CO                ",3,"PENNSYLVANIA","INDIANA",MAAC,P1
+  3121,042049,42.1358,-80.0889,"FRONT STREET                            ","PENNSYLVANIA ELECTRIC CO                ",3,"PENNSYLVANIA","ERIE", ,P2
+  3122,042063,40.5142,-79.1969,"HOMER CITY                              ","PENNSYLVANIA ELECTRIC CO                ",3,"PENNSYLVANIA","INDIANA",MAAC,P2
+  3130,042063,40.4069,-79.0333,"SEWARD                                  ","PENNSYLVANIA ELECTRIC CO                ",3,"PENNSYLVANIA","INDIANA",MAAC,P2
+  3131,042033,41.0681,-78.3661,"SHAWVILLE                               ","PENNSYLVANIA ELECTRIC CO                ",3,"PENNSYLVANIA","CLEARFIELD",MAAC,P1
+  3132,042123,41.8358,-79.1900,"WARREN                                  ","PENNSYLVANIA ELECTRIC CO                ",3,"PENNSYLVANIA","WARREN",MAAC,P2
+  3135,042013,40.4680,-78.2067,"WILLIAMSBURG                            ","PENNSYLVANIA ELECTRIC CO                ",3,"PENNSYLVANIA","BLAIR", ,P2
+  3136,042005,40.6522,-79.3425,"KEYSTONE                                ","PENNSYLVANIA ELECTRIC CO                ",3,"PENNSYLVANIA","ARMSTRONG",MAAC,P2
+  3138,042073,40.9383,-80.3683,"NEW CASTLE                              ","PENNSYLVANIA POWER CO                   ",3,"PENNSYLVANIA","LAWRENCE",ECAR,P2
+  3140,042133,40.1333,-76.7167,"BRUNNER ISLAND                          ","PENNSYLVANIA POWER & LIGHT CO           ",3,"PENNSYLVANIA","YORK",MAAC,P1
+  3145,042071,39.8260,-76.3308,"HOLTWOOD                                ","PENNSYLVANIA POWER & LIGHT CO           ",3,"PENNSYLVANIA","LANCASTER",MAAC,P2
+  3148,042095,40.7500,-75.2000,"MARTINS CREEK                           ","PENNSYLVANIA POWER & LIGHT CO           ",3,"PENNSYLVANIA","NORTHAMPTON",MAAC,P1
+  3149,042093,41.0700,-76.6664,"MONTOUR                                 ","PENNSYLVANIA POWER & LIGHT CO           ",3,"PENNSYLVANIA","MONTOUR",MAAC,P2
+  3152,042109,40.8667,-76.8000,"SUNBURY                                 ","PENNSYLVANIA POWER & LIGHT CO           ",3,"PENNSYLVANIA","SNYDER",MAAC,P1
+  3159,042029,40.1522,-75.5406,"CROMBY                                  ","PHILADELPHIA ELECTRIC CO                ",3,"PENNSYLVANIA","CHESTER",MAAC,P2
+  3160,042101,39.9675,-75.1361,"DELAWARE                                ","PHILADELPHIA ELECTRIC CO                ",3,"PENNSYLVANIA","PHILADELPHIA",MAAC,P2
+  3161,042045,39.8586,-75.3231,"EDDYSTONE                               ","PHILADELPHIA ELECTRIC CO                ",3,"PENNSYLVANIA","DELAWARE",MAAC,P2
+  3168,042101,40.0018,-75.1281,"RICHMOND                                ","PHILADELPHIA ELECTRIC CO                ",3,"PENNSYLVANIA","PHILADELPHIA",MAAC,P2
+  3169,042101,39.9419,-75.1889,"SCHUYLKILL                              ","PHILADELPHIA ELECTRIC CO                ",3,"PENNSYLVANIA","PHILADELPHIA",MAAC,P2
+  3170,042101,40.0018,-75.1281,"SOUTHWARK                               ","PHILADELPHIA ELECTRIC CO                ",3,"PENNSYLVANIA","PHILADELPHIA",MAAC,P2
+  3176,042079,41.2010,-76.0719,"HUNLOCK POWER                           ","UGI CORP                                ",3,"PENNSYLVANIA","LUZERNE",MAAC,P2
+  3178,042005,40.9292,-79.4669,"ARMSTRONG                               ","WEST PENN POWER CO                      ",3,"PENNSYLVANIA","ARMSTRONG",ECAR,P1
+  3179,042059,39.8500,-79.9167,"HATFIELD'S FERRY                        ","WEST PENN POWER CO                      ",3,"PENNSYLVANIA","GREENE",ECAR,P1
+  3181,042125,40.2167,-79.9667,"MITCHELL                                ","WEST PENN POWER CO                      ",3,"PENNSYLVANIA","WASHINGTON",ECAR,P2
+  3182,042003,40.4358,-80.0271,"SPRINGDALE                              ","WEST PENN POWER CO                      ",3,"PENNSYLVANIA","ALLEGHENY", ,P2
+  3236,044007,41.8153,-71.4056,"MANCHESTER STREET                       ","NEW ENGLAND POWER CO                    ",1,"RHODE ISLAND","PROVIDENCE",NPCC,P2
+  3238,044007,41.8250,-71.4069,"SOUTH STREET                            ","NEW ENGLAND POWER CO                    ",1,"RHODE ISLAND","PROVIDENCE", ,P2
+  3250,045031,34.3089,-79.9736,"DARLINGTON COUNTY                       ","CAROLINA POWER & LIGHT CO               ",4,"SOUTH CAROLINA","DARLINGTON",SERC,P2
+  3251,045031,34.4000,-80.1667,"H B ROBINSON                            ","CAROLINA POWER & LIGHT CO               ",4,"SOUTH CAROLINA","DARLINGTON",SERC,P2
+  3264,045007,34.6022,-82.4350,"W S LEE                                 ","DUKE POWER CO                           ",4,"SOUTH CAROLINA","ANDERSON",SERC,P2
+  3280,045029,33.0647,-80.6228,"CANADYS STEAM                           ","SOUTH CAROLINA ELECTRIC&GAS CO          ",4,"SOUTH CAROLINA","COLLETON",SERC,P2
+  3285,045019,32.8269,-79.9639,"HAGOOD                                  ","SOUTH CAROLINA ELECTRIC&GAS CO          ",4,"SOUTH CAROLINA","CHARLESTON",SERC,P2
+  3287,045063,34.0556,-81.2172,"MCMEEKIN                                ","SOUTH CAROLINA ELECTRIC&GAS CO          ",4,"SOUTH CAROLINA","LEXINGTON",SERC,P2
+  3295,045003,33.4339,-81.9114,"URQUHART                                ","SOUTH CAROLINA ELECTRIC&GAS CO          ",4,"SOUTH CAROLINA","AIKEN",SERC,P2
+  3297,045079,33.8264,-80.6228,"WATEREE                                 ","SOUTH CAROLINA ELECTRIC&GAS CO          ",4,"SOUTH CAROLINA","RICHLAND",SERC,P2
+  3298,045015,33.0158,-79.9297,"WILLIAMS                                ","SOUTH CAROLINA GENERTG CO INC           ",4,"SOUTH CAROLINA","BERKELEY",SERC,P2
+  3317,045051,33.8253,-79.0528,"DOLPHUS M GRAINGER                      ","SOUTH CAROLINA PUB SERV AUTH            ",4,"SOUTH CAROLINA","HORRY",SERC,P2
+  3319,045015,33.2422,-79.9875,"JEFFERIES                               ","SOUTH CAROLINA PUB SERV AUTH            ",4,"SOUTH CAROLINA","BERKELEY",SERC,P2
+  3325,046103,44.0872,-103.2614,"BEN FRENCH                              ","BLACK HILLS CORP                        ",8,"SOUTH DAKOTA","PENNINGTON",WSCC,P2
+  3328,046081,44.3483,-103.7606,"KIRK                                    ","BLACK HILLS CORP                        ",8,"SOUTH DAKOTA","LAWRENCE", ,P2
+  3334,046099,43.6700,-96.7700,"PATHFINDER                              ","NORTHERN STATES POWER CO                ",8,"SOUTH DAKOTA","MINNEHAHA", ,P2
+  3344,046005,44.4146,-98.2791,"HURON                                   ","NORTHWESTERN PUBLIC SERVICE CO          ",8,"SOUTH DAKOTA","BEADLE",MAPP,P2
+  3346,046005,44.4146,-98.2791,"MOBILE                                  ","NORTHWESTERN PUBLIC SERVICE CO          ",8,"SOUTH DAKOTA","BEADLE", ,P2
+  3393,047157,35.0742,-90.1492,"ALLEN                                   ","TENNESSEE VALLEY AUTHORITY              ",4,"TENNESSEE","SHELBY",SERC,P1
+  3396,047001,36.0211,-84.1567,"BULL RUN                                ","TENNESSEE VALLEY AUTHORITY              ",4,"TENNESSEE","ANDERSON",SERC,P2
+  3399,047161,36.3942,-87.6539,"CUMBERLAND                              ","TENNESSEE VALLEY AUTHORITY              ",4,"TENNESSEE","STEWART",SERC,P1
+  3403,047165,36.3156,-86.4006,"GALLATIN                                ","TENNESSEE VALLEY AUTHORITY              ",4,"TENNESSEE","SUMNER",SERC,P1
+  3405,047073,36.3767,-82.9639,"JOHN SEVIER                             ","TENNESSEE VALLEY AUTHORITY              ",4,"TENNESSEE","HAWKINS",SERC,P2
+  3406,047085,36.0278,-87.9861,"JOHNSONVILLE                            ","TENNESSEE VALLEY AUTHORITY              ",4,"TENNESSEE","HUMPHREYS",SERC,P1
+  3407,047145,35.8992,-84.5194,"KINGSTON                                ","TENNESSEE VALLEY AUTHORITY              ",4,"TENNESSEE","ROANE",SERC,P2
+  3419,047143,35.6171,-84.9348,"WATTS BAR                               ","TENNESSEE VALLEY AUTHORITY              ",4,"TENNESSEE","RHEA",SERC,P2
+  3436,048057,28.6500,-96.5417,"E S JOSLIN                              ","CENTRAL POWER & LIGHT CO                ",6,"TEXAS","CALHOUN",ERCOT,P2
+  3438,048215,26.2167,-98.4083,"J. L. BATES                             ","CENTRAL POWER & LIGHT CO                ",6,"TEXAS","HIDALGO",ERCOT,P2
+  3439,048479,27.5667,-99.5089,"LAREDO                                  ","CENTRAL POWER & LIGHT CO                ",6,"TEXAS","WEBB",ERCOT,P2
+  3440,048355,27.8500,-97.6167,"LON C HILL                              ","CENTRAL POWER & LIGHT CO                ",6,"TEXAS","NUECES",ERCOT,P2
+  3441,048355,27.8169,-97.4167,"NUECES BAY                              ","CENTRAL POWER & LIGHT CO                ",6,"TEXAS","NUECES",ERCOT,P2
+  3442,048061,26.1333,-97.6389,"LA PALMA                                ","CENTRAL POWER & LIGHT CO                ",6,"TEXAS","CAMERON",ERCOT,P2
+  3443,048469,28.7894,-97.0103,"VICTORIA                                ","CENTRAL POWER & LIGHT CO                ",6,"TEXAS","VICTORIA",ERCOT,P2
+  3451,048113,32.7878,-96.8092,"DALLAS                                  ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","DALLAS", ,P2
+  3452,048113,32.8361,-96.5461,"LAKE HUBBARD                            ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","DALLAS",ERCOT,P2
+  3453,048113,32.7233,-96.9361,"MOUNTAIN CREEK                          ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","DALLAS",ERCOT,P2
+  3454,048113,32.9506,-96.9750,"NORTH LAKE                              ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","DALLAS",ERCOT,P2
+  3455,048113,32.7767,-96.7236,"PARKDALE                                ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","DALLAS",ERCOT,P2
+  3456,048141,31.9842,-106.4319,"NEWMAN                                  ","EL PASO ELECTRIC CO                     ",6,"TEXAS","EL PASO",WSCC,P2
+  3457,048339,30.4367,-95.5478,"LEWIS CREEK                             ","GULF STATES UTILITIES CO                ",6,"TEXAS","MONTGOMERY",SPP,P2
+  3458,048245,29.8641,-94.1350,"NECHES                                  ","GULF STATES UTILITIES CO                ",6,"TEXAS","JEFFERSON", ,P2
+  3459,048361,31.0206,-93.8753,"SABINE                                  ","GULF STATES UTILITIES CO                ",6,"TEXAS","ORANGE",SPP,P2
+  3460,048071,29.7500,-94.9256,"CEDAR BAYOU                             ","HOUSTON LIGHTING & POWER CO             ",6,"TEXAS","CHAMBERS",ERCOT,P2
+  3461,048201,29.7231,-95.2261,"DEEPWATER                               ","HOUSTON LIGHTING & POWER CO             ",6,"TEXAS","HARRIS",ERCOT,P2
+  3464,048201,29.8208,-95.2183,"GREENS BAYOU                            ","HOUSTON LIGHTING & POWER CO             ",6,"TEXAS","HARRIS",ERCOT,P2
+  3465,048201,29.6483,-95.4508,"HIRAM CLARKE                            ","HOUSTON LIGHTING & POWER CO             ",6,"TEXAS","HARRIS",ERCOT,P2
+  3466,048167,29.4869,-94.9797,"P H ROBINSON                            ","HOUSTON LIGHTING & POWER CO             ",6,"TEXAS","GALVESTON",ERCOT,P2
+  3468,048201,29.7297,-95.1719,"SAM BERTRON                             ","HOUSTON LIGHTING & POWER CO             ",6,"TEXAS","HARRIS",ERCOT,P2
+  3469,048201,29.9417,-95.5306,"T H WHARTON                             ","HOUSTON LIGHTING & POWER CO             ",6,"TEXAS","HARRIS",ERCOT,P2
+  3470,048157,29.4833,-95.6331,"W A PARISH                              ","HOUSTON LIGHTING & POWER CO             ",6,"TEXAS","FORT BEND",ERCOT,P2
+  3471,048201,29.5261,-95.1081,"WEBSTER                                 ","HOUSTON LIGHTING & POWER CO             ",6,"TEXAS","HARRIS",ERCOT,P2
+  3476,048143,32.3744,-94.6431,"KNOX LEE                                ","SOUTHWESTERN ELECTRIC POWER CO          ",6,"TEXAS","GREGG",SPP,P2
+  3477,048343,32.9125,-94.7131,"LONE STAR                               ","SOUTHWESTERN ELECTRIC POWER CO          ",6,"TEXAS","MORRIS",SPP,P2
+  3478,048315,32.8486,-94.5469,"WILKES                                  ","SOUTHWESTERN ELECTRIC POWER CO          ",6,"TEXAS","MARION",SPP,P2
+  3480,048165,32.7410,-102.6334,"DENVER CITY                             ","SOUTHWESTERN PUBLIC SERVICE CO          ",6,"TEXAS","GAINES", ,P2
+  3482,048303,33.5239,-101.7397,"JONES STATION                           ","SOUTHWESTERN PUBLIC SERVICE CO          ",6,"TEXAS","LUBBOCK",SPP,P2
+  3483,048341,35.8377,-101.8925,"MOORE COUNTY STATION                    ","SOUTHWESTERN PUBLIC SERVICE CO          ",6,"TEXAS","MOORE",SPP,P2
+  3484,048375,35.2831,-101.7458,"NICHOLS STATION                         ","SOUTHWESTERN PUBLIC SERVICE CO          ",6,"TEXAS","POTTER",SPP,P2
+  3485,048279,34.1661,-102.4111,"PLANT X                                 ","SOUTHWESTERN PUBLIC SERVICE CO          ",6,"TEXAS","LAMB",SPP,P2
+  3489,048439,32.9058,-97.4794,"EAGLE MOUNTAIN                          ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","TARRANT",ERCOT,P2
+  3490,048503,33.1347,-98.6119,"GRAHAM                                  ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","YOUNG",ERCOT,P2
+  3491,048439,32.7286,-97.2192,"HANDLEY                                 ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","TARRANT",ERCOT,P2
+  3492,048335,32.3361,-100.9156,"MORGAN CREEK                            ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","MITCHELL",ERCOT,P2
+  3493,048439,32.7608,-97.3364,"NORTH MAIN                              ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","TARRANT", ,P2
+  3494,048475,31.5839,-102.9636,"PERMIAN BASIN                           ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","WARD",ERCOT,P2
+  3497,048161,31.8206,-96.0547,"BIG BROWN                               ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","FREESTONE",ERCOT,P2
+  3500,048085,33.2028,-96.8108,"COLLIN                                  ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","COLLIN",ERCOT,P2
+  3502,048309,31.4633,-96.9867,"LAKE CREEK                              ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","MCLENNAN",ERCOT,P2
+  3503,048387,33.3933,-95.1467,"RIVER CREST                             ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","RED RIVER", ,P2
+  3504,048073,31.9381,-94.9883,"STRYKER CREEK                           ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","CHEROKEE",ERCOT,P2
+  3506,048309,31.5728,-96.9644,"TRADINGHOUSE                            ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","MCLENNAN",ERCOT,P2
+  3507,048213,32.1336,-96.1019,"TRINIDAD                                ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","HENDERSON",ERCOT,P2
+  3508,048147,36.6436,-96.3650,"VALLEY                                  ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","FANNIN",ERCOT,P2
+  3517,048441,32.3000,-99.8900,"ABILENE                                 ","WEST TEXAS UTILITIES CO                 ",6,"TEXAS","TAYLOR",ERCOT,P2
+  3518,048451,31.3958,-100.6891,"CONCHO                                  ","WEST TEXAS UTILITIES CO                 ",6,"TEXAS","TOM GREEN", ,P2
+  3521,048197,34.3000,-99.7400,"LAKE PAULINE                            ","WEST TEXAS UTILITIES CO                 ",6,"TEXAS","HARDEMAN",ERCOT,P2
+  3523,048081,31.8900,-100.5300,"OAK CREEK                               ","WEST TEXAS UTILITIES CO                 ",6,"TEXAS","COKE",ERCOT,P2
+  3524,048207,33.0811,-99.5778,"PAINT CREEK                             ","WEST TEXAS UTILITIES CO                 ",6,"TEXAS","HASKELL",ERCOT,P2
+  3526,048105,31.0867,-102.3694,"RIO PECOS                               ","WEST TEXAS UTILITIES CO                 ",6,"TEXAS","CROCKETT",ERCOT,P2
+  3527,048451,31.3933,-100.4922,"SAN ANGELO                              ","WEST TEXAS UTILITIES CO                 ",6,"TEXAS","TOM GREEN",ERCOT,P2
+  3548,048453,30.3036,-97.6128,"DECKER CREEK                            ","AUSTIN CITY OF (TX)                     ",6,"TEXAS","TRAVIS",ERCOT,P2
+  3549,048453,30.2500,-97.7167,"HOLLY STREET                            ","AUSTIN CITY OF (TX)                     ",6,"TEXAS","TRAVIS",ERCOT,P2
+  3550,048453,30.2864,-97.7356,"SEAHOLM                                 ","AUSTIN CITY OF (TX)                     ",6,"TEXAS","TRAVIS", ,P2
+  3559,048061,25.9131,-97.5222,"SILAS RAY                               ","BROWNSVILLE PUBLIC UTILS BOARD          ",6,"TEXAS","CAMERON",ERCOT,P2
+  3561,048041,30.6442,-96.3725,"BRYAN                                   ","BRYAN CITY OF                           ",6,"TEXAS","BRAZOS",ERCOT,P2
+  3574,048113,32.9125,-96.6228,"C E NEWMAN                              ","GARLAND CITY OF                         ",6,"TEXAS","DALLAS",ERCOT,P2
+  3576,048085,33.0681,-96.4528,"RAY OLINGER                             ","GARLAND CITY OF                         ",6,"TEXAS","COLLIN",ERCOT,P2
+  3601,048021,30.1417,-97.2750,"SIM GIDEON                              ","LOWER COLORADO RIVER AUTHORITY          ",6,"TEXAS","BASTROP",ERCOT,P2
+  3602,048303,33.5164,-101.7917,"HOLLY AVE                               ","LUBBOCK CITY OF                         ",6,"TEXAS","LUBBOCK",SPP,P2
+  3604,048303,33.6100,-101.8000,"J. ROBERT MASSENGALE                    ","LUBBOCK CITY OF                         ",6,"TEXAS","LUBBOCK",SPP,P2
+  3609,048029,29.3508,-98.5750,"LEON CREEK                              ","SAN ANTONIO CITY OF                     ",6,"TEXAS","BEXAR", ,P2
+  3610,048029,29.3975,-98.4883,"MISSION ROAD                            ","SAN ANTONIO CITY OF                     ",6,"TEXAS","BEXAR", ,P2
+  3611,048029,29.3078,-98.3244,"O W SOMMERS                             ","SAN ANTONIO CITY OF                     ",6,"TEXAS","BEXAR",ERCOT,P2
+  3612,048029,29.2561,-98.3814,"V H BRAUNIG                             ","SAN ANTONIO CITY OF                     ",6,"TEXAS","BEXAR",ERCOT,P2
+  3613,048029,29.5303,-98.4178,"W B TUTTLE                              ","SAN ANTONIO CITY OF                     ",6,"TEXAS","BEXAR",ERCOT,P2
+  3627,048367,32.7803,-97.6953,"NORTH TEXAS                             ","BRAZOS ELECTRIC POWER COOP INC          ",6,"TEXAS","PARKER",ERCOT,P2
+  3628,048363,32.6581,-98.3103,"R W MILLER                              ","BRAZOS ELECTRIC POWER COOP INC          ",6,"TEXAS","PALO PINTO",ERCOT,P2
+  3629,048027,31.0361,-97.4919,"W R POAGE                               ","BRAZOS ELECTRIC POWER COOP INC          ",6,"TEXAS","BELL", ,P2
+  3630,048163,29.0939,-99.4122,"PEARSALL                                ","MEDINA ELECTRIC COOP INC                ",6,"TEXAS","FRIO",ERCOT,P2
+  3631,048469,28.7900,-96.9800,"SAM RAYBURN                             ","SOUTH TEXAS ELECTRIC COOP INC           ",6,"TEXAS","VICTORIA",ERCOT,P2
+  3633,049021,37.8118,-113.2589,"CEDAR                                   ","PACIFICORP                              ",8,"UTAH","IRON", ,P2
+  3644,049007,39.7264,-110.8639,"CARBON                                  ","PACIFICORP                              ",8,"UTAH","CARBON",WSCC,P2
+  3648,049035,40.7667,-111.9292,"GADSBY                                  ","PACIFICORP                              ",8,"UTAH","SALT LAKE",WSCC,P2
+  3652,049049,40.1895,-111.5237,"HALE                                    ","PACIFICORP                              ",8,"UTAH","UTAH", ,P2
+  3653,049035,40.6737,-111.9060,"JORDAN                                  ","PACIFICORP                              ",8,"UTAH","SALT LAKE", ,P2
+  3686,049049,40.1895,-111.5237,"PROVO                                   ","PROVO CITY CORP                         ",8,"UTAH","UTAH",WSCC,P2
+  3717,050007,44.4420,-73.0829,"MILTON                                  ","CENTRAL VERMONT PUB SERV CORP           ",1,"VERMONT","CHITTENDEN",NPCC,P2
+  3755,050007,44.4420,-73.0829,"J EDWARD MORAN                          ","BURLINGTON CITY OF                      ",1,"VERMONT","CHITTENDEN", ,P2
+  3775,051167,36.9333,-82.1997,"CLINCH RIVER                            ","APPALACHIAN POWER CO                    ",3,"VIRGINIA","RUSSELL",ECAR,P2
+  3776,051071,37.3697,-80.8633,"GLEN LYN                                ","APPALACHIAN POWER CO                    ",3,"VIRGINIA","GILES",ECAR,P2
+  3788,051510,38.8078,-77.0372,"POTOMAC RIVER                           ","POTOMAC ELECTRIC POWER CO               ",3,"VIRGINIA","ALEXANDRIA",MAAC,P2
+  3796,051065,37.7089,-78.2878,"BREMO                                   ","VIRGINIA ELECTRIC & POWER CO            ",3,"VIRGINIA","FLUVANNA",SERC,P2
+  3797,051041,37.3822,-77.3833,"CHESTERFIELD                            ","VIRGINIA ELECTRIC & POWER CO            ",3,"VIRGINIA","CHESTERFIELD",SERC,P2
+  3803,051550,36.7711,-76.3019,"CHESAPEAKE                              ","VIRGINIA ELECTRIC & POWER CO            ",3,"VIRGINIA","CHESAPEAKE",SERC,P2
+  3804,051153,38.5367,-77.2806,"POSSUM POINT                            ","VIRGINIA ELECTRIC & POWER CO            ",3,"VIRGINIA","PRINCE WILLIAM",SERC,P2
+  3809,051199,37.2144,-76.4611,"YORKTOWN                                ","VIRGINIA ELECTRIC & POWER CO            ",3,"VIRGINIA","YORK",SERC,P2
+  3845,053041,46.7000,-122.8500,"CENTRALIA                               ","PACIFICORP                              ",10,"WASHINGTON","LEWIS",WSCC,P2
+  3858,053033,47.4338,-121.7531,"SHUFFLETON                              ","PUGET SOUND POWER & LIGHT CO            ",10,"WASHINGTON","KING", ,P2
+  3920,053053,46.9900,-122.1100,"STEAM PLANT NO2                         ","TACOMA CITY OF                          ",10,"WASHINGTON","PIERCE",WSCC,P2
+  3935,054079,38.4731,-81.8233,"JOHN E AMOS                             ","APPALACHIAN POWER CO                    ",3,"WEST VIRGINIA","PUTNAM",ECAR,P2
+  3936,054039,38.2056,-81.4211,"KANAWHA RIVER                           ","APPALACHIAN POWER CO                    ",3,"WEST VIRGINIA","KANAWHA",ECAR,P2
+  3938,054053,38.9669,-81.9231,"PHIL SPORN                              ","CENTRAL OPERATING CO                    ",3,"WEST VIRGINIA","MASON",ECAR,P2
+  3942,054077,39.4883,-79.6367,"ALBRIGHT                                ","MONONGAHELA POWER CO                    ",3,"WEST VIRGINIA","PRESTON",ECAR,"P1,P1.5"
+  3943,054061,39.7000,-79.9167,"FORT MARTIN                             ","MONONGAHELA POWER CO                    ",3,"WEST VIRGINIA","MONONGALIA",ECAR,P1
+  3944,054033,39.3833,-80.3167,"HARRISON                                ","MONONGAHELA POWER CO                    ",3,"WEST VIRGINIA","HARRISON",ECAR,P1
+  3945,054049,39.5167,-80.1167,"RIVESVILLE                              ","MONONGAHELA POWER CO                    ",3,"WEST VIRGINIA","MARION",ECAR,P1.5
+  3946,054073,39.3669,-81.3003,"WILLOW ISLAND                           ","MONONGAHELA POWER CO                    ",3,"WEST VIRGINIA","PLEASANTS",ECAR,P1.5
+  3947,054051,39.8464,-89.8189,"KAMMER                                  ","OHIO POWER CO                           ",3,"WEST VIRGINIA","MARSHALL",ECAR,P1
+  3948,054051,39.8297,-80.8153,"MITCHELL                                ","OHIO POWER CO                           ",3,"WEST VIRGINIA","MARSHALL",ECAR,P1
+  3954,054023,39.2014,-79.2667,"MT STORM                                ","VIRGINIA ELECTRIC & POWER CO            ",3,"WEST VIRGINIA","GRANT",SERC,P1
+  3982,055003,46.2700,-90.6700,"BAY FRONT                               ","NORTHERN STATES POWER CO                ",5,"WISCONSIN","ASHLAND",MAPP,P2
+  3992,055025,43.0792,-89.3739,"BLOUNT STREET                           ","MADISON GAS & ELECTRIC CO               ",5,"WISCONSIN","DANE",MAIN,P2
+  4005,055063,43.9100,-91.1200,"FRENCH ISLAND                           ","NORTHERN STATES POWER CO                ",5,"WISCONSIN","LA CROSSE",MAPP,P2
+  4026,055031,46.4300,-91.9200,"WINSLOW                                 ","SUPERIOR WATER LIGHT&POWER CO           ",5,"WISCONSIN","DOUGLAS", ,P2
+  4036,055079,43.0173,-87.9480,"COMMERCE                                ","WISCONSIN ELECTRIC POWER CO             ",5,"WISCONSIN","MILWAUKEE", ,P2
+  4039,055079,42.8131,-87.8322,"NORTH OAK CREEK                         ","WISCONSIN ELECTRIC POWER CO             ",5,"WISCONSIN","MILWAUKEE", ,P1
+  4040,055089,43.3908,-87.8686,"PORT WASHINGTON                         ","WISCONSIN ELECTRIC POWER CO             ",5,"WISCONSIN","OZAUKEE",MAIN,P2
+  4041,055079,42.8014,-87.8314,"SOUTH OAK CREEK                         ","WISCONSIN ELECTRIC POWER CO             ",5,"WISCONSIN","MILWAUKEE",MAIN,P1
+  4042,055079,43.0303,-87.9250,"VALLEY                                  ","WISCONSIN ELECTRIC POWER CO             ",5,"WISCONSIN","MILWAUKEE",MAIN,P2
+  4048,055105,42.6700,-89.0800,"BLACKHAWK                               ","WISCONSIN POWER & LIGHT CO              ",5,"WISCONSIN","ROCK",MAIN,P2
+  4050,055117,43.7181,-87.7092,"EDGEWATER                               ","WISCONSIN POWER & LIGHT CO              ",5,"WISCONSIN","SHEBOYGAN",MAIN,"P1,P1.5"
+  4054,055043,42.7228,-90.0078,"NELSON DEWEY                            ","WISCONSIN POWER & LIGHT CO              ",5,"WISCONSIN","GRANT",MAIN,P1
+  4057,055105,42.5808,-89.0264,"ROCK RIVER                              ","WISCONSIN POWER & LIGHT CO              ",5,"WISCONSIN","ROCK",MAIN,P1.5
+  4072,055009,44.5394,-88.0042,"PULLIAM                                 ","WISCONSIN PUBLIC SERVICE CORP           ",5,"WISCONSIN","BROWN",MAIN,P2
+  4076,055075,45.3805,-88.0066,"WEST MARINETTE                          ","WISCONSIN PUBLIC SERVICE CORP           ",5,"WISCONSIN","MARINETTE",MAIN,P2
+  4078,055073,44.8617,-89.6550,"WESTON                                  ","WISCONSIN PUBLIC SERVICE CORP           ",5,"WISCONSIN","MARATHON",MAIN,P2
+  4114,055043,42.8580,-90.7915,"FENNIMORE MUNICIPAL                     ","FENNIMORE CITY OF                       ",5,"WISCONSIN","GRANT", ,
+  4125,055071,44.1200,-87.8100,"MANITOWOC                               ","MANITOWOC CITY OF                       ",5,"WISCONSIN","MANITOWOC",MAIN,P2
+  4126,055000,44.4600,-90.0300,"WILDWOOD                                ","MARSHFIELD CITY OF                      ",5,"WISCONSIN","WOOD", ,P2
+  4127,055139,44.0700,-88.6400,"MENASHA                                 ","MENASHA CITY OF                         ",5,"WISCONSIN","WINNEBAGO",MAIN,P2
+  4129,055103,43.3595,-90.4316,"MUSCODA                                 ","MUSCODA CITY OF                         ",5,"WISCONSIN","RICHLAND", ,P2
+  4132,055000,43.3595,-90.4316,"RICHLAND CENTER                         ","RICHLAND CENTER CITY OF                 ",5,"WISCONSIN","RICHLAND", ,P2
+  4140,055011,44.3078,-91.9050,"ALMA                                    ","DAIRYLAND POWER COOP                    ",5,"WISCONSIN","BUFFALO",MAPP,P1.5
+  4143,055123,43.5592,-91.2333,"GENOA                                   ","DAIRYLAND POWER COOP                    ",5,"WISCONSIN","VERNON",MAPP,P1
+  4146,055043,42.8700,-90.7000,"STONEMAN                                ","DAIRYLAND POWER COOP                    ",5,"WISCONSIN","GRANT", ,P2
+  4150,056005,44.2500,-105.5400,"NEIL SIMPSON                            ","BLACK HILLS CORP                        ",8,"WYOMING","CAMPBELL",WSCC,P2
+  4151,056045,43.8400,-104.5600,"OSAGE                                   ","BLACK HILLS CORP                        ",8,"WYOMING","WESTON",WSCC,P2
+  4158,056009,42.8333,-105.7667,"DAVE JOHNSTON                           ","PACIFICORP                              ",8,"WYOMING","CONVERSE",WSCC,P2
+  4162,056023,41.7572,-110.5986,"NAUGHTON                                ","PACIFICORP                              ",8,"WYOMING","LINCOLN",WSCC,P2
+  4195,048231,33.1744,-96.1256,"POWERLANE PLANT                         ","GREENVILLE CITY OF                      ",6,"TEXAS","HUNT", ,P2
+  4207,024019,38.4764,-76.0214,"NANTICOKE                               ","DELMARVA POWER & LIGHT CO               ",3,"MARYLAND","DORCHESTER", ,P2
+  4257,024041,38.7583,-76.1431,"EASTON 2                                ","EASTON UTILITIES COMM                   ",3,"MARYLAND","TALBOT",MAAC,P2
+  4259,026059,41.9000,-84.6000,"ENDICOTT GENERATING                     ","MICHIGAN SOUTH CENTRAL PWR AGY          ",5,"MICHIGAN","HILLSDALE",ECAR,P2
+  4266,048121,33.2042,-97.1028,"SPENCER                                 ","DENTON CITY OF                          ",6,"TEXAS","DENTON",ERCOT,P2
+  4271,055011,44.3022,-91.9142,"JOHN P MADGETT                          ","DAIRYLAND POWER COOP                    ",5,"WISCONSIN","BUFFALO",MAPP,P1.5
+  4937,048299,30.5564,-98.3694,"T C FERGUSON                            ","LOWER COLORADO RIVER AUTHORITY          ",6,"TEXAS","LLANO",ERCOT,P2
+  4938,048253,32.5825,-99.6825,"FORT PHANTOM                            ","WEST TEXAS UTILITIES CO                 ",6,"TEXAS","JONES",ERCOT,P2
+  4939,048355,27.6064,-97.3117,"BARNEY M. DAVIS                         ","CENTRAL POWER & LIGHT CO                ",6,"TEXAS","NUECES",ERCOT,P2
+  4940,040143,35.9858,-95.9519,"RIVERSIDE                               ","PUBLIC SERVICE CO OF OKLAHOMA           ",6,"OKLAHOMA","TULSA",SPP,P2
+  4941,004005,36.9125,-111.3917,"NAVAJO                                  ","SALT RIVER PROJ AG I & P DIST           ",9,"ARIZONA","COCONINO",WSCC,P2
+  6002,001073,33.6319,-87.0597,"JAMES H MILLER JR                       ","ALABAMA POWER CO                        ",4,"ALABAMA","JEFFERSON",SERC,P2
+  6004,054073,39.3678,-81.2958,"PLEASANTS                               ","MONONGAHELA POWER CO                    ",3,"WEST VIRGINIA","PLEASANTS",ECAR,P2
+  6009,005069,34.4236,-92.1392,"WHITE BLUFF                             ","ARKANSAS POWER & LIGHT CO               ",6,"ARKANSAS","JEFFERSON",SPP,P2
+  6013,006037,34.1764,-118.3139,"OLIVE                                   ","BURBANK CITY OF                         ",9,"CALIFORNIA","LOS ANGELES",WSCC,P2
+  6016,017057,40.4644,-89.9825,"DUCK CREEK                              ","CENTRAL ILLINOIS LIGHT CO               ",5,"ILLINOIS","FULTON",MAIN,P2
+  6017,017079,38.9364,-88.2778,"NEWTON                                  ","CENTRAL ILLINOIS PUB SERV CO            ",5,"ILLINOIS","JASPER",MAIN,P1.5
+  6018,021015,38.9624,-84.7379,"EAST BEND                               ","CINCINNATI GAS & ELECTRIC CO            ",4,"KENTUCKY","BOONE",ECAR,P1.5
+  6019,039025,38.8692,-84.2300,"W H ZIMMER                              ","CINCINNATI GAS & ELECTRIC CO            ",5,"OHIO","CLERMONT",ECAR,P2
+  6021,008081,40.4628,-107.5900,"CRAIG                                   ","TRI-STATE G & T ASSN INC                ",8,"COLORADO","MOFFAT",WSCC,P2
+  6025,017063,41.3542,-88.4167,"COLLINS                                 ","COMMONWEALTH EDISON CO                  ",5,"ILLINOIS","GRUNDY",MAIN,P1.5
+  6030,038055,47.3789,-101.1572,"COAL CREEK                              ","COOP POWER ASSN                         ",8,"NORTH DAKOTA","MCLEAN",MAPP,P2
+  6031,039001,38.6903,-83.4803,"KILLEN STATION                          ","DAYTON POWER & LIGHT CO                 ",5,"OHIO","ADAMS",ECAR,P2
+  6034,026147,42.7750,-82.4939,"BELLE RIVER                             ","DETROIT EDISON CO                       ",5,"MICHIGAN","ST CLAIR",ECAR,P2
+  6035,026147,43.1056,-82.6964,"GREENWOOD                               ","DETROIT EDISON CO                       ",5,"MICHIGAN","ST CLAIR",ECAR,P2
+  6041,021161,38.7000,-83.8175,"H L SPURLOCK                            ","EAST KENTUCKY POWER COOP INC            ",4,"KENTUCKY","MASON",ECAR,P1
+  6042,012081,27.6058,-82.3456,"MANATEE                                 ","FLORIDA POWER & LIGHT CO                ",4,"FLORIDA","MANATEE",SERC,P2
+  6043,012085,27.3211,-80.5647,"MARTIN                                  ","FLORIDA POWER & LIGHT CO                ",4,"FLORIDA","MARTIN",SERC,P2
+  6046,012127,29.0199,-81.2071,"DEBARY                                  ","FLORIDA POWER CORP                      ",4,"FLORIDA","VOLUSIA",SERC,P2
+  6052,013149,33.4167,-85.0333,"WANSLEY                                 ","GEORGIA POWER CO                        ",4,"GEORGIA","HEARD",SERC,P1
+  6055,022077,30.7283,-91.3686,"BIG CAJUN 2                             ","CAJUN ELECTRIC POWER COOP INC           ",6,"LOUISIANA","POINTE COUPEE",SPP,P2
+  6061,028073,31.2175,-89.3939,"R D MORROW                              ","SOUTH MISSISSIPPI EL PWR ASSN           ",4,"MISSISSIPPI","LAMAR",SERC,P1.5
+  6064,020209,39.1714,-94.6958,"NEARMAN CREEK                           ","KANSAS CITY CITY OF                     ",7,"KANSAS","WYANDOTTE",SPP,P2
+  6065,029165,39.4483,-94.9808,"IATAN                                   ","KANSAS CITY POWER & LIGHT CO            ",7,"MISSOURI","PLATTE",SPP,P2
+  6068,020149,39.2856,-96.1083,"JEFFREY ENERGY CENTR                    ","KPL, A WESTERN RESOURCES CO             ",7,"KANSAS","POTTAWATOMIE",SPP,P2
+  6071,021223,38.5678,-85.4139,"TRIMBLE COUNTY                          ","LOUISVILLE GAS & ELECTRIC CO            ",4,"KENTUCKY","TRIMBLE",ECAR,P2
+  6073,028059,30.5322,-88.5569,"VICTOR J DANIEL JR                      ","MISSISSIPPI POWER CO                    ",4,"MISSISSIPPI","JACKSON",SERC,P2
+  6076,030087,45.8844,-106.6139,"COLSTRIP                                ","MONTANA POWER CO                        ",8,"MONTANA","ROSEBUD",WSCC,P2
+  6077,031111,41.0836,-101.1456,"GERALD GENTLEMAN STA                    ","NEBRASKA PUBLIC POWER DISTRICT          ",7,"NEBRASKA","LINCOLN",MAPP,P2
+  6082,036063,43.3564,-78.5992,"KINTIGH                                 ","NEW YORK STATE ELEC & GAS CORP          ",2,"NEW YORK","NIAGARA",NPCC,P2
+  6085,018073,41.2167,-87.0222,"R M SCHAHFER                            ","NORTHERN INDIANA PUB SERV CO            ",5,"INDIANA","JASPER",ECAR,P2
+  6089,030083,47.7900,-104.5600,"LEWIS & CLARK                           ","MONTANA-DAKOTA UTILITIES CO             ",8,"MONTANA","RICHLAND",MAPP,P2
+  6090,027141,45.3792,-93.8958,"SHERBURNE COUNTY                        ","NORTHERN STATES POWER CO                ",5,"MINNESOTA","SHERBURNE",MAPP,P2
+  6094,042007,40.6342,-80.4144,"BRUCE MANSFIELD                         ","PENNSYLVANIA POWER CO                   ",3,"PENNSYLVANIA","BEAVER",ECAR,P2
+  6095,040103,36.4544,-97.0500,"SOONER                                  ","OKLAHOMA GAS & ELECTRIC CO              ",6,"OKLAHOMA","NOBLE",SPP,P2
+  6096,031131,40.6250,-95.7917,"NEBRASKA CITY                           ","OMAHA PUBLIC POWER DISTRICT             ",7,"NEBRASKA","OTOE",MAPP,P2
+  6097,036059,40.7526,-73.6024,"MITCHEL GARDENS                         ","LONG ISLAND LIGHTING CO                 ",2,"NEW YORK","NASSAU", ,P2
+  6098,046051,45.3047,-96.5083,"BIG STONE                               ","OTTER TAIL POWER CO                     ",8,"SOUTH DAKOTA","GRANT",MAPP,P2
+  6101,056005,44.2833,-105.4000,"WYODAK                                  ","PACIFICORP                              ",8,"WYOMING","CAMPBELL",WSCC,P2
+  6106,041049,45.4178,-119.4817,"BOARDMAN                                ","PORTLAND GENERAL ELECTRIC CO            ",10,"OREGON","MORROW",WSCC,P2
+  6112,008123,40.5010,-104.3121,"FORT ST. VRAIN                          ","PUBLIC SERVICE CO OF COLORADO           ",8,"COLORADO","WELD",WSCC,P2
+  6113,018051,38.3589,-87.7783,"GIBSON                                  ","PUBLIC SERVICE CO OF IN INC             ",5,"INDIANA","GIBSON",ECAR,P2
+  6124,013103,32.3533,-81.1628,"MCINTOSH                                ","SAVANNAH ELECTRIC & POWER CO            ",4,"GEORGIA","EFFINGHAM",SERC,P1.5
+  6136,048185,30.6167,-96.0778,"GIBBONS CREEK                           ","TEXAS MUNICIPAL POWER AGENCY            ",6,"TEXAS","GRIMES",ERCOT,P2
+  6137,018129,37.9053,-87.7150,"A B BROWN                               ","SOUTHERN INDIANA GAS & ELEC CO          ",5,"INDIANA","POSEY",ECAR,P2
+  6138,005007,36.2625,-94.5208,"FLINT CREEK                             ","SOUTHWESTERN ELECTRIC POWER CO          ",6,"ARKANSAS","BENTON",SPP,P2
+  6139,048449,33.0403,-94.8372,"WELSH                                   ","SOUTHWESTERN ELECTRIC POWER CO          ",6,"TEXAS","TITUS",SPP,P2
+  6146,048401,32.2606,-94.5708,"MARTIN LAKE                             ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","RUSK",ERCOT,P2
+  6147,048449,33.0917,-95.0417,"MONTICELLO                              ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","TITUS",ERCOT,P2
+  6148,048213,32.1824,-95.9409,"FOREST GROVE                            ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","HENDERSON", ,P2
+  6150,001071,34.7333,-85.9667,"BELLEFONTE                              ","TENNESSEE VALLEY AUTHORITY              ",4,"ALABAMA","JACKSON", ,
+  6155,029099,38.1306,-90.2625,"RUSH ISLAND                             ","UNION ELECTRIC CO                       ",7,"MISSOURI","JEFFERSON",MAIN,P1.5
+  6156,009009,41.2836,-72.9042,"NEW HAVEN HARBOR                        ","UNITED ILLUMINATING CO                  ",1,"CONNECTICUT","NEW HAVEN",NPCC,P2
+  6165,049015,39.1667,-111.0261,"HUNTER (EMERY)                          ","PACIFICORP                              ",8,"UTAH","EMERY",WSCC,P2
+  6166,018147,37.9256,-87.0372,"ROCKPORT                                ","INDIANA MICHIGAN POWER CO               ",5,"INDIANA","SPENCER",ECAR,P2
+  6170,055059,42.5381,-87.9033,"PLEASANT PRAIRIE                        ","WISCONSIN ELECTRIC POWER CO             ",5,"WISCONSIN","KENOSHA",MAIN,P2
+  6177,004001,34.5778,-109.2717,"CORONADO                                ","SALT RIVER PROJ AG I & P DIST           ",9,"ARIZONA","APACHE",WSCC,P2
+  6178,048175,28.7128,-97.2142,"COLETO CREEK                            ","CENTRAL POWER & LIGHT CO                ",6,"TEXAS","GOLIAD",ERCOT,P2
+  6179,048149,29.9172,-96.7506,"SAM SEYMOUR                             ","LOWER COLORADO RIVER AUTHORITY          ",6,"TEXAS","FAYETTE",ERCOT,P2
+  6180,048395,31.0260,-96.5352,"TWIN OAK                                ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","ROBERTSON", ,P2
+  6181,048029,29.3072,-98.3228,"J T DEELY                               ","SAN ANTONIO CITY OF                     ",6,"TEXAS","BEXAR",ERCOT,P2
+  6183,048013,28.7089,-98.4722,"SAN MIGUEL                              ","SAN MIGUEL ELECTRIC COOP INC            ",6,"TEXAS","ATASCOSA",ERCOT,P2
+  6190,022079,31.3950,-92.7167,"RODEMACHER                              ","CENTRAL LOUISIANA ELEC CO INC           ",6,"LOUISIANA","RAPIDES",SPP,P2
+  6193,048375,35.2989,-101.7475,"HARRINGTON STATION                      ","SOUTHWESTERN PUBLIC SERVICE CO          ",6,"TEXAS","POTTER",SPP,P2
+  6194,048279,34.1847,-102.5686,"TOLK STATION                            ","SOUTHWESTERN PUBLIC SERVICE CO          ",6,"TEXAS","LAMB",SPP,P2
+  6195,029077,37.1519,-93.3892,"SOUTHWEST POWER ST                      ","SPRINGFIELD CITY OF (MO)                ",7,"MISSOURI","GREENE",SPP,P1.5
+  6204,056031,42.1086,-104.8711,"LARAMIE RIVER                           ","BASIN ELECTRIC POWER COOP               ",8,"WYOMING","PLATTE",MAPP,P2
+  6213,018153,39.0694,-87.5108,"MEROM                                   ","HOOSIER ENERGY R E C INC                ",5,"INDIANA","SULLIVAN",ECAR,P2
+  6220,019031,41.7723,-91.1315,"DURANT MUNICIPAL ELE                    ","DURANT CITY OF                          ",7,"IOWA","CEDAR", ,
+  6223,029097,37.2060,-94.3350,"EMPIRE ENERGY CENTER                    ","EMPIRE DISTRICT ELECTRIC CO             ",7,"MISSOURI","JASPER",SPP,P2
+  6225,018037,38.4003,-86.9142,"JASPER 2                                ","JASPER CITY OF                          ",5,"INDIANA","DUBOIS",ECAR,P2
+  6238,017149,39.6200,-90.9000,"PEARL STATION                           ","SOYLAND POWER COOP INC                  ",5,"ILLINOIS","PIKE",MAIN,P2
+  6243,048041,30.7217,-96.4611,"DANSBY                                  ","BRYAN CITY OF                           ",6,"TEXAS","BRAZOS",ERCOT,P2
+  6246,012107,29.5818,-81.7453,"PUTNAM                                  ","FLORIDA POWER & LIGHT CO                ",4,"FLORIDA","PUTNAM",SERC,P2
+  6248,008087,40.2694,-103.6933,"PAWNEE                                  ","PUBLIC SERVICE CO OF COLORADO           ",8,"COLORADO","MORGAN",WSCC,P2
+  6249,045043,33.4953,-79.3347,"WINYAH                                  ","SOUTH CAROLINA PUB SERV AUTH            ",4,"SOUTH CAROLINA","GEORGETOWN",SERC,P2
+  6250,037145,36.5278,-78.8919,"MAYO                                    ","CAROLINA POWER & LIGHT CO               ",4,"NORTH CAROLINA","PERSON",SERC,P2
+  6254,019179,41.0981,-92.5547,"OTTUMWA                                 ","IES UTILITIES INC                       ",7,"IOWA","WAPELLO",MAPP,P2
+  6257,013207,33.0583,-83.8072,"SCHERER                                 ","GEORGIA POWER CO                        ",4,"GEORGIA","MONROE",SERC,P2
+  6264,054053,38.9794,-81.9344,"MOUNTAINEER (1301)                      ","APPALACHIAN POWER CO                    ",3,"WEST VIRGINIA","MASON",ECAR,P2
+  6373,031109,40.7846,-96.6884,"ROKEBY                                  ","LINCOLN ELECTRIC SYSTEM                 ",7,"NEBRASKA","LANCASTER", ,P2
+  6469,038057,47.3700,-101.8353,"ANTELOPE VALLEY                         ","BASIN ELECTRIC POWER COOP               ",8,"NORTH DAKOTA","MERCER",MAPP,P2
+  6481,049027,39.5108,-112.5792,"INTERMOUNTAIN                           ","LOS ANGELES CITY OF                     ",8,"UTAH","MILLARD",WSCC,P2
+  6516,008089,37.9543,-103.7289,"ROCKY FORD                              ","UTILICORP UNITED                        ",8,"COLORADO","OTERO",SPP,P2
+  6554,019017,42.7746,-92.3178,"NORTH PLANT                             ","WAVERLY CITY OF                         ",7,"IOWA","BREMER",MAPP,P2
+  6558,022079,31.3208,-92.4619,"D G HUNTER                              ","ALEXANDRIA CITY OF                      ",6,"LOUISIANA","RAPIDES",SPP,P2
+  6567,044009,41.4781,-71.6384,"BLOCK ISLAND                            ","BLOCK ISLAND POWER CO                   ",1,"RHODE ISLAND","WASHINGTON", ,
+  6574,035028,35.8610,-106.2855,"TA 3                                    ","U S ERDA-LOS ALAMOS AREA OFF            ",6,"NEW MEXICO","LOS ALAMOS", ,P2
+  6579,020187,37.5633,-101.7838,"JOHNSON CITY                            ","JOHNSON CITY OF                         ",7,"KANSAS","STANTON",SPP,P2
+  6583,012087,24.5617,-81.7989,"KEY WEST                                ","KEY WEST CITY OF                        ",4,"FLORIDA","MONROE",SERC,P2
+  6584,012087,25.5300,-81.0700,"STOCK ISLAND                            ","KEY WEST CITY OF                        ",4,"FLORIDA","MONROE",SERC,P2
+  6635,009009,41.4100,-72.9300,"PIERCE                                  ","WALLINGFORD TOWN OF                     ",1,"CONNECTICUT","NEW HAVEN",NPCC,P2
+  6639,021233,37.6458,-87.5014,"R D GREEN                               ","BIG RIVERS ELECTRIC CORP                ",4,"KENTUCKY","WEBSTER",ECAR,P1.5
+  6641,005063,35.6733,-91.4083,"INDEPENDENCE                            ","ARKANSAS POWER & LIGHT CO               ",6,"ARKANSAS","INDEPENDENCE",SPP,P2
+  6648,048331,30.5642,-97.0639,"SANDOW                                  ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","MILAM",ERCOT,P2
+  6664,019115,41.3181,-91.0931,"LOUISA                                  ","IOWA-ILLINOIS GAS&ELECTRIC CO           ",7,"IOWA","LOUISA",MAPP,P2
+  6705,018173,37.9150,-87.3319,"WARRICK                                 ","SOUTHERN INDIANA GAS & ELEC CO          ",5,"INDIANA","WARRICK",ECAR,"P1,P1.5"
+  6706,022089,29.4908,-90.5033,"THIBODAUX                               ","LOUISIANA POWER & LIGHT CO              ",6,"LOUISIANA","LAFOURCHE", ,P2
+  6761,008069,40.8583,-105.0269,"RAWHIDE                                 ","PLATTE RIVER POWER AUTHORITY            ",8,"COLORADO","LARIMER",WSCC,P2
+  6768,029201,36.8786,-89.6169,"SIKESTON                                ","SIKESTON CITY OF                        ",7,"MISSOURI","SCOTT",SPP,P2
+  6772,040023,34.0292,-95.3167,"HUGO                                    ","WESTERN FARMERS ELEC COOP INC           ",6,"OKLAHOMA","CHOCTAW",SPP,P2
+  6823,021183,37.4497,-87.0806,"D B WILSON                              ","BIG RIVERS ELECTRIC CORP                ",4,"KENTUCKY","OHIO",ECAR,P2
+  7011,020189,37.1919,-101.3113,"HUGOTON 2                               ","HUGOTON CITY OF                         ",7,"KANSAS","STEVENS",SPP,P2
+  7013,020035,37.2631,-97.0717,"EAST 12TH STREET                        ","WINFIELD CITY OF                        ",7,"KANSAS","COWLEY",SPP,P2
+  7018,020133,37.5588,-95.3066,"CITY OF CHANUTE POWER PLANT #3          ","CHANUTE CITY OF                         ",7,"KANSAS","NEOSHO",SPP,P2
+  7030,048395,31.0928,-96.6933,"TNP ONE                                 ","TEXAS-NEW MEXICO POWER CO               ",6,"TEXAS","ROBERTSON",ERCOT,P2
+  7063,001129,31.4067,-88.1903,"MCINTOSH-CAES                           ","ALABAMA ELECTRIC COOP INC               ",4,"ALABAMA","WASHINGTON",SERC,P2
+  7082,032003,35.9278,-114.9715,"HARRY ALLEN                             ","NEVADA POWER CO                         ",9,"NEVADA","CLARK", ,P2
+  7097,048029,29.3064,-98.3203,"J K SPRUCE                              ","SAN ANTONIO CITY OF                     ",6,"TEXAS","BEXAR",ERCOT,P2
+  7137,019157,41.6861,-92.5325,"GRINNELL                                ","IES UTILITIES INC                       ",7,"IOWA","POWESHIEK", ,P2
+  7143,012087,25.4604,-81.1635,"STOCK ISLAND D 1                        ","KEY WEST CITY OF                        ",4,"FLORIDA","MONROE",SERC,P2
+  7144,012087,25.4604,-81.1635,"STOCK ISLAND D 2                        ","KEY WEST CITY OF                        ",4,"FLORIDA","MONROE", ,P2
+  7145,019153,41.6776,-93.5719,"PLEASANT HILL ENERGY CENTER             ","MIDWEST POWER SYSTEMS, INC              ",7,"IOWA","POLK",MAPP,P2
+  7152,034011,39.3729,-75.1305,"BUTLER                                  ","VINELAND CITY OF                        ",2,"NEW JERSEY","CUMBERLAND", ,P2
+  7153,010003,39.5680,-75.6006,"HAY ROAD                                ","DELMARVA POWER & LIGHT CO               ",3,"DELAWARE","NEW CASTLE",MAAC,P2
+  7155,019033,43.0816,-93.2607,"LIME CREEK                              ","INTERSTATE POWER CO                     ",7,"IOWA","CERRO GORDO",MAPP,P2
+  7157,055025,43.0701,-89.4238,"COMBUSTION TURBINE                      ","MADISON GAS & ELECTRIC CO               ",5,"WISCONSIN","DANE", ,P2
+  7158,039017,39.4410,-84.5781,"WOODSDALE                               ","CINCINNATI GAS & ELECTRIC CO            ",5,"OHIO","BUTLER",ECAR,P2
+  7159,055055,43.0202,-88.7746,"CONCORD                                 ","WISCONSIN ELECTRIC POWER CO             ",5,"WISCONSIN","JEFFERSON",MAIN,P2
+  7160,029095,39.0342,-94.3563,"COMBUSTION TURBINE 1                    ","KANSAS CITY POWER & LIGHT CO            ",7,"MISSOURI","JACKSON", ,P2
+  7161,029095,39.0342,-94.3563,"COMBUSTION TURBINE 2                    ","KANSAS CITY POWER & LIGHT CO            ",7,"MISSOURI","JACKSON", ,P2
+  7162,029095,39.0342,-94.3563,"COMBUSTION TURBINE 3                    ","KANSAS CITY POWER & LIGHT CO            ",7,"MISSOURI","JACKSON", ,P2
+  7185,040071,36.7963,-97.1060,"CONOCO                                  ","OKLAHOMA GAS & ELECTRIC CO              ",6,"OKLAHOMA","KAY",SPP,P2
+  7186,051047,38.5034,-77.9255,"EAST CHANDLER                           ","CULPEPER TOWN OF                        ",3,"VIRGINIA","CULPEPER", ,P2
+  7203,055039,43.7404,-88.5225,"SOUTH FOND DU LAC                       ","WISCONSIN POWER & LIGHT CO              ",5,"WISCONSIN","FOND DU LAC",MAIN,P2
+  7210,045075,33.3639,-81.0303,"COPE STATION                            ","SOUTH CAROLINA ELECTRIC&GAS CO          ",4,"SOUTH CAROLINA","ORANGEBURG",SERC,P2
+  7213,051083,36.8667,-78.7000,"CLOVER                                  ","VIRGINIA ELECTRIC & POWER CO            ",3,"VIRGINIA","HALIFAX",SERC,P2
+  7220,021167,37.8244,-84.8604,"NA 1 -- 7220                            ","KENTUCKY UTILITIES CO                   ",4,"KENTUCKY","MERCER", ,P2
+  7225,048029,29.4332,-98.4635,"GT 99                                   ","SAN ANTONIO CITY OF                     ",6,"TEXAS","BEXAR", ,P2
+  7228,017183,39.9008,-87.4136,"NA 1 -- 7228                            ","PUBLIC SERVICE CO OF IN INC             ",5,"INDIANA","VERMILLION", ,P2
+  7236,046103,44.0993,-103.0275,"CT                                      ","BLACK HILLS CORP                        ",8,"SOUTH DAKOTA","PENNINGTON", ,P2
+  7237,046099,43.6746,-96.7910,"ANGUS ANSON                             ","NORTHERN STATES POWER CO                ",8,"SOUTH DAKOTA","MINNEHAHA",MAPP,P2
+  7238,012097,27.9948,-81.2595,"CANE ISLAND                             ","KISSIMMEE UTILITY AUTHORITY             ",4,"FLORIDA","OSCEOLA",SERC,P2
+  7242,012105,28.0023,-81.6244,"POLK                                    ","TAMPA ELECTRIC CO                       ",4,"FLORIDA","POLK", ,P2
+  7243,048029,29.4332,-98.4635,"GT 98                                   ","SAN ANTONIO CITY OF                     ",6,"TEXAS","BEXAR", ,P2
+  7246,005041,33.8183,-91.2546,"NA 2 -- 7246                            ","ARKANSAS ELECTRIC COOP CORP             ",6,"ARKANSAS","DESHA", ,P2
+  7250,055000,58.3849,-134.1888,"NA2                                     ","WISCONSIN PUBLIC SERVICE CORP           ",5,"WISCONSIN","",ASCC,P2
+  7266,006099,37.6062,-120.9293,"WOODLAND GENERATION                     ","MODESTO IRRIGATION DISTRICT             ",9,"CALIFORNIA","STANISLAUS", ,P2
+  7268,026139,42.9868,-86.0273,"491 E 48TH STREET                       ","HOLLAND CITY OF                         ",5,"MICHIGAN","OTTAWA",ECAR,
+  7270,055059,42.5811,-88.0542,"PARIS                                   ","WISCONSIN ELECTRIC POWER CO             ",5,"WISCONSIN","KENOSHA",MAIN,P2
+  7277,037109,35.4850,-81.2393,"LINCOLN                                 ","DUKE POWER CO                           ",4,"NORTH CAROLINA","LINCOLN",SERC,P2
+  7286,039167,39.3672,-81.5208,"RICHARD GORSUCH                         ","AMERICAN MUN POWER-OHIO INC             ",5,"OHIO","WASHINGTON",ECAR,
+  7288,034011,39.3729,-75.1305,"SHERMAN AVENUE                          ","ATLANTIC CITY ELECTRIC CO               ",2,"NEW JERSEY","CUMBERLAND",MAAC,P2
+  7294,012095,28.5662,-81.2613,"COMBINED CYCLE 1                        ","REEDY CREEK IMPROVEMENT DIST            ",4,"FLORIDA","ORANGE", ,
+  7302,012105,28.0023,-81.6244,"HINES FACILITY                          ","FLORIDA POWER CORP                      ",4,"FLORIDA","POLK", ,
+  7314,036103,40.8852,-72.7233,"RICHARD M FLYNN                         ","POWER AUTHORITY OF STATE OF NY          ",2,"NEW YORK","SUFFOLK",NPCC,P2
+  7318,010001,39.0977,-75.5362,"VAN SANT                                ","DOVER CITY OF (DE)                      ",3,"DELAWARE","KENT",MAAC,P2
+  7325,048201,29.8336,-95.4383,"SAN JACINTO STEAM ELECTRIC STATION      ","HOUSTON LIGHTING & POWER CO             ",6,"TEXAS","HARRIS",ERCOT,P2
+  7343,019193,42.3022,-96.3622,"GEORGE NEAL SOUTH                       ","IOWA PUBLIC SERVICE CO                  ",7,"IOWA","WOODBURY",MAPP,P2
+  7345,012001,29.6828,-82.3558,"UNIVERSITY OF FLORIDA                   ","FLORIDA POWER CORP                      ",4,"FLORIDA","ALACHUA",SERC,P2
+  7348,013153,32.4874,-83.6775,"ROBINS                                  ","GEORGIA POWER CO                        ",4,"GEORGIA","HOUSTON",SERC,P2
+  7350,041049,45.4600,-119.5749,"COYOTE SPRINGS                          ","PORTLAND GENERAL ELECTRIC CO            ",10,"OREGON","MORROW",WSCC,P2
+  7376,027053,45.0167,-93.4729,"ALLIANT TECHSYSTEMS                     ","NORTHERN STATES POWER CO                ",5,"MINNESOTA","HENNEPIN", ,P2
+  7377,027053,45.0167,-93.4729,"UNITED HEALTH CARE                      ","NORTHERN STATES POWER CO                ",5,"MINNESOTA","HENNEPIN", ,P2
+  7378,027123,45.0065,-93.1059,"UNITED HOSPITAL                         ","NORTHERN STATES POWER CO                ",5,"MINNESOTA","RAMSEY", ,P2
+  7384,017179,40.5339,-89.5939,"NSB NUIQSUT UTIL                        ","CENTRAL ILLINOIS LIGHT CO               ",5,"ILLINOIS","TAZEWELL",MAIN,
+  7425,017167,39.7499,-89.6058,"INTERSTATE                              ","SPRINGFIELD CITY OF (IL)                ",5,"ILLINOIS","SANGAMON", ,P2
+  7456,016055,47.6788,-116.6824,"RATHDRUM COMBUSTION TURBINE PROJECT     ","WASHINGTON WATER POWER CO               ",10,"IDAHO","KOOTENAI",WSCC,P2
+  7504,056005,44.2477,-105.5462,"NEIL SIMPSON II                         ","BLACK HILLS CORP                        ",8,"WYOMING","CAMPBELL",WSCC,P2
+  7505,027111,46.4124,-95.7132,"FERGUS CONTROL CENTER                   ","OTTER TAIL POWER CO                     ",5,"MINNESOTA","OTTER TAIL", ,P2
+  7515,020113,38.3917,-97.6479,"MCPHERSON 3                             ","MCPHERSON CITY OF                       ",7,"KANSAS","MCPHERSON", ,P2
+  7527,006067,38.3804,-121.4437,"CARSON COGENERATION                     ","SACRAMENTO MUNICIPAL UTIL DIST          ",9,"CALIFORNIA","SACRAMENTO", ,
+  7537,054025,37.9766,-80.4213,"NORTH BRANCH POWER STATION              ","VIRGINIA ELECTRIC & POWER CO            ",3,"WEST VIRGINIA","GRANT",SERC,P2
+  7551,006067,38.3804,-121.4437,"PROCTER & GAMBLE                        ","SACRAMENTO MUNICIPAL UTIL DIST          ",9,"CALIFORNIA","SACRAMENTO", ,P2
+  7552,006067,38.3804,-121.4437,"SAC PWR AUTH COGEN                      ","SACRAMENTO MUNICIPAL UTIL DIST          ",9,"CALIFORNIA","SACRAMENTO", ,P2
+  7603,039101,40.5693,-83.1394,"PROSPECT                                ","AMERICAN MUN POWER-OHIO INC             ",5,"OHIO","MARION", ,
+  7604,029069,36.3135,-90.0252,"ST. FRANCIS                             ","ASSOCIATED ELECTRIC COOP INC            ",7,"MISSOURI","DUNKLIN", ,
+  7605,053011,45.8017,-122.5143,"RIVER ROAD GENERATIN                    ","PUD NO 1 OF CLARK COUNTY                ",10,"WASHINGTON","CLARK", ,
+  7693,006059,33.6665,-117.7664,"COMBUSTION TURBINE                      ","ANAHEIM CITY OF                         ",9,"CALIFORNIA","ORANGE", ,
+  7696,051159,37.5115,-77.5105,"BELL MEAD                               ","RICHMOND POWER ENTERPRISES LP           ",3,"VIRGINIA","RICHMOND", ,
+  7697,001097,30.7449,-88.1865,"OLIN COGENERATION                       ","ALABAMA POWER CO                        ",4,"ALABAMA","MOBILE", ,
+  7698,001101,32.2327,-86.2141,"GE PLASTICS COGEN                       ","ALABAMA POWER CO                        ",4,"ALABAMA","MONTGOMERY", ,
+  7699,012105,28.0023,-81.6244,"TIGER BAY                               ","FLORIDA POWER CORP                      ",4,"FLORIDA","POLK", ,P2
+  7719,028075,32.4011,-88.6519,"MERIDIAN NAVAL AIR S                    ","TENNESSEE VALLEY AUTHORITY              ",4,"MISSISSIPPI","LAUDERDALE", ,
+  7721,001097,30.7449,-88.1865,"THEODORE COGENERATIO                    ","ALABAMA POWER CO                        ",4,"ALABAMA","MOBILE", ,
+  7749,029207,36.8773,-89.9750,"ESSEX POWER PLANT                       ","ASSOCIATED ELECTRIC COOP INC            ",7,"MISSOURI","STODDARD", ,
+  7754,029147,40.3516,-94.9006,"NODAWAY POWER PLANT                     ","ASSOCIATED ELECTRIC COOP INC            ",7,"MISSOURI","NODAWAY", ,
+  7790,049047,40.0833,-109.2833,"BONANZA                                 ","DESERET GENERATION & TRAN COOP          ",8,"UTAH","UINTAH",WSCC,P2
+  7902,048203,32.4606,-94.4850,"PIRKEY                                  ","SOUTHWESTERN ELECTRIC POWER CO          ",6,"TEXAS","HARRISON",SPP,P2
+  8002,033015,43.1000,-70.7914,"NEWINGTON                               ","PUBLIC SERVICE CO OF NH                 ",1,"NEW HAMPSHIRE","ROCKINGHAM",NPCC,P2
+  8006,036071,41.5711,-73.9750,"ROSETON                                 ","CENTRAL HUDSON GAS & ELEC CORP          ",2,"NEW YORK","ORANGE",NPCC,P1.5
+  8023,055021,43.4833,-89.4000,"COLUMBIA                                ","WISCONSIN POWER & LIGHT CO              ",5,"WISCONSIN","COLUMBIA",MAIN,P2
+  8042,037169,36.2811,-80.0603,"BELEWS CREEK                            ","DUKE POWER CO                           ",4,"NORTH CAROLINA","STOKES",SERC,P2
+  8048,012101,28.1842,-82.7872,"ANCLOTE                                 ","FLORIDA POWER CORP                      ",4,"FLORIDA","PASCO",SERC,P2
+  8049,012097,27.9948,-81.2595,"INTERCESSION CITY                       ","FLORIDA POWER CORP                      ",4,"FLORIDA","OSCEOLA",SERC,P2
+  8054,028151,33.3503,-91.1181,"GERALD ANDRUS                           ","MISSISSIPPI POWER & LIGHT CO            ",4,"MISSISSIPPI","WASHINGTON",SPP,P2
+  8056,022089,29.9778,-90.4750,"WATERFORD 1 & 2                         ","LOUISIANA POWER & LIGHT CO              ",6,"LOUISIANA","ST CHARLES",SPP,P2
+  8059,040031,34.5542,-98.2061,"COMANCHE                                ","PUBLIC SERVICE CO OF OKLAHOMA           ",6,"OKLAHOMA","COMANCHE",SPP,P2
+  8063,048221,32.4017,-97.7186,"DECORDOVA                               ","TEXAS UTILITIES ELECTRIC CO             ",6,"TEXAS","HOOD",ERCOT,P2
+  8066,056037,41.7500,-108.8000,"JIM BRIDGER                             ","PACIFICORP                              ",8,"WYOMING","SWEETWATER",WSCC,P2
+  8069,049015,39.3792,-111.0750,"HUNTINGTON                              ","PACIFICORP                              ",8,"UTAH","EMERY",WSCC,P2
+  8102,039053,38.9358,-82.1164,"GEN J M GAVIN                           ","OHIO POWER CO                           ",5,"OHIO","GALLIA",ECAR,P1
+  8106,019031,41.7723,-91.1315,"TIPTON MUNICIPAL UTI                    ","TIPTON CITY OF                          ",7,"IOWA","CEDAR", ,
+  8108,019055,42.4709,-91.3695,"HOPKINTON MUNICIPAL UTILITIES           ","HOPKINTON CITY OF                       ",7,"IOWA","DELAWARE",MAPP,P2
+  8219,008041,38.6306,-104.7056,"RAY D NIXON                             ","COLORADO SPRINGS CITY OF                ",8,"COLORADO","EL PASO",WSCC,P2
+  8222,038057,47.2217,-101.8139,"COYOTE                                  ","MONTANA-DAKOTA UTILITIES CO             ",8,"NORTH DAKOTA","MERCER",MAPP,P2
+  8223,004001,34.3186,-109.1636,"SPRINGERVILLE                           ","TUCSON ELECTRIC POWER CO                ",9,"ARIZONA","APACHE",WSCC,P2
+  8224,032013,40.8833,-117.1542,"NORTH VALMY                             ","SIERRA PACIFIC POWER CO                 ",9,"NEVADA","HUMBOLDT",WSCC,P2
+  8226,042003,40.5375,-79.7917,"CHESWICK                                ","DUQUESNE LIGHT CO                       ",3,"PENNSYLVANIA","ALLEGHENY",ECAR,P1
+  8906,036081,40.7864,-73.9133,"ASTORIA                                 ","CONSOLIDATED EDISON CO-NY INC           ",2,"NEW YORK","QUEENS",NPCC,P2
+  9864,025013,42.1997,-72.6103,"CABOT-HOLYOKE                           ","HOLYOKE GAS & ELECTRIC CO               ",1,"MASSACHUSETTS","HAMPDEN",NPCC,P2
+  9907,053033,47.4338,-121.7531,"LAKE UNION                              ","SEATTLE CITY OF                         ",10,"WASHINGTON","KING", ,P2
+ 10805,034039,40.6658,-74.2999,"KENILWORTH ENERGY FACILITY              ","SITHE ENERGIES/EF KENILWORTH            ",2,"NEW JERSEY","UNION", ,
+ 50074,042045,39.9338,-75.4041,"MARCUS HOOK REFINERY                    ","SUN COMPANY                             ",3,"PENNSYLVANIA","DELAWARE", ,
+ 50130,042007,40.6657,-80.3324,"G.F. WEATON STATION                     ","ZINC CORP OF AMERICA                    ",3,"PENNSYLVANIA","BEAVER", ,
+ 50137,048481,29.2983,-96.2438,"NEWGULF                                 ","CENTRAL AND SOUTH WEST ENRGY            ",6,"TEXAS","WHARTON", ,P2
+ 50731,042017,40.3285,-75.1043,"TRENTON COGEN PROJ                      ","U S STEEL                               ",3,"PENNSYLVANIA","BUCKS", ,
+ 54365,012105,28.0023,-81.6244,"ORANGE COGENERATION FACILITY            ","CSW ENERGY, INC, POWER OPS DIV          ",4","FLORIDA",POLK, ,P2
+ 54423,012069,28.8112,-81.6550,"LAKE COGENERATION                       ","STEWART & STEVENSON OPER., INC          ",4,"FLORIDA","LAKE", ,
+ 54424,012025,25.5582,-80.4962,"PASCO COGENERATION                      ","NCP DADE POWER, INC                     ",4,"FLORIDA","PASCO", ,
+ 54426,012105,28.0023,-81.6244,"MULBERRY COGENERATION FACILITY          ","CSW ENERGY, INC, POWER OPS DIV          ",4","FLORIDA",POLK, ,P2
+ 54466,012095,28.5662,-81.2613,"ORLANDO COGEN                           ","AIR PRODUCTS AND CHEMICALS, IN          ",4,"FLORIDA","ORANGE", ,P2
+ 54538,013147,34.3518,-82.9451,"HARTWELL ENERGY FACILITY                ","ESBI ENERGY O&M, INC                    ",4,"GEORGIA","HART", ,
+ 54658,012105,28.0023,-81.6244,"AUBURNDALE POWER PARTNERS, LP           ","MISSION OPS. & MAINTENANCE, IN          ",4,"FLORIDA","POLK", ,P2
+ 54761,041059,45.4986,-118.7026,"HERMISTON                               ","U.S. OPERATING SERVICES CO              ",10,"OREGON","UMATILLA", ,P2
+ 54785,042101,40.0018,-75.1281,"GRAYS FERRY COGEN                       ","PUPCO                                   ",3,"PENNSYLVANIA","PHILADELPHIA", ,
+ 54814,035045,36.5003,-108.2327,"MILAGRO                                 ","WILLIAMS FIELD SERVICES                 ",6,"NEW MEXICO","SAN JUAN", ,P2
+ 54817,048251,32.3444,-97.3516,"CLEBURNE COGENERATION                   ","NORTH AMERICAN ENERGY SERVICES          ",6,"TEXAS","JOHNSON", ,
+ 54832,024033,38.8338,-76.8801,"PANDA BRANDYWINE                        ","OGDEN POWER CORPORATION                 ",3,"MARYLAND","PRINCE GEORGES", ,
+ 54914,036047,40.6518,-73.9452,"BROOKLYN NAVY YARD COGENERATION FAC     ","PALMARK INC                             ",2,"NEW YORK","KINGS", ,P2
+ 54915,026105,43.9973,-86.2740,"MICHIGAN POWER LIMITED PARTNERSHIP      ","DESTEC OPERATING COMPANY                ",5,"MICHIGAN","MASON", ,P2
+ 55010,027163,45.0214,-92.8831,"COTTAGE GROVE                           ","WESTINGHOUSE OPERATING SERV CO          ",5,"MINNESOTA","WASHINGTON", ,
+ 55011,055127,42.6676,-88.5417,"WHITEWATER                              ","LSP-WHITEWATER LP                       ",5,"WISCONSIN","WALWORTH", ,
+ 55015,048039,29.2062,-95.4646,"SWEENY COGENERATION                     ","SWEENY COGENERATION LTD LP              ",6,"TEXAS","BRAZORIA", ,P2
+ 55026,025005,41.7885,-71.1099,"DIGHTON                                 ","DIGHTON POWER ASSOCIATES LP             ",1,"MASSACHUSETTS","BRISTOL", ,
+ 55032,049049,40.1895,-111.5237,"LEHI INDEPENDENT POW                    ","LEHI INDEPENDENT POWER ASSOC            ",8,"UTAH","UTAH", ,
+ 55039,035001,35.0442,-106.6727,"COBISA-PERSON POWER                     ","COBISA-PERSON LTD PARTNERSHIP           ",6,"NEW MEXICO","BERNALILLO", ,
+ 55040,013153,32.4874,-83.6775,"MID-GEORGIA COGEN                       ","MID-GEORGIA COGEN LP                    ",4,"GEORGIA","HOUSTON", ,
+ 55042,009001,41.3245,-73.4085,"BRIDGEPORT ENERGY                       ","SIEMENS POWER CORPORATION               ",1,"CONNECTICUT","FAIRFIELD", ,P2
+ 55043,045021,35.0113,-81.6207,"CHEROKEE                                ","ESI OPERATING SERVICES INC              ",4,"SOUTH CAROLINA","CHEROKEE", ,
+ 55047,048201,29.8336,-95.4383,"PASADENA POWER PLANT                    ","CALPINE CORPORATION                     ",6,"TEXAS","HARRIS", ,
+ 55048,044001,41.7128,-71.2850,"TIVERTON                                ","TIVERTON POWER ASSOCIATES LP            ",1,"RHODE ISLAND","BRISTOL", ,
+ 55061,013097,33.6900,-84.7422,"TENASKA GEORGIA                         ","TENASKA GEORGIA PARTNERS LP             ",4,"GEORGIA","DOUGLAS", ,
+ 55063,028107,34.3567,-89.9618,"BATESVILLE GENERATIO                    ","LSP ENERGY LTD PARTNERSHIP              ",4,"MISSISSIPPI","PANOLA", ,
+ 55064,048375,35.4015,-101.8947,"BLACKHAWK STATION                       ","QUIXX POWER SERVICES                    ",6,"TEXAS","POTTER", ,
+ 55065,048501,33.1734,-102.8289,"MUSTANG STATION                         ","DENVER CITY ENERGY ASSOC LP             ",6,"TEXAS","YOAKUM", ,
+ 55068,023005,43.8520,-70.3663,"MAINE INDEPENDENCE S                    ","CASCO BAY ENERGY CO LLC                 ",1,"MAINE","CUMBERLAND", ,
+ 55076,028019,33.3209,-89.2709,"RED HILLS GENERATION                    ","CHOCTAW GENERATING LP                   ",4,"MISSISSIPPI","CHOCTAW", ,
+ 55079,025027,42.3646,-71.8968,"MILLENNIUM POWER PAR                    ","MILLENNIUM POWER                        ",1,"MASSACHUSETTS","WORCESTER", ,
+880001,047085,36.0419,-87.9753,"DUPONT JOHNSONVILLE                     ","E. I. DUPONT DE NEMOURS & CO.           ",4,"TENNESSEE","HUMPHREYS", ,P1.5

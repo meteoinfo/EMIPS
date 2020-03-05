@@ -1,0 +1,124 @@
+#COUNTRY US
+#COUNTRY CANADA
+100	Population
+110	Housing
+120	Urban Population 
+130	Rural Population
+140	Housing Change and Population
+150	Residential Heating - Natural Gas
+160	Residential Heating - Wood
+170	Residential Heating - Distillate Oil
+180	Residential Heating - Coal
+190	Residential Heating - LP Gas
+200	Urban Primary Road Miles
+210	Rural Primary Road Miles
+220	Urban Secondary Road Miles
+230	Rural Secondary Road Miles
+240	Total Road Miles
+250	Urban Primary plus Rural Primary
+255	3/4 Roadway Miles plus 1/4 population
+260	Total Railroad Miles
+270	Class 1 Railroad Miles
+280	Class 2 and 3 Railroad Miles
+300	Low Intensity Residential
+310	Total Agriculture
+311	Total Agriculture without Orchards/Vineyards
+312	Orchards/Vineyards
+320	Forest Land
+330	Strip Mines/Quarries
+340	Land 
+350	Water
+400	Rural Land Area
+500	Commercial Land
+505	Industrial Land
+510	Commercial plus Industrial
+515	Commercial plus Institutional Land
+520	Commercial plust Industrial plus Institutional
+525	Golf Courses plus Institutional plus Industrial plus Commercial
+530	Residential_High Density (RES3 + RES4 + RES5 + RES6)
+535	Residential (RES1-4) + Commercial + Industrial + Institutional + Government
+540	Retail Trade (COM1)
+545	Personal Repair (COM3)
+550	Retail Trade (COM1) plus Personal Repair (COM3)
+555	Professional/Technical (COM4) plus General Government (GOV1)
+560	Hospital (COM6)
+565	Medical Office/Clinic (COM7)
+570	Heavy and High Tech Industrial (IND1 + IND5)
+575	Light and High Tech Industrial (IND2 + IND5)
+580	Food, Drug, Chemical Industrial (IND3)
+585	Metals and Minerals Industrial (IND4)
+590	Heavy Industrial (IND1)
+595	Light Industrial (IND2)
+596	Industrial plus Institutional plus Hospitals 
+600	Gas Stations
+650	Refineries and Tank Farms
+675	Refineries and Tank Farms and Gas Stations
+700	Airport Area
+710	Airport Point 
+720	Military Airports
+800	Marine Ports
+810	Navigable Waterway Miles
+850	Golf Courses
+860	Mines
+870	Wastewater Treatment Facilities
+880	Drycleaners
+890	Commercial Timber
+900	Total population
+901	Total dwelling
+902	Agricultural and related service industries
+903	Fishing and trapping industries
+904	Logging and forestry industries
+905	Mining (including milling), quarrying and oil well industries
+906	Manufacturing industries
+907	Construction industries
+908	Transportation and storage industries
+909	Communication and other utility industries
+910	Wholesale trade industries
+911	Retail trade industries
+912	Finance and insurance industries
+913	Real estate operator and insurance agent industries
+914	Business service industries
+915	Government service industries
+916	Educational service industries
+917	Health and social service industries
+918	Accommodation, food and beverage service industries
+919	Other service industries
+920	Combination of Wholesale trade and Retail trade industries
+921	Combination of Agricultural and Manufacturing industries
+922	Combination of Forestry and Manufacturing industries
+923	Combination of Mining and Manufacturing industries
+924	Combination of Communication industries and Total Dwelling
+925	Combination of Construction industries and Total Dwelling
+926	Combination of Government industries and Total Dwelling
+927	Ferry corridors.
+928	Marine corridors.
+929	Flight corridors, heavy jets
+930	Flight corridors, ligh & medium jets
+931	Minor airport location 50km buffer
+932	Rail corridors.
+933	Forest fires.
+934	Light Duty Gasoline Vehicles (LDGV)
+935	Light Duty Gasoline Trucks (LDGT)
+936	Heavy Duty Gasoline Vehicles (HDGV)
+937	Motorcycles (MC)
+938	Light Duty Diesel Vehicles (LDDV)
+939	Light Duty Diesel Trucks (LDDT)
+940	Heavy Duty Diesel Vehicles (HDDV)
+941	Paved Roads
+942	Unpaved Roads
+#COUNTRY MEXICO
+1   Agriculture
+2   Airports 
+340 Land Area 
+4   Housing 
+7   Major Highways
+100 Population 
+9   Ports 
+10  Railroads 
+11  Water Area
+15  Urban Primary Roads 
+16  Rural Primary Roads 
+17  Urban Secondary Roads 
+18  Rural Secondary Roads 
+19  Urban Population  
+20  Rural Population

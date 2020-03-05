@@ -1,0 +1,1613 @@
+01   Agricultural Production - Crops
+0100 Agricultural production- crops
+011  Agricultural Production - Crops, Cash Grains
+0111 Agricultural Production - Crops, Cash Grains, Wheat
+0112 Agricultural Production - Crops, Cash Grains, Rice
+0115 Agricultural Production - Crops, Cash Grains, Corn
+0116 Agricultural Production - Crops, Cash Grains, Soybeans
+0119 Agricultural Production - Crops, Cash Grains, Cash grains, nec
+013  Agricultural Production - Crops, Field Crops, except Cash Grains
+0131 Agricultural Production - Crops, Field Crops, except Cash Grains, Cotton
+0132 Agricultural Production - Crops, Field Crops, except Cash Grains, Tobacco
+0133 Agricultural Production - Crops, Field Crops, except Cash Grains, Sugarcane and sugar beets
+0134 Agricultural Production - Crops, Field Crops, except Cash Grains, Irish potatoes
+0139 Agricultural Production - Crops, Field Crops, except Cash Grains, Field crops, except cash grains, nec
+016  Agricultural Production - Crops, Vegetables and Melons
+0161 Agricultural Production - Crops, Vegetables and Melons, Vegetables and melons
+017  Agricultural Production - Crops, Fruits and Tree Nuts
+0170 Fruit and Tree Nuts
+0171 Agricultural Production - Crops, Fruits and Tree Nuts, Berry crops
+0172 Agricultural Production - Crops, Fruits and Tree Nuts, Grapes
+0173 Agricultural Production - Crops, Fruits and Tree Nuts, Tree nuts
+0174 Agricultural Production - Crops, Fruits and Tree Nuts, Citrus fruits
+0175 Agricultural Production - Crops, Fruits and Tree Nuts, Deciduous tree fruits
+0179 Agricultural Production - Crops, Fruits and Tree Nuts, Fruits and tree nuts, nec
+018  Agricultural Production - Crops, Horticultural Specialties
+0181 Agricultural Production - Crops, Horticultural Specialties, Ornamental nursery products
+0182 Agricultural Production - Crops, Horticultural Specialties, Food crops grown under cover
+019  Agricultural Production - Crops, General Farms, Primarily Crop
+0191 Agricultural Production - Crops, General Farms, Primarily Crop, General farms, primarily crop
+02   Agricultural Production--Livestock
+0200 Agricultural production- livestock
+021  Agricultural Production--Livestock, Livestock, Except Dairy And Poultry
+0211 Agricultural Production--Livestock, Livestock, Except Dairy And Poultry, Beef cattle feedlots
+0212 Agricultural Production--Livestock, Livestock, Except Dairy And Poultry, Beef cattle, except feedlots
+0213 Agricultural Production--Livestock, Livestock, Except Dairy And Poultry, Hogs
+0214 Agricultural Production--Livestock, Livestock, Except Dairy And Poultry, Sheep and goats
+0219 Agricultural Production--Livestock, Livestock, Except Dairy And Poultry, General livestock, nec
+024  Agricultural Production--Livestock, Dairy Farms
+0241 Agricultural Production--Livestock, Dairy Farms, Dairy farms
+025  Agricultural Production--Livestock, Poultry and Eggs
+0251 Agricultural Production--Livestock, Poultry and Eggs, Broiler, fryer, and roaster chickens
+0252 Agricultural Production--Livestock, Poultry and Eggs, Chicken eggs
+0253 Agricultural Production--Livestock, Poultry and Eggs, Turkeys and turkey eggs
+0254 Agricultural Production--Livestock, Poultry and Eggs, Poultry hatcheries
+0259 Agricultural Production--Livestock, Poultry and Eggs, Poultry and eggs, nec
+027  Agricultural Production--Livestock, Animal Specialties
+0271 Agricultural Production--Livestock, Animal Specialties, Fur-bearing animals and rabbits
+0272 Agricultural Production--Livestock, Animal Specialties, Horses and other equines
+0273 Agricultural Production--Livestock, Animal Specialties, Animal aquaculture
+0279 Agricultural Production--Livestock, Animal Specialties, Animal specialties, nec
+029  Agricultural Production--Livestock, General Farms, Primarily Animal
+0291 Agricultural Production--Livestock, General Farms, Primarily Animal, General farms, primarily animal
+07   Agricultural Services
+0700 Agricultural services
+071  Agricultural Services, Soil Preparation Services
+0711 Agricultural Services, Soil Preparation Services, Soil preparation services
+072  Agricultural Services, Crop Services
+0721 Agricultural Services, Crop Services, Crop planting and protecting
+0722 Agricultural Services, Crop Services, Crop harvesting
+0723 Agricultural Services, Crop Services, Crop preparation services for market
+0724 Agricultural Services, Crop Services, Cotton ginning
+074  Agricultural Services, Veterinary Services
+0741 Agricultural Services, Veterinary Services, Veterinary services for livestock
+0742 Agricultural Services, Veterinary Services, Veterinary services, specialties
+075  Agricultural Services, Animal Services, Except Veterinary
+0751 Agricultural Services, Animal Services, Except Veterinary, Livestock services, exc. veterinary
+0752 Agricultural Services, Animal Services, Except Veterinary, Animal specialty services
+076  Agricultural Services, Farm Labor and Management Services
+0761 Agricultural Services, Farm Labor and Management Services, Farm labor contractors
+0762 Agricultural Services, Farm Labor and Management Services, Farm management services
+078  Agricultural Services, Landscape and Horticultural Services
+0781 Agricultural Services, Landscape and Horticultural Services, Landscape counseling and planning
+0782 Agricultural Services, Landscape and Horticultural Services, Lawn and garden services
+0783 Agricultural Services, Landscape and Horticultural Services, Ornamental shrub and tree services
+08   Forestry, Landscape and Horticultural Services
+0800 Forestry
+081  Forestry, Timber Tracts
+0811 Forestry, Timber Tracts, Timber tracts
+083  Forestry, Forest Products
+0831 Forestry, Forest Products, Forest products
+085  Forestry, Forestry Services
+0851 Forestry, Forestry Services, Forestry services
+09   Fishing, Hunting, And Trapping
+0900 Fishing, hunting, and trapping
+091  Fishing, Hunting, And Trapping, Commercial Fishing
+0912 Fishing, Hunting, And Trapping, Commercial Fishing, Finfish
+0913 Fishing, Hunting, And Trapping, Commercial Fishing, Shellfish
+0919 Fishing, Hunting, And Trapping, Commercial Fishing, Miscellaneous marine products
+092  Fishing, Hunting, And Trapping, Fish Hatcheries and Preserves
+0921 Fishing, Hunting, And Trapping, Fish Hatcheries and Preserves, Fish hatcheries and preserves
+097  Fishing, Hunting, And Trapping, Hunting, Trapping, Game Propagation
+0971 Fishing, Hunting, And Trapping, Hunting, Trapping, Game Propagation, Hunting, trapping, game propagation
+10   Metal Mining
+1000 Metal mining
+101  Metal Mining, Iron Ores
+1011 Metal Mining, Iron Ores, Iron ores
+102  Metal Mining, Copper Ores
+1021 Metal Mining, Copper Ores, Copper ores
+103  Metal Mining, Lead and Zinc Ores
+1031 Metal Mining, Lead and Zinc Ores, Lead and zinc ores
+104  Metal Mining, Gold and Silver Ores
+1041 Metal Mining, Gold and Silver Ores, Gold ores
+1044 Metal Mining, Gold and Silver Ores, Silver ores
+106  Metal Mining, Ferroalloy Ores, Except Vanadium
+1061 Metal Mining, Ferroalloy Ores, Except Vanadium, Ferroalloy ores, except vanadium
+108  Metal Mining, Metal Mining Services
+1081 Metal Mining, Metal Mining Services, Metal mining services
+109  Metal Mining, Miscellaneous Metal Ores
+1094 Metal Mining, Miscellaneous Metal Ores, Uranium-radium-vanadium ores
+1099 Metal Mining, Miscellaneous Metal Ores, Metal ores, nec
+12   Coal Mining
+1200 Coal mining
+122  Coal Mining, Bituminous Coal and Lignite Mining
+1221 Coal Mining, Bituminous Coal and Lignite Mining, Bituminous coal and lignite--surface
+1222 Coal Mining, Bituminous Coal and Lignite Mining, Bituminous coal--underground
+123  Coal Mining, Anthracite Mining
+1231 Coal Mining, Anthracite Mining, Anthracite mining
+124  Coal Mining, Coal Mining Services
+1241 Coal Mining, Coal Mining Services, Coal mining services
+13   Oil And Gas Extraction
+1300 Oil and gas extraction
+131  Oil And Gas Extraction, Crude Petroleum And Natural Gas
+1311 Oil And Gas Extraction, Crude Petroleum And Natural Gas, Crude petroleum and natural gas
+132  Oil And Gas Extraction, Natural Gas Liquids
+1321 Oil And Gas Extraction, Natural Gas Liquids, Natural gas liquids
+138  Oil And Gas Extraction, Oil and Gas Field Services
+1381 Oil And Gas Extraction, Oil and Gas Field Services, Drilling oil and gas wells
+1382 Oil And Gas Extraction, Oil and Gas Field Services, Oil and gas exploration services
+1389 Oil And Gas Extraction, Oil and Gas Field Services, Oil and gas field services, nec
+14   Nonmetallic Minerals, Except Fuels
+1400 Nonmetallic minerals, except fuels
+141  Nonmetallic Minerals, Except Fuels, Dimension Stone
+1411 Nonmetallic Minerals, Except Fuels, Dimension Stone, Dimension stone
+142  Nonmetallic Minerals, Except Fuels, Crushed and Broken Stone
+1422 Nonmetallic Minerals, Except Fuels, Crushed and Broken Stone, Crushed and broken limestone
+1423 Nonmetallic Minerals, Except Fuels, Crushed and Broken Stone, Crushed and broken granite
+1429 Nonmetallic Minerals, Except Fuels, Crushed and Broken Stone, Crushed and broken stone, nec
+144  Nonmetallic Minerals, Except Fuels, Sand and Gravel
+1442 Nonmetallic Minerals, Except Fuels, Sand and Gravel, Construction sand and gravel
+1446 Nonmetallic Minerals, Except Fuels, Sand and Gravel, Industrial sand
+145  Nonmetallic Minerals, Except Fuels, Clay, Ceramic, & Refractory Minerals
+1455 Nonmetallic Minerals, Except Fuels, Clay, Ceramic, & Refractory Minerals, Kaolin and ball clay
+1459 Nonmetallic Minerals, Except Fuels, Clay, Ceramic, & Refractory Minerals, Clay and related minerals, nec
+147  Nonmetallic Minerals, Except Fuels, Chemical and Fertilizer Minerals
+1474 Nonmetallic Minerals, Except Fuels, Chemical and Fertilizer Minerals, Potash, soda, and borate minerals
+1475 Nonmetallic Minerals, Except Fuels, Chemical and Fertilizer Minerals, Phosphate rock
+1479 Nonmetallic Minerals, Except Fuels, Chemical and Fertilizer Minerals, Chemical and fertilizer mining, nec
+148  Nonmetallic Minerals, Except Fuels, Nonmetallic Minerals Services
+1481 Nonmetallic Minerals, Except Fuels, Nonmetallic Minerals Services, Nonmetallic minerals services
+149  Nonmetallic Minerals, Except Fuels, Miscellaneous Nonmetallic Minerals
+1499 Nonmetallic Minerals, Except Fuels, Miscellaneous Nonmetallic Minerals, Miscellaneous nonmetallic minerals
+15   General Building Contractors
+1500 General building contractors
+152  General Building Contractors, Residential Building Construction
+1521 General Building Contractors, Residential Building Construction, Single-family housing construction
+1522 General Building Contractors, Residential Building Construction, Residential construction, nec
+153  General Building Contractors, Operative Builders
+1531 General Building Contractors, Operative Builders, Operative builders
+154  General Building Contractors, Nonresidential Building Construction
+1541 General Building Contractors, Nonresidential Building Construction, Industrial buildings and warehouses
+1542 General Building Contractors, Nonresidential Building Construction, Nonresidential construction, nec
+16   Heavy Construction, Ex. Building
+1600 Heavy construction contractors
+161  Heavy Construction, Ex. Building, Highway and Street Construction
+1611 Heavy Construction, Ex. Building, Highway and Street Construction, Highway and street construction
+162  Heavy Construction, Ex. Building, Heavy Construction, except Highway
+1622 Heavy Construction, Ex. Building, Heavy Construction, except Highway, Bridge, tunnel, & elevated highway
+1623 Heavy Construction, Ex. Building, Heavy Construction, except Highway, Water, sewer, and utility lines
+1629 Heavy Construction, Ex. Building, Heavy Construction, except Highway, Heavy construction, nec
+17   Special Trade Contractors
+1700 Special trade contractors
+171  Special Trade Contractors, Plumbing, Heating, Air-conditioning
+1711 Special Trade Contractors, Plumbing, Heating, Air-conditioning, Plumbing, heating, air-conditioning
+172  Special Trade Contractors, Painting and Paper Hanging
+1721 Special Trade Contractors, Painting and Paper Hanging, Painting and paper hanging
+173  Special Trade Contractors, Electrical Work
+1731 Special Trade Contractors, Electrical Work, Electrical work
+174  Special Trade Contractors, Masonry, Stonework, and Plastering
+1741 Special Trade Contractors, Masonry, Stonework, and Plastering, Masonry and other stone work
+1742 Special Trade Contractors, Masonry, Stonework, and Plastering, Plastering, drywall, and insulation
+1743 Special Trade Contractors, Masonry, Stonework, and Plastering, Terrazzo, tile, marble, mosaic work
+175  Special Trade Contractors, Carpentry and Floor Work
+1751 Special Trade Contractors, Carpentry and Floor Work, Carpentry work
+1752 Special Trade Contractors, Carpentry and Floor Work, Floor laying and floor work, nec
+176  Special Trade Contractors, Roofing, Siding, and Sheet Metal Work
+1761 Special Trade Contractors, Roofing, Siding, and Sheet Metal Work, Roofing, siding, & sheet metal work
+177  Special Trade Contractors, Concrete Work
+1771 Special Trade Contractors, Concrete Work, Concrete work
+178  Special Trade Contractors, Water Well Drilling
+1781 Special Trade Contractors, Water Well Drilling, Water well drilling
+179  Special Trade Contractors, Misc. Special Trade Contractors
+1791 Special Trade Contractors, Misc. Special Trade Contractors, Structural steel erection
+1793 Special Trade Contractors, Misc. Special Trade Contractors, Glass and glazing work
+1794 Special Trade Contractors, Misc. Special Trade Contractors, Excavation work
+1795 Special Trade Contractors, Misc. Special Trade Contractors, Wrecking and demolition work
+1796 Special Trade Contractors, Misc. Special Trade Contractors, Installing building equipment, nec
+1799 Special Trade Contractors, Misc. Special Trade Contractors, Special trade contractors, nec
+20   Food And Kindred Products
+2000 Food and kindred products
+201  Food And Kindred Products, Meat Products
+2011 Food And Kindred Products, Meat Products, Meat packing plants
+2013 Food And Kindred Products, Meat Products, Sausages and other prepared meats
+2015 Food And Kindred Products, Meat Products, Poultry slaughtering and processing
+202  Food And Kindred Products, Dairy Products
+2021 Food And Kindred Products, Dairy Products, Creamery butter
+2022 Food And Kindred Products, Dairy Products, Cheese, natural and processed
+2023 Food And Kindred Products, Dairy Products, Dry, condensed, evaporated  products
+2024 Food And Kindred Products, Dairy Products, Ice cream and frozen desserts
+2026 Food And Kindred Products, Dairy Products, Fluid milk
+203  Food And Kindred Products, Preserved Fruits and Vegetables
+2032 Food And Kindred Products, Preserved Fruits and Vegetables, Canned specialties
+2033 Food And Kindred Products, Preserved Fruits and Vegetables, Canned fruits and vegetables
+2034 Food And Kindred Products, Preserved Fruits and Vegetables, Dehydrated fruits, vegetables, soups
+2035 Food And Kindred Products, Preserved Fruits and Vegetables, Pickles, sauces, and salad dressings
+2037 Food And Kindred Products, Preserved Fruits and Vegetables, Frozen fruits and vegetables
+2038 Food And Kindred Products, Preserved Fruits and Vegetables, Frozen specialties, nec
+204  Food And Kindred Products, Grain Mill Products
+2041 Food And Kindred Products, Grain Mill Products, Flour and other grain mill products
+2043 Food And Kindred Products, Grain Mill Products, Cereal breakfast foods
+2044 Food And Kindred Products, Grain Mill Products, Rice milling
+2045 Food And Kindred Products, Grain Mill Products, Prepared flour mixes and doughs
+2046 Food And Kindred Products, Grain Mill Products, Wet corn milling
+2047 Food And Kindred Products, Grain Mill Products, Dog and cat food
+2048 Food And Kindred Products, Grain Mill Products, Prepared feeds, nec
+205  Food And Kindred Products, Bakery Products
+2051 Food And Kindred Products, Bakery Products, Bread, cake, and related products
+2052 Food And Kindred Products, Bakery Products, Cookies and crackers
+2053 Food And Kindred Products, Bakery Products, Frozen bakery products, except bread
+206  Food And Kindred Products, Sugar and Confectionery Products
+2061 Food And Kindred Products, Sugar and Confectionery Products, Raw cane sugar
+2062 Food And Kindred Products, Sugar and Confectionery Products, Cane sugar refining
+2063 Food And Kindred Products, Sugar and Confectionery Products, Beet sugar
+2064 Food And Kindred Products, Sugar and Confectionery Products, Candy & other confectionery products
+2066 Food And Kindred Products, Sugar and Confectionery Products, Chocolate & cocoa products
+2067 Food And Kindred Products, Sugar and Confectionery Products, Chewing gum
+2068 Food And Kindred Products, Sugar and Confectionery Products, Salted & roasted nuts & seeds
+207  Food And Kindred Products, Fats and Oils
+2074 Food And Kindred Products, Fats and Oils, Cottonseed oil mills
+2075 Food And Kindred Products, Fats and Oils, Soybean oil mills
+2076 Food And Kindred Products, Fats and Oils, Vegetable oil mills, nec
+2077 Food And Kindred Products, Fats and Oils, Animal and marine fats and oils
+2079 Food And Kindred Products, Fats and Oils, Edible fats and oils, nec
+208  Food And Kindred Products, Beverages
+2082 Food And Kindred Products, Beverages, Malt beverages
+2083 Food And Kindred Products, Beverages, Malt
+2084 Food And Kindred Products, Beverages, Wines, brandy, and brandy spirits
+2085 Food And Kindred Products, Beverages, Distilled and blended liquors
+2086 Food And Kindred Products, Beverages, Bottled and canned soft drinks
+2087 Food And Kindred Products, Beverages, Flavoring extracts and syrups, nec
+209  Food And Kindred Products, Misc. Food and Kindred Products
+2091 Food And Kindred Products, Misc. Food and Kindred Products, Canned and cured fish and seafoods
+2092 Food And Kindred Products, Misc. Food and Kindred Products, Fresh or frozen prepared fish
+2095 Food And Kindred Products, Misc. Food and Kindred Products, Roasted coffee
+2096 Food And Kindred Products, Misc. Food and Kindred Products, Potato chips and similar snacks
+2097 Food And Kindred Products, Misc. Food and Kindred Products, Manufactured ice
+2098 Food And Kindred Products, Misc. Food and Kindred Products, Macaroni and spaghetti
+2099 Food And Kindred Products, Misc. Food and Kindred Products, Food preparations, nec
+21   Tobacco Products
+2100 Tobacco manufactures
+211  Tobacco Products, Cigarettes
+2111 Tobacco Products, Cigarettes, Cigarettes
+212  Tobacco Products, Cigars
+2121 Tobacco Products, Cigars, Cigars
+213  Tobacco Products, Chewing and Smoking Tobacco
+2131 Tobacco Products, Chewing and Smoking Tobacco, Chewing and smoking tobacco
+214  Tobacco Products, Tobacco Stemming And Redrying
+2141 Tobacco Products, Tobacco Stemming And Redrying, Tobacco stemming and redrying
+22   Textile Mill Products
+2200 Textile mill products
+221  Textile Mill Products, Broadwoven Fabric Mills, Cotton
+2211 Textile Mill Products, Broadwoven Fabric Mills, Cotton, Broadwoven fabric mills, cotton
+222  Textile Mill Products, Broadwoven Fabric Mills, Manmade
+2221 Textile Mill Products, Broadwoven Fabric Mills, Manmade, Broadwoven fabric mills, manmade
+223  Textile Mill Products, Broadwoven Fabric Mills, Wool
+2231 Textile Mill Products, Broadwoven Fabric Mills, Wool, Broadwoven fabric mills, wool
+224  Textile Mill Products, Narrow Fabric Mills
+2241 Textile Mill Products, Narrow Fabric Mills, Narrow fabric mills
+225  Textile Mill Products, Knitting Mills
+2251 Textile Mill Products, Knitting Mills, Women's hosiery, except socks
+2252 Textile Mill Products, Knitting Mills, Hosiery, nec
+2253 Textile Mill Products, Knitting Mills, Knit outerwear mills
+2254 Textile Mill Products, Knitting Mills, Knit underwear mills
+2257 Textile Mill Products, Knitting Mills, Weft knit fabric mills
+2258 Textile Mill Products, Knitting Mills, Lace and warp knit fabric mills
+2259 Textile Mill Products, Knitting Mills, Knitting mills, nec
+226  Textile Mill Products, Textile Finishing, except Wool
+2261 Textile Mill Products, Textile Finishing, except Wool, Finishing plants, cotton
+2262 Textile Mill Products, Textile Finishing, except Wool, Finishing plants, manmade
+2269 Textile Mill Products, Textile Finishing, except Wool, Finishing plants, nec
+227  Textile Mill Products, Carpets and Rugs
+2273 Textile Mill Products, Carpets and Rugs, Carpets and rugs
+228  Textile Mill Products, Yarn and Thread Mills
+2281 Textile Mill Products, Yarn and Thread Mills, Yarn spinning mills
+2282 Textile Mill Products, Yarn and Thread Mills, Throwing and winding mills
+2284 Textile Mill Products, Yarn and Thread Mills, Thread mills
+229  Textile Mill Products, Miscellaneous Textile Goods
+2295 Textile Mill Products, Miscellaneous Textile Goods, Coated fabrics, not rubberized
+2296 Textile Mill Products, Miscellaneous Textile Goods, Tire cord and fabrics
+2297 Textile Mill Products, Miscellaneous Textile Goods, Nonwoven fabrics
+2298 Textile Mill Products, Miscellaneous Textile Goods, Cordage and twine
+2299 Textile Mill Products, Miscellaneous Textile Goods, Textile goods, nec
+23   Apparel And Other Textile Products
+2300 Apparel and other textile products
+231  Apparel And Other Textile Products, Men's and Boys' Suits and Coats
+2311 Apparel And Other Textile Products, Men's and Boys' Suits and Coats, Men's & boys' suits & coats
+232  Apparel And Other Textile Products, Men's and Boys' Furnishings
+2321 Apparel And Other Textile Products, Men's and Boys' Furnishings, Men's & boys' shirts
+2322 Apparel And Other Textile Products, Men's and Boys' Furnishings, Men's & boys' underwear & nightwear
+2323 Apparel And Other Textile Products, Men's and Boys' Furnishings, Men's & boys' neckwear
+2325 Apparel And Other Textile Products, Men's and Boys' Furnishings, Men's & boys' trousers & slacks
+2326 Apparel And Other Textile Products, Men's and Boys' Furnishings, Men's & boys' work clothing
+2329 Apparel And Other Textile Products, Men's and Boys' Furnishings, Men's & boys' clothing, nec
+233  Apparel And Other Textile Products, Women's and Misses' Outerwear
+2331 Apparel And Other Textile Products, Women's and Misses' Outerwear, Women's & misses' blouses & shirts
+2335 Apparel And Other Textile Products, Women's and Misses' Outerwear, Women's, & misses' dresses
+2337 Apparel And Other Textile Products, Women's and Misses' Outerwear, Women's & misses' suits and coats
+2339 Apparel And Other Textile Products, Women's and Misses' Outerwear, Women's & misses' outerwear, nec
+234  Apparel And Other Textile Products, Women's and Children's Undergarments
+2341 Apparel And Other Textile Products, Women's and Children's Undergarments, Women's and children's underwear
+2342 Apparel And Other Textile Products, Women's and Children's Undergarments, Bras, girdles, and allied garments
+235  Apparel And Other Textile Products, Hats, Caps, and Millinery
+2353 Apparel And Other Textile Products, Hats, Caps, and Millinery, Hats, caps, and millinery
+236  Apparel And Other Textile Products, Girls' and Children's Outerwear
+2361 Apparel And Other Textile Products, Girls' and Children's Outerwear, Girls' & children's dresses, blouses
+2369 Apparel And Other Textile Products, Girls' and Children's Outerwear, Girls' & children's outerwear, nec
+237  Apparel And Other Textile Products, Fur Goods
+2371 Apparel And Other Textile Products, Fur Goods, Fur goods
+238  Apparel And Other Textile Products, Miscellaneous Apparel and Accessories
+2381 Apparel And Other Textile Products, Miscellaneous Apparel and Accessories, Fabric dress and work gloves
+2384 Apparel And Other Textile Products, Miscellaneous Apparel and Accessories, Robes and dressing gowns
+2385 Apparel And Other Textile Products, Miscellaneous Apparel and Accessories, Waterproof outerwear
+2386 Apparel And Other Textile Products, Miscellaneous Apparel and Accessories, Leather and sheep-lined clothing
+2387 Apparel And Other Textile Products, Miscellaneous Apparel and Accessories, Apparel belts
+2389 Apparel And Other Textile Products, Miscellaneous Apparel and Accessories, Apparel and accessories, nec
+239  Apparel And Other Textile Products, Misc. Fabricated Textile Products
+2391 Apparel And Other Textile Products, Misc. Fabricated Textile Products, Curtains and draperies
+2392 Apparel And Other Textile Products, Misc. Fabricated Textile Products, Housefurnishings, nec
+2393 Apparel And Other Textile Products, Misc. Fabricated Textile Products, Textile bags
+2394 Apparel And Other Textile Products, Misc. Fabricated Textile Products, Canvas and related products
+2395 Apparel And Other Textile Products, Misc. Fabricated Textile Products, Pleating and stitching
+2396 Apparel And Other Textile Products, Misc. Fabricated Textile Products, Automotive and apparel trimmings
+2397 Apparel And Other Textile Products, Misc. Fabricated Textile Products, Schiffli machine embroideries
+2399 Apparel And Other Textile Products, Misc. Fabricated Textile Products, Fabricated textile products, nec
+24   Lumber And Wood Products
+2400 Lumber and wood products
+241  Lumber And Wood Products, Logging
+2411 Lumber And Wood Products, Logging, Logging
+242  Lumber And Wood Products, Sawmills and Planing Mills
+2420 Sawmills and Planing Mills
+2421 Lumber And Wood Products, Sawmills and Planing Mills, Sawmills & planing mills, general
+2426 Lumber And Wood Products, Sawmills and Planing Mills, Hardwood dimension & flooring mills
+2429 Lumber And Wood Products, Sawmills and Planing Mills, Special product sawmills, nec
+243  Lumber And Wood Products, Millwork, Plywood & Structural Members
+2431 Lumber And Wood Products, Millwork, Plywood & Structural Members, Millwork
+2434 Lumber And Wood Products, Millwork, Plywood & Structural Members, Wood kitchen cabinets
+2435 Lumber And Wood Products, Millwork, Plywood & Structural Members, Hardwood veneer and plywood
+2436 Lumber And Wood Products, Millwork, Plywood & Structural Members, Softwood veneer and plywood
+2439 Lumber And Wood Products, Millwork, Plywood & Structural Members, Structural wood members, nec
+244  Lumber And Wood Products, Wood Containers
+2441 Lumber And Wood Products, Wood Containers, Nailed wood boxes and shook
+2448 Lumber And Wood Products, Wood Containers, Wood pallets and skids
+2449 Lumber And Wood Products, Wood Containers, Wood containers, nec
+245  Lumber And Wood Products, Wood Buildings and Mobile Homes
+2451 Lumber And Wood Products, Wood Buildings and Mobile Homes, Mobile homes
+2452 Lumber And Wood Products, Wood Buildings and Mobile Homes, Prefabricated wood buildings
+249  Lumber And Wood Products, Miscellaneous Wood Products
+2491 Lumber And Wood Products, Miscellaneous Wood Products, Wood preserving
+2493 Lumber And Wood Products, Miscellaneous Wood Products, Reconstituted wood products
+2499 Lumber And Wood Products, Miscellaneous Wood Products, Wood products, nec
+25   Furniture And Fixtures
+2500 Furniture and fixtures
+251  Furniture And Fixtures, Household Furniture
+2511 Furniture And Fixtures, Household Furniture, Wood household furniture
+2512 Furniture And Fixtures, Household Furniture, Upholstered household furniture
+2514 Furniture And Fixtures, Household Furniture, Metal household furniture
+2515 Furniture And Fixtures, Household Furniture, Mattresses and bedsprings
+2517 Furniture And Fixtures, Household Furniture, Wood TV and radio cabinets
+2519 Furniture And Fixtures, Household Furniture, Household furniture, nec
+252  Furniture And Fixtures, Office Furniture
+2521 Furniture And Fixtures, Office Furniture, Wood office furniture
+2522 Furniture And Fixtures, Office Furniture, Office furniture, except wood
+253  Furniture And Fixtures, Public Building & Related Furniture
+2531 Furniture And Fixtures, Public Building & Related Furniture, Public building & related furniture
+254  Furniture And Fixtures, Partitions and Fixtures
+2541 Furniture And Fixtures, Partitions and Fixtures, Wood partitions and fixtures
+2542 Furniture And Fixtures, Partitions and Fixtures, Partitions and fixtures, except wood
+259  Furniture And Fixtures, Miscellaneous Furniture and Fixtures
+2591 Furniture And Fixtures, Miscellaneous Furniture and Fixtures, Drapery hardware, blinds and shades
+2599 Furniture And Fixtures, Miscellaneous Furniture and Fixtures, Furniture and fixtures, nec
+26   Paper And Allied Products
+2600 Paper and allied products
+261  Paper And Allied Products, Pulp Mills
+2611 Paper And Allied Products, Pulp Mills, Pulp mills
+262  Paper And Allied Products, Paper Mills
+2621 Paper And Allied Products, Paper Mills, Paper mills
+263  Paper And Allied Products, Paperboard Mills
+2631 Paper And Allied Products, Paperboard Mills, Paperboard mills
+265  Paper And Allied Products, Paperboard Containers and Boxes
+2652 Paper And Allied Products, Paperboard Containers and Boxes, Setup paperboard boxes
+2653 Paper And Allied Products, Paperboard Containers and Boxes, Corrugated & solid fiber boxes
+2655 Paper And Allied Products, Paperboard Containers and Boxes, Fiber cans, drums & similar products
+2656 Paper And Allied Products, Paperboard Containers and Boxes, Sanitary food containers
+2657 Paper And Allied Products, Paperboard Containers and Boxes, Folding paperboard boxes
+267  Paper And Allied Products, Misc. Converted Paper Products
+2671 Paper And Allied Products, Misc. Converted Paper Products, Paper coated & laminated, packaging
+2672 Paper And Allied Products, Misc. Converted Paper Products, Paper coated & laminated, nec
+2673 Paper And Allied Products, Misc. Converted Paper Products, Bags: plastics, laminated, & coated
+2674 Paper And Allied Products, Misc. Converted Paper Products, Bags: uncoated paper & multiwall
+2675 Paper And Allied Products, Misc. Converted Paper Products, Die-cut paper & board
+2676 Paper And Allied Products, Misc. Converted Paper Products, Sanitary paper products
+2677 Paper And Allied Products, Misc. Converted Paper Products, Envelopes
+2678 Paper And Allied Products, Misc. Converted Paper Products, Stationery products
+2679 Paper And Allied Products, Misc. Converted Paper Products, Converted paper products, nec
+27   Printing And Publishing
+2700 Printing and publishing
+271  Printing And Publishing, Newspapers
+2711 Printing And Publishing, Newspapers, Newspapers
+272  Printing And Publishing, Periodicals
+2721 Printing And Publishing, Periodicals, Periodicals
+273  Printing And Publishing, Books
+2731 Printing And Publishing, Books, Book publishing
+2732 Printing And Publishing, Books, Book printing
+274  Printing And Publishing, Miscellaneous Publishing
+2741 Printing And Publishing, Miscellaneous Publishing, Miscellaneous publishing
+275  Printing And Publishing, Commercial Printing
+2752 Printing And Publishing, Commercial Printing, Commercial printing, lithographic
+2754 Printing And Publishing, Commercial Printing, Commercial printing, gravure
+2759 Printing And Publishing, Commercial Printing, Commercial printing, nec
+276  Printing And Publishing, Manifold Business Forms
+2761 Printing And Publishing, Manifold Business Forms, Manifold business forms
+277  Printing And Publishing, Greeting Cards
+2771 Printing And Publishing, Greeting Cards, Greeting cards
+278  Printing And Publishing, Blankbooks and Bookbinding
+2782 Printing And Publishing, Blankbooks and Bookbinding, Blankbooks and looseleaf binders
+2789 Printing And Publishing, Blankbooks and Bookbinding, Bookbinding and related work
+279  Printing And Publishing, Printing Trade Services
+2791 Printing And Publishing, Printing Trade Services, Typesetting
+2796 Printing And Publishing, Printing Trade Services, Platemaking services
+28   Chemicals And Allied Products
+2800 Chemicals and allied products
+281  Chemicals And Allied Products, Industrial Inorganic Chemicals
+2812 Chemicals And Allied Products, Industrial Inorganic Chemicals, Alkalies and chlorine
+2813 Chemicals And Allied Products, Industrial Inorganic Chemicals, Industrial gases
+2816 Chemicals And Allied Products, Industrial Inorganic Chemicals, Inorganic pigments
+2819 Chemicals And Allied Products, Industrial Inorganic Chemicals, Industrial inorganic chemicals, nec
+282  Chemicals And Allied Products, Plastics Materials and Synthetics
+2820 Plastics Materials and Synthetic Resins, Synthetic
+2821 Chemicals And Allied Products, Plastics Materials and Synthetics, Plastics materials and resins
+2822 Chemicals And Allied Products, Plastics Materials and Synthetics, Synthetic rubber
+2823 Chemicals And Allied Products, Plastics Materials and Synthetics, Cellulosic manmade fibers
+2824 Chemicals And Allied Products, Plastics Materials and Synthetics, Organic fibers, noncellulosic
+283  Chemicals And Allied Products, Drugs
+2833 Chemicals And Allied Products, Drugs, Medicinals and botanicals
+2834 Chemicals And Allied Products, Drugs, Pharmaceutical preparations
+2835 Chemicals And Allied Products, Drugs, Diagnostic substances
+2836 Chemicals And Allied Products, Drugs, Biological products exc. diagnostic
+284  Chemicals And Allied Products, Soap, Cleaners, and Toilet Goods
+2841 Chemicals And Allied Products, Soap, Cleaners, and Toilet Goods, Soap and other detergents
+2842 Chemicals And Allied Products, Soap, Cleaners, and Toilet Goods, Polishes and sanitation goods
+2843 Chemicals And Allied Products, Soap, Cleaners, and Toilet Goods, Surface active agents
+2844 Chemicals And Allied Products, Soap, Cleaners, and Toilet Goods, Toilet preparations
+285  Chemicals And Allied Products, Paints and Allied Products
+2851 Chemicals And Allied Products, Paints and Allied Products, Paints and allied products
+286  Chemicals And Allied Products, Industrial Organic Chemicals
+2861 Chemicals And Allied Products, Industrial Organic Chemicals, Gum and wood chemicals
+2865 Chemicals And Allied Products, Industrial Organic Chemicals, Cyclic crudes and intermediates
+2869 Chemicals And Allied Products, Industrial Organic Chemicals, Industrial organic chemicals, nec
+287  Chemicals And Allied Products, Agricultural Chemicals
+2873 Chemicals And Allied Products, Agricultural Chemicals, Nitrogenous fertilizers
+2874 Chemicals And Allied Products, Agricultural Chemicals, Phosphatic fertilizers
+2875 Chemicals And Allied Products, Agricultural Chemicals, Fertilizers, mixing only
+2879 Chemicals And Allied Products, Agricultural Chemicals, Agricultural chemicals, nec
+289  Chemicals And Allied Products, Miscellaneous Chemical Products
+2891 Chemicals And Allied Products, Miscellaneous Chemical Products, Adhesives and sealants
+2892 Chemicals And Allied Products, Miscellaneous Chemical Products, Explosives
+2893 Chemicals And Allied Products, Miscellaneous Chemical Products, Printing ink
+2895 Chemicals And Allied Products, Miscellaneous Chemical Products, Carbon black
+2899 Chemicals And Allied Products, Miscellaneous Chemical Products, Chemical preparations, nec
+29   Petroleum And Coal Products
+2900 Petroleum and coal products
+291  Petroleum And Coal Products, Petroleum Refining
+2911 Petroleum And Coal Products, Petroleum Refining, Petroleum refining
+295  Petroleum And Coal Products, Asphalt Paving and Roofing Materials
+2951 Petroleum And Coal Products, Asphalt Paving and Roofing Materials, Asphalt paving mixtures and blocks
+2952 Petroleum And Coal Products, Asphalt Paving and Roofing Materials, Asphalt felts and coatings
+299  Petroleum And Coal Products, Misc. Petroleum and Coal Products
+2992 Petroleum And Coal Products, Misc. Petroleum and Coal Products, Lubricating oils and greases
+2999 Petroleum And Coal Products, Misc. Petroleum and Coal Products, Petroleum and coal products, nec
+30   Rubber And Misc. Plastics Products
+3000 Rubber and miscellaneous plastics products
+301  Rubber And Misc. Plastics Products, Tires and Inner Tubes
+3011 Rubber And Misc. Plastics Products, Tires and Inner Tubes, Tires and inner tubes
+302  Rubber And Misc. Plastics Products, Rubber and Plastics Footwear
+3021 Rubber And Misc. Plastics Products, Rubber and Plastics Footwear, Rubber and plastics footwear
+305  Rubber And Misc. Plastics Products, Hose & Belting & Gaskets & Packing
+3052 Rubber And Misc. Plastics Products, Hose & Belting & Gaskets & Packing, Rubber & plastics hose & belting
+3053 Rubber And Misc. Plastics Products, Hose & Belting & Gaskets & Packing, Gaskets, packing & sealing devices
+306  Rubber And Misc. Plastics Products, Fabricated Rubber Products, Nec
+3061 Rubber And Misc. Plastics Products, Fabricated Rubber Products, Nec, Mechanical rubber goods
+3069 Rubber And Misc. Plastics Products, Fabricated Rubber Products, Nec, Fabricated rubber products, nec
+3079 Miscellaneous Plastic Products
+308  Rubber And Misc. Plastics Products, Miscellaneous Plastics Products, Nec
+3080 Miscellaneous Plastics Products
+3081 Rubber And Misc. Plastics Products, Miscellaneous Plastics Products, Nec, Unsupported plastics film & sheet
+3082 Rubber And Misc. Plastics Products, Miscellaneous Plastics Products, Nec, Unsupported plastics profile shapes
+3083 Rubber And Misc. Plastics Products, Miscellaneous Plastics Products, Nec, Laminated plastics plate & sheet
+3084 Rubber And Misc. Plastics Products, Miscellaneous Plastics Products, Nec, Plastics pipe
+3085 Rubber And Misc. Plastics Products, Miscellaneous Plastics Products, Nec, Plastics bottles
+3086 Rubber And Misc. Plastics Products, Miscellaneous Plastics Products, Nec, Plastics foam products
+3087 Rubber And Misc. Plastics Products, Miscellaneous Plastics Products, Nec, Custom compound purchased resins
+3088 Rubber And Misc. Plastics Products, Miscellaneous Plastics Products, Nec, Plastics plumbing fixtures
+3089 Rubber And Misc. Plastics Products, Miscellaneous Plastics Products, Nec, Plastics products, nec
+31   Leather And Leather Products
+3100 Leather and leather products
+311  Leather And Leather Products, Leather Tanning and Finishing
+3111 Leather And Leather Products, Leather Tanning and Finishing, Leather tanning and finishing
+313  Leather And Leather Products, Footwear Cut Stock
+3131 Leather And Leather Products, Footwear Cut Stock, Footwear cut stock
+314  Leather And Leather Products, Footwear, except Rubber
+3142 Leather And Leather Products, Footwear, except Rubber, House slippers
+3143 Leather And Leather Products, Footwear, except Rubber, Men's footwear, except athletic
+3144 Leather And Leather Products, Footwear, except Rubber, Women's footwear, except athletic
+3149 Leather And Leather Products, Footwear, except Rubber, Footwear, except rubber, nec
+315  Leather And Leather Products, Leather Gloves and Mittens
+3151 Leather And Leather Products, Leather Gloves and Mittens, Leather gloves and mittens
+316  Leather And Leather Products, Luggage
+3161 Leather And Leather Products, Luggage, Luggage
+317  Leather And Leather Products, Handbags and Personal Leather Goods
+3171 Leather And Leather Products, Handbags and Personal Leather Goods, Women's handbags and purses
+3172 Leather And Leather Products, Handbags and Personal Leather Goods, Personal leather goods, nec
+319  Leather And Leather Products, Leather Goods, Nec
+3199 Leather And Leather Products, Leather Goods, Nec, Leather goods, nec
+32   Stone, Clay, And Glass Products, Leather Goods, Nec
+3200 Stone, clay, glass, and concrete products
+321  Stone, Clay, And Glass Products, Flat Glass
+3211 Stone, Clay, And Glass Products, Flat Glass, Flat glass
+322  Stone, Clay, And Glass Products, Glass and Glassware, Pressed Or Blown
+3221 Stone, Clay, And Glass Products, Glass and Glassware, Pressed Or Blown, Glass containers
+3229 Stone, Clay, And Glass Products, Glass and Glassware, Pressed Or Blown, Pressed and blown glass, nec
+323  Stone, Clay, And Glass Products, Products Of Purchased Glass
+3231 Stone, Clay, And Glass Products, Products Of Purchased Glass, Products of purchased glass
+324  Stone, Clay, And Glass Products, Cement, Hydraulic
+3241 Stone, Clay, And Glass Products, Cement, Hydraulic, Cement, hydraulic
+325  Stone, Clay, And Glass Products, Structural Clay Products
+3251 Stone, Clay, And Glass Products, Structural Clay Products, Brick and structural clay tile
+3253 Stone, Clay, And Glass Products, Structural Clay Products, Ceramic wall and floor tile
+3255 Stone, Clay, And Glass Products, Structural Clay Products, Clay refractories
+3259 Stone, Clay, And Glass Products, Structural Clay Products, Structural clay products, nec
+326  Stone, Clay, And Glass Products, Pottery and Related Products
+3261 Stone, Clay, And Glass Products, Pottery and Related Products, Vitreous plumbing fixtures
+3262 Stone, Clay, And Glass Products, Pottery and Related Products, Vitreous china table & kitchenware
+3263 Stone, Clay, And Glass Products, Pottery and Related Products, Semivitreous table & kitchenware
+3264 Stone, Clay, And Glass Products, Pottery and Related Products, Porcelain electrical supplies
+3269 Stone, Clay, And Glass Products, Pottery and Related Products, Pottery products, nec
+327  Stone, Clay, And Glass Products, Concrete, Gypsum, and Plaster Products
+3271 Stone, Clay, And Glass Products, Concrete, Gypsum, and Plaster Products, Concrete block and brick
+3272 Stone, Clay, And Glass Products, Concrete, Gypsum, and Plaster Products, Concrete products, nec
+3273 Stone, Clay, And Glass Products, Concrete, Gypsum, and Plaster Products, Ready-mixed concrete
+3274 Stone, Clay, And Glass Products, Concrete, Gypsum, and Plaster Products, Lime
+3275 Stone, Clay, And Glass Products, Concrete, Gypsum, and Plaster Products, Gypsum products
+328  Stone, Clay, And Glass Products, Cut Stone and Stone Products
+3281 Stone, Clay, And Glass Products, Cut Stone and Stone Products, Cut stone and stone products
+329  Stone, Clay, And Glass Products, Misc. Nonmetallic Mineral Products
+3291 Stone, Clay, And Glass Products, Misc. Nonmetallic Mineral Products, Abrasive products
+3292 Stone, Clay, And Glass Products, Misc. Nonmetallic Mineral Products, Asbestos products
+3295 Stone, Clay, And Glass Products, Misc. Nonmetallic Mineral Products, Minerals, ground or treated
+3296 Stone, Clay, And Glass Products, Misc. Nonmetallic Mineral Products, Mineral wool
+3297 Stone, Clay, And Glass Products, Misc. Nonmetallic Mineral Products, Nonclay refractories
+3299 Stone, Clay, And Glass Products, Misc. Nonmetallic Mineral Products, Nonmetallic mineral products, nec
+33   Primary Metal Industries, Misc. Nonmetallic Mineral Products
+3300 Primary metal industries
+331  Primary Metal Industries, Blast Furnace and Basic Steel Products
+3312 Primary Metal Industries, Blast Furnace and Basic Steel Products, Blast furnaces and steel mills
+3313 Primary Metal Industries, Blast Furnace and Basic Steel Products, Electrometallurgical products
+3315 Primary Metal Industries, Blast Furnace and Basic Steel Products, Steel wire and related products
+3316 Primary Metal Industries, Blast Furnace and Basic Steel Products, Cold finishing of steel shapes
+3317 Primary Metal Industries, Blast Furnace and Basic Steel Products, Steel pipe and tubes
+332  Primary Metal Industries, Iron and Steel Foundries
+3321 Primary Metal Industries, Iron and Steel Foundries, Gray and ductile iron foundries
+3322 Primary Metal Industries, Iron and Steel Foundries, Malleable iron foundries
+3324 Primary Metal Industries, Iron and Steel Foundries, Steel investment foundries
+3325 Primary Metal Industries, Iron and Steel Foundries, Steel foundries, nec
+333  Primary Metal Industries, Primary Nonferrous Metals
+3331 Primary Metal Industries, Primary Nonferrous Metals, Primary copper
+3334 Primary Metal Industries, Primary Nonferrous Metals, Primary aluminum
+3339 Primary Metal Industries, Primary Nonferrous Metals, Primary nonferrous metals, nec
+334  Primary Metal Industries, Secondary Nonferrous Metals
+3340 Secondary Smelting and Refining of Nonferrous
+3341 Primary Metal Industries, Secondary Nonferrous Metals, Secondary nonferrous metals
+335  Primary Metal Industries, Nonferrous Rolling and Drawing
+3351 Primary Metal Industries, Nonferrous Rolling and Drawing, Copper rolling & drawing
+3353 Primary Metal Industries, Nonferrous Rolling and Drawing, Aluminum sheet, plate, and foil
+3354 Primary Metal Industries, Nonferrous Rolling and Drawing, Aluminum extruded products
+3355 Primary Metal Industries, Nonferrous Rolling and Drawing, Aluminum rolling & drawing, nec
+3356 Primary Metal Industries, Nonferrous Rolling and Drawing, Nonferrous rolling & drawing, nec
+3357 Primary Metal Industries, Nonferrous Rolling and Drawing, Nonferrous wiredrawing & insulating
+336  Primary Metal Industries, Nonferrous Foundries (castings)
+3363 Primary Metal Industries, Nonferrous Foundries (castings), Aluminum die-castings
+3364 Primary Metal Industries, Nonferrous Foundries (castings), Nonferrous die-casting exc. aluminum
+3365 Primary Metal Industries, Nonferrous Foundries (castings), Aluminum foundries
+3366 Primary Metal Industries, Nonferrous Foundries (castings), Copper foundries
+3369 Primary Metal Industries, Nonferrous Foundries (castings), Nonferrous foundries, nec
+339  Primary Metal Industries, Miscellaneous Primary Metal Products
+3398 Primary Metal Industries, Miscellaneous Primary Metal Products, Metal heat treating
+3399 Primary Metal Industries, Miscellaneous Primary Metal Products, Primary metal products, nec
+34   Fabricated Metal Products
+3400 Fabricated metal products
+341  Fabricated Metal Products, Metal Cans and Shipping Containers
+3411 Fabricated Metal Products, Metal Cans and Shipping Containers, Metal cans
+3412 Fabricated Metal Products, Metal Cans and Shipping Containers, Metal barrels, drums, and pails
+342  Fabricated Metal Products, Cutlery, Handtools, and Hardware
+3421 Fabricated Metal Products, Cutlery, Handtools, and Hardware, Cutlery
+3423 Fabricated Metal Products, Cutlery, Handtools, and Hardware, Hand and edge tools, nec
+3425 Fabricated Metal Products, Cutlery, Handtools, and Hardware, Saw blades and handsaws
+3429 Fabricated Metal Products, Cutlery, Handtools, and Hardware, Hardware, nec
+343  Fabricated Metal Products, Plumbing and Heating, except Electric
+3431 Fabricated Metal Products, Plumbing and Heating, except Electric, Metal sanitary ware
+3432 Fabricated Metal Products, Plumbing and Heating, except Electric, Plumbing fixture fittings and trim
+3433 Fabricated Metal Products, Plumbing and Heating, except Electric, Heating equipment, except electric
+344  Fabricated Metal Products, Fabricated Structural Metal Products
+3441 Fabricated Metal Products, Fabricated Structural Metal Products, Fabricated structural metal
+3442 Fabricated Metal Products, Fabricated Structural Metal Products, Metal doors, sash, and trim
+3443 Fabricated Metal Products, Fabricated Structural Metal Products, Fabricated plate work (boiler shops)
+3444 Fabricated Metal Products, Fabricated Structural Metal Products, Sheet metalwork
+3446 Fabricated Metal Products, Fabricated Structural Metal Products, Architectural metal work
+3448 Fabricated Metal Products, Fabricated Structural Metal Products, Prefabricated metal buildings
+3449 Fabricated Metal Products, Fabricated Structural Metal Products, Miscellaneous metal work
+345  Fabricated Metal Products, Screw Machine Products, Bolts, Etc.
+3451 Fabricated Metal Products, Screw Machine Products, Bolts, Etc., Screw machine products
+3452 Fabricated Metal Products, Screw Machine Products, Bolts, Etc., Bolts, nuts, rivets, and washers
+346  Fabricated Metal Products, Metal Forgings and Stampings
+3462 Fabricated Metal Products, Metal Forgings and Stampings, Iron and steel forgings
+3463 Fabricated Metal Products, Metal Forgings and Stampings, Nonferrous forgings
+3465 Fabricated Metal Products, Metal Forgings and Stampings, Automotive stampings
+3466 Fabricated Metal Products, Metal Forgings and Stampings, Crowns and closures
+3469 Fabricated Metal Products, Metal Forgings and Stampings, Metal stampings, nec
+347  Fabricated Metal Products, Metal Services, Nec
+3471 Fabricated Metal Products, Metal Services, Nec, Plating and polishing
+3479 Fabricated Metal Products, Metal Services, Nec, Metal coating and allied services
+348  Fabricated Metal Products, Ordnance and Accessories, Nec
+3482 Fabricated Metal Products, Ordnance and Accessories, Nec, Small arms ammunition
+3483 Fabricated Metal Products, Ordnance and Accessories, Nec, Ammunition, exc. for small arms, nec
+3484 Fabricated Metal Products, Ordnance and Accessories, Nec, Small arms
+3489 Fabricated Metal Products, Ordnance and Accessories, Nec, Ordnance and accessories, nec
+349  Fabricated Metal Products, Misc. Fabricated Metal Products
+3490 Miscellaneous Fabricated Metal Products
+3491 Fabricated Metal Products, Misc. Fabricated Metal Products, Industrial valves
+3492 Fabricated Metal Products, Misc. Fabricated Metal Products, Fluid power valves & hose fittings
+3493 Fabricated Metal Products, Misc. Fabricated Metal Products, Steel springs, except wire
+3494 Fabricated Metal Products, Misc. Fabricated Metal Products, Valves & pipe fittings, nec
+3495 Fabricated Metal Products, Misc. Fabricated Metal Products, Wire springs
+3496 Fabricated Metal Products, Misc. Fabricated Metal Products, Misc. fabricated wire products
+3497 Fabricated Metal Products, Misc. Fabricated Metal Products, Metal foil & leaf
+3498 Fabricated Metal Products, Misc. Fabricated Metal Products, Fabricated pipe & fittings
+3499 Fabricated Metal Products, Misc. Fabricated Metal Products, Fabricated metal products, nec
+35   Industrial Machinery And Equipment
+3500 Industrial machinery and equipment
+351  Industrial Machinery And Equipment, Engines and Turbines
+3511 Industrial Machinery And Equipment, Engines and Turbines, Turbines and turbine generator sets
+3519 Industrial Machinery And Equipment, Engines and Turbines, Internal combustion engines, nec
+352  Industrial Machinery And Equipment, Farm and Garden Machinery
+3523 Industrial Machinery And Equipment, Farm and Garden Machinery, Farm machinery and equipment
+3524 Industrial Machinery And Equipment, Farm and Garden Machinery, Lawn and garden equipment
+353  Industrial Machinery And Equipment, Construction and Related Machinery
+3531 Industrial Machinery And Equipment, Construction and Related Machinery, Construction machinery
+3532 Industrial Machinery And Equipment, Construction and Related Machinery, Mining machinery
+3533 Industrial Machinery And Equipment, Construction and Related Machinery, Oil and gas field machinery
+3534 Industrial Machinery And Equipment, Construction and Related Machinery, Elevators and moving stairways
+3535 Industrial Machinery And Equipment, Construction and Related Machinery, Conveyors and conveying equipment
+3536 Industrial Machinery And Equipment, Construction and Related Machinery, Hoists, cranes, and monorails
+3537 Industrial Machinery And Equipment, Construction and Related Machinery, Industrial trucks and tractors
+354  Industrial Machinery And Equipment, Metalworking Machinery
+3541 Industrial Machinery And Equipment, Metalworking Machinery, Machine tools, metal cutting types
+3542 Industrial Machinery And Equipment, Metalworking Machinery, Machine tools, metal forming types
+3543 Industrial Machinery And Equipment, Metalworking Machinery, Industrial patterns
+3544 Industrial Machinery And Equipment, Metalworking Machinery, Special dies, tools, jigs & fixtures
+3545 Industrial Machinery And Equipment, Metalworking Machinery, Machine tool accessories
+3546 Industrial Machinery And Equipment, Metalworking Machinery, Power-driven handtools
+3547 Industrial Machinery And Equipment, Metalworking Machinery, Rolling mill machinery
+3548 Industrial Machinery And Equipment, Metalworking Machinery, Welding apparatus
+3549 Industrial Machinery And Equipment, Metalworking Machinery, Metalworking machinery, nec
+355  Industrial Machinery And Equipment, Special Industry Machinery
+3552 Industrial Machinery And Equipment, Special Industry Machinery, Textile machinery
+3553 Industrial Machinery And Equipment, Special Industry Machinery, Woodworking machinery
+3554 Industrial Machinery And Equipment, Special Industry Machinery, Paper industries machinery
+3555 Industrial Machinery And Equipment, Special Industry Machinery, Printing trades machinery
+3556 Industrial Machinery And Equipment, Special Industry Machinery, Food products machinery
+3559 Industrial Machinery And Equipment, Special Industry Machinery, Special industry machinery, nec
+356  Industrial Machinery And Equipment, General Industrial Machinery
+3561 Industrial Machinery And Equipment, General Industrial Machinery, Pumps and pumping equipment
+3562 Industrial Machinery And Equipment, General Industrial Machinery, Ball and roller bearings
+3563 Industrial Machinery And Equipment, General Industrial Machinery, Air and gas compressors
+3564 Industrial Machinery And Equipment, General Industrial Machinery, Blowers and fans
+3565 Industrial Machinery And Equipment, General Industrial Machinery, Packaging machinery
+3566 Industrial Machinery And Equipment, General Industrial Machinery, Speed changers, drives, and gears
+3567 Industrial Machinery And Equipment, General Industrial Machinery, Industrial furnaces and ovens
+3568 Industrial Machinery And Equipment, General Industrial Machinery, Power transmission equipment, nec
+3569 Industrial Machinery And Equipment, General Industrial Machinery, General industrial machinery, nec
+357  Industrial Machinery And Equipment, Computer and Office Equipment
+3571 Industrial Machinery And Equipment, Computer and Office Equipment, Electronic computers
+3572 Industrial Machinery And Equipment, Computer and Office Equipment, Computer storage devices
+3575 Industrial Machinery And Equipment, Computer and Office Equipment, Computer terminals
+3577 Industrial Machinery And Equipment, Computer and Office Equipment, Computer peripheral equipment, nec
+3578 Industrial Machinery And Equipment, Computer and Office Equipment, Calculating and accounting equipment
+3579 Industrial Machinery And Equipment, Computer and Office Equipment, Office machines, nec
+358  Industrial Machinery And Equipment, Refrigeration and Service Machinery
+3581 Industrial Machinery And Equipment, Refrigeration and Service Machinery, Automatic vending machines
+3582 Industrial Machinery And Equipment, Refrigeration and Service Machinery, Commercial laundry equipment
+3585 Industrial Machinery And Equipment, Refrigeration and Service Machinery, Refrigeration and heating equipment
+3586 Industrial Machinery And Equipment, Refrigeration and Service Machinery, Measuring and dispensing pumps
+3589 Industrial Machinery And Equipment, Refrigeration and Service Machinery, Service industry machinery, nec
+359  Industrial Machinery And Equipment, Industrial Machinery, Nec
+3592 Industrial Machinery And Equipment, Industrial Machinery, Nec, Carburetors, pistons, rings, valves
+3593 Industrial Machinery And Equipment, Industrial Machinery, Nec, Fluid power cylinders & actuators
+3594 Industrial Machinery And Equipment, Industrial Machinery, Nec, Fluid power pumps & motors
+3596 Industrial Machinery And Equipment, Industrial Machinery, Nec, Scales and balances, exc. laboratory
+3599 Industrial Machinery And Equipment, Industrial Machinery, Nec, Industrial machinery, nec
+36   Electronic & Other Electric Equipment
+3600 Electrical and electronic equipment
+361  Electronic & Other Electric Equipment, Electric Distribution Equipment
+3612 Electronic & Other Electric Equipment, Electric Distribution Equipment, Transformers, except electronic
+3613 Electronic & Other Electric Equipment, Electric Distribution Equipment, Switchgear and switchboard apparatus
+362  Electronic & Other Electric Equipment, Electrical Industrial Apparatus
+3621 Electronic & Other Electric Equipment, Electrical Industrial Apparatus, Motors and generators
+3624 Electronic & Other Electric Equipment, Electrical Industrial Apparatus, Carbon and graphite products
+3625 Electronic & Other Electric Equipment, Electrical Industrial Apparatus, Relays and industrial controls
+3629 Electronic & Other Electric Equipment, Electrical Industrial Apparatus, Electrical industrial apparatus, nec
+363  Electronic & Other Electric Equipment, Household Appliances
+3630 Household Appliances
+3631 Electronic & Other Electric Equipment, Household Appliances, Household cooking equipment
+3632 Electronic & Other Electric Equipment, Household Appliances, Household refrigerators and freezers
+3633 Electronic & Other Electric Equipment, Household Appliances, Household laundry equipment
+3634 Electronic & Other Electric Equipment, Household Appliances, Electric housewares and fans
+3635 Electronic & Other Electric Equipment, Household Appliances, Household vacuum cleaners
+3639 Electronic & Other Electric Equipment, Household Appliances, Household appliances, nec
+364  Electronic & Other Electric Equipment, Electric Lighting and Wiring Equipment
+3641 Electronic & Other Electric Equipment, Electric Lighting and Wiring Equipment, Electric lamps
+3643 Electronic & Other Electric Equipment, Electric Lighting and Wiring Equipment, Current-carrying wiring devices
+3644 Electronic & Other Electric Equipment, Electric Lighting and Wiring Equipment, Noncurrent-carrying wiring devices
+3645 Electronic & Other Electric Equipment, Electric Lighting and Wiring Equipment, Residential lighting fixtures
+3646 Electronic & Other Electric Equipment, Electric Lighting and Wiring Equipment, Commercial lighting fixtures
+3647 Electronic & Other Electric Equipment, Electric Lighting and Wiring Equipment, Vehicular lighting equipment
+3648 Electronic & Other Electric Equipment, Electric Lighting and Wiring Equipment, Lighting equipment, nec
+365  Electronic & Other Electric Equipment, Household Audio and Video Equipment
+3651 Electronic & Other Electric Equipment, Household Audio and Video Equipment, Household audio and video equipment
+3652 Electronic & Other Electric Equipment, Household Audio and Video Equipment, Prerecorded records and tapes
+366  Electronic & Other Electric Equipment, Communications Equipment
+3661 Electronic & Other Electric Equipment, Communications Equipment, Telephone and telegraph apparatus
+3663 Electronic & Other Electric Equipment, Communications Equipment, Radio & TV communications equipment
+3669 Electronic & Other Electric Equipment, Communications Equipment, Communications equipment, nec
+367  Electronic & Other Electric Equipment, Electronic Components and Accessories
+3671 Electronic & Other Electric Equipment, Electronic Components and Accessories, Electron tubes
+3672 Electronic & Other Electric Equipment, Electronic Components and Accessories, Printed circuit boards
+3674 Electronic & Other Electric Equipment, Electronic Components and Accessories, Semiconductors and related devices
+3675 Electronic & Other Electric Equipment, Electronic Components and Accessories, Electronic capacitors
+3676 Electronic & Other Electric Equipment, Electronic Components and Accessories, Electronic resistors
+3677 Electronic & Other Electric Equipment, Electronic Components and Accessories, Electronic coils and transformers
+3678 Electronic & Other Electric Equipment, Electronic Components and Accessories, Electronic connectors
+3679 Electronic & Other Electric Equipment, Electronic Components and Accessories, Electronic components, nec
+369  Electronic & Other Electric Equipment, Misc. Electrical Equipment & Supplies
+3691 Electronic & Other Electric Equipment, Misc. Electrical Equipment & Supplies, Storage batteries
+3692 Electronic & Other Electric Equipment, Misc. Electrical Equipment & Supplies, Primary batteries, dry and wet
+3694 Electronic & Other Electric Equipment, Misc. Electrical Equipment & Supplies, Engine electrical equipment
+3695 Electronic & Other Electric Equipment, Misc. Electrical Equipment & Supplies, Magnetic and optical recording media
+3699 Electronic & Other Electric Equipment, Misc. Electrical Equipment & Supplies, Electrical equipment & supplies, nec
+37   Transportation Equipment
+3700 Transportation equipment
+371  Transportation Equipment, Motor Vehicles and Equipment
+3710 Motor Vehicles and Motor Vehicle Equipment
+3711 Transportation Equipment, Motor Vehicles and Equipment, Motor vehicles and car bodies
+3713 Transportation Equipment, Motor Vehicles and Equipment, Truck and bus bodies
+3714 Transportation Equipment, Motor Vehicles and Equipment, Motor vehicle parts and accessories
+3715 Transportation Equipment, Motor Vehicles and Equipment, Truck trailers
+3716 Transportation Equipment, Motor Vehicles and Equipment, Motor homes
+372  Transportation Equipment, Aircraft and Parts
+3720 Aircraft and Parts
+3721 Transportation Equipment, Aircraft and Parts, Aircraft
+3724 Transportation Equipment, Aircraft and Parts, Aircraft engines and engine parts
+3728 Transportation Equipment, Aircraft and Parts, Aircraft parts and equipment, nec
+373  Transportation Equipment, Ship and Boat Building and Repairing
+3730 Ship and Boat Building and Repairing
+3731 Transportation Equipment, Ship and Boat Building and Repairing, Ship building and repairing
+3732 Transportation Equipment, Ship and Boat Building and Repairing, Boat building and repairing
+374  Transportation Equipment, Railroad Equipment
+3743 Transportation Equipment, Railroad Equipment, Railroad equipment
+375  Transportation Equipment, Motorcycles, Bicycles, and Parts
+3751 Transportation Equipment, Motorcycles, Bicycles, and Parts, Motorcycles, bicycles, and parts
+376  Transportation Equipment, Guided Missiles, Space Vehicles, Parts
+3761 Transportation Equipment, Guided Missiles, Space Vehicles, Parts, Guided missiles and space vehicles
+3764 Transportation Equipment, Guided Missiles, Space Vehicles, Parts, Space propulsion units and parts
+3769 Transportation Equipment, Guided Missiles, Space Vehicles, Parts, Space vehicle equipment, nec
+379  Transportation Equipment, Miscellaneous Transportation Equipment
+3792 Transportation Equipment, Miscellaneous Transportation Equipment, Travel trailers and campers
+3795 Transportation Equipment, Miscellaneous Transportation Equipment, Tanks and tank components
+3799 Transportation Equipment, Miscellaneous Transportation Equipment, Transportation equipment, nec
+38   Instruments And Related Products
+3800 Instruments and related products
+381  Instruments And Related Products, Search and Navigation Equipment
+3812 Instruments And Related Products, Search and Navigation Equipment, Search and navigation equipment
+382  Instruments And Related Products, Measuring and Controlling Devices
+3821 Instruments And Related Products, Measuring and Controlling Devices, Laboratory apparatus and furniture
+3822 Instruments And Related Products, Measuring and Controlling Devices, Environmental controls
+3823 Instruments And Related Products, Measuring and Controlling Devices, Process control instruments
+3824 Instruments And Related Products, Measuring and Controlling Devices, Fluid meters and counting devices
+3825 Instruments And Related Products, Measuring and Controlling Devices, Instruments to measure electricity
+3826 Instruments And Related Products, Measuring and Controlling Devices, Analytical instruments
+3827 Instruments And Related Products, Measuring and Controlling Devices, Optical instruments and lenses
+3829 Instruments And Related Products, Measuring and Controlling Devices, Measuring & controlling devices, nec
+384  Instruments And Related Products, Medical Instruments and Supplies
+3841 Instruments And Related Products, Medical Instruments and Supplies, Surgical and medical instruments
+3842 Instruments And Related Products, Medical Instruments and Supplies, Surgical appliances and supplies
+3843 Instruments And Related Products, Medical Instruments and Supplies, Dental equipment and supplies
+3844 Instruments And Related Products, Medical Instruments and Supplies, X-ray apparatus and tubes
+3845 Instruments And Related Products, Medical Instruments and Supplies, Electromedical equipment
+385  Instruments And Related Products, Ophthalmic Goods
+3851 Instruments And Related Products, Ophthalmic Goods, Ophthalmic goods
+386  Instruments And Related Products, Photographic Equipment and Supplies
+3861 Instruments And Related Products, Photographic Equipment and Supplies, Photographic equipment and supplies
+387  Instruments And Related Products, Watches, Clocks, Watchcases & Parts
+3873 Instruments And Related Products, Watches, Clocks, Watchcases & Parts, Watches, clocks, watchcases & parts
+39   Miscellaneous Manufacturing Industries
+3900 Miscellaneous manufacturing industries
+391  Miscellaneous Manufacturing Industries, Jewelry, Silverware, and Plated Ware
+3911 Miscellaneous Manufacturing Industries, Jewelry, Silverware, and Plated Ware, Jewelry, precious metal
+3914 Miscellaneous Manufacturing Industries, Jewelry, Silverware, and Plated Ware, Silverware and plated ware
+3915 Miscellaneous Manufacturing Industries, Jewelry, Silverware, and Plated Ware, Jewelers' materials & lapidary work
+393  Miscellaneous Manufacturing Industries, Musical Instruments
+3931 Miscellaneous Manufacturing Industries, Musical Instruments, Musical instruments
+394  Miscellaneous Manufacturing Industries, Toys and Sporting Goods
+3942 Miscellaneous Manufacturing Industries, Toys and Sporting Goods, Dolls and stuffed toys
+3944 Miscellaneous Manufacturing Industries, Toys and Sporting Goods, Games, toys, and children's vehicles
+3949 Miscellaneous Manufacturing Industries, Toys and Sporting Goods, Sporting and athletic goods, nec
+395  Miscellaneous Manufacturing Industries, Pens, Pencils, Office, & Art Supplies
+3951 Miscellaneous Manufacturing Industries, Pens, Pencils, Office, & Art Supplies, Pens and mechanical pencils
+3952 Miscellaneous Manufacturing Industries, Pens, Pencils, Office, & Art Supplies, Lead pencils and art goods
+3953 Miscellaneous Manufacturing Industries, Pens, Pencils, Office, & Art Supplies, Marking devices
+3955 Miscellaneous Manufacturing Industries, Pens, Pencils, Office, & Art Supplies, Carbon paper and inked ribbons
+396  Miscellaneous Manufacturing Industries, Costume Jewelry and Notions
+3961 Miscellaneous Manufacturing Industries, Costume Jewelry and Notions, Costume jewelry
+3965 Miscellaneous Manufacturing Industries, Costume Jewelry and Notions, Fasteners, buttons, needles, & pins
+399  Miscellaneous Manufacturing Industries, Miscellaneous Manufactures
+3991 Miscellaneous Manufacturing Industries, Miscellaneous Manufactures, Brooms and brushes
+3993 Miscellaneous Manufacturing Industries, Miscellaneous Manufactures, Signs and advertising specialities
+3995 Miscellaneous Manufacturing Industries, Miscellaneous Manufactures, Burial caskets
+3996 Miscellaneous Manufacturing Industries, Miscellaneous Manufactures, Hard surface floor coverings, nec
+3999 Miscellaneous Manufacturing Industries, Miscellaneous Manufactures, Manufacturing industries, nec
+40   Railroad Transportation
+4000 Railroad Transporation
+401  Railroad Transportation, Railroads
+4011 Railroad Transportation, Railroads, Railroads, line-haul operating
+4013 Railroad Transportation, Railroads, Switching and terminal services
+41   Local And Interurban Passenger Transit
+4100 Local and interurban passenger transit
+411  Local And Interurban Passenger Transit, Local and Suburban Transportation
+4111 Local And Interurban Passenger Transit, Local and Suburban Transportation, Local and suburban transit
+4119 Local And Interurban Passenger Transit, Local and Suburban Transportation, Local passenger transportation, nec
+412  Local And Interurban Passenger Transit, Taxicabs
+4121 Local And Interurban Passenger Transit, Taxicabs, Taxicabs
+413  Local And Interurban Passenger Transit, Intercity and Rural Bus Transportation
+4131 Local And Interurban Passenger Transit, Intercity and Rural Bus Transportation, Intercity & rural bus transportation
+414  Local And Interurban Passenger Transit, Bus Charter Service
+4141 Local And Interurban Passenger Transit, Bus Charter Service, Local bus charter service
+4142 Local And Interurban Passenger Transit, Bus Charter Service, Bus charter service, except local
+415  Local And Interurban Passenger Transit, School Buses
+4151 Local And Interurban Passenger Transit, School Buses, School buses
+417  Local And Interurban Passenger Transit, Bus Terminal and Service Facilities
+4173 Local And Interurban Passenger Transit, Bus Terminal and Service Facilities, Bus terminal and service facilities
+42   Trucking And Warehousing
+4200 Motor freight transportation and warehousing
+421  Trucking And Warehousing, Trucking & Courier Services, Ex. Air
+4212 Trucking And Warehousing, Trucking & Courier Services, Ex. Air, Local trucking, without storage
+4213 Trucking And Warehousing, Trucking & Courier Services, Ex. Air, Trucking, except local
+4214 Trucking And Warehousing, Trucking & Courier Services, Ex. Air, Local trucking with storage
+4215 Trucking And Warehousing, Trucking & Courier Services, Ex. Air, Courier services, except by air
+422  Trucking And Warehousing, Public Warehousing and Storage
+4221 Trucking And Warehousing, Public Warehousing and Storage, Farm product warehousing and storage
+4222 Trucking And Warehousing, Public Warehousing and Storage, Refrigerated warehousing and storage
+4225 Trucking And Warehousing, Public Warehousing and Storage, General warehousing and storage
+4226 Trucking And Warehousing, Public Warehousing and Storage, Special warehousing and storage, nec
+423  Trucking And Warehousing, Trucking Terminal Facilities
+4231 Trucking And Warehousing, Trucking Terminal Facilities, Trucking terminal facilities
+43   U.S. Postal Service
+4300 U.S. Postal Service
+431  U.S. Postal Service, U.S. Postal Service
+4311 U.S. Postal Service, U.S. Postal Service, U.S. Postal Service
+44   Water Transportation
+4400 Water transportation
+441  Water Transportation, Deep Sea Foreign Trans. Of Freight
+4412 Water Transportation, Deep Sea Foreign Trans. Of Freight, Deep sea foreign trans. of freight
+442  Water Transportation, Deep Sea Domestic Trans. Of Freight
+4424 Water Transportation, Deep Sea Domestic Trans. Of Freight, Deep sea domestic trans. of freight
+443  Water Transportation, Freight Trans. On The Great Lakes
+4432 Water Transportation, Freight Trans. On The Great Lakes, Freight trans. on the Great Lakes
+444  Water Transportation, Water Transportation Of Freight, Nec
+4449 Water Transportation, Water Transportation Of Freight, Nec, Water transportation of freight, nec
+448  Water Transportation, Water Transportation Of Passengers
+4481 Water Transportation, Water Transportation Of Passengers, Deep sea passenger trans., ex. ferry
+4482 Water Transportation, Water Transportation Of Passengers, Ferries
+4489 Water Transportation, Water Transportation Of Passengers, Water passenger transportation, nec
+449  Water Transportation, Water Transportation Services
+4490 Services Incidental to Water Transporation
+4491 Water Transportation, Water Transportation Services, Marine cargo handling
+4492 Water Transportation, Water Transportation Services, Towing and tugboat service
+4493 Water Transportation, Water Transportation Services, Marinas
+4499 Water Transportation, Water Transportation Services, Water transportation services, nec
+45   Transportation By Air, Water Transportation Services
+4500 Transportation by air
+451  Transportation By Air, Air Transportation, Scheduled
+4512 Transportation By Air, Air Transportation, Scheduled, Air transportation, scheduled
+4513 Transportation By Air, Air Transportation, Scheduled, Air courier services
+452  Transportation By Air, Air Transportation, Nonscheduled
+4522 Transportation By Air, Air Transportation, Nonscheduled, Air transportation, nonscheduled
+458  Transportation By Air, Airports, Flying Fields, & Services
+4581 Transportation By Air, Airports, Flying Fields, & Services, Airports, flying fields, & services
+46   Pipelines, Except Natural Gas
+4600 Pipelines, except natural gas
+461  Pipelines, Except Natural Gas, Pipelines, except Natural Gas
+4612 Pipelines, Except Natural Gas, Pipelines, except Natural Gas, Crude petroleum pipelines
+4613 Pipelines, Except Natural Gas, Pipelines, except Natural Gas, Refined petroleum pipelines
+4619 Pipelines, Except Natural Gas, Pipelines, except Natural Gas, Pipelines, nec
+47   Transportation Services
+4700 Transportation services
+472  Transportation Services, Passenger Transportation Arrangement
+4724 Transportation Services, Passenger Transportation Arrangement, Travel agencies
+4725 Transportation Services, Passenger Transportation Arrangement, Tour operators
+4729 Transportation Services, Passenger Transportation Arrangement, Passenger transport arrangement, nec
+473  Transportation Services, Freight Transportation Arrangement
+4731 Transportation Services, Freight Transportation Arrangement, Freight transportation arrangement
+474  Transportation Services, Rental Of Railroad Cars
+4741 Transportation Services, Rental Of Railroad Cars, Rental of railroad cars
+478  Transportation Services, Miscellaneous Transportation Services
+4783 Transportation Services, Miscellaneous Transportation Services, Packing and crating
+4785 Transportation Services, Miscellaneous Transportation Services, Inspection & fixed facilities
+4789 Transportation Services, Miscellaneous Transportation Services, Transportation services, nec
+48   Communication
+4800 Communications
+481  Communication, Telephone Communication
+4812 Communication, Telephone Communication, Radiotelephone communications
+4813 Communication, Telephone Communication, Telephone communications, exc. radio
+482  Communication, Telegraph & Other Communications
+4822 Communication, Telegraph & Other Communications, Telegraph & other communications
+483  Communication, Radio and Television Broadcasting
+4832 Communication, Radio and Television Broadcasting, Radio broadcasting stations
+4833 Communication, Radio and Television Broadcasting, Television broadcasting stations
+484  Communication, Cable and Other Pay TV Services
+4841 Communication, Cable and Other Pay TV Services, Cable and other pay TV services
+489  Communication, Communication Services, Nec
+4899 Communication, Communication Services, Nec, Communication services, nec
+49   Electric, Gas, And Sanitary Services
+4900 Electric, gas, and sanitary services
+491  Electric, Gas, And Sanitary Services, Electric Services
+4911 Electric, Gas, And Sanitary Services, Electric Services, Electric services
+492  Electric, Gas, And Sanitary Services, Gas Production and Distribution
+4922 Electric, Gas, And Sanitary Services, Gas Production and Distribution, Natural gas transmission
+4923 Electric, Gas, And Sanitary Services, Gas Production and Distribution, Gas transmission and distribution
+4924 Electric, Gas, And Sanitary Services, Gas Production and Distribution, Natural gas distribution
+4925 Electric, Gas, And Sanitary Services, Gas Production and Distribution, Gas production and/or distribution
+493  Electric, Gas, And Sanitary Services, Combination Utility Services
+4931 Electric, Gas, And Sanitary Services, Combination Utility Services, Electric and other services combined
+4932 Electric, Gas, And Sanitary Services, Combination Utility Services, Gas and other services combined
+4939 Electric, Gas, And Sanitary Services, Combination Utility Services, Combination utilities, nec
+494  Electric, Gas, And Sanitary Services, Water Supply
+4941 Electric, Gas, And Sanitary Services, Water Supply, Water supply
+495  Electric, Gas, And Sanitary Services, Sanitary Services
+4952 Electric, Gas, And Sanitary Services, Sanitary Services, Sewerage systems
+4953 Electric, Gas, And Sanitary Services, Sanitary Services, Refuse systems
+4959 Electric, Gas, And Sanitary Services, Sanitary Services, Sanitary services, nec
+496  Electric, Gas, And Sanitary Services, Steam and Air-conditioning Supply
+4961 Electric, Gas, And Sanitary Services, Steam and Air-conditioning Supply, Steam and air-conditioning supply
+497  Electric, Gas, And Sanitary Services, Irrigation Systems
+4971 Electric, Gas, And Sanitary Services, Irrigation Systems, Irrigation systems
+50   Wholesale Trade--Durable Goods
+5000 Wholesale trade--durable goods
+501  Wholesale Trade--Durable Goods, Motor Vehicles, Parts, and Supplies
+5012 Wholesale Trade--Durable Goods, Motor Vehicles, Parts, and Supplies, Automobiles and other motor vehicles
+5013 Wholesale Trade--Durable Goods, Motor Vehicles, Parts, and Supplies, Motor vehicle supplies and new parts
+5014 Wholesale Trade--Durable Goods, Motor Vehicles, Parts, and Supplies, Tires and tubes
+5015 Wholesale Trade--Durable Goods, Motor Vehicles, Parts, and Supplies, Motor vehicle parts, used
+502  Wholesale Trade--Durable Goods, Furniture and Homefurnishings
+5021 Wholesale Trade--Durable Goods, Furniture and Homefurnishings, Furniture
+5023 Wholesale Trade--Durable Goods, Furniture and Homefurnishings, Homefurnishings
+503  Wholesale Trade--Durable Goods, Lumber and Construction Materials
+5031 Wholesale Trade--Durable Goods, Lumber and Construction Materials, Lumber, plywood, and millwork
+5032 Wholesale Trade--Durable Goods, Lumber and Construction Materials, Brick, stone, & related materials
+5033 Wholesale Trade--Durable Goods, Lumber and Construction Materials, Roofing, siding, & insulation
+5039 Wholesale Trade--Durable Goods, Lumber and Construction Materials, Construction materials, nec
+504  Wholesale Trade--Durable Goods, Professional & Commercial Equipment
+5043 Wholesale Trade--Durable Goods, Professional & Commercial Equipment, Photographic equipment and supplies
+5044 Wholesale Trade--Durable Goods, Professional & Commercial Equipment, Office equipment
+5045 Wholesale Trade--Durable Goods, Professional & Commercial Equipment, Computers, peripherals & software
+5046 Wholesale Trade--Durable Goods, Professional & Commercial Equipment, Commercial equipment, nec
+5047 Wholesale Trade--Durable Goods, Professional & Commercial Equipment, Medical and hospital equipment
+5048 Wholesale Trade--Durable Goods, Professional & Commercial Equipment, Ophthalmic goods
+5049 Wholesale Trade--Durable Goods, Professional & Commercial Equipment, Professional equipment, nec
+505  Wholesale Trade--Durable Goods, Metals and Minerals, except Petroleum
+5051 Wholesale Trade--Durable Goods, Metals and Minerals, except Petroleum, Metals service centers and offices
+5052 Wholesale Trade--Durable Goods, Metals and Minerals, except Petroleum, Coal and other minerals and ores
+506  Wholesale Trade--Durable Goods, Electrical Goods
+5063 Wholesale Trade--Durable Goods, Electrical Goods, Electrical apparatus and equipment
+5064 Wholesale Trade--Durable Goods, Electrical Goods, Electrical appliances, TV & radios
+5065 Wholesale Trade--Durable Goods, Electrical Goods, Electronic parts and equipment
+507  Wholesale Trade--Durable Goods, Hardware, Plumbing & Heating Equipment
+5072 Wholesale Trade--Durable Goods, Hardware, Plumbing & Heating Equipment, Hardware
+5074 Wholesale Trade--Durable Goods, Hardware, Plumbing & Heating Equipment, Plumbing & hydronic heating supplies
+5075 Wholesale Trade--Durable Goods, Hardware, Plumbing & Heating Equipment, Warm air heating & air-conditioning
+5078 Wholesale Trade--Durable Goods, Hardware, Plumbing & Heating Equipment, Refrigeration equipment and supplies
+508  Wholesale Trade--Durable Goods, Machinery, Equipment, and Supplies
+5082 Wholesale Trade--Durable Goods, Machinery, Equipment, and Supplies, Construction and mining machinery
+5083 Wholesale Trade--Durable Goods, Machinery, Equipment, and Supplies, Farm and garden machinery
+5084 Wholesale Trade--Durable Goods, Machinery, Equipment, and Supplies, Industrial machinery and equipment
+5085 Wholesale Trade--Durable Goods, Machinery, Equipment, and Supplies, Industrial supplies
+5087 Wholesale Trade--Durable Goods, Machinery, Equipment, and Supplies, Service establishment equipment
+5088 Wholesale Trade--Durable Goods, Machinery, Equipment, and Supplies, Transportation equipment & supplies
+509  Wholesale Trade--Durable Goods, Miscellaneous Durable Goods
+5091 Wholesale Trade--Durable Goods, Miscellaneous Durable Goods, Sporting & recreational goods
+5092 Wholesale Trade--Durable Goods, Miscellaneous Durable Goods, Toys and hobby goods and supplies
+5093 Wholesale Trade--Durable Goods, Miscellaneous Durable Goods, Scrap and waste materials
+5094 Wholesale Trade--Durable Goods, Miscellaneous Durable Goods, Jewelry & precious stones
+5099 Wholesale Trade--Durable Goods, Miscellaneous Durable Goods, Durable goods, nec
+51   Wholesale Trade--Nondurable Goods
+5100 Wholesale trade--nondurable goods
+511  Wholesale Trade--Nondurable Goods, Paper and Paper Products
+5111 Wholesale Trade--Nondurable Goods, Paper and Paper Products, Printing and writing paper
+5112 Wholesale Trade--Nondurable Goods, Paper and Paper Products, Stationery and office supplies
+5113 Wholesale Trade--Nondurable Goods, Paper and Paper Products, Industrial & personal service paper
+512  Wholesale Trade--Nondurable Goods, Drugs, Proprietaries, and Sundries
+5122 Wholesale Trade--Nondurable Goods, Drugs, Proprietaries, and Sundries, Drugs, proprietaries, and sundries
+513  Wholesale Trade--Nondurable Goods, Apparel, Piece Goods, and Notions
+5131 Wholesale Trade--Nondurable Goods, Apparel, Piece Goods, and Notions, Piece goods & notions
+5136 Wholesale Trade--Nondurable Goods, Apparel, Piece Goods, and Notions, Men's and boys' clothing
+5137 Wholesale Trade--Nondurable Goods, Apparel, Piece Goods, and Notions, Women's and children's clothing
+5139 Wholesale Trade--Nondurable Goods, Apparel, Piece Goods, and Notions, Footwear
+514  Wholesale Trade--Nondurable Goods, Groceries and Related Products
+5141 Wholesale Trade--Nondurable Goods, Groceries and Related Products, Groceries, general line
+5142 Wholesale Trade--Nondurable Goods, Groceries and Related Products, Packaged frozen foods
+5143 Wholesale Trade--Nondurable Goods, Groceries and Related Products, Dairy products, exc. dried or canned
+5144 Wholesale Trade--Nondurable Goods, Groceries and Related Products, Poultry and poultry products
+5145 Wholesale Trade--Nondurable Goods, Groceries and Related Products, Confectionery
+5146 Wholesale Trade--Nondurable Goods, Groceries and Related Products, Fish and seafoods
+5147 Wholesale Trade--Nondurable Goods, Groceries and Related Products, Meats and meat products
+5148 Wholesale Trade--Nondurable Goods, Groceries and Related Products, Fresh fruits and vegetables
+5149 Wholesale Trade--Nondurable Goods, Groceries and Related Products, Groceries and related products, nec
+515  Wholesale Trade--Nondurable Goods, Farm-product Raw Materials
+5153 Wholesale Trade--Nondurable Goods, Farm-product Raw Materials, Grain and field beans
+5154 Wholesale Trade--Nondurable Goods, Farm-product Raw Materials, Livestock
+5159 Wholesale Trade--Nondurable Goods, Farm-product Raw Materials, Farm-product raw materials, nec
+516  Wholesale Trade--Nondurable Goods, Chemicals and Allied Products
+5162 Wholesale Trade--Nondurable Goods, Chemicals and Allied Products, Plastics materials & basic shapes
+5169 Wholesale Trade--Nondurable Goods, Chemicals and Allied Products, Chemicals & allied products, nec
+517  Wholesale Trade--Nondurable Goods, Petroleum and Petroleum Products
+5170 Petroleum and Petroleum Products
+5171 Wholesale Trade--Nondurable Goods, Petroleum and Petroleum Products, Petroleum bulk stations & terminals
+5172 Wholesale Trade--Nondurable Goods, Petroleum and Petroleum Products, Petroleum products, nec
+518  Wholesale Trade--Nondurable Goods, Beer, Wine, and Distilled Beverages
+5181 Wholesale Trade--Nondurable Goods, Beer, Wine, and Distilled Beverages, Beer and ale
+5182 Wholesale Trade--Nondurable Goods, Beer, Wine, and Distilled Beverages, Wine and distilled beverages
+519  Wholesale Trade--Nondurable Goods, Misc. Nondurable Goods
+5191 Wholesale Trade--Nondurable Goods, Misc. Nondurable Goods, Farm supplies
+5192 Wholesale Trade--Nondurable Goods, Misc. Nondurable Goods, Books, periodicals, & newspapers
+5193 Wholesale Trade--Nondurable Goods, Misc. Nondurable Goods, Flowers & florists' supplies
+5194 Wholesale Trade--Nondurable Goods, Misc. Nondurable Goods, Tobacco and tobacco products
+5198 Wholesale Trade--Nondurable Goods, Misc. Nondurable Goods, Paints, varnishes, and supplies
+5199 Wholesale Trade--Nondurable Goods, Misc. Nondurable Goods, Nondurable goods, nec
+52   Building Materials & Garden Supplies
+5200 Building materials, hardware, garden supply, & mobile home
+521  Building Materials & Garden Supplies, Lumber and Other Building Materials
+5211 Building Materials & Garden Supplies, Lumber and Other Building Materials, Lumber and other building materials
+523  Building Materials & Garden Supplies, Paint, Glass, and Wallpaper Stores
+5231 Building Materials & Garden Supplies, Paint, Glass, and Wallpaper Stores, Paint, glass, and wallpaper stores
+525  Building Materials & Garden Supplies, Hardware Stores
+5251 Building Materials & Garden Supplies, Hardware Stores, Hardware stores
+526  Building Materials & Garden Supplies, Retail Nurseries and Garden Stores
+5261 Building Materials & Garden Supplies, Retail Nurseries and Garden Stores, Retail nurseries and garden stores
+527  Building Materials & Garden Supplies, Mobile Home Dealers
+5271 Building Materials & Garden Supplies, Mobile Home Dealers, Mobile home dealers
+53   General Merchandise Stores
+5300 General merchandise stores
+531  General Merchandise Stores, Department Stores
+5311 General Merchandise Stores, Department Stores, Department stores
+533  General Merchandise Stores, Variety Stores
+5331 General Merchandise Stores
+539  General Merchandise Stores, Misc. General Merchandise Stores
+5399 General Merchandise Stores, Misc. General Merchandise Stores, Misc. general merchandise stores
+54   Food Stores
+5400 Food stores
+541  Food Stores, Grocery Stores
+5411 Food Stores, Grocery Stores, Grocery stores
+542  Food Stores, Meat and Fish Markets
+5421 Food Stores, Meat and Fish Markets, Meat and fish markets
+543  Food Stores, Fruit and Vegetable Markets
+5431 Food Stores, Fruit and Vegetable Markets, Fruit and vegetable markets
+544  Food Stores, Candy, Nut, and Confectionery Stores
+5441 Food Stores, Candy, Nut, and Confectionery Stores, Candy, nut, and confectionery stores
+545  Food Stores, Dairy Products Stores
+5451 Food Stores, Dairy Products Stores, Dairy products stores
+546  Food Stores, Retail Bakeries
+5461 Food Stores, Retail Bakeries, Retail bakeries
+549  Food Stores, Miscellaneous Food Stores
+5499 Food Stores, Miscellaneous Food Stores, Miscellaneous food stores
+55   Automotive Dealers & Service Stations
+5500 Automotive dealers and gasoline service stations
+551  Automotive Dealers & Service Stations, New and Used Car Dealers
+5511 Automotive Dealers & Service Stations, New and Used Car Dealers, New and used car dealers
+552  Automotive Dealers & Service Stations, Used Car Dealers
+5521 Automotive Dealers & Service Stations, Used Car Dealers, Used car dealers
+553  Automotive Dealers & Service Stations, Auto and Home Supply Stores
+5531 Automotive Dealers & Service Stations, Auto and Home Supply Stores, Auto and home supply stores
+554  Automotive Dealers & Service Stations, Gasoline Service Stations
+5541 Automotive Dealers & Service Stations, Gasoline Service Stations, Gasoline service stations
+555  Automotive Dealers & Service Stations, Boat Dealers
+5551 Automotive Dealers & Service Stations, Boat Dealers, Boat dealers
+556  Automotive Dealers & Service Stations, Recreational Vehicle Dealers
+5561 Automotive Dealers & Service Stations, Recreational Vehicle Dealers, Recreational vehicle dealers
+557  Automotive Dealers & Service Stations, Motorcycle Dealers
+5571 Automotive Dealers & Service Stations, Motorcycle Dealers, Motorcycle dealers
+559  Automotive Dealers & Service Stations, Automotive Dealers, Nec
+5599 Automotive Dealers & Service Stations, Automotive Dealers, Nec, Automotive dealers, nec
+56   Apparel And Accessory Stores
+5600 Apparel and accessory stores
+561  Apparel And Accessory Stores, Men's & Boys' Clothing Stores
+5611 Apparel And Accessory Stores, Men's & Boys' Clothing Stores, Men's & boys' clothing stores
+562  Apparel And Accessory Stores, Women's Clothing Stores
+5621 Apparel And Accessory Stores, Women's Clothing Stores, Women's clothing stores
+563  Apparel And Accessory Stores, Women's Accessory & Specialty Stores
+5632 Apparel And Accessory Stores, Women's Accessory & Specialty Stores, Women's accessory & specialty stores
+564  Apparel And Accessory Stores, Children's and Infants' Wear Stores
+5641 Apparel And Accessory Stores, Children's and Infants' Wear Stores, Children's and infants' wear stores
+565  Apparel And Accessory Stores, Family Clothing Stores
+5651 Apparel And Accessory Stores, Family Clothing Stores, Family clothing stores
+566  Apparel And Accessory Stores, Shoe Stores
+5661 Apparel And Accessory Stores, Shoe Stores, Shoe stores
+569  Apparel And Accessory Stores, Misc. Apparel & Accessory Stores
+5699 Apparel And Accessory Stores, Misc. Apparel & Accessory Stores, Misc. apparel & accessory stores
+57   Furniture And Homefurnishings Stores
+5700 Furniture, home furnishings and equipment stores
+571  Furniture And Homefurnishings Stores, Furniture and Homefurnishings Stores
+5712 Furniture And Homefurnishings Stores, Furniture and Homefurnishings Stores, Furniture stores
+5713 Furniture And Homefurnishings Stores, Furniture and Homefurnishings Stores, Floor covering stores
+5714 Furniture And Homefurnishings Stores, Furniture and Homefurnishings Stores, Drapery and upholstery stores
+5719 Furniture And Homefurnishings Stores, Furniture and Homefurnishings Stores, Misc. homefurnishings stores
+572  Furniture And Homefurnishings Stores, Household Appliance Stores
+5722 Furniture And Homefurnishings Stores, Household Appliance Stores, Household appliance stores
+573  Furniture And Homefurnishings Stores, Radio, Television, & Computer Stores
+5731 Furniture And Homefurnishings Stores, Radio, Television, & Computer Stores, Radio, TV, & electronic stores
+5734 Furniture And Homefurnishings Stores, Radio, Television, & Computer Stores, Computer and software stores
+5735 Furniture And Homefurnishings Stores, Radio, Television, & Computer Stores, Record & prerecorded tape stores
+5736 Furniture And Homefurnishings Stores, Radio, Television, & Computer Stores, Musical instrument stores
+58   Eating And Drinking Places
+5800 Eating and drinking places
+581  Eating And Drinking Places, Eating and Drinking Places
+5812 Eating And Drinking Places, Eating and Drinking Places, Eating places
+5813 Eating And Drinking Places, Eating and Drinking Places, Drinking places
+59   Miscellaneous Retail
+5900 Miscellaneous retail
+591  Miscellaneous Retail, Drug Stores and Proprietary Stores
+5912 Miscellaneous Retail, Drug Stores and Proprietary Stores, Drug stores and proprietary stores
+592  Miscellaneous Retail, Liquor Stores
+5921 Miscellaneous Retail, Liquor Stores, Liquor stores
+593  Miscellaneous Retail, Used Merchandise Stores
+5932 Miscellaneous Retail, Used Merchandise Stores, Used merchandise stores
+594  Miscellaneous Retail, Miscellaneous Shopping Goods Stores
+5941 Miscellaneous Retail, Miscellaneous Shopping Goods Stores, Sporting goods and bicycle shops
+5942 Miscellaneous Retail, Miscellaneous Shopping Goods Stores, Book stores
+5943 Miscellaneous Retail, Miscellaneous Shopping Goods Stores, Stationery stores
+5944 Miscellaneous Retail, Miscellaneous Shopping Goods Stores, Jewelry stores
+5945 Miscellaneous Retail, Miscellaneous Shopping Goods Stores, Hobby, toy, and game shops
+5946 Miscellaneous Retail, Miscellaneous Shopping Goods Stores, Camera & photographic supply stores
+5947 Miscellaneous Retail, Miscellaneous Shopping Goods Stores, Gift, novelty, and souvenir shops
+5948 Miscellaneous Retail, Miscellaneous Shopping Goods Stores, Luggage and leather goods stores
+5949 Miscellaneous Retail, Miscellaneous Shopping Goods Stores, Sewing, needlework, and piece goods
+596  Miscellaneous Retail, Nonstore Retailers
+5961 Miscellaneous Retail, Nonstore Retailers, Catalog and mail-order houses
+5962 Miscellaneous Retail, Nonstore Retailers, Merchandising machine operators
+5963 Miscellaneous Retail, Nonstore Retailers, Direct selling establishments
+598  Miscellaneous Retail, Fuel Dealers
+5983 Miscellaneous Retail, Fuel Dealers, Fuel oil dealers
+5984 Miscellaneous Retail, Fuel Dealers, Liquefied petroleum gas dealers
+5989 Miscellaneous Retail, Fuel Dealers, Fuel dealers, nec
+599  Miscellaneous Retail, Retail Stores, Nec
+5992 Miscellaneous Retail, Retail Stores, Nec, Florists
+5993 Miscellaneous Retail, Retail Stores, Nec, Tobacco stores and stands
+5994 Miscellaneous Retail, Retail Stores, Nec, News dealers and newsstands
+5995 Miscellaneous Retail, Retail Stores, Nec, Optical goods stores
+5999 Miscellaneous Retail, Retail Stores, Nec, Miscellaneous retail stores, nec
+60   Depository Institutions
+6000 Depository institutions
+601  Depository Institutions, Central Reserve Depository
+6011 Depository Institutions, Central Reserve Depository, Federal reserve banks
+6019 Depository Institutions, Central Reserve Depository, Central reserve depository, nec
+602  Depository Institutions, Commercial Banks
+6021 Depository Institutions, Commercial Banks, National commercial banks
+6022 Depository Institutions, Commercial Banks, State commercial banks
+6029 Depository Institutions, Commercial Banks, Commercial banks, nec
+603  Depository Institutions, Savings Institutions
+6035 Depository Institutions, Savings Institutions, Federal savings institutions
+6036 Depository Institutions, Savings Institutions, Savings institutions, except federal
+606  Depository Institutions, Credit Unions
+6061 Depository Institutions, Credit Unions, Federal credit unions
+6062 Depository Institutions, Credit Unions, State credit unions
+608  Depository Institutions, Foreign Bank & Branches + Agencies
+6081 Depository Institutions, Foreign Bank & Branches + Agencies, Foreign bank & branches & agencies
+6082 Depository Institutions, Foreign Bank & Branches + Agencies, Foreign trade & international banks
+609  Depository Institutions, Functions Closely Related To Banking
+6091 Depository Institutions, Functions Closely Related To Banking, Nondeposit trust facilities
+6099 Depository Institutions, Functions Closely Related To Banking, Functions related to deposit banking
+61   Nondepository Institutions
+6100 Nondepository credit institutions
+611  Nondepository Institutions, Federal & Fed.-sponsored Credit
+6111 Nondepository Institutions, Federal & Fed.-sponsored Credit, Federal & fed.-sponsored credit
+614  Nondepository Institutions, Personal Credit Institutions
+6141 Nondepository Institutions, Personal Credit Institutions, Personal credit institutions
+615  Nondepository Institutions, Business Credit Institutions
+6153 Nondepository Institutions, Business Credit Institutions, Short-term business credit
+6159 Nondepository Institutions, Business Credit Institutions, Misc. business credit institutions
+616  Nondepository Institutions, Mortgage Bankers and Brokers
+6162 Nondepository Institutions, Mortgage Bankers and Brokers, Mortgage bankers and correspondents
+6163 Nondepository Institutions, Mortgage Bankers and Brokers, Loan brokers
+62   Security And Commodity Brokers
+6200 Security, commodity brokers, and services
+621  Security And Commodity Brokers, Security Brokers and Dealers
+6211 Security And Commodity Brokers, Security Brokers and Dealers, Security brokers and dealers
+622  Security And Commodity Brokers, Commodity Contracts Brokers, Dealers
+6221 Security And Commodity Brokers, Commodity Contracts Brokers, Dealers, Commodity contracts brokers, dealers
+623  Security And Commodity Brokers, Security and Commodity Exchanges
+6231 Security And Commodity Brokers, Security and Commodity Exchanges, Security and commodity exchanges
+628  Security And Commodity Brokers, Security and Commodity Services
+6282 Security And Commodity Brokers, Security and Commodity Services, Investment advice
+6289 Security And Commodity Brokers, Security and Commodity Services, Security & commodity services, nec
+63   Insurance Carriers
+6300 Insurance carriers
+631  Insurance Carriers, Life Insurance
+6311 Insurance Carriers, Life Insurance, Life insurance
+632  Insurance Carriers, Medical Service and Health Insurance
+6321 Insurance Carriers, Medical Service and Health Insurance, Accident and health insurance
+6324 Insurance Carriers, Medical Service and Health Insurance, Hospital and medical service plans
+633  Insurance Carriers, Fire, Marine, and Casualty Insurance
+6331 Insurance Carriers, Fire, Marine, and Casualty Insurance, Fire, marine, and casualty insurance
+635  Insurance Carriers, Surety Insurance
+6351 Insurance Carriers, Surety Insurance, Surety insurance
+636  Insurance Carriers, Title Insurance
+6361 Insurance Carriers, Title Insurance, Title insurance
+637  Insurance Carriers, Pension, Health, and Welfare Funds
+6371 Insurance Carriers, Pension, Health, and Welfare Funds, Pension, health, and welfare funds
+639  Insurance Carriers, Insurance Carriers, Nec
+6399 Insurance Carriers, Insurance Carriers, Nec, Insurance carriers, nec
+64   Insurance Agents, Brokers, & Service
+6400 Insurance agents, brokers, and service
+641  Insurance Agents, Brokers, & Service, Insurance Agents, Brokers, & Service
+6411 Insurance Agents, Brokers, & Service, Insurance Agents, Brokers, & Service, Insurance agents, brokers, & service
+65   Real Estate
+6500 Real estate
+651  Real Estate, Real Estate Operators and Lessors
+6512 Real Estate, Real Estate Operators and Lessors, Nonresidential building operators
+6513 Real Estate, Real Estate Operators and Lessors, Apartment building operators
+6514 Real Estate, Real Estate Operators and Lessors, Dwelling operators, exc. apartments
+6515 Real Estate, Real Estate Operators and Lessors, Mobile home site operators
+6517 Real Estate, Real Estate Operators and Lessors, Railroad property lessors
+6519 Real Estate, Real Estate Operators and Lessors, Real property lessors, nec
+653  Real Estate, Real Estate Agents and Managers
+6531 Real Estate, Real Estate Agents and Managers, Real estate agents and managers
+654  Real Estate, Title Abstract Offices
+6541 Real Estate, Title Abstract Offices, Title abstract offices
+655  Real Estate, Subdividers and Developers
+6552 Real Estate, Subdividers and Developers, Subdividers and developers, nec
+6553 Real Estate, Subdividers and Developers, Cemetery subdividers and developers
+67   Holding And Other Investment Offices
+6700 Holding and other investment offices
+671  Holding And Other Investment Offices, Holding Offices
+6712 Holding And Other Investment Offices, Holding Offices, Bank holding companies
+6719 Holding And Other Investment Offices, Holding Offices, Holding companies, nec
+672  Holding And Other Investment Offices, Investment Offices
+6722 Holding And Other Investment Offices, Investment Offices, Management investment, open-end
+6726 Holding And Other Investment Offices, Investment Offices, Investment offices, nec
+673  Holding And Other Investment Offices, Trusts
+6732 Holding And Other Investment Offices, Trusts, Educational, religious, etc. trusts
+6733 Holding And Other Investment Offices, Trusts, Trusts, nec
+679  Holding And Other Investment Offices, Miscellaneous Investing
+6792 Holding And Other Investment Offices, Miscellaneous Investing, Oil royalty traders
+6794 Holding And Other Investment Offices, Miscellaneous Investing, Patent owners and lessors
+6798 Holding And Other Investment Offices, Miscellaneous Investing, Real estate investment trusts
+6799 Holding And Other Investment Offices, Miscellaneous Investing, Investors, nec
+70   Hotels And Other Lodging Places
+7000 Hotels, rooming houses, camps, and other lodging places
+701  Hotels And Other Lodging Places, Hotels and Motels
+7011 Hotels And Other Lodging Places, Hotels and Motels, Hotels and motels
+702  Hotels And Other Lodging Places, Rooming and Boarding Houses
+7021 Hotels And Other Lodging Places, Rooming and Boarding Houses, Rooming and boarding houses
+703  Hotels And Other Lodging Places, Camps and Recreational Vehicle Parks
+7032 Hotels And Other Lodging Places, Camps and Recreational Vehicle Parks, Sporting and recreational camps
+7033 Hotels And Other Lodging Places, Camps and Recreational Vehicle Parks, Trailer parks and campsites
+704  Hotels And Other Lodging Places, Membership-Basis Organization Hotels
+7041 Hotels And Other Lodging Places, Membership-Basis Organization Hotels, Membership-basis organization hotels
+72   Personal Services, Membership-Basis Organization Hotels
+7200 Personal services
+721  Personal Services, Laundry, Cleaning, & Garment Services
+7211 Personal Services, Laundry, Cleaning, & Garment Services, Power laundries, family & commercial
+7212 Personal Services, Laundry, Cleaning, & Garment Services, Garment pressing & cleaners' agents
+7213 Personal Services, Laundry, Cleaning, & Garment Services, Linen supply
+7215 Personal Services, Laundry, Cleaning, & Garment Services, Coin-operated laundries and cleaning
+7216 Personal Services, Laundry, Cleaning, & Garment Services, Drycleaning plants, except rug
+7217 Personal Services, Laundry, Cleaning, & Garment Services, Carpet and upholstery cleaning
+7218 Personal Services, Laundry, Cleaning, & Garment Services, Industrial launderers
+7219 Personal Services, Laundry, Cleaning, & Garment Services, Laundry and garment services, nec
+722  Personal Services, Photographic Studios, Portrait
+7221 Personal Services, Photographic Studios, Portrait, Photographic studios, portrait
+723  Personal Services, Beauty Shops
+7231 Personal Services, Beauty Shops, Beauty shops
+724  Personal Services, Barber Shops
+7241 Personal Services, Barber Shops, Barber shops
+725  Personal Services, Shoe Repair and Shoeshine Parlors
+7251 Personal Services, Shoe Repair and Shoeshine Parlors, Shoe repair and shoeshine parlors
+726  Personal Services, Funeral Service and Crematories
+7261 Personal Services, Funeral Service and Crematories, Funeral service and crematories
+729  Personal Services, Miscellaneous Personal Services
+7291 Personal Services, Miscellaneous Personal Services, Tax return preparation services
+7299 Personal Services, Miscellaneous Personal Services, Miscellaneous personal services, nec
+73   Business Services
+7300 Business services
+731  Business Services, Advertising
+7311 Business Services, Advertising, Advertising agencies
+7312 Business Services, Advertising, Outdoor advertising services
+7313 Business Services, Advertising, Radio, TV, publisher representatives
+7319 Business Services, Advertising, Advertising, nec
+732  Business Services, Credit Reporting and Collection
+7322 Business Services, Credit Reporting and Collection, Adjustment & collection services
+7323 Business Services, Credit Reporting and Collection, Credit reporting services
+733  Business Services, Mailing, Reproduction, Stenographic
+7331 Business Services, Mailing, Reproduction, Stenographic, Direct mail advertising services
+7334 Business Services, Mailing, Reproduction, Stenographic, Photocopying & duplicating services
+7335 Business Services, Mailing, Reproduction, Stenographic, Commercial photography
+7336 Business Services, Mailing, Reproduction, Stenographic, Commercial art and graphic design
+7338 Business Services, Mailing, Reproduction, Stenographic, Secretarial & court reporting
+734  Business Services, Services to Buildings
+7342 Business Services, Services to Buildings, Disinfecting & pest control services
+7349 Business Services, Services to Buildings, Building maintenance services, nec
+735  Business Services, Misc. Equipment Rental & Leasing
+7352 Business Services, Misc. Equipment Rental & Leasing, Medical equipment rental
+7353 Business Services, Misc. Equipment Rental & Leasing, Heavy construction equipment rental
+7359 Business Services, Misc. Equipment Rental & Leasing, Equipment rental & leasing, nec
+736  Business Services, Personnel Supply Services
+7361 Business Services, Personnel Supply Services, Employment agencies
+7363 Business Services, Personnel Supply Services, Help supply services
+737  Business Services, Computer and Data Processing Services
+7371 Business Services, Computer and Data Processing Services, Computer programming services
+7372 Business Services, Computer and Data Processing Services, Prepackaged software
+7373 Business Services, Computer and Data Processing Services, Computer integrated systems design
+7374 Business Services, Computer and Data Processing Services, Data processing and preparation
+7375 Business Services, Computer and Data Processing Services, Information retrieval services
+7376 Business Services, Computer and Data Processing Services, Computer facilities management
+7377 Business Services, Computer and Data Processing Services, Computer rental & leasing
+7378 Business Services, Computer and Data Processing Services, Computer maintenance & repair
+7379 Business Services, Computer and Data Processing Services, Computer related services, nec
+738  Business Services, Miscellaneous Business Services
+7381 Business Services, Miscellaneous Business Services, Detective & armored car services
+7382 Business Services, Miscellaneous Business Services, Security systems services
+7383 Business Services, Miscellaneous Business Services, News syndicates
+7384 Business Services, Miscellaneous Business Services, Photofinishing laboratories
+7389 Business Services, Miscellaneous Business Services, Business services, nec
+75   Auto Repair, Services, And Parking
+7500 Automotive repair, services, and parking
+751  Auto Repair, Services, And Parking, Automotive Rentals, No Drivers
+7513 Auto Repair, Services, And Parking, Automotive Rentals, No Drivers, Truck rental and leasing, no drivers
+7514 Auto Repair, Services, And Parking, Automotive Rentals, No Drivers, Passenger car rental
+7515 Auto Repair, Services, And Parking, Automotive Rentals, No Drivers, Passenger car leasing
+7519 Auto Repair, Services, And Parking, Automotive Rentals, No Drivers, Utility trailer rental
+752  Auto Repair, Services, And Parking, Automobile Parking
+7521 Auto Repair, Services, And Parking, Automobile Parking, Automobile parking
+753  Auto Repair, Services, And Parking, Automotive Repair Shops
+7530 Automotive Repair Shops
+7532 Auto Repair, Services, And Parking, Automotive Repair Shops, Top & body repair & paint shops
+7533 Auto Repair, Services, And Parking, Automotive Repair Shops, Auto exhaust system repair shops
+7534 Auto Repair, Services, And Parking, Automotive Repair Shops, Tire retreading and repair shops
+7536 Auto Repair, Services, And Parking, Automotive Repair Shops, Automotive glass replacement shops
+7537 Auto Repair, Services, And Parking, Automotive Repair Shops, Automotive transmission repair shops
+7538 Auto Repair, Services, And Parking, Automotive Repair Shops, General automotive repair shops
+7539 Auto Repair, Services, And Parking, Automotive Repair Shops, Automotive repair shops, nec
+754  Auto Repair, Services, And Parking, Automotive Services, except Repair
+7542 Auto Repair, Services, And Parking, Automotive Services, except Repair, Carwashes
+7549 Auto Repair, Services, And Parking, Automotive Services, except Repair, Automotive services, nec
+76   Miscellaneous Repair Services, Automotive Services, except Repair
+7600 Miscellaneous repair services
+762  Miscellaneous Repair Services, Electrical Repair Shops
+7622 Miscellaneous Repair Services, Electrical Repair Shops, Radio and television repair
+7623 Miscellaneous Repair Services, Electrical Repair Shops, Refrigeration service and repair
+7629 Miscellaneous Repair Services, Electrical Repair Shops, Electrical repair shops, nec
+763  Miscellaneous Repair Services, Watch, Clock, and Jewelry Repair
+7631 Miscellaneous Repair Services, Watch, Clock, and Jewelry Repair, Watch, clock, and jewelry repair
+764  Miscellaneous Repair Services, Reupholstery and Furniture Repair
+7641 Miscellaneous Repair Services, Reupholstery and Furniture Repair, Reupholstery and furniture repair
+769  Miscellaneous Repair Services, Miscellaneous Repair Shops
+7692 Miscellaneous Repair Services, Miscellaneous Repair Shops, Welding repair
+7694 Miscellaneous Repair Services, Miscellaneous Repair Shops, Armature rewinding shops
+7699 Miscellaneous Repair Services, Miscellaneous Repair Shops, Repair services, nec
+78   Motion Pictures
+7800 Motion pictures
+781  Motion Pictures, Motion Picture Production & Services
+7812 Motion Pictures, Motion Picture Production & Services, Motion picture & video production
+7819 Motion Pictures, Motion Picture Production & Services, Services allied to motion pictures
+782  Motion Pictures, Motion Picture Distribution & Services
+7822 Motion Pictures, Motion Picture Distribution & Services, Motion picture and tape distribution
+7829 Motion Pictures, Motion Picture Distribution & Services, Motion picture distribution services
+783  Motion Pictures, Motion Picture Theaters
+7832 Motion Pictures, Motion Picture Theaters, Motion picture theaters, ex drive-in
+7833 Motion Pictures, Motion Picture Theaters, Drive-in motion picture theaters
+784  Motion Pictures, Video Tape Rental
+7841 Motion Pictures, Video Tape Rental, Video tape rental
+79   Amusement & Recreation Services, Video Tape Rental
+7900 Amusement and recreational services
+791  Amusement & Recreation Services, Dance Studios, Schools, and Halls
+7911 Amusement & Recreation Services, Dance Studios, Schools, and Halls, Dance studios, schools, and halls
+792  Amusement & Recreation Services, Producers, Orchestras, Entertainers
+7922 Amusement & Recreation Services, Producers, Orchestras, Entertainers, Theatrical producers and services
+7929 Amusement & Recreation Services, Producers, Orchestras, Entertainers, Entertainers & entertainment groups
+793  Amusement & Recreation Services, Bowling Centers
+7933 Amusement & Recreation Services, Bowling Centers, Bowling centers
+794  Amusement & Recreation Services, Commercial Sports
+7941 Amusement & Recreation Services, Commercial Sports, Sports clubs, managers, & promoters
+7948 Amusement & Recreation Services, Commercial Sports, Racing, including track operation
+799  Amusement & Recreation Services, Misc. Amusement, Recreation Services
+7991 Amusement & Recreation Services, Misc. Amusement, Recreation Services, Physical fitness facilities
+7992 Amusement & Recreation Services, Misc. Amusement, Recreation Services, Public golf courses
+7993 Amusement & Recreation Services, Misc. Amusement, Recreation Services, Coin-operated amusement devices
+7996 Amusement & Recreation Services, Misc. Amusement, Recreation Services, Amusement parks
+7997 Amusement & Recreation Services, Misc. Amusement, Recreation Services, Membership sports & recreation clubs
+7999 Amusement & Recreation Services, Misc. Amusement, Recreation Services, Amusement and recreation, nec
+80   Health Services
+8000 Health services
+801  Health Services, Offices & Clinics Of Medical Doctors
+8011 Health Services, Offices & Clinics Of Medical Doctors, Offices & clinics of medical doctors
+802  Health Services, Offices and Clinics Of Dentists
+8021 Health Services, Offices and Clinics Of Dentists, Offices and clinics of dentists
+803  Health Services, Offices Of Osteopathic Physicians
+8031 Health Services, Offices Of Osteopathic Physicians, Offices of osteopathic physicians
+804  Health Services, Offices Of Other Health Practitioners
+8041 Health Services, Offices Of Other Health Practitioners, Offices and clinics of chiropractors
+8042 Health Services, Offices Of Other Health Practitioners, Offices and clinics of optometrists
+8043 Health Services, Offices Of Other Health Practitioners, Offices and clinics of podiatrists
+8049 Health Services, Offices Of Other Health Practitioners, Offices of health practitioners, nec
+805  Health Services, Nursing and Personal Care Facilities
+8051 Health Services, Nursing and Personal Care Facilities, Skilled nursing care facilities
+8052 Health Services, Nursing and Personal Care Facilities, Intermediate care facilities
+8059 Health Services, Nursing and Personal Care Facilities, Nursing and personal care, nec
+806  Health Services, Hospitals
+8060 Hospitals
+8062 Health Services, Hospitals, General medical & surgical hospitals
+8063 Health Services, Hospitals, Psychiatric hospitals
+8069 Health Services, Hospitals, Specialty hospitals exc. psychiatric
+807  Health Services, Medical and Dental Laboratories
+8071 Health Services, Medical and Dental Laboratories, Medical laboratories
+8072 Health Services, Medical and Dental Laboratories, Dental laboratories
+808  Health Services, Home Health Care Services
+8082 Health Services, Home Health Care Services, Home health care services
+809  Health Services, Health and Allied Services, Nec
+8092 Health Services, Health and Allied Services, Nec, Kidney dialysis centers
+8093 Health Services, Health and Allied Services, Nec, Specialty outpatient clinics, nec
+8099 Health Services, Health and Allied Services, Nec, Health and allied services, nec
+81   Legal Services
+8100 Legal services
+811  Legal Services, Legal Services
+8111 Legal Services, Legal Services, Legal services
+82   Educational Services
+8200 Educational services
+821  Educational Services, Elementary and Secondary Schools
+8211 Educational Services, Elementary and Secondary Schools, Elementary and secondary schools
+822  Educational Services, Colleges and Universities
+8221 Educational Services, Colleges and Universities, Colleges and universities
+8222 Educational Services, Colleges and Universities, Junior colleges
+823  Educational Services, Libraries
+8231 Educational Services, Libraries, Libraries
+824  Educational Services, Vocational Schools
+8243 Educational Services, Vocational Schools, Data processing schools
+8244 Educational Services, Vocational Schools, Business and secretarial schools
+8249 Educational Services, Vocational Schools, Vocational schools, nec
+829  Educational Services, Schools & Educational Services, Nec
+8299 Educational Services, Schools & Educational Services, Nec, Schools & educational services, nec
+83   Social Services
+8300 Social services
+832  Social Services, Individual and Family Services
+8322 Social Services, Individual and Family Services, Individual and family services
+833  Social Services, Job Training and Related Services
+8331 Social Services, Job Training and Related Services, Job training and related services
+835  Social Services, Child Day Care Services
+8351 Social Services, Child Day Care Services, Child day care services
+836  Social Services, Residential Care
+8361 Social Services, Residential Care, Residential care
+839  Social Services, Social Services, Nec
+8399 Social Services, Social Services, Nec, Social services, nec
+84   Museums, Botanical, Zoological Gardens
+8400 Museums, art galleries, botanical & zoological gardens
+841  Museums, Botanical, Zoological Gardens, Museums and Art Galleries
+8412 Museums, Botanical, Zoological Gardens, Museums and Art Galleries, Museums and art galleries
+842  Museums, Botanical, Zoological Gardens, Botanical and Zoological Gardens
+8422 Museums, Botanical, Zoological Gardens, Botanical and Zoological Gardens, Botanical and zoological gardens
+86   Membership Organizations
+8600 Membership organizations
+861  Membership Organizations, Business Associations
+8611 Membership Organizations, Business Associations, Business associations
+862  Membership Organizations, Professional Organizations
+8621 Membership Organizations, Professional Organizations, Professional organizations
+863  Membership Organizations, Labor Organizations
+8631 Membership Organizations, Labor Organizations, Labor organizations
+864  Membership Organizations, Civic and Social Associations
+8641 Membership Organizations, Civic and Social Associations, Civic and social associations
+865  Membership Organizations, Political Organizations
+8651 Membership Organizations, Political Organizations, Political organizations
+866  Membership Organizations, Religious Organizations
+8661 Membership Organizations, Religious Organizations, Religious organizations
+869  Membership Organizations, Membership Organizations, Nec
+8699 Membership Organizations, Membership Organizations, Nec, Membership organizations, nec
+87   Engineering & Management Services
+8700 Engineering and management services
+871  Engineering & Management Services, Engineering & Architectural Services
+8711 Engineering & Management Services, Engineering & Architectural Services, Engineering services
+8712 Engineering & Management Services, Engineering & Architectural Services, Architectural services
+8713 Engineering & Management Services, Engineering & Architectural Services, Surveying services
+872  Engineering & Management Services, Accounting, Auditing, & Bookkeeping
+8721 Engineering & Management Services, Accounting, Auditing, & Bookkeeping, Accounting, auditing, & bookkeeping
+873  Engineering & Management Services, Research and Testing Services
+8731 Engineering & Management Services, Research and Testing Services, Commercial physical research
+8732 Engineering & Management Services, Research and Testing Services, Commercial nonphysical research
+8733 Engineering & Management Services, Research and Testing Services, Noncommercial research organizations
+8734 Engineering & Management Services, Research and Testing Services, Testing laboratories
+874  Engineering & Management Services, Management and Public Relations
+8741 Engineering & Management Services, Management and Public Relations, Management services
+8742 Engineering & Management Services, Management and Public Relations, Management consulting services
+8743 Engineering & Management Services, Management and Public Relations, Public relations services
+8744 Engineering & Management Services, Management and Public Relations, Facilities support services
+8748 Engineering & Management Services, Management and Public Relations, Business consulting, nec
+88   Private Households
+8800 Private households
+881  Private Households, Private Households
+8811 Private Households, Private Households, Private households
+89   Services, Nec
+8900 Miscellaneous services
+899  Services, Nec, Services, Nec
+8999 Services, Nec, Services, Nec, Services, nec
+91   Executive, Legislative, And General
+9100 Executive, legislative, and general government
+911  Executive, Legislative, And General, Executive Offices
+9111 Executive, Legislative, And General, Executive Offices, Executive offices
+912  Executive, Legislative, And General, Legislative Bodies
+9121 Executive, Legislative, And General, Legislative Bodies, Legislative bodies
+913  Executive, Legislative, And General, Executive and Legislative Combined
+9131 Executive, Legislative, And General, Executive and Legislative Combined, Executive and legislative combined
+919  Executive, Legislative, And General, General Government, Nec
+9199 Executive, Legislative, And General, General Government, Nec, General government, nec
+92   Justice, Public Order, And Safety
+9200 Justice, public order, and safety
+921  Justice, Public Order, And Safety, Courts
+9211 Justice, Public Order, And Safety, Courts, Courts
+922  Justice, Public Order, And Safety, Public Order and Safety
+9221 Justice, Public Order, And Safety, Public Order and Safety, Police protection
+9222 Justice, Public Order, And Safety, Public Order and Safety, Legal counsel and prosecution
+9223 Justice, Public Order, And Safety, Public Order and Safety, Correctional Institutions
+9224 Justice, Public Order, And Safety, Public Order and Safety, Fire protection
+9229 Justice, Public Order, And Safety, Public Order and Safety, Public order and safety, nec
+93   Finance, Taxation, & Monetary Policy
+9300 Finance, taxation, and monetary policy
+931  Finance, Taxation, & Monetary Policy, Finance, Taxation, & Monetary Policy
+9311 Finance, Taxation, & Monetary Policy, Finance, Taxation, & Monetary Policy, Finance, taxation, & monetary policy
+94   Administration Of Human Resources
+9400 Administration of human resources
+941  Administration Of Human Resources, Admin. Of Educational Programs
+9411 Administration Of Human Resources, Admin. Of Educational Programs, Admin. of educational programs
+943  Administration Of Human Resources, Admin. Of Public Health Programs
+9431 Administration Of Human Resources, Admin. Of Public Health Programs, Admin. of public health programs
+944  Administration Of Human Resources, Admin. Of Social & Manpower Programs
+9441 Administration Of Human Resources, Admin. Of Social & Manpower Programs, Admin. of social & manpower programs
+945  Administration Of Human Resources, Administration Of Veterans' Affairs
+9451 Administration Of Human Resources, Administration Of Veterans' Affairs, Administration of veterans' affairs
+95   Environmental Quality And Housing
+9500 Environmental quality and housing
+951  Environmental Quality And Housing, Environmental Quality
+9511 Environmental Quality And Housing, Environmental Quality, Air, water, & solid waste management
+9512 Environmental Quality And Housing, Environmental Quality, Land, mineral, wildlife conservation
+953  Environmental Quality And Housing, Housing and Urban Development
+9531 Environmental Quality And Housing, Housing and Urban Development, Housing programs
+9532 Environmental Quality And Housing, Housing and Urban Development, Urban and community development
+96   Administration Of Economic Programs
+9600 Administration of economic programs
+961  Administration Of Economic Programs, Admin. Of General Economic Programs
+9611 Administration Of Economic Programs, Admin. Of General Economic Programs, Admin. of general economic programs
+962  Administration Of Economic Programs, Regulation, Admin. Of Transportation
+9621 Administration Of Economic Programs, Regulation, Admin. Of Transportation, Regulation, admin. of transportation
+963  Administration Of Economic Programs, Regulation, Admin. Of Utilities
+9631 Administration Of Economic Programs, Regulation, Admin. Of Utilities, Regulation, admin. of utilities
+964  Administration Of Economic Programs, Regulation Of Agricultural Marketing
+9641 Administration Of Economic Programs, Regulation Of Agricultural Marketing, Regulation of agricultural marketing
+965  Administration Of Economic Programs, Regulation Misc. Commercial Sectors
+9651 Administration Of Economic Programs, Regulation Misc. Commercial Sectors, Regulation misc. commercial sectors
+966  Administration Of Economic Programs, Space Research and Technology
+9661 Administration Of Economic Programs, Space Research and Technology, Space research and technology
+97   National Security And Intl. Affairs
+9700 National security and international affairs
+971  National Security And Intl. Affairs, National Security
+9711 National Security And Intl. Affairs, National Security, National security
+972  National Security And Intl. Affairs, International Affairs
+9721 National Security And Intl. Affairs, International Affairs, International affairs
+973  National Security And Intl. Affairs, General Philanthropic Foundations
+974  National Security And Intl. Affairs, Corporate Foundations
+975  National Security And Intl. Affairs, Family Foundations
+976  National Security And Intl. Affairs, Community Foundations
+977  National Security And Intl. Affairs, Special-Purpose Foundations
+978  National Security And Intl. Affairs, Non-Profit Agencies/Associations
+980  National Security And Intl. Affairs, US Government, Nec
+981  National Security And Intl. Affairs, City Government
+982  National Security And Intl. Affairs, County Government
+983  National Security And Intl. Affairs, State Government
+984  National Security And Intl. Affairs, Federal Government
+985  National Security And Intl. Affairs, Foreign Government
+99   Nonclassifiable Establishments
+999  Nonclassifiable Establishments, Nonclassifiable Establishments
+9999 Nonclassifiable Establishments, Nonclassifiable Establishments, Nonclassifiable establishments

@@ -1,0 +1,15 @@
+#GRID   AN_GRID -2466000.0 -2034000.0 36000.0    36000.0    137     113     1       LAMBERT meters  30.0 60.0  103.8      103.8     36.3
+# Surrogate information for CHN 36-km grid
+# Colums: Region, Code, Description, File
+US,100,"Land area",weighted_srg_AN_GRID.txt
+CANADA,100,"Land area",weighted_srg_AN_GRID.txt
+MEXICO,100,"Land area",weighted_srg_AN_GRID.txt
+CUBA,100,"Land area",weighted_srg_AN_GRID.txt
+BAHAMAS,100,"Land area",weighted_srg_AN_GRID.txt
+HAITI,100,"Land area",weighted_srg_AN_GRID.txt
+DOMINICANREPUBLIC,100,"Land area",weighted_srg_AN_GRID.txt
+EASTASIA,100,"Land area",weighted_srg_AN_GRID.txt
+ASIA,100,"Land area",weighted_srg_AN_GRID.txt
+CHINA,100,"Land area",weighted_srg_AN_GRID.txt
+
+
