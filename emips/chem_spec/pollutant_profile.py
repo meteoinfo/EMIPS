@@ -39,3 +39,13 @@ class PollutantProfile(object):
         :param spec_prof: (*SpeciesProfile*) The species profile
         """
         self.species_profiles.append(spec_prof)
+
+    def get_species(self):
+        """
+        Get species
+        :return: The species
+        """
+        specs = []
+        for spec_prof in self.species_profiles:
+            specs.append(spec_prof.species)
+        return specs
