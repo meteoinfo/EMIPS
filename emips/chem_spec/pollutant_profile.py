@@ -1,66 +1,41 @@
 from .pollutant import Pollutant
 from .species import Species
 
-class PollutantProfileItem(object):
+class PollutantProfile(object):
 
-    def __init__(self, pollutant, species, sf, dv, mf):
-        """
-        Pollutant profile item
-
-        :param pollutant The pollutant
-        :param species: The species
-        :param sf: Split factor
-        :param dv: Divisor
-        :param mf: Mass fraction
-        """
-        if isinstance(pollutant, basestring):
-            self.pollutant = Pollutant(pollutant)
-        else:
-            self.pollutant = pollutant
-        if isinstance(species, basestring):
-            self.species = Species(species)
-        else:
-            self.species = species
-        self.split_factor = sf
-        self.divisor = dv
-        self.mass_fraction = mf
-
-    def __str__(self):
-        r = "{}: split_factor={}, divisor={}, mass_fraction={}".format(self.species.name, self.split_factor,
-            self.divisor, self.mass_fraction)
-        return r
-
-    __repr__ =  __str__
-
-    @classmethod
-    def read_string(cls, line):
-        """
-        Read pollutant profile item from string line
-        :param line: The string line
-        :return: Pollutant profile item
-        """
-        data = line.split()
-        pollutant = Pollutant(data[1])
-        species = Species(data[2])
-        return PollutantProfileItem(pollutant, species, float(data[3]), float(data[4]), float(data[5]))
-
-class PollutantProfile(list):
-
-    def __init__(self, pollutant, prof_items=[]):
+    def __init__(self, pollutant, species_profiles=[]):
         """
         Pollutant profile
-        :param prof_items: The pollutant profile items
+
+        :param pollutant: (*Pollutant*) The pollutant
+        :param species_profiles: (*list of SpeciesProfile*) The species profiles
         """
-        list.__init__([])
         if isinstance(pollutant, basestring):
             pollutant = Pollutant(pollutant)
         self.pollutant = pollutant
-        self.extend(prof_items)
+        self.species_profiles = []
+        self.species_profiles.extend(species_profiles)
 
     def __str__(self):
         r = 'Pollutant: {}'.format(self.pollutant.name)
-        for prof_item in self:
+        for prof_item in self.species_profiles:
             r += "\n\t{}".format(prof_item)
         return r
 
     __repr__ = __str__
+
+    def __getitem__(self, item):
+        if isinstance(item, int):
+            return self.species_profiles[item]
+        else:
+            for spec_prof in self.species_profiles:
+                if spec_prof.species.name == item:
+                    return spec_prof
+            raise ValueError("Not a valid key: {}".format(item))
+
+    def append(self, spec_prof):
+        """
+        Append a species profile
+        :param spec_prof: (*SpeciesProfile*) The species profile
+        """
+        self.species_profiles.append(spec_prof)

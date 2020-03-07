@@ -1,5 +1,6 @@
 from .species_reference import SpeciesReferenceItem, SpeciesReference
-from .pollutant_profile import PollutantProfileItem, PollutantProfile
+from .species_profile import SpeciesProfile
+from .pollutant_profile import PollutantProfile
 from .pollutant import Pollutant
 import mipylib.numeric as np
 
@@ -56,7 +57,7 @@ def read_file(ref_fn, profile_fn, scc):
         profile_id = data[0]
         poll_name = data[1]
         if spec_ref.contains(profile_id, poll_name):
-            ppi = PollutantProfileItem.read_string(line)
+            ppi = SpeciesProfile.read_string(line)
             if poll_name in poll_names:
                 poll_profile = get_pollutant_profile(pollutant_profiles, poll_name)
                 poll_profile.append(ppi)

@@ -181,8 +181,9 @@ def diurnal_allocation(data, diurnal_profile):
     """
     ny, nx = data.shape
     h_data = np.zeros((24, ny, nx))
+    weights = diurnal_profile.get_ratios()
     for i in range(24):
-        h_data[i] = data * diurnal_profile.weights[i]
+        h_data[i] = data * weights[i]
 
     return h_data
 
