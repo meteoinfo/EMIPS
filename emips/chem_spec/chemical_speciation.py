@@ -16,7 +16,7 @@ def get_pollutant_profile(poll_profiles, pollutant):
     if isinstance(pollutant, basestring):
         pollutant = Pollutant(pollutant)
     for profile in poll_profiles:
-        if profile.pollutant == pollutant:
+        if profile.pollutant.name.upper() == pollutant.name.upper():
             return profile
     return None
 
