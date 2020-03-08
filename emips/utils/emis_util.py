@@ -12,17 +12,21 @@ def get_scc(sector):
     """
     scc = "10100101"
     if sector.name == SectorName.BIOMASS:
-        scc = "28050001"
+        scc = "2810001000"
     elif sector.name == SectorName.ENERGY:
         scc = "10100101"
     elif sector.name == SectorName.INDUSTRY:
         scc = "30100101"
     elif sector.name == SectorName.RESIDENTIAL:
-        scc = "28050002"
+        scc = "2104001000"
     elif sector.name == SectorName.WASTE_TREATMENT:
-        scc = "28050001"
-    elif sector.name in [SectorName.TRANSPORT, SectorName.AIR, SectorName.SHIPS]:
-        scc = "22010000"
+        scc = "50100101"
+    elif sector.name == SectorName.TRANSPORT:
+        scc = "2294000000"
+    elif sector.name == SectorName.AIR:
+        scc = "2275000000"
+    elif sector.name == SectorName.SHIPS:
+        scc = "2280000000"
     elif sector.name == SectorName.AGRICULTURE:
         scc = "28050000"
 
