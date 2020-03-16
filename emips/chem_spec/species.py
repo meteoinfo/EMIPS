@@ -2,21 +2,18 @@ from ..utils import Units, Weight, Area, Period
 
 class Species(object):
 
-    def __init__(self, name, units=Units(Weight.KG, Area.M2, Period.SECOND), ratio=1.0):
+    def __init__(self, name, units=Units(Weight.KG, Area.M2, Period.SECOND)):
         """
         Chemical species
 
         :param name: Species name
         :param units: Species units
-        :param ratio: Lump ratio - only used for VOC lump
         """
         self.name = name
         self.units = units
-        self.ratio = ratio
 
     def __str__(self):
-        return 'Name: {}}\nUnits: {}\nRatio: {}'.format(self.name, self.units,
-                                                        self.ratio)
+        return 'Name: {}; Units: {}'.format(self.name, self.units)
 
     __repr__ = __str__
 

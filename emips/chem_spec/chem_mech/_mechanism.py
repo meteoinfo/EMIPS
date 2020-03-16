@@ -15,7 +15,7 @@ class ChemicalMechanism(object):
         """
         return None
 
-    @property
+    @classmethod
     def voc_species(self):
         """
         Get VOC species
