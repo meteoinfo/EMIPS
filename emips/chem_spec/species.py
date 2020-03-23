@@ -1,4 +1,5 @@
 from ..utils import Units, Weight, Area, Period
+from ..utils._base import enum
 
 class Species(object):
 
@@ -19,3 +20,17 @@ class Species(object):
 
     def __eq__(self, other):
         return self.name == other.name and self.units == other.units
+
+#Normally used species
+SpeciesEnum = enum(PEC = Species("PEC"),
+                   CO = Species("CO"),
+                   NH3 = Species("NH3"),
+                   POA = Species("POA"),
+                   SO2 = Species("SO2"),
+                   PMC = Species("PMC"),
+                   NO = Species("NO"),
+                   NO2 = Species("NO2"),
+                   SULF = Species("SULF"),
+                   PMFINE = Species("PMFINE"),
+                   PNO3 = Species("PNO3"),
+                   PSO4 = Species("PSO4"))

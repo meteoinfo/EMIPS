@@ -4,6 +4,7 @@ from .retro import RETRO
 
 class RADM2(ChemicalMechanism):
 
+    #VOC species
     ALD = Species('ALD')    #Acetaldehyde and higher aldehydes
     CSL = Species('CSL')    #Counter species for cresol reaction
     ETH = Species('ETH')    #Ethane
@@ -23,6 +24,21 @@ class RADM2(ChemicalMechanism):
     TERP = Species('TERP')  #Monoterpenes
     TOL = Species('TOL')    #Toluene and less reactive aromatics
     XYL = Species('XYL')    #Xylene and more reactive aromatics
+    CH4 = Species('CH4')    #Methane
+
+    #None-VOC species
+    CO = Species('CO')
+    NO = Species('NO')
+    NO2 = Species('NO2')
+    NH3 = Species('NH3')
+    SO2 = Species('SO2')
+    SULF = Species('SULF')
+    PEC = Species('PEC')
+    PMFINE = Species('PMFINE')
+    PNO3 = Species('PNO3')
+    POA = Species('POA')
+    PSO4 = Species('PSO4')
+    PMC = Species('PMC')
     
     def __init__(self):
         """
@@ -39,17 +55,38 @@ class RADM2(ChemicalMechanism):
         return 'RADM2'
 
     @classmethod
-    def voc_species(cls):
+    def nmvoc_species(cls):
         """
-        Get VOC species
-        :return:
+        Get NMVOC (None-Methane VOC) species
+        :return: (*list of species*) NMVOC species
         """
-        sp_list = [cls.ALD, cls.CSL, cls.ETH, cls.HC3, cls.HC5, cls.HC8,
+        sp_nmvoc = [cls.ALD, cls.CSL, cls.ETH, cls.HC3, cls.HC5, cls.HC8,
                    cls.HCHO, cls.ISOP, cls.KET, cls.NR, cls.OL2, cls.OLE,
                    cls.OLI, cls.OLT, cls.ORA2, cls.PAR, cls.TERP, cls.TOL,
                    cls.XYL]
 
-        return sp_list
+        return sp_nmvoc
+
+    @classmethod
+    def voc_species(cls):
+        """
+        Get VOC species
+        :return: (*list of species*) VOC species
+        """
+        sp_voc = cls.nmvoc_species()
+        sp_voc.insert(1, cls.CH4)
+
+    @classmethod
+    def all_species(cls):
+        """
+        Get all species
+        :return: (*list of species*) All species
+        """
+        sp_all = [cls.CO, cls.NO, cls.NO2]
+        sp_all.extend(cls.voc_species())
+        sp_all.extend(cls.NH3, cls.SO2, cls.SULF, cls.PEC, cls.PMFINE, cls.PNO3, cls.POA, \
+                      cls.PSO4,cls.PMC)
+        return sp_all
 
     @classmethod
     def lump_RETRO(cls, spec):

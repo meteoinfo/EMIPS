@@ -1,4 +1,5 @@
 from ..utils.units import Units, Weight, Area, Period
+from ..utils._base import enum
 
 class Pollutant(object):
 
@@ -19,3 +20,17 @@ class Pollutant(object):
 
     def __eq__(self, other):
         return self.name == other.name and self.units == other.units
+
+#Normally used pollutants
+PollutantEnum = enum(BC = Pollutant("BC"),
+                     CO = Pollutant("CO"),
+                     NH3 = Pollutant("NH3"),
+                     NOx = Pollutant("NOx"),
+                     OC = Pollutant("OC"),
+                     PM25 = Pollutant("PM25"),
+                     SO2 = Pollutant("SO2"),
+                     PMcoarse = Pollutant("PMcoarse"),
+                     PM10more = Pollutant("PM10more"),
+                     CH4 = Pollutant("CH4"),
+                     NMVOC = Pollutant("NMVOC"),
+                     VOC = Pollutant("VOC"))

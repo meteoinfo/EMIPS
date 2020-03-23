@@ -1,4 +1,4 @@
-from .sector import SectorName
+from .sector import SectorEnum
 import calendar
 
 __all__ = ['get_scc', 'get_month_days', 'get_year_days']
@@ -11,23 +11,23 @@ def get_scc(sector):
     :return: Source classification code
     """
     scc = "10100101"
-    if sector.name == SectorName.BIOMASS:
+    if sector.name == SectorEnum.BIOMASS:
         scc = "2810001000"
-    elif sector.name == SectorName.ENERGY:
+    elif sector.name == SectorEnum.ENERGY:
         scc = "10100101"
-    elif sector.name == SectorName.INDUSTRY:
+    elif sector.name == SectorEnum.INDUSTRY:
         scc = "30100101"
-    elif sector.name == SectorName.RESIDENTIAL:
+    elif sector.name == SectorEnum.RESIDENTIAL:
         scc = "2104001000"
-    elif sector.name == SectorName.WASTE_TREATMENT:
+    elif sector.name == SectorEnum.WASTE_TREATMENT:
         scc = "50100101"
-    elif sector.name == SectorName.TRANSPORT:
+    elif sector.name == SectorEnum.TRANSPORT:
         scc = "2294000000"
-    elif sector.name == SectorName.AIR:
+    elif sector.name == SectorEnum.AIR:
         scc = "2275000000"
-    elif sector.name == SectorName.SHIPS:
+    elif sector.name == SectorEnum.SHIPS:
         scc = "2280000000"
-    elif sector.name == SectorName.AGRICULTURE:
+    elif sector.name == SectorEnum.AGRICULTURE:
         scc = "28050000"
 
     return scc

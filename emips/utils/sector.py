@@ -1,16 +1,6 @@
 from ._base import enum
 
-__all__ = ['Sector', 'SectorName']
-
-SectorName = enum(ENERGY = "energy",
-              INDUSTRY = "industry",
-              RESIDENTIAL = "residential",
-              SHIPS = "ships",
-              TRANSPORT = "transport",
-              AIR = "air",
-              BIOMASS = "biomass",
-              WASTE_TREATMENT = "waste_treatment",
-              AGRICULTURE = "agriculture")
+__all__ = ['Sector', 'SectorEnum']
 
 class Sector(object):
 
@@ -25,3 +15,14 @@ class Sector(object):
         return self.name
 
     __repr__ = __str__
+
+#Normally used sectors
+SectorEnum = enum(ENERGY = Sector("energy"),
+               INDUSTRY = Sector("industry"),
+               RESIDENTIAL = Sector("residential"),
+               SHIPS = Sector("ships"),
+               TRANSPORT = Sector("transport"),
+               AIR = Sector("air"),
+               BIOMASS = Sector("biomass"),
+               WASTE_TREATMENT = Sector("waste_treatment"),
+               AGRICULTURE = Sector("agriculture"))
