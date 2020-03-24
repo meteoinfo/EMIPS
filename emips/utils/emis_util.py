@@ -38,7 +38,7 @@ def get_year_days(year):
     :param year: (*int*) The year.
     :return: Number of days in a year.
     """
-    return 366 if calendar.isleep(year) else 365
+    return 366 if calendar.isleap(year) else 365
 
 def get_month_days(year, month):
     """

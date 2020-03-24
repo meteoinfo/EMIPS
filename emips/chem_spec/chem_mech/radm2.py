@@ -1,44 +1,44 @@
 from ._mechanism import ChemicalMechanism
-from ..species import Species
+from ..species import Species, SpeciesEnum
 from .retro import RETRO
 
 class RADM2(ChemicalMechanism):
 
     #VOC species
-    ALD = Species('ALD')    #Acetaldehyde and higher aldehydes
-    CSL = Species('CSL')    #Counter species for cresol reaction
-    ETH = Species('ETH')    #Ethane
-    HC3 = Species('HC3')    #Alkanes w/ 2.7x10-13 > kOH < 3.4x10-12
-    HC5 = Species('HC5')    #Alkanes w/ 3.4x10-12 > kOH < 6.8x10-12
-    HC8 = Species('HC8')    #Alkanes w/ kOH > 6.8x10-12
-    HCHO = Species('HCHO')  #Formaldehyde
-    ISOP = Species('ISOP')  #Isoprene
-    KET = Species('KET')    #Ketones
+    ALD = Species('ALD', molar_mass=44)    #Acetaldehyde and higher aldehydes
+    CSL = Species('CSL', molar_mass=108)    #Counter species for cresol reaction
+    ETH = Species('ETH', molar_mass=30)    #Ethane
+    HC3 = Species('HC3', molar_mass=44)    #Alkanes w/ 2.7x10-13 > kOH < 3.4x10-12
+    HC5 = Species('HC5', molar_mass=72)    #Alkanes w/ 3.4x10-12 > kOH < 6.8x10-12
+    HC8 = Species('HC8', molar_mass=114)    #Alkanes w/ kOH > 6.8x10-12
+    HCHO = Species('HCHO', molar_mass=30)  #Formaldehyde
+    ISOP = Species('ISOP', molar_mass=68)  #Isoprene
+    KET = Species('KET', molar_mass=72)    #Ketones
     NR = Species('NR')      #non-reactive class
-    OL2 = Species('OL2')    #Ethene
+    OL2 = Species('OL2', molar_mass=28)    #Ethene
     OLE = Species('OLE')    #double-bonded carbon atoms
-    OLI = Species('OLI')    #Internal olefins
-    OLT = Species('OLT')    #Terminal olefins
-    ORA2 = Species('ORA2')  #Acetic and higher acids
+    OLI = Species('OLI', molar_mass=56)    #Internal olefins
+    OLT = Species('OLT', molar_mass=42)    #Terminal olefins
+    ORA2 = Species('ORA2', molar_mass=60)  #Acetic and higher acids
     PAR = Species('PAR')    #single-bonds carbon atoms
-    TERP = Species('TERP')  #Monoterpenes
-    TOL = Species('TOL')    #Toluene and less reactive aromatics
-    XYL = Species('XYL')    #Xylene and more reactive aromatics
-    CH4 = Species('CH4')    #Methane
+    TERP = Species('TERP', molar_mass=136)  #Monoterpenes
+    TOL = Species('TOL', molar_mass=92)    #Toluene and less reactive aromatics
+    XYL = Species('XYL', molar_mass=106)    #Xylene and more reactive aromatics
+    CH4 = SpeciesEnum.CH4    #Methane
 
     #None-VOC species
-    CO = Species('CO')
-    NO = Species('NO')
-    NO2 = Species('NO2')
-    NH3 = Species('NH3')
-    SO2 = Species('SO2')
-    SULF = Species('SULF')
-    PEC = Species('PEC')
-    PMFINE = Species('PMFINE')
-    PNO3 = Species('PNO3')
-    POA = Species('POA')
-    PSO4 = Species('PSO4')
-    PMC = Species('PMC')
+    CO = SpeciesEnum.CO
+    NO = SpeciesEnum.NO
+    NO2 = SpeciesEnum.NO2
+    NH3 = SpeciesEnum.NH3
+    SO2 = SpeciesEnum.SO2
+    SULF = SpeciesEnum.SULF
+    PEC = SpeciesEnum.PEC
+    PMFINE = SpeciesEnum.PMFINE
+    PNO3 = SpeciesEnum.PNO3
+    POA = SpeciesEnum.POA
+    PSO4 = SpeciesEnum.PSO4
+    PMC = SpeciesEnum.PMC
     
     def __init__(self):
         """
@@ -75,6 +75,8 @@ class RADM2(ChemicalMechanism):
         """
         sp_voc = cls.nmvoc_species()
         sp_voc.insert(1, cls.CH4)
+
+        return sp_voc
 
     @classmethod
     def all_species(cls):
