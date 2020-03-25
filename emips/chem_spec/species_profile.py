@@ -1,5 +1,5 @@
 from .pollutant import Pollutant
-from .species import Species
+from .species import Species, SpeciesEnum
 
 class SpeciesProfile(object):
 
@@ -33,13 +33,17 @@ class SpeciesProfile(object):
     __repr__ =  __str__
 
     @classmethod
-    def read_string(cls, line):
+    def read_string(cls, line, mechanism=None):
         """
         Read pollutant profile item from string line
-        :param line: The string line
+        :param line: (*str*) The string line
+        :param mechanism: (*ChemicalMechanism*) Chemical mechanism
         :return: Pollutant profile item
         """
         data = line.split()
         pollutant = Pollutant(data[1])
-        species = Species(data[2])
+        if mechanism is None:
+            species = SpeciesEnum.species(data[2])
+        else:
+            species = mechanism.species(data[2])
         return SpeciesProfile(pollutant, species, float(data[3]), float(data[4]), float(data[5]))

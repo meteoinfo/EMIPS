@@ -14,13 +14,13 @@ class RADM2(ChemicalMechanism):
     HCHO = Species('HCHO', molar_mass=30)  #Formaldehyde
     ISOP = Species('ISOP', molar_mass=68)  #Isoprene
     KET = Species('KET', molar_mass=72)    #Ketones
-    NR = Species('NR')      #non-reactive class
+    NR = Species('NR', molar_mass=100)     #non-reactive class (molar mass: 45-150)
     OL2 = Species('OL2', molar_mass=28)    #Ethene
-    OLE = Species('OLE')    #double-bonded carbon atoms
+    OLE = Species('OLE', molar_mass=27)    #double-bonded carbon atoms
     OLI = Species('OLI', molar_mass=56)    #Internal olefins
     OLT = Species('OLT', molar_mass=42)    #Terminal olefins
     ORA2 = Species('ORA2', molar_mass=60)  #Acetic and higher acids
-    PAR = Species('PAR')    #single-bonds carbon atoms
+    PAR = Species('PAR', molar_mass=14)    #single-bonds carbon atoms
     TERP = Species('TERP', molar_mass=136)  #Monoterpenes
     TOL = Species('TOL', molar_mass=92)    #Toluene and less reactive aromatics
     XYL = Species('XYL', molar_mass=106)    #Xylene and more reactive aromatics
@@ -86,9 +86,22 @@ class RADM2(ChemicalMechanism):
         """
         sp_all = [cls.CO, cls.NO, cls.NO2]
         sp_all.extend(cls.voc_species())
-        sp_all.extend(cls.NH3, cls.SO2, cls.SULF, cls.PEC, cls.PMFINE, cls.PNO3, cls.POA, \
-                      cls.PSO4,cls.PMC)
+        sp_all.extend([cls.NH3, cls.SO2, cls.SULF, cls.PEC, cls.PMFINE, cls.PNO3, cls.POA, \
+                      cls.PSO4,cls.PMC])
         return sp_all
+
+    @classmethod
+    def species(cls, name):
+        """
+        Get species from name
+        :param name: (*str*) Species name
+        :return: The species
+        """
+        species = cls.all_species()
+        for spec in species:
+            if spec.name == name:
+                return spec
+        return Species(name)
 
     @classmethod
     def lump_RETRO(cls, spec):

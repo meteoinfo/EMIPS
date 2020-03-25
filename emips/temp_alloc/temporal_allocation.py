@@ -100,8 +100,9 @@ def month_allocation(data, month_profile):
     """
     ny, nx = data.shape
     m_data = np.zeros((12, ny, nx))
+    weights = month_profile.get_ratios()
     for i in range(12):
-        m_data[i] = data * month_profile.weights[i]
+        m_data[i] = data * weights[i]
 
     return m_data
 

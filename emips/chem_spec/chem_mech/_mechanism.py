@@ -16,9 +16,18 @@ class ChemicalMechanism(object):
         return None
 
     @classmethod
-    def voc_species(self):
+    def voc_species(cls):
         """
         Get VOC species
         :return:
+        """
+        pass
+
+    @classmethod
+    def species(cls, name):
+        """
+        Get species by name
+        :param name: (*str*) Species name
+        :return: Species
         """
         pass

@@ -17,7 +17,10 @@ class Species(object):
         self.molar_mass = molar_mass
 
     def __str__(self):
-        return 'Name: {}; Units: {}'.format(self.name, self.units)
+        s = 'Name: {}; Units: {}'.format(self.name, self.units)
+        if not self.molar_mass is None:
+            s = s + '; Molar mass: {}'.format(self.molar_mass)
+        return s
 
     __repr__ = __str__
 
@@ -25,16 +28,40 @@ class Species(object):
         return self.name == other.name and self.units == other.units
 
 #Normally used species
-SpeciesEnum = enum(PEC = Species("PEC"),
-                   CO = Species("CO", molar_mass=28),
-                   CH4 = Species("CH4", molar_mass=16),
-                   NH3 = Species("NH3", molar_mass=17),
-                   POA = Species("POA"),
-                   SO2 = Species("SO2", molar_mass=64),
-                   PMC = Species("PMC"),
-                   NO = Species("NO", molar_mass=30),
-                   NO2 = Species("NO2", molar_mass=46),
-                   SULF = Species("SULF"),
-                   PMFINE = Species("PMFINE"),
-                   PNO3 = Species("PNO3"),
-                   PSO4 = Species("PSO4"))
+class SpeciesEnum(object):
+    PEC = Species("PEC")
+    CO = Species("CO", molar_mass=28)
+    CH4 = Species("CH4", molar_mass=16)
+    NH3 = Species("NH3", molar_mass=17)
+    POA = Species("POA")
+    SO2 = Species("SO2", molar_mass=64)
+    PMC = Species("PMC")
+    NO = Species("NO", molar_mass=30)
+    NO2 = Species("NO2", molar_mass=46)
+    SULF = Species("SULF")
+    PMFINE = Species("PMFINE")
+    PNO3 = Species("PNO3")
+    PSO4 = Species("PSO4")
+
+    @classmethod
+    def all_species(cls):
+        """
+        Get all species
+        :return: (*list of species*) All species
+        """
+        species = [cls.PEC, cls.CO, cls.CH4, cls.NH3, cls.POA, cls.SO2, cls.PMC,
+                   cls.NO, cls.NO2, cls.SULF, cls.PMFINE, cls.PNO3, cls.PSO4]
+        return species
+
+    @classmethod
+    def species(cls, name):
+        """
+        Get species from name
+        :param name: (*str*) Species name
+        :return: The species
+        """
+        species = cls.all_species()
+        for spec in species:
+            if spec.name == name:
+                return spec
+        return Species(name)
