@@ -1,4 +1,4 @@
-EMIPS：EMission Inventory Procession System
+EMIPS：EMission Inventory Processing System
 ============================================
 
 [![Join the chat at https://gitter.im/meteoinfo/community](https://badges.gitter.im/meteoinfo/community/meteoinfo.svg)](https://gitter.im/meteoinfo/community)
@@ -29,7 +29,7 @@ Learn more about MeteoInfo and EMIPS in its official documentation at http://met
 License
 -------
 
-Copyright 2019, EMIPS Developers
+Copyright 2019-2020, EMIPS Developers
 
 Licensed under the LGPL License, Version 3.0 (the "License");
 you may not use this file except in compliance with the License.
