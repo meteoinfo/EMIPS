@@ -54,57 +54,52 @@ class RADM2(ChemicalMechanism):
         """
         return 'RADM2'
 
-    @classmethod
-    def nmvoc_species(cls):
+    def nmvoc_species(self):
         """
         Get NMVOC (None-Methane VOC) species
         :return: (*list of species*) NMVOC species
         """
-        sp_nmvoc = [cls.ALD, cls.CSL, cls.ETH, cls.HC3, cls.HC5, cls.HC8,
-                   cls.HCHO, cls.ISOP, cls.KET, cls.NR, cls.OL2, cls.OLE,
-                   cls.OLI, cls.OLT, cls.ORA2, cls.PAR, cls.TERP, cls.TOL,
-                   cls.XYL]
+        sp_nmvoc = [self.ALD, self.CSL, self.ETH, self.HC3, self.HC5, self.HC8,
+                   self.HCHO, self.ISOP, self.KET, self.NR, self.OL2, self.OLE,
+                   self.OLI, self.OLT, self.ORA2, self.PAR, self.TERP, self.TOL,
+                   self.XYL]
 
         return sp_nmvoc
 
-    @classmethod
-    def voc_species(cls):
+    def voc_species(self):
         """
         Get VOC species
         :return: (*list of species*) VOC species
         """
-        sp_voc = cls.nmvoc_species()
-        sp_voc.insert(1, cls.CH4)
+        sp_voc = self.nmvoc_species()
+        sp_voc.insert(1, self.CH4)
 
         return sp_voc
 
-    @classmethod
-    def all_species(cls):
+    def all_species(self):
         """
         Get all species
         :return: (*list of species*) All species
         """
-        sp_all = [cls.CO, cls.NO, cls.NO2]
-        sp_all.extend(cls.voc_species())
-        sp_all.extend([cls.NH3, cls.SO2, cls.SULF, cls.PEC, cls.PMFINE, cls.PNO3, cls.POA, \
-                      cls.PSO4,cls.PMC])
+        sp_all = [self.CO, self.NO, self.NO2]
+        sp_all.extend(self.voc_species())
+        sp_all.extend([self.NH3, self.SO2, self.SULF, self.PEC, self.PMFINE, self.PNO3, self.POA, \
+                      self.PSO4,self.PMC])
         return sp_all
 
-    @classmethod
-    def species(cls, name):
+    def species(self, name):
         """
         Get species from name
         :param name: (*str*) Species name
         :return: The species
         """
-        species = cls.all_species()
+        species = self.all_species()
         for spec in species:
             if spec.name == name:
                 return spec
         return Species(name)
 
-    @classmethod
-    def lump_RETRO(cls, spec):
+    def lump_RETRO(self, spec):
         """
         Lump a species from RETRO species.
         :param spec: (*Species*) The species in this chemical mechanism.
@@ -112,44 +107,44 @@ class RADM2(ChemicalMechanism):
             the chemical mechanism species.
         """
         spec_dict = {}
-        if spec == cls.ALD:
+        if spec == self.ALD:
             spec_dict[RETRO.Other_alkanals] = 1.0
-        elif spec == cls.CSL:
+        elif spec == self.CSL:
             spec_dict[RETRO.Esters] = 1.0
             spec_dict[RETRO.Ethers] = 1.0
-        elif spec == cls.ETH:
+        elif spec == self.ETH:
             spec_dict[RETRO.Ethane] = 1.0
-        elif spec == cls.HC3:
+        elif spec == self.HC3:
             spec_dict[RETRO.Propane] = 1.0
-        elif spec == cls.HC5:
+        elif spec == self.HC5:
             spec_dict[RETRO.Butanes] = 1.0
             spec_dict[RETRO.Pentanes] = 1.0
-        elif spec == cls.HC8:
+        elif spec == self.HC8:
             spec_dict[RETRO.Hexanes_plus_higher_alkanes] = 1.0
             spec_dict[RETRO.Other_VOC] = 1.0
-        elif spec == cls.HCHO:
+        elif spec == self.HCHO:
             spec_dict[RETRO.Methanal] = 1.0
-        elif spec == cls.ISOP:
+        elif spec == self.ISOP:
             spec_dict[RETRO.Isoprene] = 1.0
-        elif spec == cls.KET:
+        elif spec == self.KET:
             spec_dict[RETRO.Ketones] = 1.0
-        elif spec == cls.OL2:
+        elif spec == self.OL2:
             spec_dict[RETRO.Ethene] = 1.0
-        elif spec == cls.OLI:
+        elif spec == self.OLI:
             spec_dict[RETRO.Propene] = 1.0
-        elif spec == cls.OLT:
+        elif spec == self.OLT:
             spec_dict[RETRO.Ethyne] = 1.0
             spec_dict[RETRO.Other_alkenes_and_alkynes] = 1.0
-        elif spec == cls.TERP:
+        elif spec == self.TERP:
             spec_dict[RETRO.Terpenes] = 1.0
-        elif spec == cls.TOL:
+        elif spec == self.TOL:
             spec_dict[RETRO.Toluene] = 1.0
             spec_dict[RETRO.Benzene] = 1.0
-        elif spec == cls.XYL:
+        elif spec == self.XYL:
             spec_dict[RETRO.Xylene] = 1.0
             spec_dict[RETRO.Trimethylbenzenes] = 1.0
             spec_dict[RETRO.Other_aromatics] = 1.0
-        elif spec == cls.ORA2:
+        elif spec == self.ORA2:
             spec_dict[RETRO.Acids] = 1.0
             spec_dict[RETRO.Alcohols] = 1.0
 
