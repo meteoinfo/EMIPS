@@ -1,6 +1,6 @@
 """
 Process emission data by spatial allocation, temporal allocation
-and chemical speciation. VOC polluant is not included in this
+and chemical speciation. VOC pollutant is not included in this
 script.
 """
 
