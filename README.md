@@ -19,7 +19,8 @@ that air pollution forecasting model can be used directly. The functions includi
 Running
 -------
 
-EMIPS jython script can be running in MeteoInfoLab environment.
+EMIPS jython script can be running in MeteoInfoLab environment. ``run`` folder of this project
+includes an example for processing HTAP 2010 emission inventory.
 
 Documentation
 -------------
