@@ -7,6 +7,8 @@ import temp_alloc
 import spatial_alloc
 import chem_spec
 
+__version__ = '0.2'
+
 import os
 ge_data_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ge_data')
 
