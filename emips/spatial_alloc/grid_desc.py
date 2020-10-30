@@ -74,6 +74,14 @@ class GridDesc(object):
         return self.__x_num
 
     @property
+    def x_end(self):
+        return self.__x_coord[-1]
+
+    @property
+    def x_delta(self):
+        return self.__x_coord[1] - self.__x_coord[0]
+
+    @property
     def y_orig(self):
         return self.__y_orig
 
@@ -84,6 +92,36 @@ class GridDesc(object):
     @property
     def y_num(self):
         return self.__y_num
+
+    @property
+    def y_end(self):
+        return self.__y_coord[-1]
+
+    @property
+    def y_delta(self):
+        return self.__y_coord[1] - self.__y_coord[0]
+
+    def get_x_value(self, v):
+        """
+        Find the nearest x coordinate value according to input value.
+        :param v: (*float*) Input value.
+        :return: (*float*) Found x coordinate value.
+        """
+        for x in self.__x_coord:
+            if x >= v:
+                return x
+        return self.__x_coord[-1]
+
+    def get_y_value(self, v):
+        """
+        Find the nearest y coordinate value according to input value.
+        :param v: (*float*) Input value.
+        :return: (*float*) Found y coordinate value.
+        """
+        for y in self.__y_coord:
+            if y >= v:
+                return y
+        return self.__y_coord[-1]
 
     def grid_areas(self):
         """
