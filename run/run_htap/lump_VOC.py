@@ -33,9 +33,9 @@ def run(year, month, dir_inter, chem_mech):
     model_grid = GridDesc(proj, x_orig=70., x_cell=0.15, x_num=502,
         y_orig=15., y_cell=0.15, y_num=330)
     #Set dimensions
-    tdim = dataset.dimension(np.arange(24), 'hour')
-    ydim = dataset.dimension(model_grid.y_coord, 'lat', 'Y')
-    xdim = dataset.dimension(model_grid.x_coord, 'lon', 'X')
+    tdim = np.dimension(np.arange(24), 'hour')
+    ydim = np.dimension(model_grid.y_coord, 'lat', 'Y')
+    xdim = np.dimension(model_grid.x_coord, 'lon', 'X')
     dims = [tdim, ydim, xdim]
     
     #Sector loop

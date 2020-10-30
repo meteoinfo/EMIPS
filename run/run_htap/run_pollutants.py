@@ -36,9 +36,9 @@ def run(year, month, dir_inter, emission, model_grid):
     spec_ref_fn = os.path.join(ge_data_dir, 'gsref.cmaq.radm2p25.txt')
     
     #Set data dimensions
-    tdim = dataset.dimension(np.arange(24), 'hour')
-    ydim = dataset.dimension(model_grid.y_coord, 'lat', 'Y')
-    xdim = dataset.dimension(model_grid.x_coord, 'lon', 'X')
+    tdim = np.dimension(np.arange(24), 'hour')
+    ydim = np.dimension(model_grid.y_coord, 'lat', 'Y')
+    xdim = np.dimension(model_grid.x_coord, 'lon', 'X')
     dims = [tdim, ydim, xdim]
     
     #Set sectors and pollutants
