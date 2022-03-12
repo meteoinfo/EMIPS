@@ -4,7 +4,7 @@ from .retro import RETRO
 
 class RADM2(ChemicalMechanism):
 
-    #VOC species
+    #NMVOC species (19)
     ALD = Species('ALD', molar_mass=44)     #Acetaldehyde and higher aldehydes
     CSL = Species('CSL', molar_mass=108)    #Counter species for cresol reaction
     ETH = Species('ETH', molar_mass=30)     #Ethane
@@ -26,7 +26,7 @@ class RADM2(ChemicalMechanism):
     XYL = Species('XYL', molar_mass=106)    #Xylene and more reactive aromatics
     CH4 = SpeciesEnum.CH4    #Methane
 
-    #None-VOC species
+    #None-VOC species (12)
     CO = SpeciesEnum.CO
     NO = SpeciesEnum.NO
     NO2 = SpeciesEnum.NO2
