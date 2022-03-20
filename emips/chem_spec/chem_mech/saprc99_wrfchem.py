@@ -5,31 +5,31 @@ from .retro import RETRO
 class SAPRC99_wrfchem(ChemicalMechanism):
 
     #NMVOC species (23)
-    C2H6 = Species('C2H6', molar_mass=30)            #ethane
-    C3H8 = Species('C3H8', molar_mass=44)            #propane
-    C2H2 = Species('C2H2', molar_mass=26)            #acetylene
-    C3H6 = Species('C3H6', molar_mass=42)            #propene
-    ALK3 = Species('ALK3', molar_mass=58.7)          #Alkanes kOH between 2.5 x10e3and 5 x 10e3ppm-1 min-1.
-    ALK4 = Species('ALK4', molar_mass=77.6)          #Alkanes kOH between 5 x 10e3and 1 x 10e4ppm-1 min-1.
-    ALK5 = Species('ALK5', molar_mass=118.9)         #Alkanes kOH greater than 1 x10e4ppm-1 min-1
-    ARO1 = Species('ARO1', molar_mass=95.2)          #Aromatics with kOH < 2x10e4ppm-1 min-1
-    ARO2 = Species('ARO2', molar_mass=118.7)         #Aromatics with kOH > 2x10e4ppm-1 min-1
-    OLE1 = Species('OLE1', molar_mass=72.3)          #Alkenes (other than ethene) with kOH < 7x10e4ppm-1 min-1
-    OLE2 = Species('OLE2', molar_mass=75.8)          #Alkenes with kOH > 7x10e4ppm-1 min-1
-    TERP = Species('TERP', molar_mass=136.2)         #Terpenes
+    C2H6 = Species('C2H6', molar_mass=30)             #ethane
+    C3H8 = Species('C3H8', molar_mass=44)             #propane
+    C2H2 = Species('C2H2', molar_mass=26)             #acetylene
+    C3H6 = Species('C3H6', molar_mass=42)             #propene
+    ALK3 = Species('ALK3', molar_mass=58.61)          #Alkanes kOH between 2.5 x10e3and 5 x 10e3ppm-1 min-1.
+    ALK4 = Species('ALK4', molar_mass=77.6)           #Alkanes kOH between 5 x 10e3and 1 x 10e4ppm-1 min-1.
+    ALK5 = Species('ALK5', molar_mass=118.89)         #Alkanes kOH greater than 1 x10e4ppm-1 min-1
+    ARO1 = Species('ARO1', molar_mass=95.16)          #Aromatics with kOH < 2x10e4ppm-1 min-1
+    ARO2 = Species('ARO2', molar_mass=118.72)         #Aromatics with kOH > 2x10e4ppm-1 min-1
+    OLE1 = Species('OLE1', molar_mass=72.34)          #Alkenes (other than ethene) with kOH < 7x10e4ppm-1 min-1
+    OLE2 = Species('OLE2', molar_mass=75.78)          #Alkenes with kOH > 7x10e4ppm-1 min-1
+    TERP = Species('TERP', molar_mass=136.24)         #Terpenes
 	#TRP1 = Species('TRP1', molar_mass=136.2)         #Terpenes
-    ETHENE = Species('ETHENE', molar_mass=28)        #Ethene
-    ISOPRENE = Species('ISOPRENE', molar_mass=68.1)  #Isoprene
-    HCHO = Species('HCHO', molar_mass=30)            #Formaldehyde
-    CCHO = Species('CCHO', molar_mass=44)            #Acetaldehyde
-    RCHO = Species('RCHO', molar_mass=58.1)          #Higher Aldehydes
-    ACET = Species('ACET', molar_mass=58.1)          #Acetone
-    MEK = Species('MEK', molar_mass=72)              #Ketones (<0.73 react)
-    MEOH = Species('MEOH', molar_mass=32)            #Methanol
-    PROD2 = Species('PROD2', molar_mass=116)         #Ketones (>0.73 react)
-    HCOOH = Species('HCOOH', molar_mass=46)          #Formic Acid
-    CCO_OH = Species('CCO_OH', molar_mass=60)        #Acetic Acid
-    CH4 = SpeciesEnum.CH4                            #Methane
+    ETHENE = Species('ETHENE', molar_mass=28.05)        #Ethene
+    ISOPRENE = Species('ISOPRENE', molar_mass=68.12)  #Isoprene
+    HCHO = Species('HCHO', molar_mass=30.03)          #Formaldehyde
+    CCHO = Species('CCHO', molar_mass=44.05)          #Acetaldehyde
+    RCHO = Species('RCHO', molar_mass=58.08)          #Higher Aldehydes
+    ACET = Species('ACET', molar_mass=58.08)          #Acetone
+    MEK = Species('MEK', molar_mass=72.11)            #Ketones (<0.73 react)
+    MEOH = Species('MEOH', molar_mass=32.04)          #Methanol
+    PROD2 = Species('PROD2', molar_mass=116.16)       #Ketones (>0.73 react)
+    HCOOH = Species('HCOOH', molar_mass=46.03)        #Formic Acid
+    CCO_OH = Species('CCO_OH', molar_mass=60.05)      #Acetic Acid
+    CH4 = SpeciesEnum.CH4                             #Methane
 
     #None-VOC species (12)
     CO = SpeciesEnum.CO

@@ -6,7 +6,7 @@ class MOZART_wrfchem(ChemicalMechanism):
 
     #NMVOC species (22)
     BIGALK = Species('BIGALK', molar_mass=72)      #Lumped alkanes C > 3
-    BIGENE = Species('BIGENE', molar_mass=76)      #Lumped alkenes C > 3
+    BIGENE = Species('BIGENE', molar_mass=56)      #Lumped alkenes C > 3
     C2H4 = Species('C2H4', molar_mass=28)          #Ethene
     C2H5OH = Species('C2H5OH', molar_mass=46)      #Ethanol
     C2H6 = Species('C2H6', molar_mass=30)          #Ethane

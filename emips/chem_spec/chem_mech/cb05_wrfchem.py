@@ -7,8 +7,8 @@ class CB05_wrfchem(ChemicalMechanism):
     #NMVOC species (15)
     ETOH = Species('ETOH', molar_mass=46)    #Ethanol
     ETHA = Species('ETHA', molar_mass=30)    #Ethane
-    PAR = Species('PAR', molar_mass=14)      #Paraffin carbon bond
-    NR = Species('NR', molar_mass=100)       #non-reactive class (molar mass: 45-150)
+    PAR = Species('PAR', molar_mass=16)      #Paraffin carbon bond
+    NR = Species('NR', molar_mass=16)        #non-reactive class 
     ETH = Species('ETH', molar_mass=28)      #Ethene
     OLE = Species('OLE', molar_mass=27)      #Oleftnic carbon bond
     ALDX = Species('ALDX', molar_mass=44)    #Propionaldehyde and higher aldehydes
