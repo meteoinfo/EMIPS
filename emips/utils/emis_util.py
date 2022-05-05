@@ -11,23 +11,23 @@ def get_scc(sector):
     :return: Source classification code
     """
     scc = "10100101"
-    if sector.name == SectorEnum.BIOMASS:
+    if sector == SectorEnum.BIOMASS:
         scc = "2810001000"
-    elif sector.name == SectorEnum.ENERGY:
+    elif sector == SectorEnum.ENERGY:
         scc = "10100101"
-    elif sector.name == SectorEnum.INDUSTRY:
+    elif sector == SectorEnum.INDUSTRY:
         scc = "30100101"
-    elif sector.name == SectorEnum.RESIDENTIAL:
+    elif sector == SectorEnum.RESIDENTIAL:
         scc = "2104001000"
-    elif sector.name == SectorEnum.WASTE_TREATMENT:
+    elif sector == SectorEnum.WASTE_TREATMENT:
         scc = "50100101"
-    elif sector.name == SectorEnum.TRANSPORT:
+    elif sector == SectorEnum.TRANSPORT:
         scc = "2294000000"
-    elif sector.name == SectorEnum.AIR:
+    elif sector == SectorEnum.AIR:
         scc = "2275000000"
-    elif sector.name == SectorEnum.SHIPS:
+    elif sector == SectorEnum.SHIPS:
         scc = "2280000000"
-    elif sector.name == SectorEnum.AGRICULTURE:
+    elif sector == SectorEnum.AGRICULTURE:
         scc = "28050000"
 
     return scc
