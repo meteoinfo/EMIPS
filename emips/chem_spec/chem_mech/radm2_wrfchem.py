@@ -4,7 +4,7 @@ from .retro import RETRO
 
 class RADM2_wrfchem(ChemicalMechanism):
 
-    #NMVOC species (19)
+    #NMVOC species (17)
     ALD = Species('ALD', molar_mass=44)       #Acetaldehyde and higher aldehydes
     CSL = Species('CSL', molar_mass=108)      #Counter species for cresol reaction
     ETH = Species('ETH', molar_mass=30)       #Ethane
@@ -22,8 +22,6 @@ class RADM2_wrfchem(ChemicalMechanism):
     TOL = Species('TOL', molar_mass=92)       #Toluene and less reactive aromatics
     XYL = Species('XYL', molar_mass=106)      #Xylene and more reactive aromatics
     CH3CL = Species('CH3CL', molar_mass=50.5) #CH3CL
-    TERP = Species('TERP', molar_mass=136)    #Monoterpenes
-    PAN = Species('PAN', molar_mass=121)      #Peroxyacetyl nitrate and higher PANs
     CH4 = SpeciesEnum.CH4                     #Methane
 
     #None-VOC species
@@ -61,8 +59,7 @@ class RADM2_wrfchem(ChemicalMechanism):
         """
         sp_nmvoc = [self.ALD, self.CSL, self.ETH, self.HC3, self.HC5, self.HC8,
                    self.HCHO, self.ISO, self.KET, self.OL2, self.OLI, self.OLT, 
-				   self.ORA1, self.ORA2, self.TOL, self.XYL, self.CH3CL, self.TERP,
-				   self.PAN]
+				   self.ORA1, self.ORA2, self.TOL, self.XYL, self.CH3CL]
 
         return sp_nmvoc
 
@@ -110,20 +107,24 @@ class RADM2_wrfchem(ChemicalMechanism):
         if spec == self.ALD:
             spec_dict[RETRO.Other_alkanals] = 1.0
         elif spec == self.CSL:
-            spec_dict[RETRO.Esters] = 1.0
-            spec_dict[RETRO.Ethers] = 1.0
+            spec_dict[RETRO.Other_VOC] = 1.0
         elif spec == self.ETH:
             spec_dict[RETRO.Ethane] = 1.0
         elif spec == self.HC3:
             spec_dict[RETRO.Propane] = 1.0
-    	    spec_dict[RETRO.Butanes] = 1.0
-    	    spec_dict[RETRO.Ethyne] = 1.0
-    	    spec_dict[RETRO.Alcohols] = 1.0
+            spec_dict[RETRO.Butanes] = 1.0
+            spec_dict[RETRO.Ethyne] = 0.4
+            spec_dict[RETRO.Alcohols] = 0.95
+            spec_dict[RETRO.Esters] = 0.69
         elif spec == self.HC5:
-            spec_dict[RETRO.Hexanes_plus_higher_alkanes] = 0.5
+            spec_dict[RETRO.Alcohols] = 0.05
+            spec_dict[RETRO.Hexanes_plus_higher_alkanes] = 0.43
             spec_dict[RETRO.Pentanes] = 1.0
+            spec_dict[RETRO.Esters] = 0.31
         elif spec == self.HC8:
-			spec_dict[RETRO.Hexanes_plus_higher_alkanes] = 0.5
+            spec_dict[RETRO.Hexanes_plus_higher_alkanes] = 0.57
+            spec_dict[RETRO.Other_aromatics] = 1.0
+            spec_dict[RETRO.Ethers] = 1.0
         elif spec == self.HCHO:
             spec_dict[RETRO.Methanal] = 1.0
         elif spec == self.ISO:
@@ -133,25 +134,22 @@ class RADM2_wrfchem(ChemicalMechanism):
         elif spec == self.OL2:
             spec_dict[RETRO.Ethene] = 1.0
         elif spec == self.OLI:  
-			spec_dict[RETRO.Other_alkenes_and_alkynes] = 1.0
+            spec_dict[RETRO.Other_alkenes_and_alkynes] = 1.0
+            spec_dict[RETRO.Terpenes] = 1.0
         elif spec == self.OLT:
             spec_dict[RETRO.Propene] = 1.0
         elif spec == self.TOL:
             spec_dict[RETRO.Toluene] = 1.0
-            spec_dict[RETRO.Benzene] = 1.0
+            spec_dict[RETRO.Benzene] = 0.293
         elif spec == self.XYL:
             spec_dict[RETRO.Xylene] = 1.0
             spec_dict[RETRO.Trimethylbenzenes] = 1.0
             spec_dict[RETRO.Other_aromatics] = 1.0
         elif spec == self.ORA1:
-            spec_dict[RETRO.Acids] = 0.5
+            spec_dict[RETRO.Acids] = 0.44
         elif spec == self.ORA2:
-            spec_dict[RETRO.Acids] = 0.5
+            spec_dict[RETRO.Acids] = 0.56
         elif spec == self.CH3CL:
         	spec_dict[RETRO.Chlorinated_hydrocarbons] = 1.0
-        elif spec == self.TERP:
-			spec_dict[RETRO.Terpenes] = 1.0
-        elif spec == self.PAN:
-			spec_dict[RETRO.Other_VOC] = 1.0
-			
+						
         return spec_dict
