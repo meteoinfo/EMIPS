@@ -6,7 +6,7 @@ import os
 
 out_species_aer = ['PEC', 'POA', 'PMFINE', 'PNO3', 'PSO4', 'PMC']
 
-def run_merge(year, month, dir_inter, model_grid, sectors, z):
+def run(year, month, dir_inter, model_grid, sectors, z):
     """
     Combine all sectors into one file
 
@@ -26,10 +26,11 @@ def run_merge(year, month, dir_inter, model_grid, sectors, z):
     #Set the definition of the output variable
     print('Define variables...')
     dimvars = []
+    count = []
     dict_spec = {}
     print('Add files...')
     for sector in sectors:
-        fn = dir_inter + '\emis_{}_{}_{}_hour_height.nc'.format(sector, year, month)
+        fn = dir_inter + '\emis_{}_{}_{}_hour_height.nc'.format(sector.name, year, month)
         if os.path.exists(fn):
             print(fn)
             f = dataset.addfile(fn)
@@ -42,6 +43,8 @@ def run_merge(year, month, dir_inter, model_grid, sectors, z):
             for var in f.varnames():
                 if var == 'lat' or var == 'lon':
                         continue
+                if var in count:
+                    continue
                 else:
                     dimvar = dataset.DimVariable()
                     dimvar.name = var
@@ -52,18 +55,19 @@ def run_merge(year, month, dir_inter, model_grid, sectors, z):
                         dimvar.addattr('units', 'g/m2/s')
                     else:
                         dimvar.addattr('units', 'mole/m2/s')
-                dimvars.append(dimvar)   
+                count.append(var)
+                dimvars.append(dimvar)
             f.close()
         else:
             print('File not exist: {}'.format(fn))
             continue
-            
+                 
     #Set dimension and define ncfile 
     out_fn = dir_inter + '\emis_{}_{}_hour.nc'.format(year, month)
     gattrs = OrderedDict()
     gattrs['Conventions'] = 'CF-1.6'
     gattrs['Tools'] = 'Created using MeteoInfo'
-    print('Create output data file...')
+    print('Create output data file:{}'.format(out_fn))
     ncfile = dataset.addfile(out_fn, 'c', largefile=True)
     ncfile.nc_define(dims, gattrs, dimvars)
     #read, merge and output
@@ -85,14 +89,4 @@ def run_merge(year, month, dir_inter, model_grid, sectors, z):
         ncfile.write(sname, spec_data)
     ncfile.close()
     print('Merge data finished!')
-
-if __name__ == '__main__':
-    #set parameter 
-    year = 2017
-    month = 1
-    dir_inter = r'G:\emips_data\region_0.1\MEIC\2017\{}{:>02d}'.format(year, month)
-    model_grid = GridDesc(geolib.projinfo(), x_orig=70., x_cell=0.1, x_num=751,
-            y_orig=15., y_cell=0.1, y_num=501)
-    #run
-    run_merge(year, month, dir_inter, model_grid)
     

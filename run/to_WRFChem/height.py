@@ -3,17 +3,14 @@ from collections import OrderedDict
 from mipylib import dataset
 import mipylib.numeric as np
 import os
+from emips.utils import emis_util
+import emips
 
-################################
-#set the sector to be allocated
-sectors_al = ['energy', 'industry']
-################################
 out_species_unit = ['PEC', 'POA', 'PMFINE', 'PNO3', 'PSO4', 'PMC']
 
-def run_allocate(year, month, dir_inter, model_grid, sectors, z):
+def run(year, month, dir_inter, model_grid, sectors, z, z_file):
     """
-    Assign data to different heights.
-    If not specified, data is allocated to the first layer.
+    Allocate data to different heights.
 
     :param year: (*int*) Year.
     :param month: (*int*) Month.
@@ -21,6 +18,7 @@ def run_allocate(year, month, dir_inter, model_grid, sectors, z):
     :param model_grid: (*GridDesc*) Model data grid describe.
     :param sectors: (*GridDesc*) The sectors need to be processed.
     :param z: (*int*) The zdim of the output data.
+    :param z_file: (*string*) The path of the vertical allocate file.
     """
     print('Define dimension and global attributes...')
     tdim = np.dimension(np.arange(24), 'hour')
@@ -34,7 +32,7 @@ def run_allocate(year, month, dir_inter, model_grid, sectors, z):
     gattrs['Tools'] = 'Created using MeteoInfo'
     
     for sector in sectors:
-        fn = dir_inter + '\emis_{}_{}_{}_hour.nc'.format(sector, year, month)
+        fn = dir_inter + '\emis_{}_{}_{}_hour.nc'.format(sector.name, year, month)
         print('File input: {}'.format(fn))
         dimvars = []
         if os.path.exists(fn):
@@ -54,18 +52,21 @@ def run_allocate(year, month, dir_inter, model_grid, sectors, z):
                         dimvar.addattr('units', 'mole/m2/s')
                     dimvars.append(dimvar)
                     
-            print('Create output data file...')
-            out_fn = dir_inter + '\emis_{}_{}_{}_hour_height.nc'.format(sector, year, month)
+            out_fn = dir_inter + '\emis_{}_{}_{}_hour_height.nc'.format(sector.name, year, month)
+            print('Create output data file:{}'.format(out_fn))
             ncfile = dataset.addfile(out_fn, 'c', largefile=True)
             ncfile.nc_define(dims, gattrs, dimvars)
             
             data = np.zeros((tdim.length, z, ydim.length, xdim.length))
             dd = np.zeros((tdim.length, z, ydim.length, xdim.length))
+            #get vertical profiles
+            scc = emis_util.get_scc(sector)
+            vertical_pro = emips.vertical_alloc.read_file(z_file, scc)
             #read, merge and output
-            if sector in sectors_al:
-                print('Allocating: {}'.format(sector))
+            if round(vertical_pro.get_ratios()[0], 2) != 1.0:
+                print('Allocating: {}'.format(sector.name))
             else:
-                print('Do not need to be allocated: {}'.format(sector))
+                print('Do not need to be allocated: {}'.format(sector.name))
             print('Write data to file...')
             for var in f.varnames():
                 if var == 'lat' or var == 'lon':
@@ -73,28 +74,13 @@ def run_allocate(year, month, dir_inter, model_grid, sectors, z):
                 else:
                     print(var)
                     dd[:, 0, :, :] = f[var][:]
-                    if sector in sectors_al:
-                        if sector == 'energy':
-                            data[:, 1, :, :] = dd[:, 0, :, :] * 0.1
-                            data[:, 2, :, :] = dd[:, 0, :, :] * 0.1
-                            data[:, 3, :, :] = dd[:, 0, :, :] * 0.3
-                            data[:, 4, :, :] = dd[:, 0, :, :] * 0.2
-                            data[:, 5, :, :] = dd[:, 0, :, :] * 0.2
-                            data[:, 6, :, :] = dd[:, 0, :, :] * 0.1
-                        if sector == 'industry':
-                            data[:, 0, :, :] = dd[:, 0, :, :] * 0.5
-                            data[:, 1, :, :] = dd[:, 0, :, :] * 0.3
-                            data[:, 2, :, :] = dd[:, 0, :, :] * 0.2
-                    else:
+                    if round(vertical_pro.get_ratios()[0], 2) == 1.0:
                         data[:, 0, :, :] = dd[:, 0, :, :]
+                    else:
+                        for lay in np.arange(len(vertical_pro.get_ratios())):
+                            data[:, lay, :, :] = dd[:, 0, :, :] * vertical_pro.get_ratios()[lay]
                     #Turn nan to zero
-                    data[data==np.nan] = 0
-                    ###test###
-                    '''
-                    if sector == 'energy':
-                        data[:, 0, :, :] = 0  
-                    '''
-					###test###					
+                    data[data==np.nan] = 0				
                 ncfile.write(var, data)
             ncfile.close()
             f.close()
@@ -102,15 +88,4 @@ def run_allocate(year, month, dir_inter, model_grid, sectors, z):
             print('File not exist: {}'.format(fn))
             continue
     print('Allocate of height finished!')
-    
-if __name__ == '__main__':
-    #set parameter 
-    year = 2017
-    month = 1
-    dir_inter = r'G:\emips_data\region_0.1\MEIC\2017\{}{:>02d}'.format(year, month)
-    model_grid = GridDesc(geolib.projinfo(), x_orig=70., x_cell=0.1, x_num=751,
-            y_orig=15., y_cell=0.1, y_num=501)
-    z = 8
-    #run
-    run_allocate(year, month, dir_inter, model_grid, z)
         

@@ -3,8 +3,7 @@ from collections import OrderedDict
 from mipylib import dataset
 import mipylib.numeric as np
 
-
-def run_transform(year, month, dir_inter, model_grid, out_species, out_species_aer, z):
+def run(year, month, dir_inter, model_grid, out_species, out_species_aer, z):
     """
     Distribution of particulate matter and change unit.
 
@@ -53,6 +52,7 @@ def run_transform(year, month, dir_inter, model_grid, out_species, out_species_a
         dimvar.addattr('coordinates', "XLONG XLAT XTIME")
         #dimvar.addattr('_ChunkSizes', '1U, 3U, 137U, 167U')
         dimvars.append(dimvar)
+    print('Create output data file:{}'.format(fn_out))
     ncfile = dataset.addfile(fn_out, 'c', largefile=True)
     ncfile.nc_define(dims, gattrs, dimvars)    
     
@@ -74,7 +74,13 @@ def run_transform(year, month, dir_inter, model_grid, out_species, out_species_a
             data = f_in['PMFINE'][:, :, :]
             data = data * 1e6
             ncfile.write(name, data*0.8)
-        elif sname == 'PM_10':
+        ##radm2, mozart
+        elif sname == 'PM_10' :
+            data = f_in['PMC'][:, :, :]
+            data = data * 1e6
+            ncfile.write(name, data)          
+        #saprc99, cb05
+        elif sname == 'PM10' :
             data = f_in['PMC'][:, :, :]
             data = data * 1e6
             ncfile.write(name, data)
@@ -115,15 +121,3 @@ def run_transform(year, month, dir_inter, model_grid, out_species, out_species_a
     f_in.close()
     ncfile.close()      
     print('Distribution of particulate matter and change unit finised!')
-
-if __name__ == '__main__':
-    #set parameter 
-    year = 2017
-    month = 1
-    dir_inter = r'G:\emips_data\region_0.1\MEIC\2017\{}{:>02d}'.format(year, month)
-    model_grid = GridDesc(geolib.projinfo(), x_orig=70., x_cell=0.1, x_num=751,
-            y_orig=15., y_cell=0.1, y_num=501)
-    #run
-    run_transform(year, month, dir_inter, model_grid)
-    
-
