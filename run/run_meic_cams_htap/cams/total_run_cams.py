@@ -1,22 +1,23 @@
 """
------CAMS-----
-Process emission data by spatial allocation, temporal allocation
-and chemical speciation.
+# Author: Wencong Chen
+# Date: 2022-08-04
+# Purpose: Process emission data by spatial allocation, temporal allocation
+           and chemical speciation(-----CAMS-----).       
 """
 
 import os
 import sys
-
+from emips.spatial_alloc import GridDesc
 #Set current working directory
 from inspect import getsourcefile
 dir_run = os.path.dirname(os.path.abspath(getsourcefile(lambda:0)))
 if not dir_run in sys.path:
     sys.path.append(dir_run)
-
+    
+#Import preprocessing scripts
 import emission_cams_year as emission
-from emips.spatial_alloc import GridDesc
 
-def run_cams(year, months, model_grid, mechanism_name, mechanism):
+def run(year, months, model_grid, mechanism_name, mechanism):
     """
     Process CAMS emission data by spatial allocation, temporal allocation
     and chemical speciation.
@@ -35,7 +36,8 @@ def run_cams(year, months, model_grid, mechanism_name, mechanism):
         print('Month: {}'.format(month))
         print('##########')
         
-        dir_inter = os.path.join(r'G:\test_data', mechanism_name, r'region_0.15\CAMS\{0:}\{0:}{1:>02d}'.format(year, month))
+        dir_inter = os.path.join(r'G:\test', mechanism_name, r'CAMS\{0:}\{0:}{1:>02d}'.format(year, month))
+        #dir_inter = os.path.join(r'G:\emips_data\region_0.1', r'CAMS\{0:}\{0:}{1:>02d}'.format(year, month))
         if not os.path.exists(dir_inter):
             os.mkdir(dir_inter)
         
@@ -45,19 +47,16 @@ def run_cams(year, months, model_grid, mechanism_name, mechanism):
         run_pollutants.run(year, month, dir_inter, emission, model_grid)
         
         #Process emission data of VOC
-        print('\n#####################################')
         print('Process emission data of VOC...')
         import run_VOC
         run_VOC.run(year, month, dir_inter, emission, model_grid)
         
         #Lump voc according chemical mechanism
-        print('\n#####################################')
         print('Lump voc according chemical mechanism...')
         import lump_VOC
         lump_VOC.run(year, month, dir_inter, mechanism, model_grid)
         
         #Merge all pollutant emission files in one file for each sector
-        print('\n#####################################')
         print('merge all pollutant emission files in one file for each sector...')
         import merge_sector
         merge_sector.run(year, month, dir_inter, model_grid)

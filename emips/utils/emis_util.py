@@ -10,7 +10,8 @@ def get_scc(sector):
     :param sector: The sector
     :return: Source classification code
     """
-    scc = "10100101"
+#    scc = "10100101"
+    scc = None
     if sector == SectorEnum.BIOMASS:
         scc = "2810001000"
     elif sector == SectorEnum.ENERGY:

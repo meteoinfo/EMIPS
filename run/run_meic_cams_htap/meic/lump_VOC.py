@@ -1,3 +1,6 @@
+"""
+-----MEIC-----
+"""
 import os
 import mipylib.numeric as np
 from mipylib import dataset
@@ -31,10 +34,8 @@ def run(year, month, dir_inter, chem_mech, model_grid):
     
     #Sector loop
     for sector in sectors:
-        print('####################################')
-        print(sector)
-        print('####################################')
-        
+        print('-----{}-----'.format(sector.name))
+
         #Set input file
         infn = os.path.join(dir_inter, \
             '{}_emis_{}_{}_{}_hour.nc'.format(pollutant.name, sector.name, year, month))
@@ -83,32 +84,14 @@ def run(year, month, dir_inter, chem_mech, model_grid):
                     else:
                         data = data + inf[rspec.name][:] * ratio
             if data is None:
-                print('No RETRO species!')
+                print('No RETRO species!---{}'.format(dimvar.name))
                 ncfile.write(dimvar.name, rdata)
             else:
                 if spec.molar_mass is not None:
-                    print('Convert (g/m2/s) to (mole/m2/s)')
+                    #print('Convert (g/m2/s) to (mole/m2/s)')
                     data = data / spec.molar_mass
                 ncfile.write(dimvar.name, data)
     
         #Close output netcdf file
+        inf.close()
         ncfile.close()
-    
-if __name__ == '__main__':  
-    #Using RADM2 chemical mechanism
-    from emips.chem_spec import RADM2
-
-    #Set year, month and data path
-    year = 2015
-    month = 1
-    dir_inter = r'D:\run_data\emips\run_meic\inter_data\{}{:>02d}'.format(year, month)
-    if not os.path.exists(dir_inter):
-        os.mkdir(dir_inter)
-
-    #Set model grids
-    proj = geolib.projinfo()
-    model_grid = GridDesc(proj, x_orig=70., x_cell=0.15, x_num=502,
-        y_orig=15., y_cell=0.15, y_num=330)
-
-    #Run
-    run(year, month, dir_inter, RADM2(), model_grid)

@@ -6,7 +6,7 @@ import calendar
 import datetime
 import mipylib.numeric as np
 
-__all__ = ['read_file', 'month_allocation', 'week_allocation', 'diurnal_allocation',
+__all__ = ['read_file', 'read_file_prof', 'month_allocation', 'week_allocation', 'diurnal_allocation',
            'month2hour', 'get_month_days', 'get_weekend_days', 'get_week_days']
 
 def read_file(ref_fn, profile_fn, scc):
@@ -90,6 +90,65 @@ def read_file(ref_fn, profile_fn, scc):
     profile_f.close()
     return month_profile, week_profile, diurnal_profile, diurnal_profile_weekend
 
+def read_file_prof(profile_fn, scc, ti=0, east=True):
+    """
+    Read temporal profiles from profile files
+    :param profile_fn: The profile file
+    :param scc: Source classific code
+    :return: Species profile
+    :param ti: Time zone
+    :param east: Determine whether it is in the Eastern time zone, default is True
+    """
+    month_profile = MonthProfile()
+    week_profile = WeekProfile()
+    diurnal_profile = DiurnalProfile()
+    profile_f = open(profile_fn)
+    line = profile_f.readline()
+    while line:
+        line = line.strip()
+        if line == "/MONTHLY/":
+            while True:
+                line = profile_f.readline().split()
+                if line == "/END/":
+                    break
+                if line[0] == scc:
+                    line = [ float(x) for x in line]
+                    month_profile.weights = np.array(line[1:]).astype('float')
+                    break
+        if line == "/WEEKLY/":
+            while True:
+                line = profile_f.readline().split()
+                if line == "/END/":
+                    break
+                if line[0] == scc:
+                    line = [ float(x) for x in line]
+                    week_profile.weights = np.array(line[1:]).astype('float')
+                    break
+        if line == "/HOURLY/":
+            while True:
+                line = profile_f.readline().split()
+                if line == "/END/":
+                    break
+                if line[0] == scc:
+                    line = [ float(x) for x in line]
+                    if ti == 0:
+                        diurnal_profile.weights = np.array(line[1:]).astype('float')
+                    else:
+                        diurnal = np.array(line[1:]).astype('float')
+                        if east is True:
+                            cut1 = diurnal[0:ti]
+                            cut2 = diurnal[ti:]
+                        else:
+                            cut1 = diurnal[0:len(diurnal)-ti]
+                            cut2 = diurnal[len(diurnal)-ti:]
+                        diurnal_profile.weights = cut2.join(cut1, 0)
+                    break
+        line = profile_f.readline()
+    profile_f.flush()
+    profile_f.close()
+    return month_profile, week_profile, diurnal_profile
+
+    
 def month_allocation(data, month_profile):
     """
     Monthly allocation.

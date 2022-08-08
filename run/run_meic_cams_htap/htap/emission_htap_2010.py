@@ -1,3 +1,6 @@
+"""
+-----HTAP-----
+"""
 from emips.chem_spec import Pollutant, PollutantEnum
 from emips.utils import SectorEnum
 from emips.spatial_alloc import GridDesc
@@ -7,7 +10,7 @@ from mipylib import geolib
 
 __all__ = ['dir_emission', 'emis_grid', 'grid_areas', 'get_emis_fn', 'read_emis']
 
-dir_emission = r'M:\Data\Emission\EDGAR_HTAP\2010'
+dir_emission = r'M:\test'
 
 emis_grid = GridDesc(geolib.projinfo(), x_orig=0.05, x_cell=0.1, x_num=3600,
     y_orig=-89.95, y_cell=0.1, y_num=1800)

@@ -1,13 +1,12 @@
 
-class TemporalProfile(object):
+class VerticalProfile(object):
 
-    def __init__(self, id=None, weights=None):
+    def __init__(self, weights=None):
         """
-        Month profile
+        Layer profile
         :param id: The id.
         :param weights: The weights
         """
-        self.id = id
         self.weights = weights
 
     def __str__(self):

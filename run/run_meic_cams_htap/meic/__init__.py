@@ -1,3 +1,3 @@
-from .total_run_meic import run_meic
+from .total_run_meic import run
 
-__all__ = ['run_meic']
+__all__ = ['run']

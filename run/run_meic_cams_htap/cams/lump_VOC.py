@@ -1,3 +1,6 @@
+"""
+-----CAMS-----
+"""
 #Import
 import os
 import mipylib.numeric as np
@@ -32,11 +35,11 @@ def run(year, month, dir_inter, chem_mech, model_grid):
     
     #Sector loop
     for sector in sectors:
-        print(sector)
+        print(sector.name)
         
         #Set input file
         infn = os.path.join(dir_inter, \
-            '{}_emis_{}_{}_{}_hour.nc'.format(pollutant.name, sector, year, month))
+            '{}_emis_{}_{}_{}_hour.nc'.format(pollutant.name, sector.name, year, month))
         if not os.path.exists(infn):
             print('Alarm! File not exists: {}'.format(infn))
             continue
@@ -51,7 +54,7 @@ def run(year, month, dir_inter, chem_mech, model_grid):
     
         #Set output file
         outfn = os.path.join(dir_inter, \
-            '{}_emis_lump_{}_{}_{}_hour.nc'.format(pollutant.name, sector, year, month))
+            '{}_emis_lump_{}_{}_{}_hour.nc'.format(pollutant.name, sector.name, year, month))
         print('Output file: {}'.format(outfn))
         #Create output netcdf file
         ncfile = dataset.addfile(outfn, 'c')
@@ -91,25 +94,3 @@ def run(year, month, dir_inter, chem_mech, model_grid):
     
         #Close output netcdf file
         ncfile.close()
-
-if __name__ == '__main__':
-    #Set current working directory
-    from inspect import getsourcefile
-    dir_run = os.path.dirname(os.path.abspath(getsourcefile(lambda:0)))
-    if not dir_run in sys.path:
-        sys.path.append(dir_run)
-
-    #Using RADM2 chemical mechanism
-    from emips.chem_spec import RADM2
-
-    #Run
-    year = 2017
-    month = 1
-    dir_inter = r'F:\emips_data\CAMS\2017\{}{:>02d}'.format(year, month)
-
-    #Set model grids
-    proj = geolib.projinfo()
-    model_grid = GridDesc(proj, x_orig=0., x_cell=0.25, x_num=1440,
-        y_orig=-89.875, y_cell=0.25, y_num=720)
-        
-    run(year, month, dir_inter, RADM2(), model_grid)

@@ -13,19 +13,41 @@ Features
 --------
 
 EMIPS (EMission Inventory Processing System) software was developed to create emission inventory (EI) data
-that air pollution forecasting model can be used directly. The functions including ``Chemical speciation``,
-``Temporal allocation`` and ``Spatial allocation``. 
+that air quality model(AQM) can be used directly. The main functions including ``Chemical speciation``,
+``Temporal allocation``, ``Spatial allocation`` and ``vertical allocation``. 
 
 Running
 -------
 
 EMIPS jython script can be running in MeteoInfoLab environment. ``run`` folder of this project
-includes an example for processing HTAP 2010 emission inventory.
+includes an example of processing emission inventory for WRF-Chem and CUACE and the cross-reference
+files and profiles can be found in ``ge_data`` folder.
+
 
 Documentation
 -------------
 
 Learn more about MeteoInfo and EMIPS in its official documentation at http://meteothink.org/
+
+Version
+-------
+
+EMIPS-1.0 was released (2022-08-04).
+
+Author
+------
+
+Yaqiang Wang
+
+email: yaqiang.wang@gmail.com
+
+Chinese Academy of Meteorological Sciences, CMA
+
+Wencong Chen
+
+email: chenwencong9801@163.com
+
+Chinese Academy of Meteorological Sciences, CMA
 
 License
 -------
