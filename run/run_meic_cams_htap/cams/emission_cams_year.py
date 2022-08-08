@@ -1,3 +1,6 @@
+"""
+-----CAMS-----
+"""
 from emips.chem_spec import Pollutant, PollutantEnum
 from emips.utils import SectorEnum
 from emips.spatial_alloc import GridDesc
@@ -9,7 +12,7 @@ import mipylib.numeric as np
 
 __all__ = ['dir_emission', 'emis_grid', 'grid_areas', 'get_emis_fn', 'read_emis']
 
-dir_emission = r'M:\Data\Emission\CAMS'
+dir_emission = r'M:\test'
 
 def get_emis_version(sector):
     """
@@ -37,14 +40,30 @@ def get_emis_fn(sector, pollutant, year, month):
     :param month: (*int*) The month.
     :returns: (*string*) Emission file path.
     """
-    pollutant_name = pollutant.name.lower()
+    if pollutant == PollutantEnum.BC:
+        pollutant_name = 'black-carbon'
+    if pollutant == PollutantEnum.CH4:
+        pollutant_name = 'methane'
+    if pollutant == PollutantEnum.CO:
+        pollutant_name = 'carbon-monoxide'
+    if pollutant == PollutantEnum.NH3:
+        pollutant_name = 'ammonia'
+    if pollutant == PollutantEnum.NOx:
+        pollutant_name = 'nitrogen-oxides'
+    if pollutant == PollutantEnum.OC:
+        pollutant_name = 'organic-carbon'
+    if pollutant == PollutantEnum.SO2:
+        pollutant_name = 'sulphur-dioxide'
+    if pollutant == PollutantEnum.NMVOC:
+        pollutant_name = 'non-methane-vocs'
+       
     if sector == SectorEnum.SHIPS:
         if pollutant == PollutantEnum.BC:
-            pollutant_name = 'ec'
+            pollutant_name = 'elemental-carbon'
         elif pollutant == PollutantEnum.SO2:
-            pollutant_name = 'sox'
+            pollutant_name = 'sulphur-oxides'
         elif pollutant == PollutantEnum.NMVOC:
-            pollutant_name = 'voc_sum'
+            pollutant_name = 'vocs-all'
     version = get_emis_version(sector)
     fn = 'CAMS-GLOB-{}_{}_{}.nc'.format(version, pollutant_name, year)  
     return os.path.join(dir_emission, str(year), fn)

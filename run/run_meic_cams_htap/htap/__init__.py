@@ -1,3 +1,3 @@
-from .total_run_htap import run_htap
+from .total_run_htap import run
 
-__all__ = ['run_htap']
+__all__ = ['run']

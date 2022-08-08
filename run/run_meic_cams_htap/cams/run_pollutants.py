@@ -1,3 +1,6 @@
+"""
+-----CAMS-----
+"""
 #Import
 import os
 import mipylib.numeric as np
@@ -24,8 +27,10 @@ def run(year, month, dir_inter, emission, model_grid):
     :param model_grid: (*GridDesc*) Model data grid describe.
     """
     #Set profile files
-    temp_profile_fn = os.path.join(ge_data_dir, 'amptpro.m3.default.us+can.txt')
-    temp_ref_fn = os.path.join(ge_data_dir, 'amptref.m3.us+can.cair.txt')
+#   temp_profile_fn = os.path.join(ge_data_dir, 'amptpro.m3.default.us+can.txt')
+#   temp_ref_fn = os.path.join(ge_data_dir, 'amptref.m3.us+can.cair.txt')
+    temp_profile_fn = os.path.join(ge_data_dir,'temporal.txt')
+    
     spec_profile_fn = os.path.join(ge_data_dir, 'gspro.cmaq.radm2p25_rev.txt')
     spec_ref_fn = os.path.join(ge_data_dir, 'gsref.cmaq.radm2p25.txt')
     
@@ -48,9 +53,7 @@ def run(year, month, dir_inter, emission, model_grid):
     
     #Loop
     for sector in sectors:
-        print('####################################')
-        print(sector)
-        print('####################################')
+        print('------{}------'.format(sector.name))
         
         #Get SCC
         scc = emis_util.get_scc(sector)
@@ -76,29 +79,30 @@ def run(year, month, dir_inter, emission, model_grid):
             
             #### Temporal allocation
             print('Temporal allocation...')
-            month_profile, week_profile, diurnal_profile, diurnal_profile_we = \
-                emips.temp_alloc.read_file(temp_ref_fn, temp_profile_fn, scc)
-            
-            print('To (kg/m2/month)')
+#            month_profile, week_profile, diurnal_profile, diurnal_profile_we = \
+#                emips.temp_alloc.read_file(temp_ref_fn, temp_profile_fn, scc)
+            month_profile, week_profile, diurnal_profile = \
+                emips.temp_alloc.read_file_prof(temp_profile_fn, scc, ti=8)
+            #print('To (kg/m2/month)')
             emis_data = emis_data * 3600 * 24 * emis_util.get_month_days(year, month)
                       
-            print('To daily emission (kg/m2/day)...')
+            #print('To daily emission (kg/m2/day)...')
             weekday_data, weekend_data = emips.temp_alloc.week_allocation(emis_data, week_profile, year, month)
-            
-            print('To hourly emission (g/m2/s)...')
+            weekday_data = (weekday_data*5 + weekend_data*2) / 7
+            #print('To hourly emission (g/m2/s)...')
             hour_data = emips.temp_alloc.diurnal_allocation(weekday_data, diurnal_profile) / 3.6
     
             #### Chemical speciation
             poll_prof = emips.chem_spec.get_pollutant_profile(pollutant_profiles, pollutant)
             if (pollutant == PollutantEnum.NOx) and (poll_prof is None):
                 poll_prof = PollutantProfile(pollutant)
-                poll_prof.append(SpeciesProfile(pollutant, SpeciesEnum.NO, 0.9, 1.0, 0.9))
-                poll_prof.append(SpeciesProfile(pollutant, SpeciesEnum.NO2, 0.1, 1.0, 0.1))
+                poll_prof.append(SpeciesProfile(pollutant, Species('NO', molar_mass=30), 0.9, 46.0, 0.9))
+                poll_prof.append(SpeciesProfile(pollutant, Species('NO2', molar_mass=46), 0.1, 46.0, 0.1))
     
             #### Set output netcdf file path    
             outfn = os.path.join(dir_inter, \
                 '{}_emis_{}_{}_{}_hour.nc'.format(pollutant.name, sector.name, year, month))
-            print outfn
+            print('File_out:{}'.format(outfn))
             if poll_prof is None:
                 #### Save hourly emission data
                 print('Save hourly emission data...')        
@@ -133,26 +137,3 @@ def run(year, month, dir_inter, emission, model_grid):
                         spec_data = hour_data * spec_prof.mass_fraction / spec.molar_mass
                     ncfile.write(dimvar.name, spec_data)
                 ncfile.close()
-
-if __name__ == '__main__':
-    #Set current working directory
-    from inspect import getsourcefile
-    dir_run = os.path.dirname(os.path.abspath(getsourcefile(lambda:0)))
-    if not dir_run in sys.path:
-        sys.path.append(dir_run)  
-    import emission_cams_year as emission
-
-    #Set year, month and output data path
-    year = 2017
-    month = 1
-    dir_inter = r'F:\emips_data\CAMS\2017\{}{:>02d}'.format(year, month)
-    if not os.path.exists(dir_inter):
-        os.mkdir(dir_inter)
-
-    #Set model grids
-    proj = geolib.projinfo()
-    model_grid = GridDesc(proj, x_orig=0., x_cell=0.25, x_num=1440,
-        y_orig=-89.875, y_cell=0.25, y_num=720)
-
-    #Run
-    run(year, month, dir_inter, emission, model_grid)

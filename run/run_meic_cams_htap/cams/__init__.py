@@ -1,3 +1,3 @@
-from .total_run_cams import run_cams
+from .total_run_cams import run
 
-__all__ = ['run_cams']
+__all__ = ['run']

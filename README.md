@@ -29,6 +29,11 @@ Documentation
 
 Learn more about MeteoInfo and EMIPS in its official documentation at http://meteothink.org/
 
+Version
+-------
+
+EMIPS-1.0 was released (2022-08-04).
+
 Author
 ------
 

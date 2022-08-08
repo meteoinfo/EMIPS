@@ -1,3 +1,6 @@
+"""
+-----HTAP-----
+"""
 import os
 import mipylib.numeric as np
 from mipylib import dataset
@@ -22,8 +25,9 @@ def run(year, month, dir_inter, emission, model_grid):
     :param model_grid: (*GridDesc*) Model data grid describe.
     """
     #Set profile files
-    temp_profile_fn = os.path.join(ge_data_dir, 'amptpro.m3.default.us+can.txt')
-    temp_ref_fn = os.path.join(ge_data_dir, 'amptref.m3.us+can.cair.txt')
+#   temp_profile_fn = os.path.join(ge_data_dir, 'amptpro.m3.default.us+can.txt')
+#   temp_ref_fn = os.path.join(ge_data_dir, 'amptref.m3.us+can.cair.txt')
+    temp_profile_fn = os.path.join(ge_data_dir,'temporal.txt')
     
     #Set data dimensions   
     tdim = np.dimension(np.arange(24), 'hour')
@@ -41,9 +45,9 @@ def run(year, month, dir_inter, emission, model_grid):
     
     #Loop
     for sector,fn_sector in zip(sectors,fn_sectors):
-        print('####################################')
-        print(sector)
-        print('####################################')
+        print('########')
+        print(sector.name)
+        print('########')
     
         #Get SCC
         scc = emis_util.get_scc(sector)
@@ -59,8 +63,10 @@ def run(year, month, dir_inter, emission, model_grid):
         
         #### Temporal allocation
         print('Temporal allocation...')
-        month_profile, week_profile, diurnal_profile, diurnal_profile_we = \
-            emips.temp_alloc.read_file(temp_ref_fn, temp_profile_fn, scc)
+#       month_profile, week_profile, diurnal_profile, diurnal_profile_we = \
+#           emips.temp_alloc.read_file(temp_ref_fn, temp_profile_fn, scc)
+        month_profile, week_profile, diurnal_profile = \
+            emips.temp_alloc.read_file_prof(temp_profile_fn, scc, ti=8)
             
         if sector == SectorEnum.AIR or sector == SectorEnum.SHIPS:
             print('To (kg/m2/year)')
@@ -72,9 +78,10 @@ def run(year, month, dir_inter, emission, model_grid):
             print('To (kg/m2/month)')
             emis_data = emis_data * 3600 * 24 * emis_util.get_month_days(year, month)
         
-        print('To daily emission (kg/m2/day)...')
+        #print('To daily emission (kg/m2/day)...')
         weekday_data, weekend_data = emips.temp_alloc.week_allocation(emis_data, week_profile, year, month)
-        print('To hourly emission (g/m2/s)...')
+        weekday_data = (weekday_data*5 + weekend_data*2) / 7
+        #print('To hourly emission (g/m2/s)...')
         hour_data = emips.temp_alloc.diurnal_allocation(weekday_data, diurnal_profile) / 3.6
     
         #### Chemical speciation
@@ -85,7 +92,7 @@ def run(year, month, dir_inter, emission, model_grid):
         print('Output file: {}'.format(outfn))
     
         print('Set grid speciation data...')
-        fn = r'Z:\chen\MEIC_data\Grid_speciation_data(VOC)\retro_nmvoc_ratio_{}_2000_0.1deg.nc'.format(fn_sector)
+        fn = r'Z:\test\retro_nmvoc_ratio_{}_2000_0.1deg.nc'.format(fn_sector)
         print('Grid speciation file: {}'.format(fn))
         f = dataset.addfile(fn)
     
@@ -116,25 +123,3 @@ def run(year, month, dir_inter, emission, model_grid):
         #Close output netcdf file
         ncfile.close()
     
-if __name__ == '__main__':
-    #Set current working directory
-    from inspect import getsourcefile
-    dir_run = os.path.dirname(os.path.abspath(getsourcefile(lambda:0)))
-    if not dir_run in sys.path:
-        sys.path.append(dir_run)  
-    import emission_htap_2010 as emission
-
-    #Set year, month and output data path
-    year = 2010
-    month = 1
-    dir_inter = r'F:\emips_data\HTAP\2017\{}{:>02d}'.format(year, month)
-    if not os.path.exists(dir_inter):
-        os.mkdir(dir_inter)
-
-    #Set model grids
-    proj = geolib.projinfo()
-    model_grid = GridDesc(proj, x_orig=70., x_cell=0.15, x_num=502,
-        y_orig=15., y_cell=0.15, y_num=330)
-        
-    #Run
-    run(year, month, dir_inter, emission, model_grid)

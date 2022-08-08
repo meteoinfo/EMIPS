@@ -1,3 +1,6 @@
+"""
+-----MEIC-----
+"""
 import os
 import mipylib.numeric as np
 from mipylib import dataset
@@ -23,8 +26,10 @@ def run(year, month, dir_inter, emission, model_grid):
     :param model_grid: (*GridDesc*) Model data grid describe.
     """
     #Set profile files
-    temp_profile_fn = os.path.join(ge_data_dir, 'amptpro.m3.default.us+can.txt')
-    temp_ref_fn = os.path.join(ge_data_dir, 'amptref.m3.us+can.cair.txt')
+#   temp_profile_fn = os.path.join(ge_data_dir, 'amptpro.m3.default.us+can.txt')
+#   temp_ref_fn = os.path.join(ge_data_dir, 'amptref.m3.us+can.cair.txt')
+    temp_profile_fn = os.path.join(ge_data_dir,'temporal.txt')
+    
     spec_profile_fn = os.path.join(ge_data_dir, 'gspro.cmaq.radm2p25_rev.txt')
     spec_ref_fn = os.path.join(ge_data_dir, 'gsref.cmaq.radm2p25.txt')       
     
@@ -39,16 +44,13 @@ def run(year, month, dir_inter, emission, model_grid):
         SectorEnum.RESIDENTIAL, SectorEnum.TRANSPORT]
     pollutants = [PollutantEnum.BC, PollutantEnum.CO, PollutantEnum.NH3, \
         PollutantEnum.NOx, PollutantEnum.OC, PollutantEnum.PM2_5, \
-        PollutantEnum.SO2, PollutantEnum.PMcoarse, PollutantEnum.PM10more]
+        PollutantEnum.SO2, PollutantEnum.PM10]
     out_species = [SpeciesEnum.PEC, SpeciesEnum.CO, SpeciesEnum.NH3, \
-        None, SpeciesEnum.POA, None, SpeciesEnum.SO2, SpeciesEnum.PMC, \
-        SpeciesEnum.PMC]
-    
+        None, SpeciesEnum.POA, None, SpeciesEnum.SO2, SpeciesEnum.PMC]
+
     #Loop
     for sector in sectors:
-        print('####################################')
-        print(sector)
-        print('####################################')
+        print('-----{}-----'.format(sector.name))
         
         #Get SCC
         scc = emis_util.get_scc(sector)
@@ -60,32 +62,54 @@ def run(year, month, dir_inter, emission, model_grid):
     
             print('Read emission data...')
             emis_data = emission.read_emis(sector, pollutant, month)
+
+            #Remove PM2.5 included in PM10, Remove BC and OC included in PM2.5
+            if pollutant == PollutantEnum.PM10:
+                emis_data_pm25 = emission.read_emis(sector, PollutantEnum.PM2_5, month)
+                emis_data = emis_data - emis_data_pm25
+            if pollutant == PollutantEnum.PM2_5:
+                emis_data_bc = emission.read_emis(sector, PollutantEnum.BC, month)
+                emis_data_oc = emission.read_emis(sector, PollutantEnum.OC, month)
+                emis_data = emis_data - emis_data_bc - emis_data_oc
             
-            #### Spatial allocation        
-            print('Convert emission data untis from Mg/grid/month to g/m2/month...')
+            #### Spatial allocation  
+            print('Spatial allocation...')      
+            #print('Convert emission data untis from Mg/grid/month to g/m2/month...')
             emis_data = emis_data * 1e6 / emission.grid_areas
             
-            print('Spatial allocation of emission grid to model grid...')
+            #print('Spatial allocation of emission grid to model grid...')
             emis_data = transform(emis_data, emission.emis_grid, model_grid)
             
             #### Temporal allocation
             print('Temporal allocation...')
-            month_profile, week_profile, diurnal_profile, diurnal_profile_we = \
-                emips.temp_alloc.read_file(temp_ref_fn, temp_profile_fn, scc)
-            print('To daily emission (g/m2/day)...')
+#            month_profile, week_profile, diurnal_profile, diurnal_profile_we = \
+#                emips.temp_alloc.read_file(temp_ref_fn, temp_profile_fn, scc)
+            month_profile, week_profile, diurnal_profile = \
+                emips.temp_alloc.read_file_prof(temp_profile_fn, scc, ti=8)
+            #print('To daily emission (g/m2/day)...')
             weekday_data, weekend_data = emips.temp_alloc.week_allocation(emis_data, week_profile, year, month)
-            print('To hourly emission (g/m2/s)...')
+            weekday_data = (weekday_data*5 + weekend_data*2) / 7
+            #print('To hourly emission (g/m2/s)...')
             hour_data = emips.temp_alloc.diurnal_allocation(weekday_data, diurnal_profile) / 3600        
     
             #### Chemical speciation
-            poll_prof = emips.chem_spec.get_pollutant_profile(pollutant_profiles, pollutant)
+            if pollutant == PollutantEnum.PM2_5:
+                poll_prof = PollutantProfile(pollutant)
+                poll_prof.append(SpeciesProfile(pollutant, SpeciesEnum.PEC, 0, 1, 0))
+                poll_prof.append(SpeciesProfile(pollutant, SpeciesEnum.PMFINE, 1, 1, 1))
+                poll_prof.append(SpeciesProfile(pollutant, SpeciesEnum.PNO3, 0, 1, 0))
+                poll_prof.append(SpeciesProfile(pollutant, SpeciesEnum.POA, 0, 1, 0))
+                poll_prof.append(SpeciesProfile(pollutant, SpeciesEnum.PSO4, 0, 1, 0))
+            else:
+                poll_prof = emips.chem_spec.get_pollutant_profile(pollutant_profiles, pollutant)
+            #poll_prof = emips.chem_spec.get_pollutant_profile(pollutant_profiles, pollutant)
             if (pollutant == PollutantEnum.NOx) and (poll_prof is None):
                 poll_prof = PollutantProfile(pollutant)
-                poll_prof.append(SpeciesProfile(pollutant, Species('NO'), 0.9, 1.0, 0.9))
-                poll_prof.append(SpeciesProfile(pollutant, Species('NO2'), 0.1, 1.0, 0.1))
+                poll_prof.append(SpeciesProfile(pollutant, Species('NO', molar_mass=30), 0.9, 46.0, 0.9))
+                poll_prof.append(SpeciesProfile(pollutant, Species('NO2', molar_mass=46), 0.1, 46.0, 0.1))
             outfn = os.path.join(dir_inter, \
                 '{}_emis_{}_{}_{}_hour.nc'.format(pollutant.name, sector.name, year, month))
-            print outfn
+            print('output file: {}'.format(outfn))
             if poll_prof is None:
                 #### Save hourly emission data
                 print('Save hourly emission data...')  
@@ -93,7 +117,7 @@ def run(year, month, dir_inter, emission, model_grid):
                     attrs = dict(units='g/m2/s')
                 else:
                     attrs = dict(units='mole/m2/s')
-                    print('To (mole/m2/s)')
+                    #print('To (mole/m2/s)')
                     hour_data = hour_data / out_spec.molar_mass
                 dataset.ncwrite(outfn, hour_data, out_spec.name, dims, attrs)
             else:
@@ -117,32 +141,7 @@ def run(year, month, dir_inter, emission, model_grid):
                     print(dimvar.name)
                     spec_data = hour_data * spec_prof.mass_fraction
                     if not spec.molar_mass is None:
-                        print('To (mole/m2/s)')
+                        #print('To (mole/m2/s)')
                         spec_data = spec_data / spec.molar_mass
                     ncfile.write(dimvar.name, spec_data)
                 ncfile.close()
-
-if __name__ == '__main__':
-    #Set current working directory
-    from inspect import getsourcefile
-    dir_run = os.path.dirname(os.path.abspath(getsourcefile(lambda:0)))
-    if not dir_run in sys.path:
-        sys.path.append(dir_run)    
-    import emission_meic_2017 as emission
-
-    #Set year month
-    year = 2017
-    month = 1
-    dir_inter = r'F:\emips_data\MEIC\2017\{}{:>02d}'.format(year, month)
-    if not os.path.exists(dir_inter):
-        os.mkdir(dir_inter)
-
-    #Set model grids
-    proj = geolib.projinfo()
-    #model_grid = GridDesc(proj, x_orig=70., x_cell=0.15, x_num=502,
-    #    y_orig=15., y_cell=0.15, y_num=330)
-    model_grid = GridDesc(proj, x_orig=0., x_cell=0.25, x_num=1440,
-        y_orig=-89.875, y_cell=0.25, y_num=720)
-
-    #Run
-    run(year, month, dir_inter, emission, model_grid)

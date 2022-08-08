@@ -8,12 +8,13 @@ import spatial_alloc
 import chem_spec
 import vertical_alloc
 
-__version__ = '0.2'
+__version__ = '1.0'
 
 import os
 ge_data_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ge_data')
 
-__all__ = ['ge_data_dir', 'utils', 'temp_alloc', 'spatial_alloc', 'chem_spec','vertical_alloc']
+version = 'EMIPS-1.0(2022.08.04)'
+__all__ = ['ge_data_dir', 'utils', 'temp_alloc', 'spatial_alloc', 'chem_spec','vertical_alloc', 'version']
 # __all__ += utils.__all__
 # __all__ += temp_alloc.__all__
 # __all__ += spatial_alloc.__all__

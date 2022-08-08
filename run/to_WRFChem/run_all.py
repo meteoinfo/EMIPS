@@ -24,7 +24,7 @@ import merge
 import transform
 
 #Generate one(proj.py) or two(proj_12.py) emission files
-import proj_12 as proj
+import proj_2_file as proj
 
 mechanism_name = 'radm2'
 print('--------CHEMICAL MECHANISM: {}--------'.format(mechanism_name.upper()))
@@ -32,7 +32,7 @@ print('--------CHEMICAL MECHANISM: {}--------'.format(mechanism_name.upper()))
 year = 2017
 month = 1
 #set file path
-dir_inter = os.path.join(r'G:\test', mechanism_name, r'test\{0:}\{0:}{1:>02d}'.format(year, month))
+dir_inter = os.path.join(r'G:\test', mechanism_name, r'merge\{0:}\{0:}{1:>02d}'.format(year, month))
 
 #set  model grid
 model_proj = geolib.projinfo()
@@ -56,7 +56,7 @@ sectors = [SectorEnum.INDUSTRY, SectorEnum.AGRICULTURE, SectorEnum.ENERGY,
 gattrs = OrderedDict()
 #gattrs['Conventions'] = 'CF-1.6'
 gattrs['TITLE'] = 'Created using MeteoInfo, mechanism: {}'.format(mechanism_name.upper())
-gattrs['START_DATE'] = "2016-12-30_00:00:00"
+gattrs['START_DATE'] = "{}-{:0>2d}-01_00:00:00".format(year, month)
 gattrs['WEST-EAST_GRID_DIMENSION'] = 335
 gattrs['SOUTH-NORTH_GRID_DIMENSION'] = 275
 gattrs['BOTTOM-TOP_GRID_DIMENSION'] = 8
@@ -95,7 +95,7 @@ gattrs['ISOILWATER'] = 14
 
 ######set out species(gases and aerosol) and out species(aerosol)
 #################################################################################################
-#------CB05,emiss_opt=15; RADM2,emiss_opt=3; SAPRC99,emiss_opt=13; MOZART,emiss_opt=10------#
+###------CB05,emiss_opt=15; RADM2,emiss_opt=3; SAPRC99,emiss_opt=13; MOZART,emiss_opt=10------###
 #################################################################################################
 out_species, out_species_aer = get_model_species_wrf(mechanism_name)
 
