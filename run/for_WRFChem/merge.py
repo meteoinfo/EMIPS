@@ -34,13 +34,13 @@ def run(year, month, dir_inter, model_grid, sectors, z):
         if os.path.exists(fn):
             print(fn)
             f = dataset.addfile(fn)
-            for var in f.variables():
+            for var in f.variables:
                 if var.ndim == 4:
                     if dict_spec.has_key(var.name):
                         dict_spec[var.name].append(fn)
                     else:
                         dict_spec[var.name] = [fn]
-            for var in f.varnames():
+            for var in f.varnames:
                 if var == 'lat' or var == 'lon':
                         continue
                 if var in count:

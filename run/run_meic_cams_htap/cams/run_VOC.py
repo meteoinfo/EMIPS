@@ -86,14 +86,14 @@ def run(year, month, dir_inter, emission, model_grid):
         print('Output file: {}'.format(outfn))
     
         print('Set grid speciation data...')
-        fn = r'Z:\test\retro_nmvoc_ratio_{}_2000_0.1deg.nc'.format(fn_sector)
+        fn = r'Z:\retro_nmvoc_ratio_{}_2000_0.1deg.nc'.format(fn_sector)
         print('Grid speciation file: {}'.format(fn))
         f = dataset.addfile(fn)
     
         #Create output netcdf file and define dimensions, global attributes and variables
         gattrs = dict(Conventions='CF-1.6', Tools='Created using MeteoInfo')
         dimvars = []
-        for var in f.variables():
+        for var in f.variables:
             if var.ndim == 2:
                 dimvar = dataset.DimVariable()
                 dimvar.name = var.name

@@ -12,7 +12,7 @@ import mipylib.numeric as np
 
 __all__ = ['dir_emission', 'emis_grid', 'grid_areas', 'get_emis_fn', 'read_emis']
 
-dir_emission = r'M:\test'
+dir_emission = r'M:\Data'
 
 def get_emis_version(sector):
     """

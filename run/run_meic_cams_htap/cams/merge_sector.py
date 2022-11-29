@@ -62,7 +62,7 @@ def run(year, month, dir_inter, model_grid):
     
             print('File_in:{}'.format(fn))
             f = dataset.addfile(fn)
-            for var in f.variables():
+            for var in f.variables:
                 if var.ndim == 3:
                     if dict_spec.has_key(var.name):
                         dict_spec[var.name].append(fn)
