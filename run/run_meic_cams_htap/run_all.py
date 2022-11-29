@@ -1,6 +1,6 @@
 """
 # Author: Wencong Chen
-# Date: 2022-08-04
+# Date: 2022-11-27
 # Purpose: Process emission data and merge EMIPS output emission data(MEIC, CAMS, HTAP).
 """
 
@@ -26,25 +26,29 @@ mechanism_name = 'radm2'
 proj = geolib.projinfo()
 model_grid = GridDesc(proj, x_orig=64., x_cell=0.25, x_num=324,
     y_orig=15., y_cell=0.25, y_num=180)
+#model_grid = GridDesc(proj, x_orig=70., x_cell=0.1, x_num=751,
+#    y_orig=15., y_cell=0.1, y_num=501)
+#Set directory
+dire = r'G:\test'
 
 #process MEIC data
 from meic import total_run_meic
-total_run_meic.run(year, months, model_grid, mechanism_name, mechanism())
+total_run_meic.run(dire, year, months, model_grid, mechanism_name, mechanism())
 
 #process HTAP data
 from htap import total_run_htap
-total_run_htap.run(months, model_grid, mechanism_name, mechanism())
+total_run_htap.run(dire, months, model_grid, mechanism_name, mechanism())
 
 #process CAMS data
 from cams import total_run_cams
-total_run_cams.run(year, months, model_grid, mechanism_name, mechanism())
+total_run_cams.run(dire, year, months, model_grid, mechanism_name, mechanism())
 
 #merge output data
 import merge_meic_cams_htap_tw as merge
-merge.run(year, months, model_grid, mechanism_name)
+merge.run(dire, year, months, model_grid, mechanism_name)
 
 print('-------------------------------')
-print('---All process completed!---')
+print('-----All process completed!----')
 print('-------------------------------')
 
 #Calculate running time

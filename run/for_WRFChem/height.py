@@ -37,7 +37,7 @@ def run(year, month, dir_inter, model_grid, sectors, z, z_file):
         dimvars = []
         if os.path.exists(fn):
             f = dataset.addfile(fn)
-            for var in f.varnames():
+            for var in f.varnames:
                 if var == 'lat' or var == 'lon':
                     continue
                 else:
@@ -68,7 +68,7 @@ def run(year, month, dir_inter, model_grid, sectors, z, z_file):
             else:
                 print('Do not need to be allocated: {}'.format(sector.name))
             print('Write data to file...')
-            for var in f.varnames():
+            for var in f.varnames:
                 if var == 'lat' or var == 'lon':
                     continue
                 else:

@@ -1,6 +1,6 @@
 """
 # Author: Wencong Chen
-# Date: 2022-08-04
+# Date: 2022-11-27
 # Purpose: Process emission data by spatial allocation, temporal allocation
            and chemical speciation(-----MEIC-----).       
 """
@@ -17,7 +17,7 @@ if not dir_run in sys.path:
 #Import preprocessing scripts
 import emission_meic_2017 as emission
 
-def run(year, months, model_grid, mechanism_name, mechanism):
+def run(dire, year, months, model_grid, mechanism_name, mechanism):
     """
     Process MEIC emission data by spatial allocation, temporal allocation
     and chemical speciation.
@@ -37,9 +37,9 @@ def run(year, months, model_grid, mechanism_name, mechanism):
         print('##########')
         
         #Set data output directory
-        dir_inter = os.path.join(r'G:\test', mechanism_name, r'meic\{0:}\{0:}{1:>02d}'.format(year, month))
+        dir_inter = os.path.join(dire, mechanism_name, r'MEIC\{0:}\{0:}{1:>02d}'.format(year, month))
         if not os.path.exists(dir_inter):
-            os.mkdir(dir_inter)
+            os.makedirs(dir_inter)
         print('Output directory: {}'.format(dir_inter))
         
         #Process emission data except VOC
@@ -59,9 +59,28 @@ def run(year, months, model_grid, mechanism_name, mechanism):
         
         #Merge all pollutant emission files in one file for each sector
         print('merge all pollutant emission files in one file for each sector...')
-        import merge_sector as merge_sector
+        import merge_sector 
         merge_sector.run(year, month, dir_inter, model_grid)
         
     print('---------------------------------------')
-    print('-----MEIC processing completed!!!------')
+    print('-----MEIC data completed!!!------')
     print('---------------------------------------')
+
+if __name__ == '__main__':  
+    import time
+    time_start = time.time()
+    
+    #Settings
+    year = 2017
+    months = [1]
+    proj = geolib.projinfo()
+    model_grid = GridDesc(proj, x_orig=64., x_cell=0.25, x_num=324,
+            y_orig=15., y_cell=0.25, y_num=180)
+    mechanism_name = 'radm2'
+    dire = r'G:\test'
+    from emips.chem_spec import RADM2_wrfchem as mechanism
+    run(dire, year, months, model_grid, mechanism_name, mechanism())
+    
+    time_end = time.time()
+    time = (time_end - time_start) / 60
+    print('Time: {:.2f}min'.format(time)) 

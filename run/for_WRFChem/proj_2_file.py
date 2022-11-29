@@ -81,7 +81,7 @@ def run(year, month, dir_inter, model_grid, target_grid, out_species, out_specie
         print('Write variable data except times...')
         for out_specie in out_species:
             data = np.zeros((tdim.length, zdim.length, ydim.length, xdim.length))
-            if out_specie in f_in.varnames():
+            if out_specie in f_in.varnames:
                 print(out_specie)
                 dd = f_in[out_specie][num:num+12]
                 #Conversion

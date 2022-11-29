@@ -4,6 +4,8 @@ from emips.utils import Sector, SectorEnum
 from emips.spatial_alloc import GridDesc
 from emips.chem_spec import RADM2
 from mipylib import dataset
+from mipylib import numeric 
+import os
 
 #Set emission low, poi, pow
 emis_cuace = {}
@@ -23,7 +25,7 @@ all_species = [RADM2.CO, RADM2.NO, RADM2.NO2, RADM2.ALD, RADM2.CH4, \
 
 #Set time dimension of output file.
 tn = 25    # 0 - 24 hour
-def run(year, months, dir_data, dir_out, xn, yn):
+def run(year, months, dir_in, dir_out, xn, yn):
     """
     Convert netcdf model-ready emission file to GrADS data 
     format for CUACE model.
@@ -32,8 +34,8 @@ def run(year, months, dir_data, dir_out, xn, yn):
     :param months: (*list*) List of months.
     :param dir_data: (*string*) The directory where netcdf data is stored.
     :param dir_out: (*string*) The directory where GrADS data is writed.
-    :param xn: (*int*) x-Dimension of output files.
-    :param yn: (*int*) y-Dimension of output files.
+    :param xn: (*int*) x-dimension of output files.
+    :param yn: (*int*) y-dimension of output files.
     """
     for month in months:
         print('**************')
@@ -41,14 +43,12 @@ def run(year, months, dir_data, dir_out, xn, yn):
         print('**************')
     
         #Set directory for input and output files
-        dir_data = r'E:\test'
-        dir_data = os.path.join(dir_data, str(year), '{}{:>02d}'.format(year, month))
-        dir_out = r'E:\test'
+        dir_in = os.path.join(dir_in, str(year), '{}{:>02d}'.format(year, month))
         dir_out = os.path.join(dir_out, str(year), '{}{:>02d}'.format(year, month))
         if not os.path.exists(dir_out):
             os.makedirs(dir_out)
         print('------------------Filepath------------------')
-        print('dir_data: {}\ndir_out: {}'.format(dir_data, dir_out))
+        print('dir_data: {}\ndir_out: {}'.format(dir_in, dir_out))
         #Loop
         for emis_type, sectors in emis_cuace.iteritems():
             print(emis_type, sectors)
@@ -68,24 +68,46 @@ def run(year, months, dir_data, dir_out, xn, yn):
                     data = None
                     #Loop sectors
                     for sector in sectors:
-                        fn = os.path.join(dir_data, 'emis_{}_{}_{}_hour.nc'.format(sector.name, year, month))
-                        f_in = addfile(fn)
-                        if species.name in f_in.varnames():
+                        fn = os.path.join(dir_in, 'emis_{}_{}_{}_hour.nc'.format(sector.name, year, month))
+                        f_in = dataset.addfile(fn)
+                        if species.name in f_in.varnames:
                             dd = f_in[species.name][t]
                             if dd.sum() == 0:
                                 continue
                             if dd.contains_nan():
-                                dd[dd==nan] = 0
+                                dd[dd==numeric.nan] = 0
                             if data is None:
                                 data = dd
                             else:
     							data = data + dd
-    					f_in.close()
+                        f_in.close()
                     if data is None:
                         print('Is None: {}'.format(species))
-                        data = zeros((yn, xn))
+                        data = numeric.zeros((yn, xn))
+                    #Check the dimensions of the input and output files
+                    if data.shape[0] != yn or data.shape[1] != xn:
+                        print('The dimensions of input data and output data do not match!!!')
+                        os.system("pause")
+                        
                     dataset.binwrite(outer, data.astype('float'), byteorder='little_endian', sequential=True)
             outer.close()      
-print('#########################')
-print('Data convert completed!!!')
-print('#########################')
+    print('#########################')
+    print('Data convert completed!!!')
+    print('#########################')
+
+if __name__ == '__main__':  
+    import time
+    time_start = time.time()
+    
+    #Settings
+    year = 2017
+    months = [1]
+    dir_in = r'G:\test'
+    dir_out = r'G:\test'
+    xn = 751
+    yn = 501
+    run(year, months, dir_in, dir_out, xn, yn)
+    
+    time_end = time.time()
+    time = (time_end - time_start) / 60
+    print('Time: {:.2f}min'.format(time))

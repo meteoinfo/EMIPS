@@ -10,7 +10,7 @@ from mipylib import geolib
 
 __all__ = ['dir_emission', 'emis_grid', 'grid_areas', 'get_emis_fn', 'read_emis']
 
-dir_emission = r'M:\test'  
+dir_emission = r'M:\Data'  
 
 emis_grid = GridDesc(geolib.projinfo(), x_orig=70.125, x_cell=0.25, x_num=320,
     y_orig=10.125, y_cell=0.25, y_num=200)

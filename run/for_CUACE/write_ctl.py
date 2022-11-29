@@ -1,17 +1,26 @@
 import calendar
+import os
+from mipylib import miutil
+import datetime
 
 #Set types of pollutants
 types = ['low','poi','pow','air']
-def run(year, months, ddir):
+def run(year, months, dir_out, xn, yn, xmin, ymin, xdelta, ydelta):
     """
     Write the description file of the output binary data files.
 
     :param year: (*int*) Year.
     :param months: (*list*) List of months.
     :param ddir: (*string*) The directory where files is wrtied.
+    :param xn: (*int*) x-dimension of output files.
+    :param yn: (*int*) y-dimension of output files.
+    :param xmin: (*float*) The initial longitude of output files.
+    :param ymin: (*float*) The initial latitude of output files.
+    :param xdelta: (*float*) The spacing of longitudes of output files.
+    :param ydelta: (*float*) The spacing of latitudes of output files.
     """
     for month in months:
-        tdir = os.path.join(ddir, str(year), '{}{:>02d}'.format(year, month))
+        tdir = os.path.join(dir_out, str(year), '{}{:>02d}'.format(year, month))
         for tps in types:
             fn = os.path.join(tdir, 'emis_{}_{}_{}.ctl'.format(year,month,tps))
             print(fn)
@@ -20,8 +29,8 @@ def run(year, months, ddir):
             f.write('title model output from grapes\n')
             f.write('options sequential\n')
             f.write('undef -9.99E+33\n')
-            f.write('xdef  751 linear   70.0000     0.1000\n')
-            f.write('ydef  501 linear   15.0000     0.1000\n')
+            f.write('xdef  {} linear   {:.2f}00     {:.2f}00\n'.format(xn, xmin, xdelta))
+            f.write('ydef  {} linear   {:.2f}00     {:.2f}00\n'.format(yn, ymin, ydelta))
             f.write('zdef   1  linear 1 1\n')
             month_abbr = miutil.dateformat(datetime.datetime(year, month, 1), 'MMM', 'eng')
             month_abbr = month_abbr.upper()
@@ -61,6 +70,26 @@ def run(year, months, ddir):
             f.write('  PMC 1 99 Emission_PMC (g/m2/s)\n')
             f.write('endvars')
             f.close()
-print('##########################')
-print('Write .ctl file completed!')
-print('##########################')
+    print('##########################')
+    print('Write .ctl file completed!')
+    print('##########################')
+
+if __name__ == '__main__':  
+    import time
+    time_start = time.time()
+    
+    #Settings
+    year = 2017
+    months = [1]
+    xn = 324
+    yn = 180
+    xmin = 64.0
+    ymin = 15.0
+    xdelta = 0.25
+    ydelta = 0.25
+    dir_out = r'G:\test'
+    run(year, months, dir_out, xn, yn, xmin, ymin, xdelta, ydelta)
+    
+    time_end = time.time()
+    time = (time_end - time_start) / 60
+    print('Time: {:.2f}min'.format(time))

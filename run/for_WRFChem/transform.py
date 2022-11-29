@@ -62,7 +62,7 @@ def run(year, month, dir_inter, model_grid, out_species, out_species_aer, z):
         data = np.zeros((tdim.length, z, ydim.length, xdim.length))
         sname = name[2:]
         print(sname)
-        if sname in f_in.varnames():
+        if sname in f_in.varnames:
             data = f_in[sname][:, :, :]
             data = data * 3600 * 1e6
             ncfile.write(name, data)

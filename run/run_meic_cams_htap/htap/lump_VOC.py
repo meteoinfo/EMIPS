@@ -47,7 +47,7 @@ def run(year, month, dir_inter, chem_mech, model_grid):
         #Open input file
         inf = dataset.addfile(infn)
         #Read a reference data
-        vname = inf.varnames()[4]
+        vname = inf.varnames[4]
         rdata = inf[vname][:]
         rdata[rdata!=np.nan] = 0.
     
@@ -78,7 +78,7 @@ def run(year, month, dir_inter, chem_mech, model_grid):
             print('RETRO species: {}'.format(rspecs))
             data = None
             for rspec, ratio in rspecs.iteritems():
-                if rspec.name in inf.varnames():
+                if rspec.name in inf.varnames:
                     if data is None:
                         data = inf[rspec.name][:] * ratio
                     else:
