@@ -1,6 +1,7 @@
 from mipylib.geolib import projinfo, gridarea
 import mipylib.numeric as np
 
+
 class GridDesc(object):
 
     def __init__(self, proj=projinfo(), x_coord=None, y_coord=None, x_orig=None, x_cell=None,

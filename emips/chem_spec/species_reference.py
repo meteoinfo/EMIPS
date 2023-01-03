@@ -1,5 +1,6 @@
 from .pollutant import Pollutant
 
+
 class SpeciesReferenceItem(object):
 
     def __init__(self, scc, profile_id, pollutant):
@@ -49,6 +50,7 @@ class SpeciesReferenceItem(object):
         if pollutant.name == "VOC":
             pollutant = Pollutant("TOG")
         return SpeciesReferenceItem(scc, profile_id, pollutant)
+
 
 class SpeciesReference(list):
 

@@ -3,6 +3,7 @@ import mipylib.numeric as np
 
 __all__ = ['transform']
 
+
 def transform(source, source_grid, dest_grid, method='auto'):
     """
     Spatial transform from source grid to destination grid.
@@ -22,10 +23,10 @@ def transform(source, source_grid, dest_grid, method='auto'):
 
         if method == 'interp':
             dest = np.interpolate.linint2(source_grid.x_coord, source_grid.y_coord, source, dest_grid.x_coord,
-                              dest_grid.y_coord)
+                                          dest_grid.y_coord)
         else:
             x, y = np.meshgrid(source_grid.x_coord, source_grid.y_coord)
-            dest = np.interpolate.griddata((x,y), source, xi=(dest_grid.x_coord, dest_grid.y_coord),
+            dest = np.interpolate.griddata((x, y), source, xi=(dest_grid.x_coord, dest_grid.y_coord),
                                            method='inside_mean')[0]
     else:
         dest = geolib.reproject(source, source_grid.x_coord, source_grid.y_coord, source_grid.proj,

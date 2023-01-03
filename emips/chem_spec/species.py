@@ -1,5 +1,5 @@
 from ..utils import Units, Weight, Area, Period
-from ..utils._base import enum
+
 
 class Species(object):
 
@@ -27,7 +27,8 @@ class Species(object):
     def __eq__(self, other):
         return self.name == other.name and self.units == other.units
 
-#Normally used species
+
+# Normally used species
 class SpeciesEnum(object):
     PEC = Species("PEC")
     CO = Species("CO", molar_mass=28)

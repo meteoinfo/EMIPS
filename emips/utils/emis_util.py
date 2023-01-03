@@ -3,6 +3,7 @@ import calendar
 
 __all__ = ['get_scc', 'get_month_days', 'get_year_days']
 
+
 def get_scc(sector):
     """
     Get source classification code
@@ -10,7 +11,7 @@ def get_scc(sector):
     :param sector: The sector
     :return: Source classification code
     """
-#    scc = "10100101"
+    #    scc = "10100101"
     scc = None
     if sector == SectorEnum.BIOMASS:
         scc = "2810001000"
@@ -33,6 +34,7 @@ def get_scc(sector):
 
     return scc
 
+
 def get_year_days(year):
     """
     Get number of days in a year.
@@ -40,6 +42,7 @@ def get_year_days(year):
     :return: Number of days in a year.
     """
     return 366 if calendar.isleap(year) else 365
+
 
 def get_month_days(year, month):
     """

@@ -1,5 +1,5 @@
 from .pollutant import Pollutant
-from .species import Species
+
 
 class PollutantProfile(object):
 

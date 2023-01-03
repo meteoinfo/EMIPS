@@ -9,6 +9,7 @@ import mipylib.numeric as np
 __all__ = ['read_file', 'read_file_prof', 'month_allocation', 'week_allocation', 'diurnal_allocation',
            'month2hour', 'get_month_days', 'get_weekend_days', 'get_week_days']
 
+
 def read_file(ref_fn, profile_fn, scc):
     """
     Read temporal profiles from reference and profile files
@@ -17,11 +18,11 @@ def read_file(ref_fn, profile_fn, scc):
     :param scc: Source classific code
     :return: Species profile
     """
-    #Read reference file
+    # Read reference file
     n = len(scc)
     month_id = "462"
     week_id = "8"
-    diurnal_id= "33"
+    diurnal_id = "33"
     ref_f = open(ref_fn)
     for line in ref_f:
         line = line.strip()
@@ -36,7 +37,7 @@ def read_file(ref_fn, profile_fn, scc):
     ref_f.flush()
     ref_f.close()
 
-    #Read profile file
+    # Read profile file
     month_profile = MonthProfile()
     week_profile = WeekProfile()
     diurnal_profile = DiurnalProfile()
@@ -90,6 +91,7 @@ def read_file(ref_fn, profile_fn, scc):
     profile_f.close()
     return month_profile, week_profile, diurnal_profile, diurnal_profile_weekend
 
+
 def read_file_prof(profile_fn, scc, ti=0, east=True):
     """
     Read temporal profiles from profile files
@@ -112,7 +114,7 @@ def read_file_prof(profile_fn, scc, ti=0, east=True):
                 if line == "/END/":
                     break
                 if line[0] == scc:
-                    line = [ float(x) for x in line]
+                    line = [float(x) for x in line]
                     month_profile.weights = np.array(line[1:]).astype('float')
                     break
         if line == "/WEEKLY/":
@@ -121,7 +123,7 @@ def read_file_prof(profile_fn, scc, ti=0, east=True):
                 if line == "/END/":
                     break
                 if line[0] == scc:
-                    line = [ float(x) for x in line]
+                    line = [float(x) for x in line]
                     week_profile.weights = np.array(line[1:]).astype('float')
                     break
         if line == "/HOURLY/":
@@ -130,7 +132,7 @@ def read_file_prof(profile_fn, scc, ti=0, east=True):
                 if line == "/END/":
                     break
                 if line[0] == scc:
-                    line = [ float(x) for x in line]
+                    line = [float(x) for x in line]
                     if ti == 0:
                         diurnal_profile.weights = np.array(line[1:]).astype('float')
                     else:
@@ -139,8 +141,8 @@ def read_file_prof(profile_fn, scc, ti=0, east=True):
                             cut1 = diurnal[0:ti]
                             cut2 = diurnal[ti:]
                         else:
-                            cut1 = diurnal[0:len(diurnal)-ti]
-                            cut2 = diurnal[len(diurnal)-ti:]
+                            cut1 = diurnal[0:len(diurnal) - ti]
+                            cut2 = diurnal[len(diurnal) - ti:]
                         diurnal_profile.weights = cut2.join(cut1, 0)
                     break
         line = profile_f.readline()
@@ -148,7 +150,7 @@ def read_file_prof(profile_fn, scc, ti=0, east=True):
     profile_f.close()
     return month_profile, week_profile, diurnal_profile
 
-    
+
 def month_allocation(data, month_profile):
     """
     Monthly allocation.
@@ -164,6 +166,7 @@ def month_allocation(data, month_profile):
         m_data[i] = data * weights[i]
 
     return m_data
+
 
 def get_weekend_days(year, month):
     """
@@ -183,6 +186,7 @@ def get_weekend_days(year, month):
         st = st + datetime.timedelta(days=1)
     return n
 
+
 def get_week_days(year, month):
     """
     Get number of week days in a month.
@@ -201,6 +205,7 @@ def get_week_days(year, month):
         st = st + datetime.timedelta(days=1)
     return wdays
 
+
 def week_allocation(data, week_profile, year, month, weekend_or_not=True):
     """
     Weekly allocation.
@@ -217,7 +222,7 @@ def week_allocation(data, week_profile, year, month, weekend_or_not=True):
         weekend_days = get_weekend_days(year, month)
         weekday_days = mdays - weekend_days
         total_weight = week_profile.weekday_weight * weekday_days + week_profile.weekend_weight * \
-            weekend_days
+                       weekend_days
         wdata = data / total_weight
         return wdata * week_profile.weekday_weight, wdata * week_profile.weekend_weight
     else:
@@ -230,6 +235,7 @@ def week_allocation(data, week_profile, year, month, weekend_or_not=True):
             d_data[i] = wdata * week_profile.weights[i]
 
         return d_data
+
 
 def diurnal_allocation(data, diurnal_profile):
     """
@@ -246,6 +252,7 @@ def diurnal_allocation(data, diurnal_profile):
         h_data[i] = data * weights[i]
 
     return h_data
+
 
 def month2hour(data, week_profile, diurnal_profile, year, month, weekend=False):
     """
@@ -265,6 +272,7 @@ def month2hour(data, week_profile, diurnal_profile, year, month, weekend=False):
     else:
         d_data = diurnal_allocation(w_data[0], diurnal_profile)
     return d_data
+
 
 def get_month_days(year, month):
     """

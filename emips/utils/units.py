@@ -1,25 +1,32 @@
-from ._base import enum
+from mipylib.enum import Enum
 
 __all__ = ['Units', 'Weight', 'Area', 'Period']
 
-Weight = enum(G = "g",
-              KG = "kg",
-              MG = "mg",
-              M = "mole",    #Mole
-              KM = "kilo_mole",
-              MM = "million_mole")
 
-Area = enum(GRID = "grid",
-            M2 = "m2",    #Squar meter
-            KM2 = "km2")
+class Weight(Enum):
+    G = "g"
+    KG = "kg"
+    MG = "mg"
+    M = "mole"  # Mole
+    KM = "kilo_mole"
+    MM = "million_mole"
 
-Period = enum(SECOND = "s",
-              MINUTE = "min",
-              HOUR = "h",
-              DAY = "d",
-              WEEK = 'w',
-              MONTH = "m",
-              YEAR = "y")
+
+class Area(Enum):
+    GRID = "grid"
+    M2 = "m2"    # Square meter
+    KM2 = "km2"
+
+
+class Period(Enum):
+    SECOND = "s"
+    MINUTE = "min"
+    HOUR = "h"
+    DAY = "d"
+    WEEK = "w"
+    MONTH = "m"
+    YEAR = "y"
+
 
 class Units(object):
 
@@ -41,8 +48,8 @@ class Units(object):
 
     def __eq__(self, other):
         return self.weight == other.weight and \
-               self.area == other.area and \
-               self.period == other.period
+            self.area == other.area and \
+            self.period == other.period
 
     def is_mole(self):
         """
@@ -97,7 +104,7 @@ class Units(object):
                     elif other.weight == Weight.KG:
                         wr = 1e-3
 
-        #Area
+        # Area
         ar = 1
         if self.area == Area.M2:
             if other.area == Area.KM2:
@@ -106,7 +113,7 @@ class Units(object):
             if other.area == Area.M2:
                 ar = 1e6
 
-        #Period
+        # Period
         pr = 1
         if self.period == Period.SECOND:
             if other.period == Period.MINUTE:

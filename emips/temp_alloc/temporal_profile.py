@@ -19,14 +19,14 @@ class TemporalProfile(object):
 
     def total_weight(self):
         """
-        Get total weight
-        :return: Total weight
+        Get total weight.
+        :return: Total weight.
         """
         return self.weights.sum()
 
     def get_weight(self, idx):
         """
-        Get weight
+        Get weight.
         :param idx: The index.
         :return: Weight
         """
@@ -34,8 +34,8 @@ class TemporalProfile(object):
 
     def get_ratios(self):
         """
-        Get weight ratios
-        :return: Weight ratios
+        Get weight ratios.
+        :return: Weight ratios.
         """
         tw = float(self.total_weight())
         return self.weights / tw

@@ -1,6 +1,7 @@
 from .pollutant import Pollutant
 from .species import Species, SpeciesEnum
 
+
 class SpeciesProfile(object):
 
     def __init__(self, pollutant, species, sf, dv, mf):
@@ -27,10 +28,10 @@ class SpeciesProfile(object):
 
     def __str__(self):
         r = "{}: split_factor={}, divisor={}, mass_fraction={}".format(self.species.name, self.split_factor,
-            self.divisor, self.mass_fraction)
+                                                                       self.divisor, self.mass_fraction)
         return r
 
-    __repr__ =  __str__
+    __repr__ = __str__
 
     @classmethod
     def read_string(cls, line, mechanism=None):
