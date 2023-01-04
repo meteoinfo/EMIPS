@@ -13,7 +13,7 @@ Features
 --------
 
 EMIPS (EMission Inventory Processing System) software was developed to create emission inventory (EI) data
-that air quality model(AQM) can be used directly. The main functions including ``Chemical speciation``,
+that atmospheric chemistry models (ACMs) can be used directly. The main functions including ``Chemical speciation``,
 ``Temporal allocation``, ``Spatial allocation`` and ``vertical allocation``. 
 
 Running
@@ -45,14 +45,14 @@ Chinese Academy of Meteorological Sciences, CMA
 
 Wencong Chen
 
-email: chenwencong9801@163.com
+email: wencong9801@outlook.com
 
 Chinese Academy of Meteorological Sciences, CMA
 
 License
 -------
 
-Copyright 2019-2020, EMIPS Developers
+Copyright 2019-2022, EMIPS Developers
 
 Licensed under the LGPL License, Version 3.0 (the "License");
 you may not use this file except in compliance with the License.
