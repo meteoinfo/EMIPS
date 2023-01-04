@@ -26,8 +26,6 @@ mechanism_name = 'radm2'
 proj = geolib.projinfo()
 model_grid = GridDesc(proj, x_orig=64., x_cell=0.25, x_num=324,
     y_orig=15., y_cell=0.25, y_num=180)
-#model_grid = GridDesc(proj, x_orig=70., x_cell=0.1, x_num=751,
-#    y_orig=15., y_cell=0.1, y_num=501)
 #Set directory
 dire = r'G:\test'
 

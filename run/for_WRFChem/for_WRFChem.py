@@ -23,7 +23,7 @@ import height
 import merge
 import transform
 
-#Generate one(proj.py) or two(proj_12.py) emission files
+#Generate one(proj.py) or two(proj_2_file.py) emission files
 import proj_2_file as proj
 
 mechanism_name = 'radm2'
