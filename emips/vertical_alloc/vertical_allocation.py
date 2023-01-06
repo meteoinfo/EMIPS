@@ -3,6 +3,7 @@ import mipylib.numeric as np
 
 __all__ = ['read_file']
 
+
 def read_file(profile_fn, scc):
     """
     Read temporal profiles from profile files
@@ -21,12 +22,10 @@ def read_file(profile_fn, scc):
                 if line == "/END/":
                     break
                 if line[0] == scc:
-                    line = [ float(x) for x in line]
+                    line = [float(x) for x in line]
                     vertical_profile.weights = np.array(line[1:]).astype('float')
                     break
         line = profile_f.readline()
     profile_f.flush()
     profile_f.close()
     return vertical_profile
-
-    

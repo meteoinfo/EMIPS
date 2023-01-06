@@ -1,3 +1,5 @@
+from ..species import Species
+
 
 class ChemicalMechanism(object):
 
@@ -5,29 +7,43 @@ class ChemicalMechanism(object):
         """
         Chemical mechanism.
         """
-        pass
+        self.name = None
 
-    @property
-    def name(self):
-        """
-        Get chemical mechanism name
-        :return: The name
-        """
-        return None
+    def __str__(self):
+        return self.name
 
-    @classmethod
-    def voc_species(cls):
+    def __repr__(self):
+        return self.__str__()
+
+    def nmvoc_species(self):
+        """
+        Get NMVOC (None-Methane VOC) species
+        :return: (*list of species*) NMVOC species
+        """
+        return []
+
+    def voc_species(self):
         """
         Get VOC species
         :return:
         """
-        pass
+        return []
 
-    @classmethod
-    def species(cls, name):
+    def all_species(self):
+        """
+        Get all species
+        :return: (*list of species*) All species
+        """
+        return []
+
+    def species(self, name):
         """
         Get species by name
         :param name: (*str*) Species name
         :return: Species
         """
-        pass
+        species = self.all_species()
+        for spec in species:
+            if spec.name == name:
+                return spec
+        return Species(name)

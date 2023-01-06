@@ -1,22 +1,24 @@
 """
 -----MEIC-----
 """
-from emips.chem_spec import Pollutant, PollutantEnum
-from emips.utils import Sector, SectorEnum
-from emips.spatial_alloc import GridDesc
 import os
-from mipylib.dataset import addfile_ascii_grid
 from mipylib import geolib
+from mipylib.dataset import addfile_ascii_grid
+
+from emips.chem_spec import PollutantEnum
+from emips.spatial_alloc import GridDesc
+from emips.utils import SectorEnum
 
 __all__ = ['dir_emission', 'emis_grid', 'grid_areas', 'get_emis_fn', 'read_emis']
 
-dir_emission = r'M:\Data'  
+dir_emission = r'M:\Data'
 
 emis_grid = GridDesc(geolib.projinfo(), x_orig=70.125, x_cell=0.25, x_num=320,
-    y_orig=10.125, y_cell=0.25, y_num=200)
+                     y_orig=10.125, y_cell=0.25, y_num=200)
 
-#Calculate emission grid areas
-grid_areas = emis_grid.grid_areas()    #square meters (array)
+# Calculate emission grid areas
+grid_areas = emis_grid.grid_areas()  # square meters (array)
+
 
 def get_emis_fn(sector, pollutant, month):
     """
@@ -39,6 +41,7 @@ def get_emis_fn(sector, pollutant, month):
         pollutant_name = 'VOC'
     fn = '2017_{:0>2d}_{}_{}.asc'.format(month, sector_name, pollutant_name)
     return os.path.join(dir_emission, fn)
+
 
 def read_emis(sector, pollutant, month):
     """

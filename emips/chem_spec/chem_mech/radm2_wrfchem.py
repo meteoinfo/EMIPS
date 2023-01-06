@@ -44,13 +44,7 @@ class RADM2_wrfchem(ChemicalMechanism):
         """
         super(RADM2_wrfchem, self).__init__()
 
-    @property
-    def name(self):
-        """
-        Get chemical mechanism name
-        :return: The name
-        """
-        return 'RADM2_wrfchem'
+        self.name = 'RADM2_wrfchem'
 
     def nmvoc_species(self):
         """

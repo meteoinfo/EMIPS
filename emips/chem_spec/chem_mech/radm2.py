@@ -46,13 +46,7 @@ class RADM2(ChemicalMechanism):
         """
         super(RADM2, self).__init__()
 
-    @property
-    def name(self):
-        """
-        Get chemical mechanism name
-        :return: The name
-        """
-        return 'RADM2'
+        self.name = 'RADM2'
 
     def nmvoc_species(self):
         """
@@ -83,7 +77,7 @@ class RADM2(ChemicalMechanism):
         """
         sp_all = [self.CO, self.NO, self.NO2]
         sp_all.extend(self.voc_species())
-        sp_all.extend([self.NH3, self.SO2, self.SULF, self.PEC, self.PMFINE, self.PNO3, self.POA, \
+        sp_all.extend([self.NH3, self.SO2, self.SULF, self.PEC, self.PMFINE, self.PNO3, self.POA,
                        self.PSO4, self.PMC])
         return sp_all
 

@@ -51,13 +51,7 @@ class SAPRC99_wrfchem(ChemicalMechanism):
         """
         super(SAPRC99_wrfchem, self).__init__()
 
-    @property
-    def name(self):
-        """
-        Get chemical mechanism name
-        :return: The name
-        """
-        return 'SAPRC99_wrfchem'
+        self.name = 'SAPRC99_wrfchem'
 
     def nmvoc_species(self):
         """

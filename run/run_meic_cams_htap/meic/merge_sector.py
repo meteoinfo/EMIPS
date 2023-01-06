@@ -1,15 +1,13 @@
 """
 -----MEIC-----
 """
-import os
 import mipylib.numeric as np
+import os
 from mipylib import dataset
-from mipylib import geolib
 
-import emips
-from emips.utils import Sector, SectorEnum
-from emips.chem_spec import Pollutant, PollutantEnum
-from emips.spatial_alloc import GridDesc
+from emips.chem_spec import PollutantEnum
+from emips.utils import SectorEnum
+
 
 def run(year, month, dir_inter, model_grid):
     """
@@ -20,42 +18,42 @@ def run(year, month, dir_inter, model_grid):
     :param dir_inter: (*string*) Data input and output path.
     :param model_grid: (*GridDesc*) Model data grid describe.
     """
-    #Set sectors and pollutants
+    # Set sectors and pollutants
     sectors = [SectorEnum.INDUSTRY, SectorEnum.AGRICULTURE, SectorEnum.ENERGY,
-        SectorEnum.RESIDENTIAL, SectorEnum.TRANSPORT]
+               SectorEnum.RESIDENTIAL, SectorEnum.TRANSPORT]
 
-    pollutants = [PollutantEnum.BC, PollutantEnum.CO, PollutantEnum.NH3, \
-        PollutantEnum.NOx, PollutantEnum.OC, PollutantEnum.PM2_5, \
-        PollutantEnum.SO2, PollutantEnum.PM10, PollutantEnum.NMVOC]
+    pollutants = [PollutantEnum.BC, PollutantEnum.CO, PollutantEnum.NH3,
+                  PollutantEnum.NOx, PollutantEnum.OC, PollutantEnum.PM2_5,
+                  PollutantEnum.SO2, PollutantEnum.PM10, PollutantEnum.NMVOC]
 
-    #Set dimensions
+    # Set dimensions
     tdim = np.dimension(np.arange(24), 'hour')
     ydim = np.dimension(model_grid.y_coord, 'lat', 'Y')
     xdim = np.dimension(model_grid.x_coord, 'lon', 'X')
     dims = [tdim, ydim, xdim]
-    
-    #Sector loop
+
+    # Sector loop
     for sector in sectors:
         print('-----{}-----'.format(sector.name))
-    
-        #Set output sector emission file name
-        outfn = os.path.join(dir_inter, \
-            'emis_{}_{}_{}_hour.nc'.format(sector.name, year, month))
+
+        # Set output sector emission file name
+        outfn = os.path.join(dir_inter,
+                             'emis_{}_{}_{}_hour.nc'.format(sector.value.name, year, month))
         print('File_out: {}'.format(outfn))
-    
-        #Pollutant loop
+
+        # Pollutant loop
         dimvars = []
         dict_spec = {}
         for pollutant in pollutants:
-            #Read data in pollutant file
+            # Read data in pollutant file
             if pollutant == PollutantEnum.NMVOC:
-                fn = os.path.join(dir_inter, \
-                    '{}_emis_lump_{}_{}_{}_hour.nc'.format(pollutant.name, \
-                    sector.name, year, month))
+                fn = os.path.join(dir_inter,
+                                  '{}_emis_lump_{}_{}_{}_hour.nc'.format(pollutant.value.name,
+                                                                         sector.value.name, year, month))
             else:
-                fn = os.path.join(dir_inter, \
-                    '{}_emis_{}_{}_{}_hour.nc'.format(pollutant.name, \
-                    sector.name, year, month))
+                fn = os.path.join(dir_inter,
+                                  '{}_emis_{}_{}_{}_hour.nc'.format(pollutant.value.name,
+                                                                    sector.value.name, year, month))
             print('File_in: {}'.format(fn))
             f = dataset.addfile(fn)
 
@@ -66,8 +64,8 @@ def run(year, month, dir_inter, model_grid):
                     else:
                         dimvars.append(var)
                         dict_spec[var.name] = [fn]
-    
-        #Create output merged netcdf data file
+
+        # Create output merged netcdf data file
         gattrs = dict(Conventions='CF-1.6', Tools='Created using MeteoInfo')
         ncfile = dataset.addfile(outfn, 'c', largefile=True)
         ncfile.nc_define(dims, gattrs, dimvars)

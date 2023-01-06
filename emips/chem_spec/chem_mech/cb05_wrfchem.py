@@ -42,13 +42,7 @@ class CB05_wrfchem(ChemicalMechanism):
         """
         super(CB05_wrfchem, self).__init__()
 
-    @property
-    def name(self):
-        """
-        Get chemical mechanism name
-        :return: The name
-        """
-        return 'CB05_wrfchem'
+        self.name = 'CB05_wrfchem'
 
     def nmvoc_species(self):
         """

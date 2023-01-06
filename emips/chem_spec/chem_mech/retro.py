@@ -61,7 +61,8 @@ class RETRO(object):
     def __init__(self):
         pass
 
-    def new_species(self, spec):
+    @classmethod
+    def new_species(cls, spec):
         """
         Get a new Species object.
         :param spec: (*Species or str*) The species or species name.

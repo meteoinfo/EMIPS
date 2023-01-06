@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Setting>
+	<Emission>
+		<Read ScriptFile="D:\Run\emips\run_meic\emission_meic_2017.py"/>
+	</Emission>
+	<Spatial>
+		<ModelGrid Projection="+proj=longlat +ellps=WGS84 +datum=WGS84 +units=degrees"
+			XOrigin="70.05" XCell="0.1" XNumber="800" YOrigin="10.05" YCell="0.1" YNumber="500"/>
+	</Spatial>
+	<Temporal>
+		<FileName Profile="amptpro.m3.default.us+can.txt" Reference="amptref.m3.us+can.cair.txt"/>
+	</Temporal>
+	<Chemical>
+
+	</Chemical>
+	<Vertical>
+
+	</Vertical>
+</Setting>

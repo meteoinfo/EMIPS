@@ -49,13 +49,7 @@ class MOZART_wrfchem(ChemicalMechanism):
         """
         super(MOZART_wrfchem, self).__init__()
 
-    @property
-    def name(self):
-        """
-        Get chemical mechanism name
-        :return: The name
-        """
-        return 'MOZART_wrfchem'
+        self.name = 'MOZART_wrfchem'
 
     def nmvoc_species(self):
         """

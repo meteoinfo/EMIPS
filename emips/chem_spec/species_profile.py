@@ -1,4 +1,4 @@
-from .pollutant import Pollutant
+from .pollutant import Pollutant, PollutantEnum
 from .species import Species, SpeciesEnum
 
 
@@ -16,12 +16,18 @@ class SpeciesProfile(object):
         """
         if isinstance(pollutant, basestring):
             self.pollutant = Pollutant(pollutant)
+        elif isinstance(pollutant, PollutantEnum):
+            self.pollutant = pollutant.value
         else:
             self.pollutant = pollutant
+
         if isinstance(species, basestring):
             self.species = Species(species)
+        elif isinstance(species, SpeciesEnum):
+            self.species = species.value
         else:
             self.species = species
+
         self.split_factor = sf
         self.divisor = dv
         self.mass_fraction = mf
@@ -44,7 +50,7 @@ class SpeciesProfile(object):
         data = line.split()
         pollutant = Pollutant(data[1])
         if mechanism is None:
-            species = SpeciesEnum.species(data[2])
+            species = SpeciesEnum[data[2]]
         else:
             species = mechanism.species(data[2])
         return SpeciesProfile(pollutant, species, float(data[3]), float(data[4]), float(data[5]))

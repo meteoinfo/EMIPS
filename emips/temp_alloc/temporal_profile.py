@@ -3,9 +3,9 @@ class TemporalProfile(object):
 
     def __init__(self, id=None, weights=None):
         """
-        Month profile
+        Temporal profile.
         :param id: The id.
-        :param weights: The weights
+        :param weights: The weights.
         """
         self.id = id
         self.weights = weights
@@ -39,4 +39,3 @@ class TemporalProfile(object):
         """
         tw = float(self.total_weight())
         return self.weights / tw
-	

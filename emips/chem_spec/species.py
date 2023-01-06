@@ -1,4 +1,5 @@
 from ..utils import Units, Weight, Area, Period
+from mipylib.enum import Enum
 
 
 class Species(object):
@@ -18,7 +19,7 @@ class Species(object):
 
     def __str__(self):
         s = 'Name: {}; Units: {}'.format(self.name, self.units)
-        if not self.molar_mass is None:
+        if self.molar_mass is not None:
             s = s + '; Molar mass: {}'.format(self.molar_mass)
         return s
 
@@ -29,7 +30,7 @@ class Species(object):
 
 
 # Normally used species
-class SpeciesEnum(object):
+class SpeciesEnum(Enum):
     PEC = Species("PEC")
     CO = Species("CO", molar_mass=28)
     CH4 = Species("CH4", molar_mass=16)
