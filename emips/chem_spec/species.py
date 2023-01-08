@@ -45,6 +45,15 @@ class SpeciesEnum(Enum):
     PNO3 = Species("PNO3")
     PSO4 = Species("PSO4")
 
+    def __str__(self):
+        if self.value.molar_mass is None:
+            return "{} ({})".format(self.name, self.value.units)
+        else:
+            return "{} ({}) ({})".format(self.name, self.value.units, self.value.molar_mass)
+
+    def __repr__(self):
+        return self.__str__()
+
     @classmethod
     def all_species(cls):
         """

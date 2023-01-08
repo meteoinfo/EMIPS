@@ -38,3 +38,9 @@ class PollutantEnum(Enum):
     CH4 = Pollutant("CH4")
     NMVOC = Pollutant("NMVOC")
     VOC = Pollutant("VOC")
+
+    def __str__(self):
+        return "{} ({})".format(self.name, self.value.units)
+
+    def __repr__(self):
+        return self.__str__()

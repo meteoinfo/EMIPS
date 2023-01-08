@@ -15,12 +15,14 @@ from emips.gui.configure import Configure, RunConfigure
 from emips.gui.emission_panel import EmissionPanel
 from emips.gui.spatial_panel import SpatialPanel
 from emips.gui.temporal_panel import TemporalPanel
+from emips.gui.vertical_panel import VerticalPanel
+from emips.gui.run_panel import RunPanel
 
 
 class MainGUI(swing.JFrame):
 
     def __init__(self, app):
-        super(MainGUI, self).__init__(app)
+        super(MainGUI, self).__init__()
         self.milab_app = app
 
         this_file = inspect.getfile(inspect.currentframe())
@@ -46,8 +48,25 @@ class MainGUI(swing.JFrame):
         # Add open file button
         icon = FlatSVGIcon(File(os.path.join(self.current_path, 'image', 'file-open.svg')))
         open_button = swing.JButton(icon, actionPerformed=self.click_openfile)
+        open_button.setToolTipText("Open configure file")
         toolbar.add(open_button)
         toolbar.addSeparator()
+        # Add save file button
+        icon = FlatSVGIcon(File(os.path.join(self.current_path, 'image', 'file-save.svg')))
+        save_button = swing.JButton(icon, actionPerformed=self.click_savefile)
+        save_button.setToolTipText("Save configure file")
+        toolbar.add(save_button)
+        # Add save as file button
+        icon = FlatSVGIcon(File(os.path.join(self.current_path, 'image', 'file-save-as.svg')))
+        save_as_button = swing.JButton(icon, actionPerformed=self.click_saveasfile)
+        save_as_button.setToolTipText("Save as configure file")
+        toolbar.add(save_as_button)
+        toolbar.addSeparator()
+        # Add about button
+        icon = FlatSVGIcon(File(os.path.join(self.current_path, 'image', 'information.svg')))
+        about_button = swing.JButton(icon, actionPerformed=self.click_about)
+        about_button.setToolTipText("About EMIPS")
+        toolbar.add(about_button)
 
         # Add main panel
         tabbed_pane = swing.JTabbedPane()
@@ -64,6 +83,12 @@ class MainGUI(swing.JFrame):
         # Add chemical panel
         self.panel_chemical = ChemicalPanel(self)
         tabbed_pane.addTab('Chemical', self.panel_chemical)
+        # Add vertical panel
+        self.panel_vertical = VerticalPanel(self)
+        tabbed_pane.addTab('Vertical', self.panel_vertical)
+        # Add run panel
+        self.panel_run = RunPanel(self)
+        tabbed_pane.addTab("Run", self.panel_run)
 
         self.add(tabbed_pane, awt.BorderLayout.CENTER)
 
@@ -111,8 +136,33 @@ class MainGUI(swing.JFrame):
             f = fc.getSelectedFile()
             print(f)
             self.config.run_config_path = f.path
-            self.run_config = RunConfigure(f.path)
+            self.run_config = RunConfigure(f.path)            
             self.update_run_configure()
+
+    def click_savefile(self, e):
+        """
+        Save run configure file.
+        """
+        self.config.save_configure()
+        self.run_config.save_configure()
+
+    def click_saveasfile(self, e):
+        """
+        Save as run configure file
+        """
+        print("Save as run configure file")
+        fc = swing.JFileChooser()
+        fc.setSelectedFile(File(self.run_config.filename))
+        r = fc.showSaveDialog(self)
+        if r == swing.JFileChooser.APPROVE_OPTION:
+            f = fc.getSelectedFile()
+            self.run_config.save_configure(f.path)
+            self.run_config.filename = f.path
+            self.config.run_config_path = f.path
+            self.label_run_config_file.setText(' {}'.format(self.run_config.filename))
+
+    def click_about(self, e):
+        pass
 
     def form_closing(self, e):
         self.config.save_configure()
@@ -123,7 +173,7 @@ class MainGUI(swing.JFrame):
 
 
 if __name__ == '__main__':
-    frm = MainGUI(None)
+    frm = MainGUI(milapp)
     frm.pack()
     frm.locationRelativeTo = None
     frm.visible = True

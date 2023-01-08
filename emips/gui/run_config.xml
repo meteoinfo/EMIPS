@@ -14,6 +14,6 @@
 
 	</Chemical>
 	<Vertical>
-
+		<FileName Profile="vpro_default.txt"/>
 	</Vertical>
 </Setting>

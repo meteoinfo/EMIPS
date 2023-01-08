@@ -1,7 +1,8 @@
 from .sector import SectorEnum
 import calendar
+from abc import ABCMeta, abstractmethod
 
-__all__ = ['get_scc', 'get_month_days', 'get_year_days']
+__all__ = ['get_scc', 'get_month_days', 'get_year_days', 'EmissionReader']
 
 
 def get_scc(sector):
@@ -52,3 +53,70 @@ def get_month_days(year, month):
     :return:
     """
     return calendar.monthrange(year, month)[1]
+
+
+class EmissionReader(object):
+
+    __metaclass__ = ABCMeta
+
+    def __init__(self, dir_emission=None):
+        """
+        Initialize.
+        :param dir_emission: (*str*) Emission data directory
+        :return:
+        """
+        self.dir_emission = dir_emission
+
+    def get_dir_emission(self):
+        """
+        Get emission data directory.
+
+        :return: (*str*) Emission data directory path.
+        """
+        return self.dir_emission
+
+    def set_dir_emission(self, dir_emis):
+        """
+        Set emission data directory.
+
+        :param dir_emis: (*str*) Emission data directory path.
+        """
+        self.dir_emission = dir_emis;
+
+    @abstractmethod
+    def get_emis_fn(self, sector, pollutant, year, month):
+        """
+        Get emission data file name.
+
+        :param sector: (*Sector*) The sector.
+        :param pollutant: (*Pollutant*) The pollutant.
+        :param year: (*int*) The year.
+        :param month: (*int*) The month.
+
+        :return: (*str*) Emission data file name.
+        """
+        pass
+
+    @abstractmethod
+    def read_emis(self, sector, pollutant, year, month):
+        """
+        Read emission gird data.
+
+        :param sector: (*Sector*) The sector.
+        :param pollutant: (*Pollutant*) The pollutant.
+        :param year: (*int*) The year.
+        :param month: (*int*) The month.
+
+        :return: (*array*) Emission data array.
+        """
+        pass
+
+    @abstractmethod
+    def get_emis_grid(self):
+        """
+        Get emission grid.
+
+        :return: (*GridDesc*) Emission grid description.
+        """
+        pass
+

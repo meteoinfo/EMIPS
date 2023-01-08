@@ -32,3 +32,13 @@ class SectorEnum(Enum):
     BIOMASS = Sector("biomass", "2810001000")
     WASTE_TREATMENT = Sector("waste_treatment", "50100101")
     AGRICULTURE = Sector("agriculture", "28050000")
+
+    @property
+    def scc(self):
+        return self.value.scc
+
+    def __str__(self):
+        return "{} ({})".format(self.name, self.value.scc)
+
+    def __repr__(self):
+        return self.__str__()

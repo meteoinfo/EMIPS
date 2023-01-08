@@ -42,7 +42,7 @@ class Units(object):
         self.period = period
 
     def __str__(self):
-        return "%s/%s/%s" % (self.weight, self.area, self.period)
+        return "{}/{}/{}".format(self.weight.value, self.area.value, self.period.value)
 
     __repr__ = __str__
 
