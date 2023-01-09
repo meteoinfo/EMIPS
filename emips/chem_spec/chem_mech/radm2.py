@@ -2,31 +2,31 @@ from ._mechanism import ChemicalMechanism
 from ..species import Species, SpeciesEnum
 from .retro import RETRO
 
+
 class RADM2(ChemicalMechanism):
+    # NMVOC species (19)
+    ALD = Species('ALD', molar_mass=44)  # Acetaldehyde and higher aldehydes
+    CSL = Species('CSL', molar_mass=108)  # Counter species for cresol reaction
+    ETH = Species('ETH', molar_mass=30)  # Ethane
+    HC3 = Species('HC3', molar_mass=44)  # Alkanes w/ 2.7x10-13 > kOH < 3.4x10-12
+    HC5 = Species('HC5', molar_mass=72)  # Alkanes w/ 3.4x10-12 > kOH < 6.8x10-12
+    HC8 = Species('HC8', molar_mass=114)  # Alkanes w/ kOH > 6.8x10-12
+    HCHO = Species('HCHO', molar_mass=30)  # Formaldehyde
+    ISOP = Species('ISOP', molar_mass=68)  # Isoprene
+    KET = Species('KET', molar_mass=72)  # Ketones
+    NR = Species('NR', molar_mass=100)  # non-reactive class (molar mass: 45-150)
+    OL2 = Species('OL2', molar_mass=28)  # Ethene
+    OLE = Species('OLE', molar_mass=27)  # double-bonded carbon atoms
+    OLI = Species('OLI', molar_mass=56)  # Internal olefins
+    OLT = Species('OLT', molar_mass=42)  # Terminal olefins
+    ORA2 = Species('ORA2', molar_mass=60)  # Acetic and higher acids
+    PAR = Species('PAR', molar_mass=14)  # single-bonds carbon atoms
+    TERP = Species('TERP', molar_mass=136)  # Monoterpenes
+    TOL = Species('TOL', molar_mass=92)  # Toluene and less reactive aromatics
+    XYL = Species('XYL', molar_mass=106)  # Xylene and more reactive aromatics
+    CH4 = SpeciesEnum.CH4  # Methane
 
-    #NMVOC species (19)
-    ALD = Species('ALD', molar_mass=44)     #Acetaldehyde and higher aldehydes
-    CSL = Species('CSL', molar_mass=108)    #Counter species for cresol reaction
-    ETH = Species('ETH', molar_mass=30)     #Ethane
-    HC3 = Species('HC3', molar_mass=44)     #Alkanes w/ 2.7x10-13 > kOH < 3.4x10-12
-    HC5 = Species('HC5', molar_mass=72)     #Alkanes w/ 3.4x10-12 > kOH < 6.8x10-12
-    HC8 = Species('HC8', molar_mass=114)    #Alkanes w/ kOH > 6.8x10-12
-    HCHO = Species('HCHO', molar_mass=30)   #Formaldehyde
-    ISOP = Species('ISOP', molar_mass=68)   #Isoprene
-    KET = Species('KET', molar_mass=72)     #Ketones
-    NR = Species('NR', molar_mass=100)      #non-reactive class (molar mass: 45-150)
-    OL2 = Species('OL2', molar_mass=28)     #Ethene
-    OLE = Species('OLE', molar_mass=27)     #double-bonded carbon atoms
-    OLI = Species('OLI', molar_mass=56)     #Internal olefins
-    OLT = Species('OLT', molar_mass=42)     #Terminal olefins
-    ORA2 = Species('ORA2', molar_mass=60)   #Acetic and higher acids
-    PAR = Species('PAR', molar_mass=14)     #single-bonds carbon atoms
-    TERP = Species('TERP', molar_mass=136)  #Monoterpenes
-    TOL = Species('TOL', molar_mass=92)     #Toluene and less reactive aromatics
-    XYL = Species('XYL', molar_mass=106)    #Xylene and more reactive aromatics
-    CH4 = SpeciesEnum.CH4    #Methane
-
-    #None-VOC species (12)
+    # None-VOC species (12)
     CO = SpeciesEnum.CO
     NO = SpeciesEnum.NO
     NO2 = SpeciesEnum.NO2
@@ -39,20 +39,14 @@ class RADM2(ChemicalMechanism):
     POA = SpeciesEnum.POA
     PSO4 = SpeciesEnum.PSO4
     PMC = SpeciesEnum.PMC
-    
+
     def __init__(self):
         """
         RADM2 chemical mechanism
         """
         super(RADM2, self).__init__()
 
-    @property
-    def name(self):
-        """
-        Get chemical mechanism name
-        :return: The name
-        """
-        return 'RADM2'
+        self.name = 'RADM2'
 
     def nmvoc_species(self):
         """
@@ -60,9 +54,9 @@ class RADM2(ChemicalMechanism):
         :return: (*list of species*) NMVOC species
         """
         sp_nmvoc = [self.ALD, self.CSL, self.ETH, self.HC3, self.HC5, self.HC8,
-                   self.HCHO, self.ISOP, self.KET, self.NR, self.OL2, self.OLE,
-                   self.OLI, self.OLT, self.ORA2, self.PAR, self.TERP, self.TOL,
-                   self.XYL]
+                    self.HCHO, self.ISOP, self.KET, self.NR, self.OL2, self.OLE,
+                    self.OLI, self.OLT, self.ORA2, self.PAR, self.TERP, self.TOL,
+                    self.XYL]
 
         return sp_nmvoc
 
@@ -83,8 +77,8 @@ class RADM2(ChemicalMechanism):
         """
         sp_all = [self.CO, self.NO, self.NO2]
         sp_all.extend(self.voc_species())
-        sp_all.extend([self.NH3, self.SO2, self.SULF, self.PEC, self.PMFINE, self.PNO3, self.POA, \
-                      self.PSO4,self.PMC])
+        sp_all.extend([self.NH3, self.SO2, self.SULF, self.PEC, self.PMFINE, self.PNO3, self.POA,
+                       self.PSO4, self.PMC])
         return sp_all
 
     def species(self, name):
@@ -168,8 +162,8 @@ class RADM2(ChemicalMechanism):
                 spec_dict[RETRO.C5H8] = 1.0
             elif spec == self.KET:
                 spec_dict[RETRO.CH3COCHO] = 1.0
-                #spec_dict[RETRO.C3H6O] = 1.0
-                #spec_dict[RETRO.MEK] = 1.0
+                # spec_dict[RETRO.C3H6O] = 1.0
+                # spec_dict[RETRO.MEK] = 1.0
             elif spec == self.OL2:
                 spec_dict[RETRO.C2H4] = 1.0
             elif spec == self.OLI:
@@ -181,7 +175,7 @@ class RADM2(ChemicalMechanism):
             elif spec == self.TOL:
                 spec_dict[RETRO.C6H6] = 1.0
                 spec_dict[RETRO.C7H8] = 1.0
-                #spec_dict[RETRO.Toluene_lump] = 1.0
+                # spec_dict[RETRO.Toluene_lump] = 1.0
             elif spec == self.XYL:
                 spec_dict[RETRO.C8H10] = 1.0
             elif spec == self.ORA2:

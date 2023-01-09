@@ -1,9 +1,10 @@
 from ..species import Species
 
+
 class RETRO(object):
-	########################
-	#Anthropogenic emission#
-	########################
+    ########################
+    # Anthropogenic emission
+    ########################
     Alcohols = Species('Alcohols')
     Ethane = Species('Ethane')
     Propane = Species('Propane')
@@ -29,9 +30,9 @@ class RETRO(object):
     Ketones = Species('Ketones')
     Acids = Species('Acids')
     Other_VOC = Species('Other_VOC')
-	#################
-	#Biomass burning#
-	#################
+    #################
+    # Biomass burning#
+    #################
     C2H2 = Species('C2H2')
     C2H4 = Species('C2H4')
     C2H4O = Species('C2H4O')
@@ -56,11 +57,12 @@ class RETRO(object):
     MEK = Species('MEK')
     NMHC = Species('NMHC')
     Toluene_lump = Species('Toluene_lump')
-	
+
     def __init__(self):
         pass
 
-    def new_species(self, spec):
+    @classmethod
+    def new_species(cls, spec):
         """
         Get a new Species object.
         :param spec: (*Species or str*) The species or species name.

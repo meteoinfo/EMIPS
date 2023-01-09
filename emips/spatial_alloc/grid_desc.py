@@ -1,6 +1,7 @@
 from mipylib.geolib import projinfo, gridarea
 import mipylib.numeric as np
 
+
 class GridDesc(object):
 
     def __init__(self, proj=projinfo(), x_coord=None, y_coord=None, x_orig=None, x_cell=None,
@@ -44,11 +45,11 @@ class GridDesc(object):
     def __str__(self):
         r = 'Projection: %s' % self.proj
         r += '\nX origin: ' + str(self.__x_orig)
-        r += '\nX cell: ' + str(self.__x_cell)
-        r += '\nX number: %i' % self.__x_num
+        r += '  X number: %i' % self.__x_num
+        r += '  X cell: ' + str(self.__x_cell)
         r += '\nY origin: ' + str(self.__y_orig)
-        r += '\nY cell: ' + str(self.__y_cell)
-        r += '\nY number: %i' % self.__y_num
+        r += '  Y number: %i' % self.__y_num
+        r += '  Y cell: ' + str(self.__y_cell)
         return r
 
     __repr__ = __str__
@@ -126,7 +127,6 @@ class GridDesc(object):
     def grid_areas(self):
         """
         Calculate grid areas
-        :param grid: (*GridDesc*) The grid
         :return: (*array*) Grid areas
         """
         a = gridarea(self.__x_orig, self.__x_cell, self.__x_num, self.__y_orig, self.__y_cell,

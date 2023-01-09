@@ -1,6 +1,7 @@
 import mipylib.numeric as np
 from .temporal_profile import TemporalProfile
 
+
 class WeekProfile(TemporalProfile):
 
     def __init__(self, id="8", weights=None, weekday_weight=None, weekend_weight=None):

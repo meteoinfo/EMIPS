@@ -38,4 +38,3 @@ class VerticalProfile(object):
         """
         tw = float(self.total_weight())
         return self.weights / tw
-	

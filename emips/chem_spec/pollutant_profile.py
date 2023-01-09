@@ -1,5 +1,5 @@
-from .pollutant import Pollutant
-from .species import Species
+from .pollutant import Pollutant, PollutantEnum
+
 
 class PollutantProfile(object):
 
@@ -12,6 +12,9 @@ class PollutantProfile(object):
         """
         if isinstance(pollutant, basestring):
             pollutant = Pollutant(pollutant)
+        elif isinstance(pollutant, PollutantEnum):
+            pollutant = pollutant.value
+
         self.pollutant = pollutant
         self.species_profiles = []
         self.species_profiles.extend(species_profiles)
