@@ -34,9 +34,8 @@ class SpatialPanel(swing.JPanel):
         border = swing.BorderFactory.createTitledBorder("Model grid")
         panel_grid.setBorder(border)
         # Projection
-        proj_model = geolib.projinfo()
         label_proj = swing.JLabel("Projection:")
-        self.text_proj = swing.JTextField(proj_model.toProj4String())
+        self.text_proj = swing.JTextField("")
         # Grid
         label_xmin = swing.JLabel("X min:")
         self.text_xmin = swing.JTextField("")
@@ -139,17 +138,27 @@ class SpatialPanel(swing.JPanel):
         :param run_config: (*RunConfigure*) Run configure object.
         """
         self.run_config = run_config
-        
-        self.emis_grid = self.run_config.emission_module.get_emis_grid()
-        self.ta_emis_grid.setText(self.emis_grid.__str__())
-        
+
+        if self.run_config.emission_module is not None:
+            self.emis_grid = self.run_config.emission_module.get_emis_grid()
+            self.ta_emis_grid.setText(self.emis_grid.__str__())
+            
         self.model_grid = self.run_config.spatial_model_grid
+        self.text_proj.setText(self.model_grid.proj.toProj4String())
         self.text_xmin.setText(str(self.model_grid.x_orig))
         self.text_xcell.setText(str(self.model_grid.x_cell))
         self.text_xnum.setText(str(self.model_grid.x_num))
         self.text_ymin.setText(str(self.model_grid.y_orig))
         self.text_ycell.setText(str(self.model_grid.y_cell))
         self.text_ynum.setText(str(self.model_grid.y_num))
+
+    def update_emission_module(self):
+        """
+        Update emission module.
+        """
+        if self.run_config.emission_module is not None:
+            self.emis_grid = self.run_config.emission_module.get_emis_grid()
+            self.ta_emis_grid.setText(self.emis_grid.__str__())
 
     def click_plot(self, e):
         """

@@ -137,6 +137,7 @@ class EmissionPanel(swing.JPanel):
             self.text_read.text = ff.getAbsolutePath()
             self.run_config.emission_read_file = ff.getAbsolutePath()
             self.run_config.load_emission_module()
+            self.frm_main.update_emission_module()
 
     def click_plot(self, e):
         """

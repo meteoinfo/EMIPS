@@ -2,7 +2,7 @@
 
 import os
 
-from java import awt
+from java.awt.event import ItemEvent
 from javax import swing
 from mipylib import plotlib as plt
 
@@ -143,7 +143,7 @@ class TemporalPanel(swing.JPanel):
 
     def click_sector(self, e):        
         cb = e.getSource()
-        if e.getStateChange() == awt.event.ItemEvent.SELECTED:
+        if e.getStateChange() == ItemEvent.SELECTED:
             sector = cb.getSelectedItem()
             scc = sector.scc
             self.read_temporal_profiles(scc)

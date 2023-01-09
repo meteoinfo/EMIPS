@@ -35,7 +35,8 @@ class MainGUI(swing.JFrame):
         if os.path.isfile(self.config.run_config_path):
             self.run_config = RunConfigure(self.config.run_config_path)
         else:
-            self.run_config = None
+            self.config.run_config_path = os.path.join(self.current_path, "run_config.xml")
+            self.run_config = RunConfigure(self.config.run_config_path)
 
         self.datafile = None
         self.init_gui()
@@ -118,10 +119,15 @@ class MainGUI(swing.JFrame):
         """
         Update run configure file.
         """
-        self.emission_module = self.run_config.load_emission_module()
         self.label_run_config_file.setText(' {}'.format(self.run_config.filename))
         self.panel_emission.update_run_configure(self.run_config)
         self.panel_spatial.update_run_configure(self.run_config)
+
+    def update_emission_module(self):
+        """
+        Update emission module.
+        """
+        self.panel_spatial.update_emission_module()
 
     def click_openfile(self, e):
         """
