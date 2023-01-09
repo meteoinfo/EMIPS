@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Setting>
+<EMIPS_Run>
 	<Emission>
-		<Read ScriptFile="D:\Run\emips\run_meic\emission_meic_2017.py"/>
+		<Read ScriptFile="D:\MyProgram\java\MeteoInfoDev\toolbox\EMIPS\run\run_meic_cams_htap\meic\emission.py"/>
 	</Emission>
 	<Spatial>
-		<ModelGrid Projection="+proj=longlat +ellps=WGS84 +datum=WGS84 +units=degrees"
-			XOrigin="70.05" XCell="0.1" XNumber="800" YOrigin="10.05" YCell="0.1" YNumber="500"/>
+		<ModelGrid Projection="+proj=longlat +ellps=WGS84 +datum=WGS84 +units=degrees " XCell="0.1" XNumber="800" XOrigin="70.05" YCell="0.1" YNumber="500" YOrigin="10.05"/>
 	</Spatial>
 	<Temporal>
 		<FileName Profile="amptpro.m3.default.us+can.txt" Reference="amptref.m3.us+can.cair.txt"/>
 	</Temporal>
 	<Chemical>
-
+		<FileName Profile="gspro.cmaq.radm2p25_rev.txt" Reference="gsref.cmaq.radm2p25.txt"/>
+		<GridSpeciation Enable="True"/>
 	</Chemical>
 	<Vertical>
 		<FileName Profile="vpro_default.txt"/>
 	</Vertical>
-</Setting>
+	<Run>
+		<Output Directory="F:\run_data\emips\run_meic\test"/>
+	</Run>
+</EMIPS_Run>

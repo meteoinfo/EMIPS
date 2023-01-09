@@ -26,7 +26,7 @@ class EmissionPanel(swing.JPanel):
 
     def init_gui(self):
         # Read emission script file
-        label_read = swing.JLabel("Read script:")
+        label_read = swing.JLabel("Read module:")
         self.text_read = swing.JTextField("")        
         icon = FlatSVGIcon(File(os.path.join(self.frm_main.current_path, 'image', 'file-open.svg')))
         button_read = swing.JButton("", icon)
@@ -57,10 +57,6 @@ class EmissionPanel(swing.JPanel):
         # Plot button
         button_plot = swing.JButton("Plot")
         button_plot.actionPerformed = self.click_plot
-
-        # Update run configure
-        if self.run_config is not None:
-            self.update_run_configure(self.run_config)
 
         # Layout
         layout = swing.GroupLayout(self)
@@ -156,13 +152,14 @@ class EmissionPanel(swing.JPanel):
         # Read data
         sector = self.combobox_sector.getSelectedItem()
         pollutant = self.combobox_pollutant.getSelectedItem()
-        year = self.text_year.text
+        year = int(self.text_year.text)
         month = self.combobox_month.getSelectedItem()
         emission = self.run_config.emission_module
-        data = emission.read_emis(sector, pollutant, month)
+        data = emission.read_emis(sector, pollutant, year, month)
         print(data)
-        lon = emission.emis_grid.x_coord
-        lat = emission.emis_grid.y_coord
+        emis_grid = emission.get_emis_grid()
+        lon = emis_grid.x_coord
+        lat = emis_grid.y_coord
 
         # Plot
         plt.clf()

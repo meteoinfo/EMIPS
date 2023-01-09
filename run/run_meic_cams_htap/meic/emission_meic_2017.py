@@ -20,12 +20,13 @@ emis_grid = GridDesc(geolib.projinfo(), x_orig=70.125, x_cell=0.25, x_num=320,
 grid_areas = emis_grid.grid_areas()  # square meters (array)
 
 
-def get_emis_fn(sector, pollutant, month):
+def get_emis_fn(sector, pollutant, year, month):
     """
     Get emission file path.
 
     :param sector: (*Sector*) The emission sector.
     :param pollutant: (*Pollutant*) The pollutant.
+    :param year: (*int*) The year.
     :param month: (*int*) The month.
     :returns: (*string*) Emission file path.
     """
@@ -43,12 +44,13 @@ def get_emis_fn(sector, pollutant, month):
     return os.path.join(dir_emission, fn)
 
 
-def read_emis(sector, pollutant, month):
+def read_emis(sector, pollutant, year, month):
     """
     Read emission data array.
 
     :param sector: (*Sector*) The sector.
     :param pollutant: (*Pollutant*) The pollutant.
+    :param year: (*int*) The year.
     :param month: (*int*) The month.
     :returns: (*array*) Emission data array.
     """

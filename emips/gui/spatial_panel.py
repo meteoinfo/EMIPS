@@ -140,7 +140,7 @@ class SpatialPanel(swing.JPanel):
         """
         self.run_config = run_config
         
-        self.emis_grid = self.run_config.emission_module.emis_grid
+        self.emis_grid = self.run_config.emission_module.get_emis_grid()
         self.ta_emis_grid.setText(self.emis_grid.__str__())
         
         self.model_grid = self.run_config.spatial_model_grid

@@ -70,7 +70,12 @@ class ChemicalPanel(swing.JPanel):
         combobox_mech = swing.JComboBox()
         combobox_mech.itemListener = self.click_chem_mech
         for cm in ChemMechEnum:
-            combobox_mech.addItem(cm.value)               
+            combobox_mech.addItem(cm.value)
+
+        # Grid speciation file
+        self.checkbox_gsf = swing.JCheckBox("Using grid speciation file")
+        self.button_gsf = swing.JButton("Set grid speciation")
+        self.button_gsf.actionPerformed = self.click_set_grid_speciation
 
         # Layout
         layout = swing.GroupLayout(self)
@@ -85,6 +90,10 @@ class ChemicalPanel(swing.JPanel):
                     .addComponent(label_mech)
                     .addComponent(combobox_mech))
                 .addComponent(self.ta_mech)
+                .addGap(15)
+                .addGroup(swing.GroupLayout.Alignment.CENTER, layout.createSequentialGroup()
+                          .addComponent(self.checkbox_gsf)
+                          .addComponent(self.button_gsf))
         )
         layout.setVerticalGroup(
             layout.createSequentialGroup()
@@ -94,6 +103,10 @@ class ChemicalPanel(swing.JPanel):
                     .addComponent(label_mech)
                     .addComponent(combobox_mech))
                 .addComponent(self.ta_mech)
+                .addGap(15)
+                .addGroup(layout.createParallelGroup(swing.GroupLayout.Alignment.BASELINE)
+                          .addComponent(self.checkbox_gsf)
+                          .addComponent(self.button_gsf))
         )
 
     def update_run_configure(self, run_config):
@@ -103,6 +116,10 @@ class ChemicalPanel(swing.JPanel):
         :param run_config: (*RunConfigure*) Run configure object.
         """
         self.run_config = run_config
+        self.combobox_spro.setSelectedItem(os.path.basename(self.run_config.chemical_prof_file))
+        self.combobox_sref.setSelectedItem(os.path.basename(self.run_config.chemical_ref_file))
+        self.checkbox_gsf.setSelected(self.run_config.use_grid_spec_file)
+        self.button_gsf.setEnabled(self.checkbox_gsf.isSelected())
 
     def click_chem_mech(self, e):
         cb = e.getSource()
@@ -112,4 +129,10 @@ class ChemicalPanel(swing.JPanel):
             for sp in self.chem_mech.all_species():
                 sp_str += sp.name + "; "
             self.ta_mech.setText(sp_str)
+
+    def click_set_grid_speciation(self, e):
+        """
+        Set grid speciation file button click event.
+        """
+        pass
         

@@ -67,22 +67,6 @@ class EmissionReader(object):
         """
         self.dir_emission = dir_emission
 
-    def get_dir_emission(self):
-        """
-        Get emission data directory.
-
-        :return: (*str*) Emission data directory path.
-        """
-        return self.dir_emission
-
-    def set_dir_emission(self, dir_emis):
-        """
-        Set emission data directory.
-
-        :param dir_emis: (*str*) Emission data directory path.
-        """
-        self.dir_emission = dir_emis;
-
     @abstractmethod
     def get_emis_fn(self, sector, pollutant, year, month):
         """
@@ -119,4 +103,3 @@ class EmissionReader(object):
         :return: (*GridDesc*) Emission grid description.
         """
         pass
-

@@ -48,6 +48,10 @@ class RunConfigure(object):
         self.spatial_model_grid = None
         self.temporal_prof_file = None
         self.temporal_ref_file = None
+        self.chemical_prof_file = None
+        self.chemical_ref_file = None
+        self.use_grid_spec_file = None
+        self.run_output_dir = None
         self.vertical_prof_file = None
 
         self.emission_module = None
@@ -85,11 +89,23 @@ class RunConfigure(object):
         self.temporal_ref_file = file_name.getAttribute('Reference')
 
         # Chemical
+        chemical = root.getElementsByTagName("Chemical")[0]
+        cfiles = chemical.getElementsByTagName("FileName")[0]
+        self.chemical_prof_file = cfiles.getAttribute("Profile")
+        self.chemical_ref_file = cfiles.getAttribute("Reference")
+        grid_spec = chemical.getElementsByTagName("GridSpeciation")[0]
+        use_gsf = grid_spec.getAttribute("Enable")
+        self.use_grid_spec_file = True if use_gsf == "True" else False
 
         # Vertical
         vertical = root.getElementsByTagName('Vertical')[0]
         vfile_name = vertical.getElementsByTagName('FileName')[0]
         self.vertical_prof_file = vfile_name.getAttribute('Profile')
+
+        # Run
+        run = root.getElementsByTagName("Run")[0]
+        output = run.getElementsByTagName("Output")[0]
+        self.run_output_dir = output.getAttribute("Directory")
 
     def load_emission_module(self):
         if os.path.isfile(self.emission_read_file):
@@ -138,6 +154,15 @@ class RunConfigure(object):
         root.appendChild(temporal)
 
         # Chemical
+        chemical = doc.createElement("Chemical")
+        cfiles = doc.createElement("FileName")
+        cfiles.setAttribute("Profile", self.chemical_prof_file)
+        cfiles.setAttribute("Reference", self.chemical_ref_file)
+        chemical.appendChild(cfiles)
+        grid_spec = doc.createElement("GridSpeciation")
+        grid_spec.setAttribute("Enable", "True" if self.use_grid_spec_file else "False")
+        chemical.appendChild(grid_spec)
+        root.appendChild(chemical)
 
         # Vertical
         vertical = doc.createElement('Vertical')
@@ -145,6 +170,13 @@ class RunConfigure(object):
         vfile_name.setAttribute('Profile', self.vertical_prof_file)
         vertical.appendChild(vfile_name)
         root.appendChild(vertical)
+
+        # Run
+        run = doc.createElement("Run")
+        output = doc.createElement("Output")
+        output.setAttribute("Directory", self.run_output_dir)
+        run.appendChild(output)
+        root.appendChild(run)
 
         # Write config file
         if filename is None:

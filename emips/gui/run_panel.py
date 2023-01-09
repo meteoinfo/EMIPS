@@ -85,10 +85,6 @@ class RunPanel(swing.JPanel):
         # Total run
         button_run_total = swing.JButton("Run (total)")
 
-        # Update run configure
-        if self.run_config is not None:
-            self.update_run_configure(self.run_config)
-
         # Layout
         layout = swing.GroupLayout(self)
         self.setLayout(layout)
@@ -143,6 +139,8 @@ class RunPanel(swing.JPanel):
         :param run_config: (*RunConfigure*) Run configure object.
         """
         self.run_config = run_config
+        self.text_output_dir.setText(self.run_config.run_output_dir)
+        
 
     def click_output_dir(self, e):
         pass
