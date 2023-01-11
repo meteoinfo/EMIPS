@@ -21,9 +21,10 @@ class LoadApp(PluginBase):
         # print(self.path)
 
     def load(self):
+        self.milab_app = self.getApplication()
         if self.app_menu_item is None:
             self.app_menu_item = JMenuItem('EMIPS', None, actionPerformed=self.click_app_menu_item)
-        self.milab_app = self.getApplication()
+
         app_menu_bar = self.milab_app.getMainMenuBar()
         app_menu = self.milab_app.getPluginMenu()
         app_menu.add(self.app_menu_item)
@@ -36,8 +37,7 @@ class LoadApp(PluginBase):
 
     def click_app_menu_item(self, e):
         frm_main = MainGUI(self.milab_app)
-        #frm_main.size = (1000, 650)
-        frm_main.locationRelativeTo = None
+        frm_main.locationRelativeTo = self.milab_app
         frm_main.visible = True
 
 

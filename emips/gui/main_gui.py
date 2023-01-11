@@ -5,7 +5,6 @@ import os
 
 import java.awt as awt
 import javax.swing as swing
-import mipylib.dataset as dataset
 from com.formdev.flatlaf.extras import FlatSVGIcon
 from java.io import File
 from javax.imageio import ImageIO
@@ -17,6 +16,7 @@ from emips.gui.spatial_panel import SpatialPanel
 from emips.gui.temporal_panel import TemporalPanel
 from emips.gui.vertical_panel import VerticalPanel
 from emips.gui.run_panel import RunPanel
+from emips.gui.form.frm_about import FrmAbout
 
 
 class MainGUI(swing.JFrame):
@@ -168,7 +168,9 @@ class MainGUI(swing.JFrame):
             self.label_run_config_file.setText(' {}'.format(self.run_config.filename))
 
     def click_about(self, e):
-        pass
+        frm_about = FrmAbout(self, True)
+        frm_about.setLocationRelativeTo(self)
+        frm_about.setVisible(True)
 
     def form_closing(self, e):
         self.config.save_configure()

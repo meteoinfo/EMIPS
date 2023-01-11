@@ -44,3 +44,25 @@ class PollutantEnum(Enum):
 
     def __repr__(self):
         return self.__str__()
+
+    @classmethod
+    def of(cls, name, units=None):
+        """
+        Create a PollutantEnum.
+        :param name: (*str*) The name.
+        :param units: (*Units*) The units.
+        :return: PollutantEnum.
+        """
+        pollutant = PollutantEnum[name]
+        if units is not None:
+            pollutant.units = units
+
+        return pollutant
+
+    @property
+    def units(self):
+        return self.value.units
+
+    @units.setter
+    def units(self, value):
+        self.value.units = value

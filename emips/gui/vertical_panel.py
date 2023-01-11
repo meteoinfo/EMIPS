@@ -2,8 +2,8 @@
 
 from java import awt
 from javax import swing
+from java.util.concurrent import ExecutionException
 import os
-from emips.utils import SectorEnum
 from emips import ge_data_dir, vertical_alloc
 from mipylib import plotlib as plt
 
@@ -38,8 +38,6 @@ class VerticalPanel(swing.JPanel):
         label_sector = swing.JLabel("Sector:")
         self.combobox_sector = swing.JComboBox()
         self.combobox_sector.itemListener = self.click_sector
-        for se in SectorEnum:
-            self.combobox_sector.addItem(se.value)       
 
         # Plot button
         button_plot = swing.JButton("Plot")
@@ -90,6 +88,9 @@ class VerticalPanel(swing.JPanel):
         """
         self.run_config = run_config
         self.combobox_vpro.setSelectedItem(os.path.basename(self.run_config.vertical_prof_file))
+        self.combobox_sector.removeAllItems()
+        for sector in self.run_config.emission_sectors:
+            self.combobox_sector.addItem(sector)
 
     def read_vertical_profile(self, scc):
         vpro_file = os.path.join(ge_data_dir, self.combobox_vpro.getSelectedItem())
@@ -105,8 +106,32 @@ class VerticalPanel(swing.JPanel):
                 self.text_vpro.setText(str(self.vertical_profile.weights)[7:-2])
 
     def click_plot(self, e):        
+        plot_vertical = PlotVertical(self)
+        plot_vertical.execute()
+
+
+class PlotVertical(swing.SwingWorker):
+
+    def __init__(self, panel):
+        self.panel = panel
+        swing.SwingWorker.__init__(self)
+
+    def doInBackground(self):
+        # Set cursor and progress bar
+        self.panel.setCursor(awt.Cursor(awt.Cursor.WAIT_CURSOR))
+        self.panel.frm_main.milab_app.getProgressBar().setVisible(True)
+
         # Plot
         plt.clf()
-        plt.plot(self.vertical_profile.weights, '-*b')
+        plt.plot(self.panel.vertical_profile.weights, '-*b')
         plt.title('Vertical profile')
-        
+
+    def done(self):
+        # Set cursor and progress bar
+        self.panel.setCursor(awt.Cursor(awt.Cursor.DEFAULT_CURSOR))
+        self.panel.frm_main.milab_app.getProgressBar().setVisible(False)
+
+        try:
+            self.get()  # raise exception if abnormal completion
+        except ExecutionException, e:
+            raise e.getCause()

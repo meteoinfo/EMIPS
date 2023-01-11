@@ -3,29 +3,121 @@ from mipylib.enum import Enum
 __all__ = ['Units', 'Weight', 'Area', 'Period']
 
 
+class Unit(object):
+
+    def __init__(self, name, ratio, name_abbr=None):
+        """
+        Initialization.
+        :param name: (*str*) The name.
+        :param ratio: (*float*) The ratio.
+        :param name_abbr: (*str*) The name abbreviation. Default is `None` that the
+            abbreviation is same as the name.
+        """
+        self.name = name
+        self.ratio = ratio
+        self.name_abbr = name if name_abbr is None else name_abbr
+
+    def __str__(self):
+        return "Name: {}; Ratio: {}; Abbr: {}".format(self.name, self.ratio, self.name_abbr)
+
+    def __repr__(self):
+        return self.__str__()
+
+    def set_shrink(self, shrink):
+        """
+        Set shrink.
+        :param shrink: (*float*) The shrink value.
+        """
+        self.ratio *= shrink
+
+
 class Weight(Enum):
-    G = "g"
-    KG = "kg"
-    MG = "mg"
-    M = "mole"  # Mole
-    KM = "kilo_mole"
-    MM = "million_mole"
+    G = Unit("G", 1., "g")  # Gram
+    KG = Unit("KG", 1000., "kg")  # Kilogram
+    MG = Unit("MG", 1.e6, "mg")  # Megagrams
+    M = Unit("M", 1., "mole")  # Mole
+    KM = Unit("KM", 1000., "k_mole")  # Kilo-moles
+    MM = Unit("MM", 1.e6, "m_mole")  # Megamoles
+
+    def is_mass(self):
+        """
+        Get whether the weight is mass.
+        :return: (*bool*) Whether the weight is mass.
+        """
+        return self in [Weight.G, Weight.KG, Weight.MG]
+
+    def is_mole(self):
+        """
+        Get whether the weight is mole.
+        :return: (*bool*) Whether the weight is mole.
+        """
+        return self in [Weight.M, Weight.KM, Weight.MM]
+
+    def convert_ratio(self, other):
+        """
+        Get convert ratio of the weight to the other weight.
+        :param other: (*Weight*) The other weight.
+        :return: (*float*) The convert ratio.
+        """
+        if self.is_mass() and other.is_mass():
+            return self.value.ratio / other.value.ratio
+        elif self.is_mass() and other.is_mole():
+            return self.value.ratio / other.value.ratio
+        else:
+            return None
 
 
 class Area(Enum):
-    GRID = "grid"
-    M2 = "m2"    # Square meter
-    KM2 = "km2"
+    GRID = Unit("GRID", None)  # Grid area
+    M2 = Unit("M2", 1., "m2")  # Square meter
+    KM2 = Unit("KM2", 1.e6, "km2")  # Square kilometers
+
+    def convert_ratio(self, other):
+        """
+        Get convert ratio of the weight to the other weight.
+        :param other: (*Weight*) The other weight.
+        :return: (*float*) The convert ratio.
+        """
+        return self.value.ratio / other.value.ratio
 
 
 class Period(Enum):
-    SECOND = "s"
-    MINUTE = "min"
-    HOUR = "h"
-    DAY = "d"
-    WEEK = "w"
-    MONTH = "m"
-    YEAR = "y"
+    SECOND = Unit("SECOND", 1., "s")      # Second
+    MINUTE = Unit("MINUTE", 60., "min")     # Minute
+    HOUR = Unit("HOUR", 3600., "h")       # Hour
+    DAY = Unit("DAY", 86400., "d")        # Day
+    WEEK = Unit("WEEK", 604800., "w")     # Week
+    MONTH = Unit("MONTH", 2592000., "m")  # Month with 30 days
+    YEAR = Unit("YEAR", 31536000., "y")   # Year with 365 days
+
+    @classmethod
+    def of_month(cls, days=30):
+        """
+        Create Month period.
+        :param days: (*int*) Days of the month.
+        :return: (*Period*) Month period.
+        """
+        p = Period.MONTH
+        p.set_shrink(days / 30.)
+        return p
+
+    @classmethod
+    def of_year(cls, days=365):
+        """
+        Create year period.
+        :param days: (*int*) Days of the year.
+        :return: (*Period*) Year period.
+        """
+        p = Period.YEAR
+        p.set_shrink(days / 365.)
+
+    def convert_ratio(self, other):
+        """
+        Get convert ratio of the weight to the other weight.
+        :param other: (*Weight*) The other weight.
+        :return: (*float*) The convert ratio.
+        """
+        return self.value.ratio / other.value.ratio
 
 
 class Units(object):
@@ -42,7 +134,8 @@ class Units(object):
         self.period = period
 
     def __str__(self):
-        return "{}/{}/{}".format(self.weight.value, self.area.value, self.period.value)
+        return "{}/{}/{}".format(self.weight.value.name_abbr, self.area.value.name_abbr,
+                                 self.period.value.name_abbr)
 
     __repr__ = __str__
 
@@ -56,7 +149,7 @@ class Units(object):
         Is mole weight or not
         :return: Mole or not
         """
-        return self.weight in [Weight.M, Weight.KM, Weight.MM]
+        return self.weight.is_mole()
 
     def convert_ratio(self, other, month_days=30, year_days=365):
         """
@@ -69,130 +162,27 @@ class Units(object):
         if self.area == Area.GRID or other.area == Area.GRID:
             return None
 
-        wr = 1
-        if self.weight != other.weight:
-            if self.is_mole():
-                if self.weight == Weight.M:
-                    if other.weight == Weight.KM:
-                        wr = 1e-3
-                    elif other.weight == Weight.MM:
-                        wr = 1e-6
-                elif self.weight == Weight.KM:
-                    if other.weight == Weight.M:
-                        wr = 1e3
-                    elif other.weight == Weight.MM:
-                        wr = 1e-3
-                elif self.weight == Weight.MM:
-                    if other.weight == Weight.M:
-                        wr = 1e-6
-                    elif other.weight == Weight.KM:
-                        wr = 1e-3
-            else:
-                if self.weight == Weight.G:
-                    if other.weight == Weight.KG:
-                        wr = 1e-3
-                    elif other.weight == Weight.MG:
-                        wr = 1e-6
-                elif self.weight == Weight.KG:
-                    if other.weight == Weight.G:
-                        wr = 1e3
-                    elif other.weight == Weight.MG:
-                        wr = 1e-3
-                elif self.weight == Weight.MG:
-                    if other.weight == Weight.G:
-                        wr = 1e-6
-                    elif other.weight == Weight.KG:
-                        wr = 1e-3
+        # Weight
+        wr = self.weight.convert_ratio(other.weight)
+        if wr is None:
+            return None
 
         # Area
-        ar = 1
-        if self.area == Area.M2:
-            if other.area == Area.KM2:
-                ar = 1e-6
-        elif self.area == Area.KM2:
-            if other.area == Area.M2:
-                ar = 1e6
+        ar = self.area.convert_ratio(other.area)
 
         # Period
-        pr = 1
-        if self.period == Period.SECOND:
-            if other.period == Period.MINUTE:
-                pr = 1. / 60.
-            elif other.period == Period.HOURE:
-                pr = 1. / 3600.
-            elif other.period == Period.DAY:
-                pr = 1. / 3600. / 24.
-            elif other.period == Period.WEEK:
-                pr = 1. / 3600. / 24. / 7.
-            elif other.period == Period.MONTH:
-                pr = 1. / 3600. / 24. / month_days
-            elif other.period == Period.YEAR:
-                pr = 1. / 3600. / 24. / year_days
-        elif self.period == Period.MINUTE:
-            if other.period == Period.SECOND:
-                pr = 60.
-            elif other.period == Period.HOURE:
-                pr = 1. / 60.
-            elif other.period == Period.DAY:
-                pr = 1. / 60. / 24.
-            elif other.period == Period.WEEK:
-                pr = 1. / 60. / 24. / 7.
-            elif other.period == Period.MONTH:
-                pr = 1. / 60. / 24. / month_days
-            elif other.period == Period.YEAR:
-                pr = 1. / 60. / 24. / year_days
-        elif self.period == Period.HOURE:
-            if other.period == Period.SECOND:
-                pr = 3600.
-            elif other.period == Period.MINUTE:
-                pr = 60.
-            elif other.period == Period.DAY:
-                pr = 1. / 24.
-            elif other.period == Period.WEEK:
-                pr = 1. / 24. / 7.
-            elif other.period == Period.MONTH:
-                pr = 1. / 24. / month_days
-            elif other.period == Period.YEAR:
-                pr = 1. / 24. / year_days
-        elif self.period == Period.DAY:
-            if other.period == Period.SECOND:
-                pr = 3600. * 24.
-            elif other.period == Period.MINUTE:
-                pr = 60. * 24.
-            elif other.period == Period.HOURE:
-                pr = 24.
-            elif other.period == Period.WEEK:
-                pr = 1. / 7.
-            elif other.period == Period.MONTH:
-                pr = 1. / month_days
-            elif other.period == Period.YEAR:
-                pr = 1. / year_days
-        elif self.period == Period.MONTH:
-            if other.period == Period.SECOND:
-                pr = 3600. * 24. * month_days
-            elif other.period == Period.MINUTE:
-                pr = 60. * 24. * month_days
-            elif other.period == Period.HOURE:
-                pr = 24. * month_days
-            elif other.period == Period.DAY:
-                pr = float(month_days)
-            elif other.period == Period.WEEK:
-                pr = month_days / 7.
-            elif other.period == Period.YEAR:
-                pr = float(month_days) / year_days
+        if month_days != 30:
+            if self.period == Period.MONTH:
+                self.period.value.set_shrink(month_days / 30.)
+            if other.period == Period.MONTH:
+                other.period.value.set_shrink(month_days / 30.)
 
-        elif self.period == Period.YEAR:
-            if other.period == Period.SECOND:
-                pr = 3600. * 24. * year_days
-            elif other.period == Period.MINUTE:
-                pr = 60. * 24. * year_days
-            elif other.period == Period.HOURE:
-                pr = 24. * year_days
-            elif other.period == Period.DAY:
-                pr = float(year_days)
-            elif other.period == Period.WEEK:
-                pr = year_days / 7.
-            elif other.period == Period.MONTH:
-                pr = float(year_days) / month_days
+        if year_days != 365:
+            if self.period == Period.YEAR:
+                self.period.value.set_shrink(year_days / 365.)
+            if other.period == Period.YEAR:
+                other.period.value.set_shrink(year_days / 365.)
 
-        return wr * ar * pr
+        pr = self.period.convert_ratio(other.period)
+
+        return wr / ar / pr

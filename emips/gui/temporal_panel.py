@@ -3,7 +3,9 @@
 import os
 
 from java.awt.event import ItemEvent
+from java import awt
 from javax import swing
+from java.util.concurrent import ExecutionException
 from mipylib import plotlib as plt
 
 from emips import ge_data_dir, temp_alloc
@@ -157,17 +159,42 @@ class TemporalPanel(swing.JPanel):
                 self.text_diurnal_pro_we.setText(str(self.diurnal_profile_we.weights)[7:-2])
 
     def click_plot(self, e):
+        plot_temporal = PlotTemporal(self)
+        plot_temporal.execute()
+
+
+class PlotTemporal(swing.SwingWorker):
+
+    def __init__(self, panel):
+        self.panel = panel
+        swing.SwingWorker.__init__(self)
+
+    def doInBackground(self):
+        # Set cursor and progress bar
+        self.panel.setCursor(awt.Cursor(awt.Cursor.WAIT_CURSOR))
+        self.panel.frm_main.milab_app.getProgressBar().setVisible(True)
+
         # Plot
         plt.clf()
         plt.subplot(2,2,1)
-        plt.plot(self.month_profile.weights, '-*b')
+        plt.plot(self.panel.month_profile.weights, '-*b')
         plt.title('Month profile')
         plt.subplot(2,2,2)
-        plt.plot(self.week_profile.weights, '-*b')
+        plt.plot(self.panel.week_profile.weights, '-*b')
         plt.title('Week profile')
         plt.subplot(2,2,3)
-        plt.plot(self.diurnal_profile.weights, '-*b')
+        plt.plot(self.panel.diurnal_profile.weights, '-*b')
         plt.title('Diurnal profile')
         plt.subplot(2,2,4)
-        plt.plot(self.diurnal_profile_we.weights, '-*b')
+        plt.plot(self.panel.diurnal_profile_we.weights, '-*b')
         plt.title('Diurnal profile (Weekend)')
+
+    def done(self):
+        # Set cursor and progress bar
+        self.panel.setCursor(awt.Cursor(awt.Cursor.DEFAULT_CURSOR))
+        self.panel.frm_main.milab_app.getProgressBar().setVisible(False)
+
+        try:
+            self.get()  # raise exception if abnormal completion
+        except ExecutionException, e:
+            raise e.getCause()

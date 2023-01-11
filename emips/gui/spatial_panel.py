@@ -2,6 +2,7 @@
 
 import javax.swing as swing
 import java.awt as awt
+from java.util.concurrent import ExecutionException
 
 from mipylib import geolib
 from mipylib import plotlib as plt
@@ -164,35 +165,60 @@ class SpatialPanel(swing.JPanel):
         """
         Read script button click event.
         """
-        proj_str = self.text_proj.getText()
+        plot_spatial = PlotSpatial(self)
+        plot_spatial.execute()
+
+
+class PlotSpatial(swing.SwingWorker):
+
+    def __init__(self, panel):
+        self.panel = panel
+        swing.SwingWorker.__init__(self)
+
+    def doInBackground(self):
+        # Set cursor and progress bar
+        self.panel.setCursor(awt.Cursor(awt.Cursor.WAIT_CURSOR))
+        self.panel.frm_main.milab_app.getProgressBar().setVisible(True)
+
+        proj_str = self.panel.text_proj.getText()
         proj = geolib.projinfo(proj4string=proj_str)
-        xmin = float(self.text_xmin.getText())
-        xnum = int(self.text_xnum.getText())
-        xcell = float(self.text_xcell.getText())
-        ymin = float(self.text_ymin.getText())
-        ynum = int(self.text_ynum.getText())
-        ycell = float(self.text_ycell.getText())
-        self.model_grid = GridDesc(proj=proj, x_orig=xmin, x_cell=xcell, x_num=xnum,
+        xmin = float(self.panel.text_xmin.getText())
+        xnum = int(self.panel.text_xnum.getText())
+        xcell = float(self.panel.text_xcell.getText())
+        ymin = float(self.panel.text_ymin.getText())
+        ynum = int(self.panel.text_ynum.getText())
+        ycell = float(self.panel.text_ycell.getText())
+        self.panel.model_grid = GridDesc(proj=proj, x_orig=xmin, x_cell=xcell, x_num=xnum,
                                    y_orig=ymin, y_cell=ycell, y_num=ynum)
 
         # Plot
         plt.clf()
-        plt.subplot(1, 2, 1, axestype='map', projection=self.emis_grid.proj)
+        plt.subplot(1, 2, 1, axestype='map', projection=self.panel.emis_grid.proj)
         plt.geoshow('country')
-        x = self.emis_grid.x_coord
-        y = self.emis_grid.y_coord
+        x = self.panel.emis_grid.x_coord
+        y = self.panel.emis_grid.y_coord
         xx, yy = np.grid_edge(x, y)
-        plt.plot(xx, yy, color='b', linewidth=2, proj=self.model_grid.proj)
+        plt.plot(xx, yy, color='b', linewidth=2, proj=self.panel.model_grid.proj)
         plt.title('Emission grid')
         plt.xlim(x[0] - (x[-1] - x[0]) * 0.1, x[-1] + (x[-1] - x[0]) * 0.1)
         plt.ylim(y[0] - (y[-1] - y[0]) * 0.1, y[-1] + (y[-1] - y[0]) * 0.1)
 
-        plt.subplot(1, 2, 2, axestype='map', projection=self.model_grid.proj)
+        plt.subplot(1, 2, 2, axestype='map', projection=self.panel.model_grid.proj)
         plt.geoshow('country')
-        x = self.model_grid.x_coord
-        y = self.model_grid.y_coord
+        x = self.panel.model_grid.x_coord
+        y = self.panel.model_grid.y_coord
         xx, yy = np.grid_edge(x, y)
-        plt.plot(xx, yy, color='r', linewidth=2, proj=self.model_grid.proj)
+        plt.plot(xx, yy, color='r', linewidth=2, proj=self.panel.model_grid.proj)
         plt.title('Model grid')
         plt.xlim(x[0] - (x[-1] - x[0]) * 0.1, x[-1] + (x[-1] - x[0]) * 0.1)
         plt.ylim(y[0] - (y[-1] - y[0]) * 0.1, y[-1] + (y[-1] - y[0]) * 0.1)
+
+    def done(self):
+        # Set cursor and progress bar
+        self.panel.setCursor(awt.Cursor(awt.Cursor.DEFAULT_CURSOR))
+        self.panel.frm_main.milab_app.getProgressBar().setVisible(False)
+
+        try:
+            self.get()  # raise exception if abnormal completion
+        except ExecutionException, e:
+            raise e.getCause()
