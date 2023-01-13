@@ -8,6 +8,7 @@ from com.formdev.flatlaf.extras import FlatSVGIcon
 from java.io import File
 from java.util.concurrent import ExecutionException
 from mipylib import plotlib as plt
+from .form.frm_sectors import FrmSectors
 
 
 class EmissionPanel(swing.JPanel):
@@ -33,11 +34,13 @@ class EmissionPanel(swing.JPanel):
         label_sector = swing.JLabel("Sector:")
         self.combobox_sector = swing.JComboBox()
         button_edit_sectors = swing.JButton("Edit sectors")
+        button_edit_sectors.actionPerformed = self.click_edit_sectors
 
         # Pollutant choose
         label_pollutant = swing.JLabel("Pollutant:")
         self.combobox_pollutant = swing.JComboBox()
         button_edit_pollutants = swing.JButton("Edit pollutants")
+        button_edit_pollutants.actionPerformed = self.click_edit_pollutants
 
         # Year and Month
         label_year = swing.JLabel("Year:")
@@ -114,9 +117,15 @@ class EmissionPanel(swing.JPanel):
         """
         self.run_config = run_config
         self.text_read.setText(self.run_config.emission_read_file)
+        self.update_sectors()
+        self.update_pollutants()
+
+    def update_sectors(self):
         self.combobox_sector.removeAllItems()
         for sector in self.run_config.emission_sectors:
             self.combobox_sector.addItem(sector)
+
+    def update_pollutants(self):
         self.combobox_pollutant.removeAllItems()
         for pollutant in self.run_config.emission_pollutants:
             self.combobox_pollutant.addItem(pollutant)
@@ -137,6 +146,17 @@ class EmissionPanel(swing.JPanel):
             self.run_config.emission_read_file = ff.getAbsolutePath()
             self.run_config.load_emission_module()
             self.frm_main.update_emission_module()
+
+    def click_edit_sectors(self, e):
+        frm_sectors = FrmSectors(self.frm_main, True)
+        frm_sectors.setLocationRelativeTo(self.frm_main)
+        frm_sectors.setVisible(True)
+
+        if frm_sectors.ok:
+            self.update_sectors()
+
+    def click_edit_pollutants(self, e):
+        pass
 
     def click_plot(self, e):
         """

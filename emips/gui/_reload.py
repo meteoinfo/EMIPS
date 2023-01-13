@@ -6,6 +6,7 @@ if gui_path not in sys.path:
     sys.path.append(gui_path)
 #emips.gui.run_panel = importlib.import_module('run_panel')
 
+reload(emips.gui.form.frm_sectors)
 reload(emips.gui.form.frm_about)
 reload(emips.gui.form)
 reload(emips.gui.emission_panel)

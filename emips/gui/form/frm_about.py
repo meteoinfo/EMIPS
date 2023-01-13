@@ -1,9 +1,8 @@
 # coding=utf-8
 
-from javax import swing
-from java.io import File
-from javax.imageio import ImageIO
 import os
+
+from javax import swing
 
 
 class FrmAbout(swing.JDialog):
