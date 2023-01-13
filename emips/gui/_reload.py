@@ -4,10 +4,11 @@ import sys
 gui_path = 'D:/MyProgram/java/MeteoInfoDev/toolbox/EMIPS/emips/gui'
 if gui_path not in sys.path:
     sys.path.append(gui_path)
-#emips.gui.run_panel = importlib.import_module('run_panel')
+#emips.gui.form.frm_pollutants = importlib.import_module('frm_pollutants')
 
 reload(emips.gui.form.frm_sectors)
 reload(emips.gui.form.frm_about)
+reload(emips.gui.form.frm_pollutants)
 reload(emips.gui.form)
 reload(emips.gui.emission_panel)
 reload(emips.gui.temporal_panel)

@@ -8,7 +8,7 @@ from com.formdev.flatlaf.extras import FlatSVGIcon
 from java.io import File
 from java.util.concurrent import ExecutionException
 from mipylib import plotlib as plt
-from .form.frm_sectors import FrmSectors
+from .form import FrmSectors, FrmPollutants
 
 
 class EmissionPanel(swing.JPanel):
@@ -156,7 +156,12 @@ class EmissionPanel(swing.JPanel):
             self.update_sectors()
 
     def click_edit_pollutants(self, e):
-        pass
+        frm_pollutants = FrmPollutants(self.frm_main, True)
+        frm_pollutants.setLocationRelativeTo(self.frm_main)
+        frm_pollutants.setVisible(True)
+
+        if frm_pollutants.ok:
+            self.update_pollutants()
 
     def click_plot(self, e):
         """

@@ -16,7 +16,7 @@ from emips.gui.spatial_panel import SpatialPanel
 from emips.gui.temporal_panel import TemporalPanel
 from emips.gui.vertical_panel import VerticalPanel
 from emips.gui.run_panel import RunPanel
-from emips.gui.form.frm_about import FrmAbout
+from emips.gui.form import FrmAbout
 
 
 class MainGUI(swing.JFrame):
@@ -115,7 +115,7 @@ class MainGUI(swing.JFrame):
         self.defaultCloseOperation = swing.JFrame.DISPOSE_ON_CLOSE
         self.windowClosing = self.form_closing
 
-    def upate_run_configure(self):
+    def update_run_configure(self):
         """
         Update run configure file.
         """
@@ -144,6 +144,7 @@ class MainGUI(swing.JFrame):
             self.config.run_config_path = f.path
             self.run_config = RunConfigure(f.path)            
             self.update_run_configure()
+            swing.JOptionPane.showMessageDialog(self, "Run configure file opened!")
 
     def click_savefile(self, e):
         """
@@ -151,6 +152,7 @@ class MainGUI(swing.JFrame):
         """
         self.config.save_configure()
         self.run_config.save_configure()
+        swing.JOptionPane.showMessageDialog(self, "Run configure file saved!")
 
     def click_saveasfile(self, e):
         """
@@ -166,6 +168,7 @@ class MainGUI(swing.JFrame):
             self.run_config.filename = f.path
             self.config.run_config_path = f.path
             self.label_run_config_file.setText(' {}'.format(self.run_config.filename))
+            swing.JOptionPane.showMessageDialog(self, "Run configure file saved!")
 
     def click_about(self, e):
         frm_about = FrmAbout(self, True)
