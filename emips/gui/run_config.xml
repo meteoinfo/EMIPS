@@ -2,6 +2,45 @@
 <EMIPS_Run>
 	<Emission>
 		<Read ScriptFile="D:\MyProgram\java\MeteoInfoDev\toolbox\EMIPS\emips\run\run_meic_cams_htap\meic\emission.py"/>
+		<Sectors>
+			<Sector Name="INDUSTRY" SCC="30100101"/>
+			<Sector Name="AGRICULTURE" SCC="28050000"/>
+			<Sector Name="ENERGY" SCC="10100101"/>
+			<Sector Name="RESIDENTIAL" SCC="2104001000"/>
+			<Sector Name="TRANSPORT" SCC="2294000000"/>
+		</Sectors>
+		<Pollutants>
+			<Pollutant Name="BC">
+				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+			</Pollutant>
+			<Pollutant Name="CO">
+				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+			</Pollutant>
+			<Pollutant Name="NH3">
+				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+			</Pollutant>
+			<Pollutant Name="NOx">
+				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+			</Pollutant>
+			<Pollutant Name="OC">
+				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+			</Pollutant>
+			<Pollutant Name="PM2_5">
+				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+			</Pollutant>
+			<Pollutant Name="SO2">
+				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+			</Pollutant>
+			<Pollutant Name="PMcoarse">
+				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+			</Pollutant>
+			<Pollutant Name="PM10more">
+				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+			</Pollutant>
+			<Pollutant Name="NMVOC">
+				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+			</Pollutant>
+		</Pollutants>
 	</Emission>
 	<Spatial>
 		<ModelGrid Projection="+proj=longlat +ellps=WGS84 +datum=WGS84 +units=degrees " XCell="0.1" XNumber="800" XOrigin="70.05" YCell="0.1" YNumber="500" YOrigin="10.05"/>

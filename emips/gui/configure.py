@@ -1,5 +1,7 @@
 import xml.dom.minidom as minidom
 from emips.spatial_alloc import GridDesc
+from emips.utils import SectorEnum, Units, Weight, Area, Period
+from emips.chem_spec import PollutantEnum
 from mipylib import geolib
 import os
 import sys
@@ -45,6 +47,9 @@ class RunConfigure(object):
         self.filename = filename
 
         self.emission_read_file = None
+        self.emission_sectors = []
+        self.emission_pollutants = []
+
         self.spatial_model_grid = None
         self.temporal_prof_file = None
         self.temporal_ref_file = None
@@ -67,6 +72,22 @@ class RunConfigure(object):
         emission = root.getElementsByTagName('Emission')[0]
         emission_read = emission.getElementsByTagName('Read')[0]
         self.emission_read_file = emission_read.getAttribute('ScriptFile')
+        emission_sectors = emission.getElementsByTagName("Sectors")[0]
+        sector_list = emission_sectors.getElementsByTagName("Sector")
+        for sector in sector_list:
+            name = sector.getAttribute("Name")
+            scc = sector.getAttribute("SCC")
+            self.emission_sectors.append(SectorEnum.of(name, scc))
+        emission_pollutants = emission.getElementsByTagName("Pollutants")[0]
+        elem_pollutants = emission_pollutants.getElementsByTagName("Pollutant")
+        for elem_pollutant in elem_pollutants:
+            name = elem_pollutant.getAttribute("Name")
+            elem_units = elem_pollutant.getElementsByTagName("Units")[0]
+            weight = elem_units.getAttribute("Weight")
+            area = elem_units.getAttribute("Area")
+            period = elem_units.getAttribute("Period")
+            units = Units(Weight[weight], Area[area], Period[period])
+            self.emission_pollutants.append(PollutantEnum.of(name, units))
 
         # Spatial
         spatial = root.getElementsByTagName('Spatial')[0]
@@ -130,6 +151,26 @@ class RunConfigure(object):
         emission_read = doc.createElement('Read')
         emission_read.setAttribute('ScriptFile', self.emission_read_file)
         emission.appendChild(emission_read)
+
+        elem_sectors = doc.createElement("Sectors")
+        for sector in self.emission_sectors:
+            elem_sector = doc.createElement("Sector")
+            elem_sector.setAttribute("Name", sector.name)
+            elem_sector.setAttribute("SCC", sector.scc)
+            elem_sectors.appendChild(elem_sector)
+        emission.appendChild(elem_sectors)
+
+        elem_pollutants = doc.createElement("Pollutants")
+        for pollutant in self.emission_pollutants:
+            elem_pollutant = doc.createElement("Pollutant")
+            elem_pollutant.setAttribute("Name", pollutant.name)
+            elem_units = doc.createElement("Units")
+            elem_units.setAttribute("Weight", pollutant.units.weight.name)
+            elem_units.setAttribute("Area", pollutant.units.area.name)
+            elem_units.setAttribute("Period", pollutant.units.period.name)
+            elem_pollutant.appendChild(elem_units)
+            elem_pollutants.appendChild(elem_pollutant)
+        emission.appendChild(elem_pollutants)
         root.appendChild(emission)
 
         # Spatial

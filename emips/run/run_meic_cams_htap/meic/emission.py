@@ -50,3 +50,6 @@ def read_emis(sector, pollutant, year, month):
 
 def get_emis_grid():
     return _emis_reader.get_emis_grid()
+
+
+grid_areas = _emis_reader.get_emis_grid().grid_areas()

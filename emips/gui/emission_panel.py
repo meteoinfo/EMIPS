@@ -1,16 +1,14 @@
 # coding=utf-8
 
-import javax.swing as swing
+import os
+
 import java.awt as awt
+import javax.swing as swing
 from com.formdev.flatlaf.extras import FlatSVGIcon
 from java.io import File
-
-from emips.utils import SectorEnum
-from emips.chem_spec import PollutantEnum
-import os
-import sys
-import importlib
+from java.util.concurrent import ExecutionException
 from mipylib import plotlib as plt
+from .form import FrmSectors, FrmPollutants
 
 
 class EmissionPanel(swing.JPanel):
@@ -35,16 +33,14 @@ class EmissionPanel(swing.JPanel):
         # Sector choose
         label_sector = swing.JLabel("Sector:")
         self.combobox_sector = swing.JComboBox()
-        for se in SectorEnum:
-            self.combobox_sector.addItem(se)
         button_edit_sectors = swing.JButton("Edit sectors")
+        button_edit_sectors.actionPerformed = self.click_edit_sectors
 
         # Pollutant choose
         label_pollutant = swing.JLabel("Pollutant:")
         self.combobox_pollutant = swing.JComboBox()
-        for poll in PollutantEnum:
-            self.combobox_pollutant.addItem(poll)
         button_edit_pollutants = swing.JButton("Edit pollutants")
+        button_edit_pollutants.actionPerformed = self.click_edit_pollutants
 
         # Year and Month
         label_year = swing.JLabel("Year:")
@@ -121,6 +117,18 @@ class EmissionPanel(swing.JPanel):
         """
         self.run_config = run_config
         self.text_read.setText(self.run_config.emission_read_file)
+        self.update_sectors()
+        self.update_pollutants()
+
+    def update_sectors(self):
+        self.combobox_sector.removeAllItems()
+        for sector in self.run_config.emission_sectors:
+            self.combobox_sector.addItem(sector)
+
+    def update_pollutants(self):
+        self.combobox_pollutant.removeAllItems()
+        for pollutant in self.run_config.emission_pollutants:
+            self.combobox_pollutant.addItem(pollutant)
 
     def click_read_script(self, e):
         """
@@ -139,6 +147,22 @@ class EmissionPanel(swing.JPanel):
             self.run_config.load_emission_module()
             self.frm_main.update_emission_module()
 
+    def click_edit_sectors(self, e):
+        frm_sectors = FrmSectors(self.frm_main, True)
+        frm_sectors.setLocationRelativeTo(self.frm_main)
+        frm_sectors.setVisible(True)
+
+        if frm_sectors.ok:
+            self.update_sectors()
+
+    def click_edit_pollutants(self, e):
+        frm_pollutants = FrmPollutants(self.frm_main, True)
+        frm_pollutants.setLocationRelativeTo(self.frm_main)
+        frm_pollutants.setVisible(True)
+
+        if frm_pollutants.ok:
+            self.update_pollutants()
+
     def click_plot(self, e):
         """
         Plot button click event.
@@ -146,16 +170,27 @@ class EmissionPanel(swing.JPanel):
         if self.run_config is None:
             return
 
+        plot_emission = PlotEmission(self)
+        plot_emission.execute()
+
+
+class PlotEmission(swing.SwingWorker):
+
+    def __init__(self, panel):
+        self.panel = panel
+        swing.SwingWorker.__init__(self)
+
+    def doInBackground(self):
         # Set cursor and progress bar
-        self.setCursor(awt.Cursor(awt.Cursor.WAIT_CURSOR))
-        self.frm_main.milab_app.getProgressBar().setVisible(True)
+        self.panel.setCursor(awt.Cursor(awt.Cursor.WAIT_CURSOR))
+        self.panel.frm_main.milab_app.getProgressBar().setVisible(True)
 
         # Read data
-        sector = self.combobox_sector.getSelectedItem()
-        pollutant = self.combobox_pollutant.getSelectedItem()
-        year = int(self.text_year.text)
-        month = self.combobox_month.getSelectedItem()
-        emission = self.run_config.emission_module
+        sector = self.panel.combobox_sector.getSelectedItem()
+        pollutant = self.panel.combobox_pollutant.getSelectedItem()
+        year = int(self.panel.text_year.text)
+        month = self.panel.combobox_month.getSelectedItem()
+        emission = self.panel.run_config.emission_module
         data = emission.read_emis(sector, pollutant, year, month)
         print(data)
         emis_grid = emission.get_emis_grid()
@@ -171,6 +206,12 @@ class EmissionPanel(swing.JPanel):
         plt.colorbar(layer, shrink=0.8)
         plt.title('Emission - {} - {} - ({}-{})'.format(sector.name, pollutant.name, year, month))
 
+    def done(self):
         # Set cursor and progress bar
-        self.setCursor(awt.Cursor(awt.Cursor.DEFAULT_CURSOR))
-        self.frm_main.milab_app.getProgressBar().setVisible(False)
+        self.panel.setCursor(awt.Cursor(awt.Cursor.DEFAULT_CURSOR))
+        self.panel.frm_main.milab_app.getProgressBar().setVisible(False)
+
+        try:
+            self.get()  # raise exception if abnormal completion
+        except ExecutionException, e:
+            raise e.getCause()
