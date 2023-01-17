@@ -45,44 +45,6 @@ class RunPanel(swing.JPanel):
         label_pollutant = swing.JLabel("Pollutant:")
         self.combobox_pollutant = swing.JComboBox()
 
-        # Test step by step
-        panel_test = swing.JPanel()
-        border = swing.BorderFactory.createTitledBorder("Test step by step")
-        panel_test.setBorder(border)
-        # Spatial
-        button_spatial = swing.JButton("Spatial")
-        button_spatial.actionPerformed = self.click_spatial
-        # Temporal
-        button_temporal = swing.JButton("Temporal")
-        button_temporal.actionPerformed = self.click_temporal
-        # Chemical
-        button_chemical = swing.JButton("Chemical")
-        button_chemical.actionPerformed = self.click_chemical
-        # Vertical
-        button_vertical = swing.JButton("Vertical")
-        button_vertical.actionPerformed = self.click_vertical
-        # Test layout
-        layout = swing.GroupLayout(panel_test)
-        panel_test.setLayout(layout)
-        layout.setAutoCreateGaps(True)
-        layout.setAutoCreateContainerGaps(True)
-        layout.setHorizontalGroup(
-            layout.createParallelGroup()
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(button_spatial)
-                    .addComponent(button_temporal)
-                    .addComponent(button_chemical)
-                    .addComponent(button_vertical))
-        )
-        layout.setVerticalGroup(
-            layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(button_spatial)
-                    .addComponent(button_temporal)
-                    .addComponent(button_chemical)
-                    .addComponent(button_vertical))
-        )
-
         # Single pollutant run
         button_run_single = swing.JButton("Run (single pollutant)")
         button_run_single.actionPerformed = self.click_run_single
@@ -111,11 +73,9 @@ class RunPanel(swing.JPanel):
                         .addComponent(self.combobox_sector)
                         .addComponent(self.combobox_pollutant)))
                 .addGap(15)
-                .addComponent(panel_test)
-                .addGap(15)
-                .addGroup(swing.GroupLayout.Alignment.CENTER, layout.createSequentialGroup()
-                    .addComponent(button_run_single)
-                    .addComponent(button_run_total))
+                .addComponent(button_run_single, swing.GroupLayout.Alignment.CENTER)
+                .addGap(30)
+                .addComponent(button_run_total, swing.GroupLayout.Alignment.CENTER)
         )
         layout.setVerticalGroup(
             layout.createSequentialGroup()
@@ -131,11 +91,9 @@ class RunPanel(swing.JPanel):
                     .addComponent(label_pollutant)
                     .addComponent(self.combobox_pollutant))
                 .addGap(15)
-                .addComponent(panel_test)
-                .addGap(15)
-                .addGroup(layout.createParallelGroup(swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(button_run_single)
-                    .addComponent(button_run_total))
+                .addComponent(button_run_single)
+                .addGap(30)
+                .addComponent(button_run_total)
         )
 
     def update_run_configure(self, run_config):
@@ -171,137 +129,13 @@ class RunPanel(swing.JPanel):
             self.text_output_dir.text = ff.getAbsolutePath()
             self.run_config.run_output_dir = ff.getAbsolutePath()
 
-    def click_spatial(self, e):
-        run_spatial = RunSpatial(self)
-        run_spatial.execute()
-
-    def click_temporal(self, e):
-        run_temporal = RunTemporal(self)
-        run_temporal.execute()
-
-    def click_chemical(self, e):
-        pass
-
-    def click_vertical(self, e):
-        pass
-
     def click_run_single(self, e):
         run_single = RunSingle(self)
         run_single.execute()
 
     def click_run_total(self, e):
-        pass
-
-
-class RunSpatial(swing.SwingWorker):
-
-    def __init__(self, panel):
-        self.panel = panel
-        swing.SwingWorker.__init__(self)
-
-    def doInBackground(self):
-        # Set cursor and progress bar
-        self.panel.setCursor(awt.Cursor(awt.Cursor.WAIT_CURSOR))
-        self.panel.frm_main.milab_app.getProgressBar().setVisible(True)
-
-        # Read data
-        print("Read emission data...")
-        sector = self.panel.combobox_sector.getSelectedItem()
-        pollutant = self.panel.combobox_pollutant.getSelectedItem()
-        year = self.panel.run_config.emission_year
-        month = self.panel.run_config.emission_month
-        emission = self.panel.run_config.emission_module
-        data = emission.read_emis(sector, pollutant, year, month)
-        emis_grid = emission.get_emis_grid()
-
-        # Emission units conversion
-        print("Units conversion...")
-        units = Units(Weight.G, Area.M2, Period.MONTH)
-        if pollutant.units.area == Area.GRID:
-            convert_ratio = pollutant.units.convert_ratio(units, ignore_area=True)
-            print(convert_ratio)
-            data = data * convert_ratio / emis_grid.grid_areas()
-        else:
-            convert_ratio = pollutant.units.convert_ratio(units)
-            data = data * convert_ratio
-
-        # Spatial transform
-        print("Spatial allocation...")
-        model_grid = self.panel.run_config.spatial_model_grid
-        self.panel.temp_data = transform(data, emis_grid, model_grid)
-
-        # Plot
-        print("Plot...")
-        plt.clf()
-        plt.axesm(projection=model_grid.proj)
-        plt.geoshow('country', edgecolor='k')
-        levs = np.logspace(-12, 1, num=14)
-        layer = plt.imshow(model_grid.x_coord, model_grid.y_coord, self.panel.temp_data, levs, proj=model_grid.proj)
-        plt.colorbar(layer, shrink=0.8, label=str(units))
-        plt.title('Emission - {} - {} - ({}-{})'.format(sector.name, pollutant.name, year, month))
-
-    def done(self):
-        # Set cursor and progress bar
-        self.panel.setCursor(awt.Cursor(awt.Cursor.DEFAULT_CURSOR))
-        self.panel.frm_main.milab_app.getProgressBar().setVisible(False)
-
-        try:
-            self.get()  # raise exception if abnormal completion
-        except ExecutionException, e:
-            raise e.getCause()
-
-
-class RunTemporal(swing.SwingWorker):
-
-    def __init__(self, panel):
-        self.panel = panel
-        swing.SwingWorker.__init__(self)
-
-    def doInBackground(self):
-        # Set cursor and progress bar
-        self.panel.setCursor(awt.Cursor(awt.Cursor.WAIT_CURSOR))
-        self.panel.frm_main.milab_app.getProgressBar().setVisible(True)
-
-        sector = self.panel.combobox_sector.getSelectedItem()
-        pollutant = self.panel.combobox_pollutant.getSelectedItem()
-        year = self.panel.run_config.emission_year
-        month = self.panel.run_config.emission_month
-        model_grid = self.panel.run_config.spatial_model_grid
-
-        # Temporal allocation
-        print('Temporal allocation...')
-        units = Units(Weight.G, Area.M2, Period.SECOND)
-        temp_ref_fn = os.path.join(ge_data_dir, self.panel.run_config.temporal_ref_file)
-        temp_profile_fn = os.path.join(ge_data_dir, self.panel.run_config.temporal_prof_file)
-        month_profile, week_profile, diurnal_profile, diurnal_profile_we = \
-            temp_alloc.read_file(temp_ref_fn, temp_profile_fn, sector.scc)
-
-        print('To daily emission (g/m2/day)...')
-        weekday_data, weekend_data = temp_alloc.week_allocation(self.panel.temp_data, week_profile, year, month)
-        weekday_data = (weekday_data * 5 + weekend_data * 2) / 7
-        print('To hourly emission (g/m2/s)...')
-        hour_data = temp_alloc.diurnal_allocation(weekday_data, diurnal_profile) / 3600
-        self.panel.temp_data = hour_data[0]
-
-        # Plot
-        print("Plot...")
-        plt.clf()
-        plt.axesm(projection=model_grid.proj)
-        plt.geoshow('country', edgecolor='k')
-        levs = np.logspace(-18, -5, num=14)
-        layer = plt.imshow(model_grid.x_coord, model_grid.y_coord, self.panel.temp_data, levs, proj=model_grid.proj)
-        plt.colorbar(layer, shrink=0.8, label=str(units))
-        plt.title('Emission - {} - {} - ({}-{})'.format(sector.name, pollutant.name, year, month))
-
-    def done(self):
-        # Set cursor and progress bar
-        self.panel.setCursor(awt.Cursor(awt.Cursor.DEFAULT_CURSOR))
-        self.panel.frm_main.milab_app.getProgressBar().setVisible(False)
-
-        try:
-            self.get()  # raise exception if abnormal completion
-        except ExecutionException, e:
-            raise e.getCause()
+        run_total = RunTotal(self)
+        run_total.execute()
 
 
 class RunSingle(swing.SwingWorker):
@@ -319,6 +153,35 @@ class RunSingle(swing.SwingWorker):
         sector = self.panel.combobox_sector.getSelectedItem()
         pollutant = self.panel.combobox_pollutant.getSelectedItem()
         run_pollutant(self.panel.run_config, sector, pollutant)
+
+    def done(self):
+        # Set cursor and progress bar
+        self.panel.setCursor(awt.Cursor(awt.Cursor.DEFAULT_CURSOR))
+        self.panel.frm_main.milab_app.getProgressBar().setVisible(False)
+
+        try:
+            self.get()  # raise exception if abnormal completion
+        except ExecutionException, e:
+            raise e.getCause()
+
+
+class RunTotal(swing.SwingWorker):
+
+    def __init__(self, panel):
+        self.panel = panel
+        swing.SwingWorker.__init__(self)
+
+    def doInBackground(self):
+        # Set cursor and progress bar
+        self.panel.setCursor(awt.Cursor(awt.Cursor.WAIT_CURSOR))
+        self.panel.frm_main.milab_app.getProgressBar().setVisible(True)
+
+        # Run
+        for sector in self.panel.run_config.emission_sectors:
+            print("Sector: {}".format(sector))
+            for pollutant in self.panel.run_config.emission_pollutants:
+                print("Pollutant: {}".format(pollutant))
+                run_pollutant(self.panel.run_config, sector, pollutant)
 
     def done(self):
         # Set cursor and progress bar
