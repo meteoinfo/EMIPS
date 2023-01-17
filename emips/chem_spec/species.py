@@ -54,6 +54,14 @@ class SpeciesEnum(Enum):
     def __repr__(self):
         return self.__str__()
 
+    @property
+    def units(self):
+        return self.value.units
+
+    @property
+    def molar_mass(self):
+        return self.value.molar_mass
+
     @classmethod
     def all_species(cls):
         """

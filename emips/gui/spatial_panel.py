@@ -53,7 +53,7 @@ class SpatialPanel(swing.JPanel):
         label_ycell = swing.JLabel("Y cell:")
         self.text_ycell = swing.JTextField("")
         # Update button
-        button_update = swing.JButton("Update")
+        button_update = swing.JButton("Update configure")
         button_update.actionPerformed = self.click_update
         # Model grid layout
         layout = swing.GroupLayout(panel_grid)

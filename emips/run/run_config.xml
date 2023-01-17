@@ -41,18 +41,22 @@
 				<Units Weight="MG" Area="GRID" Period="MONTH"/>
 			</Pollutant>
 		</Pollutants>
+		<Time Year="2017" Month="1"/>
 	</Emission>
 	<Spatial>
-		<ModelGrid Projection="+proj=longlat +ellps=WGS84 +datum=WGS84 +units=degrees " XCell="0.1" XNumber="800" XOrigin="70.05" YCell="0.1" YNumber="500" YOrigin="10.05"/>
+		<ModelGrid Projection="+proj=longlat +ellps=WGS84 +datum=WGS84 +units=degrees " XCell="0.15" XNumber="502" XOrigin="70." YCell="0.15" YNumber="330" YOrigin="15."/>
 	</Spatial>
 	<Temporal>
 		<FileName Profile="amptpro.m3.default.us+can.txt" Reference="amptref.m3.us+can.cair.txt"/>
 	</Temporal>
 	<Chemical>
-		<FileName Profile="gspro.cmaq.radm2p25_rev.txt" Reference="gsref.cmaq.radm2p25.txt"/>
-		<GridSpeciation Enable="True"/>
+		<FileName Profile="gspro.cuace.radm2.txt" Reference="gsref.cuace.radm2.txt"/>
+		<GridSpeciation Enable="True">
+			<Read ScriptFile="D:\MyProgram\java\MeteoInfoDev\toolbox\EMIPS\emips\run\run_meic_cams_htap\meic\grid_spec.py"/>
+			<ChemMech name="RADM2"/>
+		</GridSpeciation>
 	</Chemical>
-	<Vertical>
+	<Vertical Enable="False">
 		<FileName Profile="vpro_default.txt"/>
 	</Vertical>
 	<Run>

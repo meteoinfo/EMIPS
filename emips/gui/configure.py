@@ -1,7 +1,7 @@
 import xml.dom.minidom as minidom
 from emips.spatial_alloc import GridDesc
 from emips.utils import SectorEnum, Units, Weight, Area, Period
-from emips.chem_spec import PollutantEnum
+from emips.chem_spec import PollutantEnum, ChemMechEnum
 from mipylib import geolib
 import os
 import sys
@@ -49,20 +49,30 @@ class RunConfigure(object):
         self.emission_read_file = None
         self.emission_sectors = []
         self.emission_pollutants = []
+        self.emission_year = None
+        self.emission_month = None
 
         self.spatial_model_grid = None
+
         self.temporal_prof_file = None
         self.temporal_ref_file = None
+
         self.chemical_prof_file = None
         self.chemical_ref_file = None
-        self.use_grid_spec_file = None
-        self.run_output_dir = None
+        self.voc_use_grid_spec = None
+        self.grid_spec_read_file = None
+        self.chemical_mechanism = None
+
         self.vertical_prof_file = None
 
+        self.run_output_dir = None
+
         self.emission_module = None
+        self.grid_spec_module = None
 
         self.load_configure(filename)
         self.load_emission_module()
+        self.load_grid_spec_module()
 
     def load_configure(self, filename):
         dom = minidom.parse(filename)
@@ -88,6 +98,9 @@ class RunConfigure(object):
             period = elem_units.getAttribute("Period")
             units = Units(Weight[weight], Area[area], Period[period])
             self.emission_pollutants.append(PollutantEnum.of(name, units))
+        emission_time = emission.getElementsByTagName("Time")[0]
+        self.emission_year = emission_time.getAttribute("Year")
+        self.emission_month = emission_time.getAttribute("Month")
 
         # Spatial
         spatial = root.getElementsByTagName('Spatial')[0]
@@ -116,7 +129,11 @@ class RunConfigure(object):
         self.chemical_ref_file = cfiles.getAttribute("Reference")
         grid_spec = chemical.getElementsByTagName("GridSpeciation")[0]
         use_gsf = grid_spec.getAttribute("Enable")
-        self.use_grid_spec_file = True if use_gsf == "True" else False
+        self.voc_use_grid_spec = True if use_gsf == "True" else False
+        grid_spec_read = grid_spec.getElementsByTagName("Read")[0]
+        self.grid_spec_read_file = grid_spec_read.getAttribute("ScriptFile")
+        grid_spec_mech = grid_spec.getElementsByTagName("ChemMech")[0]
+        self.chemical_mechanism = ChemMechEnum[grid_spec_mech.getAttribute("name")]
 
         # Vertical
         vertical = root.getElementsByTagName('Vertical')[0]
@@ -137,7 +154,18 @@ class RunConfigure(object):
             run_module = os.path.splitext(run_module)[0]
             self.emission_module = importlib.import_module(run_module)
         else:
-            print('Read emission script file not exist! {}'.format(self.emission_read_file))
+            print('Read emission script file not exist!\n {}'.format(self.emission_read_file))
+
+    def load_grid_spec_module(self):
+        if os.path.isfile(self.grid_spec_read_file):
+            run_path = os.path.dirname(self.grid_spec_read_file)
+            if run_path not in sys.path:
+                sys.path.append(run_path)
+            run_module = os.path.basename(self.grid_spec_read_file)
+            run_module = os.path.splitext(run_module)[0]
+            self.grid_spec_module = importlib.import_module(run_module)
+        else:
+            print('Read grid speciation script file not exist!\n {}'.format(self.grid_spec_read_file))
 
     def save_configure(self, filename=None):
         doc = minidom.Document()
@@ -171,6 +199,11 @@ class RunConfigure(object):
             elem_pollutant.appendChild(elem_units)
             elem_pollutants.appendChild(elem_pollutant)
         emission.appendChild(elem_pollutants)
+
+        elem_time = doc.createElement("Time")
+        elem_time.setAttribute("Year", str(self.emission_year))
+        elem_time.setAttribute("Month", str(self.emission_month))
+        emission.appendChild(elem_time)
         root.appendChild(emission)
 
         # Spatial
@@ -201,7 +234,13 @@ class RunConfigure(object):
         cfiles.setAttribute("Reference", self.chemical_ref_file)
         chemical.appendChild(cfiles)
         grid_spec = doc.createElement("GridSpeciation")
-        grid_spec.setAttribute("Enable", "True" if self.use_grid_spec_file else "False")
+        grid_spec.setAttribute("Enable", "True" if self.voc_use_grid_spec else "False")
+        grid_spec_read = doc.createElement("Read")
+        grid_spec_read.setAttribute("ScriptFile", self.grid_spec_read_file)
+        grid_spec.appendChild(grid_spec_read)
+        grid_spec_mech = doc.createElement("ChemMech")
+        grid_spec_mech.setAttribute("name", self.chemical_mechanism.name)
+        grid_spec.appendChild(grid_spec_mech)
         chemical.appendChild(grid_spec)
         root.appendChild(chemical)
 

@@ -66,3 +66,10 @@ class PollutantEnum(Enum):
     @units.setter
     def units(self, value):
         self.value.units = value
+
+    @property
+    def is_VOC(self):
+        if self in [PollutantEnum.NMVOC, PollutantEnum.VOC]:
+            return True
+        else:
+            return False

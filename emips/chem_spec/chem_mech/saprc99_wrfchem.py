@@ -98,10 +98,11 @@ class SAPRC99_wrfchem(ChemicalMechanism):
                 return spec
         return Species(name)
 
-    def lump_RETRO(self, spec):
+    def lump_RETRO(self, spec, biomass=False):
         """
         Lump a species from RETRO species.
         :param spec: (*Species*) The species in this chemical mechanism.
+        :param biomass: (*bool*) Whether is biomass section. Default is `False`.
         :return: (*dict of Species and ratios*) The species in pollutant profile to be lumped as
             the chemical mechanism species.
         """

@@ -1,7 +1,10 @@
 from ..species import Species
+from abc import ABCMeta, abstractmethod
 
 
 class ChemicalMechanism(object):
+
+    __metaclass__ = ABCMeta
 
     def __init__(self):
         """
@@ -15,6 +18,7 @@ class ChemicalMechanism(object):
     def __repr__(self):
         return self.__str__()
 
+    @abstractmethod
     def nmvoc_species(self):
         """
         Get NMVOC (None-Methane VOC) species
@@ -22,6 +26,7 @@ class ChemicalMechanism(object):
         """
         return []
 
+    @abstractmethod
     def voc_species(self):
         """
         Get VOC species
@@ -29,6 +34,7 @@ class ChemicalMechanism(object):
         """
         return []
 
+    @abstractmethod
     def all_species(self):
         """
         Get all species
@@ -47,3 +53,14 @@ class ChemicalMechanism(object):
             if spec.name == name:
                 return spec
         return Species(name)
+
+    @abstractmethod
+    def lump_RETRO(self, spec, biomass=False):
+        """
+        Lump a species from RETRO species.
+        :param spec: (*Species*) The species in this chemical mechanism.
+        :param biomass: (*bool*) Whether is biomass section. Default is `False`.
+        :return: (*dict of Species and ratios*) The species in pollutant profile to be lumped as
+            the chemical mechanism species.
+        """
+        pass

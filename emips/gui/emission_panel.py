@@ -3,11 +3,14 @@
 import os
 
 import java.awt as awt
+from java.awt.event import ItemEvent
 import javax.swing as swing
+from javax.swing.event import DocumentListener
 from com.formdev.flatlaf.extras import FlatSVGIcon
 from java.io import File
 from java.util.concurrent import ExecutionException
 from mipylib import plotlib as plt
+from mipylib import numeric as np
 from .form import FrmSectors, FrmPollutants
 
 
@@ -44,9 +47,11 @@ class EmissionPanel(swing.JPanel):
 
         # Year and Month
         label_year = swing.JLabel("Year:")
-        self.text_year = swing.JTextField("2017")
+        self.text_year = swing.JTextField("")
+        self.text_year.getDocument().addDocumentListener(YearDocumentListener(self))
         label_month = swing.JLabel("Month:")
         self.combobox_month = swing.JComboBox()
+        self.combobox_month.itemListener = self.click_month
         for m in range(1, 13):
             self.combobox_month.addItem(m)
 
@@ -119,6 +124,8 @@ class EmissionPanel(swing.JPanel):
         self.text_read.setText(self.run_config.emission_read_file)
         self.update_sectors()
         self.update_pollutants()
+        self.text_year.setText(self.run_config.emission_year)
+        self.combobox_month.setSelectedItem(self.run_config.emission_month)
 
     def update_sectors(self):
         self.combobox_sector.removeAllItems()
@@ -163,6 +170,11 @@ class EmissionPanel(swing.JPanel):
         if frm_pollutants.ok:
             self.update_pollutants()
 
+    def click_month(self, e):
+        cb = e.getSource()
+        if e.getStateChange() == ItemEvent.SELECTED:
+            self.run_config.emission_month = cb.getSelectedItem()
+
     def click_plot(self, e):
         """
         Plot button click event.
@@ -172,6 +184,24 @@ class EmissionPanel(swing.JPanel):
 
         plot_emission = PlotEmission(self)
         plot_emission.execute()
+
+
+class YearDocumentListener(DocumentListener):
+
+    def __init__(self, panel):
+        self.panel = panel
+        DocumentListener.__init__(self)
+
+    def insertUpdate(self, e):
+        self.changedUpdate(e)
+
+    def removeUpdate(self, e):
+        self.changedUpdate(e)
+
+    def changedUpdate(self, e):
+        year_str = self.panel.text_year.text
+        if year_str.isdigit():
+            self.panel.run_config.emission_year = int(year_str)
 
 
 class PlotEmission(swing.SwingWorker):
@@ -188,8 +218,8 @@ class PlotEmission(swing.SwingWorker):
         # Read data
         sector = self.panel.combobox_sector.getSelectedItem()
         pollutant = self.panel.combobox_pollutant.getSelectedItem()
-        year = int(self.panel.text_year.text)
-        month = self.panel.combobox_month.getSelectedItem()
+        year = self.panel.run_config.emission_year
+        month = self.panel.run_config.emission_month
         emission = self.panel.run_config.emission_module
         data = emission.read_emis(sector, pollutant, year, month)
         print(data)
@@ -201,8 +231,8 @@ class PlotEmission(swing.SwingWorker):
         plt.clf()
         plt.axesm()
         plt.geoshow('country', edgecolor='k')
-        levs = [0.01, 0.1, 1, 5, 10, 15, 100]
-        layer = plt.imshow(lon, lat, data * 1e2, levs)
+        levs = np.logspace(-10, 2, num=13)
+        layer = plt.imshow(lon, lat, data, levs)
         plt.colorbar(layer, shrink=0.8)
         plt.title('Emission - {} - {} - ({}-{})'.format(sector.name, pollutant.name, year, month))
 
