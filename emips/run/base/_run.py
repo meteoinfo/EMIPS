@@ -1,16 +1,20 @@
 from emips.utils import Units, Weight, Area, Period
 from emips.spatial_alloc import transform
+from emips.chem_spec import PollutantEnum
 from emips import ge_data_dir
 from emips import temp_alloc
 from emips import chem_spec
+from emips import vertical_alloc
 
 from mipylib import numeric as np
 from mipylib import dataset
 
 import os
+from collections import OrderedDict
 
 __all__ = ["read_emission", "convert_units", "run_spatial", "run_temporal", "run_chemical",
-           "run_chemical_grid_spec", "lump_VOC", "run_pollutant"]
+           "run_chemical_grid_spec", "lump_VOC", "run_pollutant", "merge_sector",
+           "run_vertical_sector", "run_sector", "run_total"]
 
 
 def read_emission(run_config, sector, pollutant):
@@ -306,3 +310,181 @@ def run_pollutant(run_config, sector, pollutant):
     else:
         run_chemical(hour_data, run_config, sector, pollutant)
     print("Done: {}_{}".format(sector.name, pollutant.name))
+
+
+def merge_sector(sector, run_config):
+    """
+    Merge all pollutant emission files in one file for each sector.
+
+    :param sector: (*Sector*) The sector.
+    :param run_config: (*RunConfigure*) The run configure.
+    """
+    year = run_config.emission_year
+    month = run_config.emission_month
+    model_grid = run_config.spatial_model_grid
+
+    # Set dimensions
+    tdim = np.dimension(np.arange(24), 'hour')
+    ydim = np.dimension(model_grid.y_coord, 'lat', 'Y')
+    xdim = np.dimension(model_grid.x_coord, 'lon', 'X')
+    dims = [tdim, ydim, xdim]
+
+    print('-----{}-----'.format(sector.name))
+
+    # Set output sector emission file name
+    outfn = os.path.join(run_config.run_output_dir,
+                         'emis_{}_{}_{}_hour.nc'.format(sector.name, year, month))
+    print('File_out: {}'.format(outfn))
+
+    # Pollutant loop
+    dimvars = []
+    dict_spec = {}
+    for pollutant in run_config.emission_pollutants:
+        # Read data in pollutant file
+        if pollutant.is_VOC and run_config.voc_use_grid_spec:
+            fn = os.path.join(run_config.run_output_dir,
+                              '{}_emis_lump_{}_{}_{}_hour.nc'.format(pollutant.name,
+                                                                     sector.name, year, month))
+        else:
+            fn = os.path.join(run_config.run_output_dir,
+                              '{}_emis_{}_{}_{}_hour.nc'.format(pollutant.name,
+                                                                sector.name, year, month))
+        print('File_in: {}'.format(fn))
+        f = dataset.addfile(fn)
+
+        for var in f.variables:
+            if var.ndim == 3:
+                if dict_spec.has_key(var.name):
+                    dict_spec[var.name].append(fn)
+                else:
+                    dimvars.append(var)
+                    dict_spec[var.name] = [fn]
+
+    # Create output merged netcdf data file
+    gattrs = dict(Conventions='CF-1.6', Tools='Created using MeteoInfo')
+    ncfile = dataset.addfile(outfn, 'c', largefile=True)
+    ncfile.nc_define(dims, gattrs, dimvars)
+    for sname, fns in dict_spec.iteritems():
+        spec_data = None
+        for fn in fns:
+            f = dataset.addfile(fn)
+            if spec_data is None:
+                spec_data = f[sname][:]
+            else:
+                spec_data = spec_data + f[sname][:]
+        ncfile.write(sname, spec_data)
+    f.close()
+    ncfile.close()
+
+
+def run_vertical_sector(sector, run_config):
+    """
+    Vertical allocation to a sector.
+
+    :param sector: (*Sector*) The sector.
+    :param run_config: (*RunConfigure*) The run configure.
+    """
+    year = run_config.emission_year
+    month = run_config.emission_month
+    model_grid = run_config.spatial_model_grid
+
+    # get vertical profiles
+    vertical_pro = vertical_alloc.read_file(run_config.vertical_prof_file, sector.scc)
+    z = len(vertical_pro.weights)
+
+    print('Define dimension and global attributes...')
+    tdim = np.dimension(np.arange(24), 'hour')
+    ydim = np.dimension(model_grid.y_coord, 'lat', 'Y')
+    xdim = np.dimension(model_grid.x_coord, 'lon', 'X')
+    zdim = np.dimension(np.arange(z), 'emissions_zdim')
+    dims = [tdim, zdim, ydim, xdim]
+
+    gattrs = OrderedDict()
+    gattrs['Conventions'] = 'CF-1.6'
+    gattrs['Tools'] = 'Created using MeteoInfo'
+
+    fn = os.path.join(run_config.run_output_dir,
+                      'emis_{}_{}_{}_hour.nc'.format(sector.name, year, month))
+    print('File input: {}'.format(fn))
+    dimvars = []
+    if os.path.exists(fn):
+        f = dataset.addfile(fn)
+        for var in f.variables:
+            if var.ndim == 3:
+                dimvar = dataset.DimVariable()
+                dimvar.name = var.name
+                dimvar.dtype = np.dtype.float
+                dimvar.dims = dims
+                dimvar.addattr('description', "EMISSION_{}".format(var.name))
+                dimvar.addattr('units', var.attrvalue('units')[0])
+                dimvars.append(dimvar)
+
+        out_fn = os.path.join(run_config.run_output_dir,
+                              'emis_{}_{}_{}_hour_height.nc'.format(sector.name, year, month))
+        print('Create output data file:{}'.format(out_fn))
+        ncfile = dataset.addfile(out_fn, 'c', largefile=True)
+        ncfile.nc_define(dims, gattrs, dimvars)
+
+        data = np.zeros((tdim.length, z, ydim.length, xdim.length))
+        dd = np.zeros((tdim.length, z, ydim.length, xdim.length))
+
+        # read, merge and output
+        if round(vertical_pro.get_ratios()[0], 2) != 1.0:
+            print('Allocating: {}'.format(sector.name))
+        else:
+            print('Do not need to be allocated: {}'.format(sector.name))
+        print('Write data to file...')
+        for var in f.varnames:
+            if var == 'lat' or var == 'lon':
+                continue
+            else:
+                print(var)
+                dd[:, 0, :, :] = f[var][:]
+                if round(vertical_pro.get_ratios()[0], 2) == 1.0:
+                    data[:, 0, :, :] = dd[:, 0, :, :]
+                else:
+                    for lay in np.arange(len(vertical_pro.get_ratios())):
+                        data[:, lay, :, :] = dd[:, 0, :, :] * vertical_pro.get_ratios()[lay]
+                # Turn nan to zero
+                data[data == np.nan] = 0
+            ncfile.write(var, data)
+        ncfile.close()
+        f.close()
+    else:
+        print('File not exist: {}'.format(fn))
+
+
+def run_sector(sector, run_config):
+    """
+    Total emission processing to a sector.
+
+    :param sector: (*Sector*) The sector.
+    :param run_config: (*RunConfigure*) The run configure.
+    """
+    for pollutant in run_config.emission_pollutants:
+        print("-------------------------------")
+        print("Pollutant: {}".format(pollutant))
+        print("-------------------------------")
+        run_pollutant(run_config, sector, pollutant)
+
+    merge_sector(sector, run_config)
+
+    if run_config.is_run_vertical:
+        run_vertical_sector(sector, run_config)
+
+    print("Done: {}".format(sector.name))
+
+
+def run_total(run_config):
+    """
+    Total emission processing to all sectors.
+
+    :param run_config: (*RunConfigure*) The run configure.
+    """
+    for sector in run_config.emission_sectors:
+        print("############################")
+        print("Sector: {}".format(sector))
+        print("############################")
+        run_sector(sector, run_config)
+
+    print("Done total!")

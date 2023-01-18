@@ -66,6 +66,7 @@ class RunConfigure(object):
         self.vertical_prof_file = None
 
         self.run_output_dir = None
+        self.is_run_vertical = None
 
         self.emission_module = None
         self.grid_spec_module = None
@@ -144,6 +145,8 @@ class RunConfigure(object):
         run = root.getElementsByTagName("Run")[0]
         output = run.getElementsByTagName("Output")[0]
         self.run_output_dir = output.getAttribute("Directory")
+        steps = run.getElementsByTagName("Steps")[0]
+        self.is_run_vertical = True if steps.getAttribute("RunVertical") == "True" else False
 
     def load_emission_module(self):
         if os.path.isfile(self.emission_read_file):
@@ -256,6 +259,9 @@ class RunConfigure(object):
         output = doc.createElement("Output")
         output.setAttribute("Directory", self.run_output_dir)
         run.appendChild(output)
+        steps = doc.createElement("Steps")
+        steps.setAttribute("RunVertical", "True" if self.is_run_vertical else "False")
+        run.appendChild(steps)
         root.appendChild(run)
 
         # Write config file

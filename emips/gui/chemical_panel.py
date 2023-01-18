@@ -1,6 +1,7 @@
 # coding=utf-8
 
 import java.awt as awt
+from java.awt.event import ItemEvent
 import javax.swing as swing
 from com.formdev.flatlaf.extras import FlatSVGIcon
 from java.io import File
@@ -30,12 +31,14 @@ class ChemicalPanel(swing.JPanel):
         for fn in ge_files:
             if fn.startswith("gspro"):
                 self.combobox_spro.addItem(fn)
+        self.combobox_spro.itemListener = self.click_spro
         # Species reference file
         label_sref = swing.JLabel("Reference file:")
         self.combobox_sref = swing.JComboBox()
         for fn in ge_files:
             if fn.startswith("gsref"):
                 self.combobox_sref.addItem(fn)
+        self.combobox_sref.itemListener = self.click_sref
         # Layout of profile panel
         layout = swing.GroupLayout(panel_profile)
         panel_profile.setLayout(layout)
@@ -84,9 +87,9 @@ class ChemicalPanel(swing.JPanel):
         self.ta_mech.setBorder(border)
         label_mech = swing.JLabel("Chemical mechanism:")
         self.combobox_mech = swing.JComboBox()
-        self.combobox_mech.itemListener = self.click_chem_mech
         for cm in ChemMechEnum:
             self.combobox_mech.addItem(cm)
+        self.combobox_mech.itemListener = self.click_chem_mech
         # Layout of grid speciation panel
         layout = swing.GroupLayout(self.panel_grid_spec)
         self.panel_grid_spec.setLayout(layout)
@@ -148,16 +151,29 @@ class ChemicalPanel(swing.JPanel):
         self.text_read.setText(self.run_config.grid_spec_read_file)
         self.combobox_mech.setSelectedItem(self.run_config.chemical_mechanism)
 
+    def click_spro(self, e):
+        cb = e.getSource()
+        if e.getStateChange() == ItemEvent.SELECTED:
+            spro_file = cb.getSelectedItem()
+            self.run_config.chemical_prof_file = os.path.join(ge_data_dir, spro_file)
+
+    def click_sref(self, e):
+        cb = e.getSource()
+        if e.getStateChange() == ItemEvent.SELECTED:
+            sref_file = cb.getSelectedItem()
+            self.run_config.chemical_ref_file = os.path.join(ge_data_dir, sref_file)
+
     def click_chem_mech(self, e):
         cb = e.getSource()
         if e.getStateChange() == awt.event.ItemEvent.SELECTED:
-            self.chem_mech = cb.getSelectedItem()
+            self.run_config.chemical_mechanism = cb.getSelectedItem()
             sp_str = ""
-            for sp in self.chem_mech.all_species():
+            for sp in self.run_config.chemical_mechanism.all_species():
                 sp_str += sp.name + "; "
             self.ta_mech.setText(sp_str)
 
     def click_enable_grid_spec(self, e):
+        self.run_config.voc_use_grid_spec = self.checkbox_gsf.isSelected()
         self.panel_grid_spec.setVisible(self.checkbox_gsf.isSelected())
 
     def click_read_script(self, e):

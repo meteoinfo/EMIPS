@@ -8,6 +8,7 @@ import emips
 
 out_species_unit = ['PEC', 'POA', 'PMFINE', 'PNO3', 'PSO4', 'PMC']
 
+
 def run(year, month, dir_inter, model_grid, sectors, z, z_file):
     """
     Allocate data to different heights.
@@ -26,11 +27,11 @@ def run(year, month, dir_inter, model_grid, sectors, z, z_file):
     xdim = np.dimension(model_grid.x_coord, 'lon', 'X')
     zdim = np.dimension(np.arange(z), 'emissions_zdim')
     dims = [tdim, zdim, ydim, xdim]
-    
+
     gattrs = OrderedDict()
     gattrs['Conventions'] = 'CF-1.6'
     gattrs['Tools'] = 'Created using MeteoInfo'
-    
+
     for sector in sectors:
         fn = dir_inter + '\emis_{}_{}_{}_hour.nc'.format(sector.name, year, month)
         print('File input: {}'.format(fn))
@@ -51,18 +52,18 @@ def run(year, month, dir_inter, model_grid, sectors, z, z_file):
                     else:
                         dimvar.addattr('units', 'mole/m2/s')
                     dimvars.append(dimvar)
-                    
+
             out_fn = dir_inter + '\emis_{}_{}_{}_hour_height.nc'.format(sector.name, year, month)
             print('Create output data file:{}'.format(out_fn))
             ncfile = dataset.addfile(out_fn, 'c', largefile=True)
             ncfile.nc_define(dims, gattrs, dimvars)
-            
+
             data = np.zeros((tdim.length, z, ydim.length, xdim.length))
             dd = np.zeros((tdim.length, z, ydim.length, xdim.length))
-            #get vertical profiles
+            # get vertical profiles
             scc = emis_util.get_scc(sector)
             vertical_pro = emips.vertical_alloc.read_file(z_file, scc)
-            #read, merge and output
+            # read, merge and output
             if round(vertical_pro.get_ratios()[0], 2) != 1.0:
                 print('Allocating: {}'.format(sector.name))
             else:
@@ -79,8 +80,8 @@ def run(year, month, dir_inter, model_grid, sectors, z, z_file):
                     else:
                         for lay in np.arange(len(vertical_pro.get_ratios())):
                             data[:, lay, :, :] = dd[:, 0, :, :] * vertical_pro.get_ratios()[lay]
-                    #Turn nan to zero
-                    data[data==np.nan] = 0				
+                    # Turn nan to zero
+                    data[data == np.nan] = 0
                 ncfile.write(var, data)
             ncfile.close()
             f.close()
@@ -88,4 +89,3 @@ def run(year, month, dir_inter, model_grid, sectors, z, z_file):
             print('File not exist: {}'.format(fn))
             continue
     print('Allocate of height finished!')
-        

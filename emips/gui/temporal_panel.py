@@ -36,6 +36,7 @@ class TemporalPanel(swing.JPanel):
         for fn in ge_files:
             if fn.startswith("amptpro"):
                 self.combobox_tpro.addItem(fn)
+        self.combobox_tpro.itemListener = self.click_tpro
 
         # Temporal reference file
         label_tref = swing.JLabel("Reference file:")
@@ -43,6 +44,7 @@ class TemporalPanel(swing.JPanel):
         for fn in ge_files:
             if fn.startswith("amptref"):
                 self.combobox_tref.addItem(fn)
+        self.combobox_tref.itemListener = self.click_tref
 
         # Temporal profile data
         label_month_pro = swing.JLabel("Month profile:")
@@ -142,6 +144,18 @@ class TemporalPanel(swing.JPanel):
         if os.path.isfile(tpro_file) and os.path.isfile(tref_file):
             self.month_profile, self.week_profile, self.diurnal_profile, self.diurnal_profile_we = \
                 temp_alloc.read_file(tref_file, tpro_file, scc)
+
+    def click_tpro(self, e):
+        cb = e.getSource()
+        if e.getStateChange() == ItemEvent.SELECTED:
+            tpro_file = cb.getSelectedItem()
+            self.run_config.temporal_prof_file = os.path.join(ge_data_dir, tpro_file)
+
+    def click_tref(self, e):
+        cb = e.getSource()
+        if e.getStateChange() == ItemEvent.SELECTED:
+            tref_file = cb.getSelectedItem()
+            self.run_config.temporal_ref_file = os.path.join(ge_data_dir, tref_file)
 
     def click_sector(self, e):        
         cb = e.getSource()

@@ -1,19 +1,14 @@
 # coding=utf-8
 
-import javax.swing as swing
+import os
+
 import java.awt as awt
+import javax.swing as swing
 from com.formdev.flatlaf.extras import FlatSVGIcon
 from java.io import File
 from java.util.concurrent import ExecutionException
-from mipylib import plotlib as plt
-from mipylib import numeric as np
 
-import os
-from emips.utils import Units, Weight, Area, Period
-from emips import ge_data_dir
-from emips.spatial_alloc import transform
-from emips import temp_alloc
-from emips.run import run_pollutant
+from emips.run import run_pollutant, run_sector, run_total
 
 
 class RunPanel(swing.JPanel):
@@ -45,9 +40,17 @@ class RunPanel(swing.JPanel):
         label_pollutant = swing.JLabel("Pollutant:")
         self.combobox_pollutant = swing.JComboBox()
 
+        # Whether run vertical
+        self.checkbox_run_vertical = swing.JCheckBox("Run vertical")
+        self.checkbox_run_vertical.actionPerformed = self.click_is_run_vertical
+
         # Single pollutant run
-        button_run_single = swing.JButton("Run (single pollutant)")
-        button_run_single.actionPerformed = self.click_run_single
+        button_run_pollutant = swing.JButton("Run (single pollutant)")
+        button_run_pollutant.actionPerformed = self.click_run_pollutant
+
+        # Single sector run
+        button_run_sector = swing.JButton("Run (single sector)")
+        button_run_sector.actionPerformed = self.click_run_sector
 
         # Total run
         button_run_total = swing.JButton("Run (total)")
@@ -72,8 +75,11 @@ class RunPanel(swing.JPanel):
                     .addGroup(layout.createParallelGroup(swing.GroupLayout.Alignment.LEADING)
                         .addComponent(self.combobox_sector)
                         .addComponent(self.combobox_pollutant)))
+                .addComponent(self.checkbox_run_vertical)
                 .addGap(15)
-                .addComponent(button_run_single, swing.GroupLayout.Alignment.CENTER)
+                .addGroup(swing.GroupLayout.Alignment.CENTER, layout.createSequentialGroup()
+                    .addComponent(button_run_pollutant)
+                    .addComponent(button_run_sector))
                 .addGap(30)
                 .addComponent(button_run_total, swing.GroupLayout.Alignment.CENTER)
         )
@@ -90,8 +96,11 @@ class RunPanel(swing.JPanel):
                 .addGroup(layout.createParallelGroup(swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_pollutant)
                     .addComponent(self.combobox_pollutant))
+                .addComponent(self.checkbox_run_vertical)
                 .addGap(15)
-                .addComponent(button_run_single)
+                .addGroup(layout.createParallelGroup(swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button_run_pollutant)
+                    .addComponent(button_run_sector))
                 .addGap(30)
                 .addComponent(button_run_total)
         )
@@ -129,16 +138,23 @@ class RunPanel(swing.JPanel):
             self.text_output_dir.text = ff.getAbsolutePath()
             self.run_config.run_output_dir = ff.getAbsolutePath()
 
-    def click_run_single(self, e):
-        run_single = RunSingle(self)
-        run_single.execute()
+    def click_is_run_vertical(self, e):
+        self.run_config.is_run_vertical = self.checkbox_run_vertical.isSelected()
+
+    def click_run_pollutant(self, e):
+        prun = RunPollutant(self)
+        prun.execute()
+
+    def click_run_sector(self, e):
+        srun = RunSector(self)
+        srun.execute()
 
     def click_run_total(self, e):
-        run_total = RunTotal(self)
-        run_total.execute()
+        trun = RunTotal(self)
+        trun.execute()
 
 
-class RunSingle(swing.SwingWorker):
+class RunPollutant(swing.SwingWorker):
 
     def __init__(self, panel):
         self.panel = panel
@@ -165,6 +181,34 @@ class RunSingle(swing.SwingWorker):
             raise e.getCause()
 
 
+class RunSector(swing.SwingWorker):
+
+    def __init__(self, panel):
+        self.panel = panel
+        swing.SwingWorker.__init__(self)
+
+    def doInBackground(self):
+        # Set cursor and progress bar
+        self.panel.setCursor(awt.Cursor(awt.Cursor.WAIT_CURSOR))
+        self.panel.frm_main.milab_app.getProgressBar().setVisible(True)
+
+        # Run
+        sector = self.panel.combobox_sector.getSelectedItem()
+        print("Sector: {}".format(sector))
+        run_sector(sector, self.panel.run_config)
+
+
+    def done(self):
+        # Set cursor and progress bar
+        self.panel.setCursor(awt.Cursor(awt.Cursor.DEFAULT_CURSOR))
+        self.panel.frm_main.milab_app.getProgressBar().setVisible(False)
+
+        try:
+            self.get()  # raise exception if abnormal completion
+        except ExecutionException, e:
+            raise e.getCause()
+
+
 class RunTotal(swing.SwingWorker):
 
     def __init__(self, panel):
@@ -177,11 +221,7 @@ class RunTotal(swing.SwingWorker):
         self.panel.frm_main.milab_app.getProgressBar().setVisible(True)
 
         # Run
-        for sector in self.panel.run_config.emission_sectors:
-            print("Sector: {}".format(sector))
-            for pollutant in self.panel.run_config.emission_pollutants:
-                print("Pollutant: {}".format(pollutant))
-                run_pollutant(self.panel.run_config, sector, pollutant)
+        run_total(self.panel.run_config)
 
     def done(self):
         # Set cursor and progress bar
