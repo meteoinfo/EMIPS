@@ -1,6 +1,7 @@
 # coding=utf-8
 
 from java import awt
+from java.awt.event import ItemEvent
 from javax import swing
 from java.util.concurrent import ExecutionException
 import os
@@ -29,6 +30,7 @@ class VerticalPanel(swing.JPanel):
         for fn in ge_files:
             if fn.startswith("vpro"):
                 self.combobox_vpro.addItem(fn)
+        self.combobox_vpro.itemListener = self.click_vpro
 
         # Vertical profile data
         label_vpro_data = swing.JLabel("Vertical profile:")
@@ -95,6 +97,12 @@ class VerticalPanel(swing.JPanel):
     def read_vertical_profile(self, scc):
         vpro_file = os.path.join(ge_data_dir, self.combobox_vpro.getSelectedItem())
         self.vertical_profile = vertical_alloc.read_file(vpro_file, scc)
+
+    def click_vpro(self, e):
+        cb = e.getSource()
+        if e.getStateChange() == ItemEvent.SELECTED:
+            vpro_file = cb.getSelectedItem()
+            self.run_config.vertical_prof_file = os.path.join(ge_data_dir, vpro_file)
 
     def click_sector(self, e):        
         cb = e.getSource()

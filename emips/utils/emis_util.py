@@ -62,8 +62,8 @@ class EmissionReader(object):
     def __init__(self, dir_emission=None):
         """
         Initialize.
+
         :param dir_emission: (*str*) Emission data directory
-        :return:
         """
         self.dir_emission = dir_emission
 

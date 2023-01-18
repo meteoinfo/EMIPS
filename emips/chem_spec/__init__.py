@@ -4,8 +4,10 @@ from .pollutant_profile import PollutantProfile
 from .species_profile import SpeciesProfile
 from .chemical_speciation import *
 from .chem_mech import *
+from .voc_util import *
 
 __all__ = ['Pollutant', 'PollutantEnum', 'Species', 'SpeciesEnum', 'PollutantProfile',
            'SpeciesProfile']
 __all__ += chemical_speciation.__all__
 __all__ += chem_mech.__all__
+__all__ += voc_util.__all__

@@ -11,51 +11,57 @@
 		</Sectors>
 		<Pollutants>
 			<Pollutant Name="BC">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="CO">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="NH3">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="NOx">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="OC">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="PM2_5">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="SO2">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="PMcoarse">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="PM10more">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="NMVOC">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 		</Pollutants>
+		<Time Year="2017" Month="1"/>
 	</Emission>
 	<Spatial>
-		<ModelGrid Projection="+proj=longlat +ellps=WGS84 +datum=WGS84 +units=degrees " XCell="0.1" XNumber="800" XOrigin="70.05" YCell="0.1" YNumber="500" YOrigin="10.05"/>
+		<ModelGrid Projection="+proj=lcc +lon_0=103.5 +lat_0=36.500008 +lat_1=30 +lat_2=60 +a=6370000 +b=6370000 " XCell="15000.0" XNumber="334" XOrigin="-2497499.59735" YCell="15000.0" YNumber="274" YOrigin="-2047499.8096"/>
 	</Spatial>
 	<Temporal>
 		<FileName Profile="amptpro.m3.default.us+can.txt" Reference="amptref.m3.us+can.cair.txt"/>
 	</Temporal>
 	<Chemical>
 		<FileName Profile="gspro.cmaq.radm2p25_rev.txt" Reference="gsref.cmaq.radm2p25.txt"/>
-		<GridSpeciation Enable="True"/>
+		<GridSpeciation Enable="True">
+			<Read ScriptFile="D:\MyProgram\java\MeteoInfoDev\toolbox\EMIPS\emips\run\run_meic_cams_htap\meic\grid_spec.py"/>
+			<ChemMech name="RADM2"/>
+		</GridSpeciation>
 	</Chemical>
 	<Vertical>
 		<FileName Profile="vpro_default.txt"/>
 	</Vertical>
 	<Run>
 		<Output Directory="F:\run_data\emips\run_meic\test"/>
+		<Steps RunVertical="True"/>
+		<PostProcess ScriptFile="D:\MyProgram\java\MeteoInfoDev\toolbox\EMIPS\emips\run\for_WRFChem\for_WRFChem.py"/>
 	</Run>
 </EMIPS_Run>

@@ -78,6 +78,9 @@ class Area(Enum):
         :param other: (*Weight*) The other weight.
         :return: (*float*) The convert ratio.
         """
+        if self == Area.GRID or other == Area.GRID:
+            return None
+
         return self.value.ratio / other.value.ratio
 
 
@@ -151,24 +154,29 @@ class Units(object):
         """
         return self.weight.is_mole()
 
-    def convert_ratio(self, other, month_days=30, year_days=365):
+    def convert_ratio(self, other, month_days=30, year_days=365, ignore_area=False):
         """
         Get units convert ratio.
+
         :param other: (*Unit*) Another units.
         :param month_days: (*int*) Days of the month.
         :param year_days: (*int*) Days of the year.
-        :return: Units convert ratio.
-        """
-        if self.area == Area.GRID or other.area == Area.GRID:
-            return None
+        :param ignore_area: (*bool*) Whether ignore area. Default is `False`.
 
+        :return: (*float*) Units convert ratio.
+        """
         # Weight
         wr = self.weight.convert_ratio(other.weight)
         if wr is None:
             return None
 
         # Area
-        ar = self.area.convert_ratio(other.area)
+        if ignore_area:
+            ar = 1.
+        else:
+            ar = self.area.convert_ratio(other.area)
+            if ar is None:
+                return None
 
         # Period
         if month_days != 30:

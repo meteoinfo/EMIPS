@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EMIPS>
-	<RunConfigure FilePath="D:\MyProgram\java\MeteoInfoDev\toolbox\EMIPS\emips\gui\run_config_wrf.xml"/>
+	<RunConfigure FilePath="D:\MyProgram\java\MeteoInfoDev\toolbox\EMIPS\emips\run\run_config.xml"/>
 </EMIPS>
