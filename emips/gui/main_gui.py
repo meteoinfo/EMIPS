@@ -122,6 +122,10 @@ class MainGUI(swing.JFrame):
         self.label_run_config_file.setText(' {}'.format(self.run_config.filename))
         self.panel_emission.update_run_configure(self.run_config)
         self.panel_spatial.update_run_configure(self.run_config)
+        self.panel_temporal.update_run_configure(self.run_config)
+        self.panel_chemical.update_run_configure(self.run_config)
+        self.panel_vertical.update_run_configure(self.run_config)
+        self.panel_run.update_run_configure(self.run_config)
 
     def update_emission_module(self):
         """
