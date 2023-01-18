@@ -62,5 +62,6 @@
 	<Run>
 		<Output Directory="F:\run_data\emips\run_meic\test"/>
 		<Steps RunVertical="False"/>
+		<PostProcess ScriptFile="D:\MyProgram\java\MeteoInfoDev\toolbox\EMIPS\emips\run\for_CUACE\for_CUACE.py"/>
 	</Run>
 </EMIPS_Run>

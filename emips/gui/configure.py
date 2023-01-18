@@ -67,13 +67,16 @@ class RunConfigure(object):
 
         self.run_output_dir = None
         self.is_run_vertical = None
+        self.post_process_file = None
 
         self.emission_module = None
         self.grid_spec_module = None
+        self.post_process_module = None
 
         self.load_configure(filename)
         self.load_emission_module()
         self.load_grid_spec_module()
+        self.load_post_process_module()
 
     def load_configure(self, filename):
         dom = minidom.parse(filename)
@@ -147,6 +150,8 @@ class RunConfigure(object):
         self.run_output_dir = output.getAttribute("Directory")
         steps = run.getElementsByTagName("Steps")[0]
         self.is_run_vertical = True if steps.getAttribute("RunVertical") == "True" else False
+        post_process = run.getElementsByTagName("PostProcess")[0]
+        self.post_process_file = post_process.getAttribute("ScriptFile")
 
     def load_emission_module(self):
         if os.path.isfile(self.emission_read_file):
@@ -169,6 +174,17 @@ class RunConfigure(object):
             self.grid_spec_module = importlib.import_module(run_module)
         else:
             print('Read grid speciation script file not exist!\n {}'.format(self.grid_spec_read_file))
+
+    def load_post_process_module(self):
+        if os.path.isfile(self.post_process_file):
+            run_path = os.path.dirname(self.post_process_file)
+            if run_path not in sys.path:
+                sys.path.append(run_path)
+            run_module = os.path.basename(self.post_process_file)
+            run_module = os.path.splitext(run_module)[0]
+            self.post_process_module = importlib.import_module(run_module)
+        else:
+            print('Post process script file not exist!\n {}'.format(self.post_process_file))
 
     def save_configure(self, filename=None):
         doc = minidom.Document()
@@ -262,6 +278,9 @@ class RunConfigure(object):
         steps = doc.createElement("Steps")
         steps.setAttribute("RunVertical", "True" if self.is_run_vertical else "False")
         run.appendChild(steps)
+        post_process = doc.createElement("PostProcess")
+        post_process.setAttribute("ScriptFile", self.post_process_file)
+        run.appendChild(post_process)
         root.appendChild(run)
 
         # Write config file

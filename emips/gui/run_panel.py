@@ -56,6 +56,15 @@ class RunPanel(swing.JPanel):
         button_run_total = swing.JButton("Run (total)")
         button_run_total.actionPerformed = self.click_run_total
 
+        # Post process
+        label_post_process = swing.JLabel("Post module:")
+        self.text_post_process = swing.JTextField("")
+        icon = FlatSVGIcon(File(os.path.join(self.frm_main.current_path, 'image', 'file-open.svg')))
+        button_post = swing.JButton("", icon)
+        button_post.actionPerformed = self.click_post_process
+        button_run_post = swing.JButton("Run post process")
+        button_run_post.actionPerformed = self.click_run_post
+
         # Layout
         layout = swing.GroupLayout(self)
         self.setLayout(layout)
@@ -80,8 +89,14 @@ class RunPanel(swing.JPanel):
                 .addGroup(swing.GroupLayout.Alignment.CENTER, layout.createSequentialGroup()
                     .addComponent(button_run_pollutant)
                     .addComponent(button_run_sector))
-                .addGap(30)
+                .addGap(20)
                 .addComponent(button_run_total, swing.GroupLayout.Alignment.CENTER)
+                .addGap(20)
+                .addGroup(layout.createSequentialGroup()
+                          .addComponent(label_post_process)
+                          .addComponent(self.text_post_process)
+                          .addComponent(button_post))
+                .addComponent(button_run_post, swing.GroupLayout.Alignment.CENTER)
         )
         layout.setVerticalGroup(
             layout.createSequentialGroup()
@@ -101,8 +116,14 @@ class RunPanel(swing.JPanel):
                 .addGroup(layout.createParallelGroup(swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(button_run_pollutant)
                     .addComponent(button_run_sector))
-                .addGap(30)
+                .addGap(20)
                 .addComponent(button_run_total)
+                .addGap(20)
+                .addGroup(layout.createParallelGroup(swing.GroupLayout.Alignment.BASELINE)
+                          .addComponent(label_post_process)
+                          .addComponent(self.text_post_process)
+                          .addComponent(button_post))
+                .addComponent(button_run_post)
         )
 
     def update_run_configure(self, run_config):
@@ -115,6 +136,7 @@ class RunPanel(swing.JPanel):
         self.text_output_dir.setText(self.run_config.run_output_dir)
         self.update_sectors()
         self.update_pollutants()
+        self.text_post_process.setText(self.run_config.post_process_file)
 
     def update_sectors(self):
         self.combobox_sector.removeAllItems()
@@ -152,6 +174,22 @@ class RunPanel(swing.JPanel):
     def click_run_total(self, e):
         trun = RunTotal(self)
         trun.execute()
+
+    def click_post_process(self, e):
+        choose_file = swing.JFileChooser()
+        ff = File(self.text_post_process.text)
+        if ff.isFile():
+            choose_file.setCurrentDirectory(ff.getParentFile())
+        choose_file.setFileSelectionMode(swing.JFileChooser.FILES_ONLY)
+        ret = choose_file.showOpenDialog(self)
+        if ret == swing.JFileChooser.APPROVE_OPTION:
+            ff = choose_file.getSelectedFile()
+            self.text_post_process.text = ff.getAbsolutePath()
+            self.run_config.post_process_file = ff.getAbsolutePath()
+            self.run_config.load_post_process_module()
+
+    def click_run_post(self, e):
+        self.run_config.post_process_module.run(self.run_config)
 
 
 class RunPollutant(swing.SwingWorker):
