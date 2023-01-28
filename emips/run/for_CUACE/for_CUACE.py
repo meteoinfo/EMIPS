@@ -8,9 +8,6 @@ import convert_grads
 import write_ctl
 import time
 
-dir_out = r'F:\run_data\emips\run_meic\test'
-
-
 def run(run_config):
     """
     To CUACE model ready emission data files.
@@ -22,6 +19,7 @@ def run(run_config):
     year = run_config.emission_year
     months = [run_config.emission_month]
     dir_in = run_config.run_output_dir
+    dir_out = run_config.run_output_dir
     model_grid = run_config.spatial_model_grid
     xn = model_grid.x_num
     yn = model_grid.y_num
@@ -39,6 +37,7 @@ def run(run_config):
     print('-------------------')
     print('---All finished!---')
     print('-------------------')
+
     time_end = time.time()
-    tt = (time_end - time_start) / 60
-    print('Time: {:.2f}min'.format(tt))
+    time_count = (time_end - time_start) / 60
+    print('Time: {:.2f}min'.format(time_count))

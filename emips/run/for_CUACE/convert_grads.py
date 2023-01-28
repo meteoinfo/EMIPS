@@ -44,7 +44,7 @@ def run(year, months, dir_in, dir_out, xn, yn):
         print('**************')
 
         # Set directory for input and output files
-        dir_in = os.path.join(dir_in, str(year), '{}{:>02d}'.format(year, month))
+        # dir_in = os.path.join(dir_in, str(year), '{}{:>02d}'.format(year, month))
         dir_out = os.path.join(dir_out, str(year), '{}{:>02d}'.format(year, month))
         if not os.path.exists(dir_out):
             os.makedirs(dir_out)

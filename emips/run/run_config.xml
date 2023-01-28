@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EMIPS_Run>
 	<Emission>
-		<Read ScriptFile="D:\MyProgram\java\MeteoInfoDev\toolbox\EMIPS\emips\run\run_meic_cams_htap\meic\emission.py"/>
+		<Read ScriptFile="Z:\chen\git_project\EMIPS\emips\run\run_meic_cams_htap\meic\emission.py"/>
 		<Sectors>
 			<Sector Name="INDUSTRY" SCC="30100101"/>
 			<Sector Name="AGRICULTURE" SCC="28050000"/>
@@ -11,57 +11,56 @@
 		</Sectors>
 		<Pollutants>
 			<Pollutant Name="BC">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="CO">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="NH3">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="NOx">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="OC">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="PM2_5">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="SO2">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="PMcoarse">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="PM10more">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 			<Pollutant Name="NMVOC">
-				<Units Weight="MG" Area="GRID" Period="MONTH"/>
+				<Units Area="GRID" Period="MONTH" Weight="MG"/>
 			</Pollutant>
 		</Pollutants>
-		<Time Year="2017" Month="1"/>
+		<Time Month="1" Year="2017"/>
 	</Emission>
 	<Spatial>
-		<ModelGrid Projection="+proj=longlat +ellps=WGS84 +datum=WGS84 +units=degrees " XCell="0.15" XNumber="502" XOrigin="70." YCell="0.15" YNumber="330" YOrigin="15."/>
+		<ModelGrid Projection="+proj=longlat +ellps=WGS84 +datum=WGS84 +units=degrees " XCell="0.15" XNumber="502" XOrigin="70.0" YCell="0.15" YNumber="330" YOrigin="15.0"/>
 	</Spatial>
 	<Temporal>
 		<FileName Profile="amptpro.m3.default.us+can.txt" Reference="amptref.m3.us+can.cair.txt"/>
 	</Temporal>
 	<Chemical>
-		<FileName Profile="gspro.cuace.radm2.txt" Reference="gsref.cuace.radm2.txt"/>
+		<FileName Profile="Z:\chen\git_project\EMIPS\emips\ge_data\gspro.cuace.radm2.txt" Reference="Z:\chen\git_project\EMIPS\emips\ge_data\gsref.cuace.radm2.txt"/>
 		<GridSpeciation Enable="True">
-			<Read ScriptFile="D:\MyProgram\java\MeteoInfoDev\toolbox\EMIPS\emips\run\run_meic_cams_htap\meic\grid_spec.py"/>
+			<Read ScriptFile="Z:\chen\git_project\EMIPS\emips\run\run_meic_cams_htap\meic\grid_spec.py"/>
 			<ChemMech name="RADM2"/>
 		</GridSpeciation>
 	</Chemical>
-	<Vertical Enable="False">
+	<Vertical>
 		<FileName Profile="vpro_default.txt"/>
 	</Vertical>
 	<Run>
-		<Output Directory="F:\run_data\emips\run_meic\test"/>
+		<Output Directory="Z:\test_output"/>
 		<Steps RunVertical="False"/>
-		<PostProcess ScriptFile="D:\MyProgram\java\MeteoInfoDev\toolbox\EMIPS\emips\run\for_CUACE\for_CUACE.py"/>
 	</Run>
 </EMIPS_Run>
