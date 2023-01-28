@@ -37,7 +37,7 @@ class MyEmissionReader(EmissionReader):
                         y_orig=10.05, y_cell=0.1, y_num=500)
 
 
-_emis_reader = MyEmissionReader(dir_emission='D:/KeyData/Emission/MEIC/2017/nc')
+_emis_reader = MyEmissionReader(dir_emission=r'G:/test_gui/test_input')
 
 
 def get_emis_fn(sector, pollutant, year, month):

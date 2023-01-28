@@ -1,5 +1,7 @@
-from .vertical_profile import VerticalProfile
 import mipylib.numeric as np
+import inspect
+import os
+from .vertical_profile import VerticalProfile
 
 __all__ = ['read_file']
 
@@ -11,8 +13,10 @@ def read_file(profile_fn, scc):
     :param scc: Source classific code
     :return: Vertical profile
     """
+    this_file = inspect.getfile(inspect.currentframe())
+    current_path = os.path.abspath(os.path.dirname(this_file))
     vertical_profile = VerticalProfile()
-    profile_f = open(profile_fn)
+    profile_f = open(os.path.join(current_path, os.pardir, "ge_data", profile_fn))
     line = profile_f.readline()
     while line:
         line = line.strip()

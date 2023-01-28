@@ -27,7 +27,7 @@ class FrmAbout(swing.JDialog):
         label_version = swing.JLabel("Version: 1.0")
 
         # Author
-        label_author = swing.JLabel("Author: Yaqiang Wang & Wenchong Chen")
+        label_author = swing.JLabel("Author: Yaqiang Wang & Wencong Chen")
 
         # Email
         label_email = swing.JLabel("Email: yaqiang.wang@gmail.com")

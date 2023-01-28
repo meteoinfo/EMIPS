@@ -21,8 +21,10 @@ Running
 
 EMIPS jython script can be running in MeteoInfoLab environment. ``run`` folder of this project
 includes an example of processing emission inventory for WRF-Chem and CUACE and the cross-reference
-files and profiles can be found in ``ge_data`` folder.
+files and profiles can be found in ``ge_data`` folder. 
+For the convenience of users, we have designed a GUI for EMIPS.
 
+![EMIPS GUI](EMIPS.jpg)
 
 Documentation
 -------------
@@ -32,7 +34,7 @@ Learn more about MeteoInfo and EMIPS in its official documentation at http://met
 Version
 -------
 
-EMIPS-1.0 was released (2022-08-04).
+EMIPS-1.0 was released (2023-01-26).
 
 Author
 ------
@@ -48,6 +50,7 @@ Wencong Chen
 email: wencong9801@outlook.com
 
 Chinese Academy of Meteorological Sciences, CMA
+
 
 License
 -------
