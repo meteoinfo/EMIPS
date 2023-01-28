@@ -732,7 +732,7 @@ def height_wrf(run_config):
                         dimvar.addattr('units', 'mole/m2/s')
                     dimvars.append(dimvar)
 
-            out_fn = dir_inter + '\emis_{}_{}_{}_hour_height.nc'.format(sector.name, year, month)
+            out_fn = dir_in + '\emis_{}_{}_{}_hour_height.nc'.format(sector.name, year, month)
             print('Create output data file:{}'.format(out_fn))
             ncfile = dataset.addfile(out_fn, 'c', largefile=True)
             ncfile.nc_define(dims, gattrs, dimvars)
@@ -834,7 +834,7 @@ def merge_wrf(run_config):
             continue
 
     #Set dimension and define ncfile
-    out_fn = dir_inter + '\emis_{}_{}_hour.nc'.format(year, month)
+    out_fn = dir_in + '\emis_{}_{}_hour.nc'.format(year, month)
     gattrs = OrderedDict()
     gattrs['Conventions'] = 'CF-1.6'
     gattrs['Tools'] = 'Created using MeteoInfo'
@@ -896,7 +896,7 @@ def transform_wrf(run_config):
     gattrs['Tools'] = 'Created using MeteoInfo'
 
     #Set the definition of the output variable and ncfile
-    fn_out = dir_inter + '\emis_{}_{}_hour_transform.nc'.format(year, month)
+    fn_out = dir_in + '\emis_{}_{}_hour_transform.nc'.format(year, month)
     print('Define variables and output file...')
     dimvars = []
     for out_specie in out_species:
@@ -1003,6 +1003,19 @@ def proj_wrf(run_config):
     :param mechanism_name: (*string*) The name of the chemical mechanism.
     :param z: (*int*) The zdim of the output data.
     """
+
+
+
+    year = run_config.emission_year
+    month = run_config.emission_month
+    dir_in = run_config.run_output_dir
+    model_grid = run_config.spatial_model_grid
+    target_proj = geolib.projinfo(proj='lcc', lon_0=103.5, lat_0=36.500008, lat_1=30.0, lat_2=60.0, a=6370000, b=6370000)
+    target_grid = GridDesc(target_proj, x_orig=-2497499.597352108, x_cell=15000.0, x_num=334,
+                       y_orig=-2047499.8096037393, y_cell=15000.0, y_num=274)
+    mechanism_name = run_config.chemical_mechanism.name
+    out_species, out_species_aer = get_model_species_wrf(mechanism_name)
+
     #set global attributes
     gattrs = OrderedDict()
     #gattrs['Conventions'] = 'CF-1.6'
@@ -1043,16 +1056,6 @@ def proj_wrf(run_config):
     gattrs['ISICE'] = 15
     gattrs['ISURBAN'] = 13
     gattrs['ISOILWATER'] = 14
-
-    year = run_config.emission_year
-    month = run_config.emission_month
-    dir_in = run_config.run_output_dir
-    model_grid = run_config.spatial_model_grid
-    target_proj = geolib.projinfo(proj='lcc', lon_0=103.5, lat_0=36.500008, lat_1=30.0, lat_2=60.0, a=6370000, b=6370000)
-    target_grid = GridDesc(target_proj, x_orig=-2497499.597352108, x_cell=15000.0, x_num=334,
-                       y_orig=-2047499.8096037393, y_cell=15000.0, y_num=274)
-    mechanism_name = run_config.chemical_mechanism.name
-    out_species, out_species_aer = get_model_species_wrf(mechanism_name)
     global_attributes = gattrs
     z = 7
 
@@ -1098,7 +1101,7 @@ def proj_wrf(run_config):
         #dimvar.addattr('_ChunkSizes', [1, 3, 137, 167])
         dimvars.append(dimvar)
     for num in [0, 12]:
-        fn_out = dir_inter + '\wrfchemi_{:0>2d}z_d01_{}'.format(num, mechanism_name)
+        fn_out = dir_in + '\wrfchemi_{:0>2d}z_d01_{}'.format(num, mechanism_name)
 
         print('Create output data file...')
         print(fn_out)
@@ -1157,6 +1160,6 @@ def for_WRFChem(run_config):
     print('Distribution of particulate matter and change unit...')
     transform_wrf(run_config)
     print('Conversion projection...')
-    proj_wrf(yrun_config)
+    proj_wrf(run_config)
 
     print("Done total!")
