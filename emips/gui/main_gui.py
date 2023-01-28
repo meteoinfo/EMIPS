@@ -35,7 +35,7 @@ class MainGUI(swing.JFrame):
         if os.path.isfile(self.config.run_config_path):
             self.run_config = RunConfigure(self.config.run_config_path)
         else:
-            self.config.run_config_path = os.path.join(self.current_path, "run_config.xml")
+            self.config.run_config_path = os.path.join(self.current_path, os.pardir, "run", "run_config.xml")
             self.run_config = RunConfigure(self.config.run_config_path)
 
         self.datafile = None

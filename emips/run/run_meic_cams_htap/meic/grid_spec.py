@@ -61,7 +61,7 @@ class RetroGridSpecReader(GridSpecReader):
                         y_orig=-89.95, y_cell=0.1, y_num=1800)
 
 
-_grid_spec_reader = RetroGridSpecReader(dir_grid="D:/Run/emips/Speciation/retro1x1")
+_grid_spec_reader = RetroGridSpecReader(dir_grid="Z:\chen\Research\EMIPS\Grid_speciation_data(VOC)")
 
 
 def get_spec_fn(sector):
