@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EMIPS>
-	<RunConfigure FilePath="Z:\chen\git_project\toolbox\EMIPS\emips\gui\..\run\run_config.xml"/>
+	<RunConfigure FilePath="..\run\run_config.xml"/>
 </EMIPS>

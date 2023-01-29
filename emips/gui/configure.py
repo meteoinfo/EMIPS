@@ -6,6 +6,9 @@ from mipylib import geolib
 import os
 import sys
 import importlib
+from inspect import getsourcefile
+
+dir_configure = os.path.dirname(os.path.abspath(getsourcefile(lambda: 0)))
 
 
 class Configure(object):
@@ -22,7 +25,8 @@ class Configure(object):
 
         # Load path
         run_configure = root.getElementsByTagName('RunConfigure')[0]
-        self.run_config_path = run_configure.getAttribute('FilePath')
+        rel_path = run_configure.getAttribute('FilePath')
+        self.run_config_path = os.path.abspath(os.path.join(dir_configure, rel_path))
 
     def save_configure(self):
         doc = minidom.Document()
@@ -33,7 +37,8 @@ class Configure(object):
 
         # The directories
         run_configure = doc.createElement('RunConfigure')
-        run_configure.setAttribute('FilePath', self.run_config_path)
+        rel_path = os.path.relpath(self.run_config_path, dir_configure)
+        run_configure.setAttribute('FilePath', rel_path)
         root.appendChild(run_configure)
 
         # Write config file
