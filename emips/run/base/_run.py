@@ -236,9 +236,9 @@ def lump_VOC(run_config, sector, pollutant):
     # Read a reference data
     vname = inf.varnames[4]
     rdata = inf[vname][:]
-    rdata[rdata!=np.nan] = 0.
+    rdata[rdata != np.nan] = 0.
 
-    #Set dimensions
+    # Set dimensions
     tdim = np.dimension(np.arange(24), 'hour')
     ydim = np.dimension(model_grid.y_coord, 'lat', 'Y')
     xdim = np.dimension(model_grid.x_coord, 'lon', 'X')
@@ -587,6 +587,8 @@ def convert_grads(run_config):
                     dataset.binwrite(outer, data.astype('float'), byteorder='little_endian', sequential=True)
             outer.close()
     print('Convert to grads completed!')
+
+
 def write_ctl(run_config):
     """
     Write the description file of the output binary data files.
@@ -612,14 +614,14 @@ def write_ctl(run_config):
     xdelta = model_grid.x_cell
     ydelta = model_grid.y_cell
 
-    types = ['low','poi','pow','air']
+    types = ['low', 'poi', 'pow', 'air']
     for month in months:
         dir_out = os.path.join(dir_out, str(year), '{}{:>02d}'.format(year, month))
         for tps in types:
-            fn = os.path.join(dir_out, 'emis_{}_{}_{}.ctl'.format(year,month,tps))
+            fn = os.path.join(dir_out, 'emis_{}_{}_{}.ctl'.format(year, month, tps))
             print(fn)
             f = open(fn, 'w')
-            f.write('dset ^emis_{}_{}_{}.grd\n'.format(year,month, tps))
+            f.write('dset ^emis_{}_{}_{}.grd\n'.format(year, month, tps))
             f.write('title model output from grapes\n')
             f.write('options sequential\n')
             f.write('undef -9.99E+33\n')
@@ -665,6 +667,8 @@ def write_ctl(run_config):
             f.write('endvars')
             f.close()
     print('Write .ctl file completed!')
+
+
 def for_CUACE(run_config):
     """
     Total emission processing to all sectors.
@@ -678,6 +682,7 @@ def for_CUACE(run_config):
     write_ctl(run_config)
 
     print("Done total!")
+
 
 def height_wrf(run_config):
     """
@@ -793,7 +798,7 @@ def merge_wrf(run_config):
     ydim = np.dimension(model_grid.y_coord, 'lat', 'Y')
     xdim = np.dimension(model_grid.x_coord, 'lon', 'X')
     dims = [tdim, zdim, ydim, xdim]
-    #Set the definition of the output variable
+    # Set the definition of the output variable
     print('Define variables...')
     dimvars = []
     count = []
@@ -833,7 +838,7 @@ def merge_wrf(run_config):
             print('File not exist: {}'.format(fn))
             continue
 
-    #Set dimension and define ncfile
+    # Set dimension and define ncfile
     out_fn = dir_in + '\emis_{}_{}_hour.nc'.format(year, month)
     gattrs = OrderedDict()
     gattrs['Conventions'] = 'CF-1.6'
@@ -841,7 +846,7 @@ def merge_wrf(run_config):
     print('Create output data file:{}'.format(out_fn))
     ncfile = dataset.addfile(out_fn, 'c', largefile=True)
     ncfile.nc_define(dims, gattrs, dimvars)
-    #read, merge and output
+    # read, merge and output
     print('Write variables data...')
     for sname, fns in dict_spec.iteritems():
         print(sname)
@@ -850,8 +855,8 @@ def merge_wrf(run_config):
         for fn in fns:
             f = dataset.addfile(fn)
             dd = f[sname][:]
-            #turn nan to zero
-            dd[dd==np.nan] = 0.0
+            # turn nan to zero
+            dd[dd == np.nan] = 0.0
             if spec_data.sum() == 0.0:
                 spec_data = dd
             else:
@@ -860,6 +865,7 @@ def merge_wrf(run_config):
         ncfile.write(sname, spec_data)
     ncfile.close()
     print('Merge data finished!')
+
 
 def transform_wrf(run_config):
     """
@@ -884,7 +890,7 @@ def transform_wrf(run_config):
     fn_in = dir_in + '\emis_{}_{}_hour.nc'.format(year, month)
     f_in = dataset.addfile(fn_in)
 
-    #Set dimension
+    # Set dimension
     print('Define dimensions and global attributes...')
     tdim = np.dimension(np.arange(24), 'Time')
     zdim = np.dimension(np.arange(z), 'emissions_zdim')
@@ -895,7 +901,7 @@ def transform_wrf(run_config):
     gattrs['Conventions'] = 'CF-1.6'
     gattrs['Tools'] = 'Created using MeteoInfo'
 
-    #Set the definition of the output variable and ncfile
+    # Set the definition of the output variable and ncfile
     fn_out = dir_in + '\emis_{}_{}_hour_transform.nc'.format(year, month)
     print('Define variables and output file...')
     dimvars = []
@@ -908,20 +914,20 @@ def transform_wrf(run_config):
         dimvar.addattr('MemoryOrder', "XYZ")
         dimvar.addattr('description', "EMISSION_{}".format(out_specie[2:]))
         if out_specie in out_species_aer:
-            #g/m2/s to ug/m^3 m/s
+            # g/m2/s to ug/m^3 m/s
             dimvar.addattr('units', 'ug/m3 m/s')
         else:
-            #mole/m2/s to mol/km^2/hr
+            # mole/m2/s to mol/km^2/hr
             dimvar.addattr('units', 'mol km^-2 hr^-1')
         dimvar.addattr('stagger', "")
         dimvar.addattr('coordinates', "XLONG XLAT XTIME")
-        #dimvar.addattr('_ChunkSizes', '1U, 3U, 137U, 167U')
+        # dimvar.addattr('_ChunkSizes', '1U, 3U, 137U, 167U')
         dimvars.append(dimvar)
     print('Create output data file:{}'.format(fn_out))
     ncfile = dataset.addfile(fn_out, 'c', largefile=True)
     ncfile.nc_define(dims, gattrs, dimvars)
 
-    #add data to ncfile
+    # add data to ncfile
     print('Process data and write to file...')
     for name in out_species:
         data = np.zeros((tdim.length, z, ydim.length, xdim.length))
@@ -934,58 +940,59 @@ def transform_wrf(run_config):
         elif sname == 'PM25I':
             data = f_in['PMFINE'][:, :, :]
             data = data * 1e6
-            ncfile.write(name, data*0.2)
+            ncfile.write(name, data * 0.2)
         elif sname == 'PM25J':
             data = f_in['PMFINE'][:, :, :]
             data = data * 1e6
-            ncfile.write(name, data*0.8)
+            ncfile.write(name, data * 0.8)
         ##radm2, mozart
-        elif sname == 'PM_10' :
+        elif sname == 'PM_10':
             data = f_in['PMC'][:, :, :]
             data = data * 1e6
             ncfile.write(name, data)
-            #saprc99, cb05
-        elif sname == 'PM10' :
+            # saprc99, cb05
+        elif sname == 'PM10':
             data = f_in['PMC'][:, :, :]
             data = data * 1e6
             ncfile.write(name, data)
         elif sname == 'ECI':
             data = f_in['PEC'][:, :, :]
             data = data * 1e6
-            ncfile.write(name, data*0.2)
+            ncfile.write(name, data * 0.2)
         elif sname == 'ECJ':
             data = f_in['PEC'][:, :, :]
             data = data * 1e6
-            ncfile.write(name, data*0.8)
+            ncfile.write(name, data * 0.8)
         elif sname == 'ORGI':
             data = f_in['POA'][:, :, :]
             data = data * 1e6
-            ncfile.write(name, data*0.2)
+            ncfile.write(name, data * 0.2)
         elif sname == 'ORGJ':
             data = f_in['POA'][:, :, :]
             data = data * 1e6
-            ncfile.write(name, data*0.8)
+            ncfile.write(name, data * 0.8)
         elif sname == 'SO4I':
             data = f_in['PSO4'][:, :, :]
             data = data * 1e6
-            ncfile.write(name, data*0.2)
+            ncfile.write(name, data * 0.2)
         elif sname == 'SO4J':
             data = f_in['PSO4'][:, :, :]
             data = data * 1e6
-            ncfile.write(name, data*0.8)
+            ncfile.write(name, data * 0.8)
         elif sname == 'NO3I':
             data = f_in['PNO3'][:, :, :]
             data = data * 1e6
-            ncfile.write(name, data*0.2)
+            ncfile.write(name, data * 0.2)
         elif sname == 'NO3J':
             data = f_in['PNO3'][:, :, :]
             data = data * 1e6
-            ncfile.write(name, data*0.8)
+            ncfile.write(name, data * 0.8)
         else:
             ncfile.write(name, data)
     f_in.close()
     ncfile.close()
     print('Distribution of particulate matter and change unit finised!')
+
 
 def proj_wrf(run_config):
     """
@@ -1004,21 +1011,20 @@ def proj_wrf(run_config):
     :param z: (*int*) The zdim of the output data.
     """
 
-
-
     year = run_config.emission_year
     month = run_config.emission_month
     dir_in = run_config.run_output_dir
     model_grid = run_config.spatial_model_grid
-    target_proj = geolib.projinfo(proj='lcc', lon_0=103.5, lat_0=36.500008, lat_1=30.0, lat_2=60.0, a=6370000, b=6370000)
+    target_proj = geolib.projinfo(proj='lcc', lon_0=103.5, lat_0=36.500008, lat_1=30.0, lat_2=60.0, a=6370000,
+                                  b=6370000)
     target_grid = GridDesc(target_proj, x_orig=-2497499.597352108, x_cell=15000.0, x_num=334,
-                       y_orig=-2047499.8096037393, y_cell=15000.0, y_num=274)
+                           y_orig=-2047499.8096037393, y_cell=15000.0, y_num=274)
     mechanism_name = run_config.chemical_mechanism.name
     out_species, out_species_aer = get_model_species_wrf(mechanism_name)
 
-    #set global attributes
+    # set global attributes
     gattrs = OrderedDict()
-    #gattrs['Conventions'] = 'CF-1.6'
+    # gattrs['Conventions'] = 'CF-1.6'
     gattrs['TITLE'] = 'Created using MeteoInfo, mechanism: {}'.format(mechanism_name.upper())
     gattrs['START_DATE'] = "{}-{:0>2d}-01_00:00:00".format(year, month)
     gattrs['WEST-EAST_GRID_DIMENSION'] = 335
@@ -1063,7 +1069,7 @@ def proj_wrf(run_config):
     fn_in = dir_in + '\emis_{}_{}_hour_transform.nc'.format(year, month)
     print(fn_in)
     f_in = dataset.addfile(fn_in)
-    #set dimension
+    # set dimension
     tdim = np.dimension(np.arange(12), 'Time')
     ydim = np.dimension(target_grid.y_coord, 'south_north', 'Y')
     xdim = np.dimension(target_grid.x_coord, 'west_east', 'X')
@@ -1072,14 +1078,14 @@ def proj_wrf(run_config):
     dims = [tdim, zdim, ydim, xdim]
     all_dims = [tdim, sdim, xdim, ydim, zdim]
 
-    #set variables
+    # set variables
     dimvars = []
 
     dimvar = dataset.DimVariable()
     dimvar.name = 'Times'
     dimvar.dtype = np.dtype.char
     dimvar.dims = [tdim, sdim]
-    #dimvar.addattr('_ChunkSizes', [1, 19])
+    # dimvar.addattr('_ChunkSizes', [1, 19])
     dimvars.append(dimvar)
 
     for out_specie in out_species:
@@ -1091,14 +1097,14 @@ def proj_wrf(run_config):
         dimvar.addattr('MemoryOrder', "XYZ")
         dimvar.addattr('description', "EMISSION_{}".format(out_specie[2:]))
         if out_specie in out_species_aer:
-            #g/m2/s to ug/m^3 m/s
+            # g/m2/s to ug/m^3 m/s
             dimvar.addattr('units', 'ug/m3 m/s')
         else:
-            #mole/m2/s to mol/km^2/hr
+            # mole/m2/s to mol/km^2/hr
             dimvar.addattr('units', 'mol km^-2 hr^-1')
         dimvar.addattr('stagger', "")
         dimvar.addattr('coordinates', "XLONG XLAT XTIME")
-        #dimvar.addattr('_ChunkSizes', [1, 3, 137, 167])
+        # dimvar.addattr('_ChunkSizes', [1, 3, 137, 167])
         dimvars.append(dimvar)
     for num in [0, 12]:
         fn_out = dir_in + '\wrfchemi_{:0>2d}z_d01_{}'.format(num, mechanism_name)
@@ -1109,10 +1115,10 @@ def proj_wrf(run_config):
         print('Define dimensions, global attributes and variables...')
         ncfile.nc_define(all_dims, global_attributes, dimvars, write_dimvars=False)
 
-        #Times
+        # Times
         print('Write Times variable...')
         s_out = []
-        for i in range(num, num+12):
+        for i in range(num, num + 12):
             s = '{}-{:0>2d}-01_{:0>2d}:00:00'.format(year, month, i)
             s_out.append(s)
         s_out = np.array(s_out, dtype=np.dtype.char)
@@ -1123,13 +1129,13 @@ def proj_wrf(run_config):
             data = np.zeros((tdim.length, zdim.length, ydim.length, xdim.length))
             if out_specie in f_in.varnames:
                 print(out_specie)
-                dd = f_in[out_specie][num:num+12]
-                #Conversion
+                dd = f_in[out_specie][num:num + 12]
+                # Conversion
                 dd = transform(dd, model_grid, target_grid)
-                #Set the fourth dimension
-                #dd = dd.reshape(12, 1, ydim.length, xdim.length)
-                #Set default values
-                dd[dd==np.nan] = 0
+                # Set the fourth dimension
+                # dd = dd.reshape(12, 1, ydim.length, xdim.length)
+                # Set default values
+                dd[dd == np.nan] = 0
             else:
                 print('{} no data!'.format(out_specie))
                 '''
@@ -1146,6 +1152,7 @@ def proj_wrf(run_config):
         ncfile.close()
     f_in.close()
     print('Convert projection finished and split into two files finished!')
+
 
 def for_WRFChem(run_config):
     """

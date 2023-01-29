@@ -96,9 +96,11 @@ class EmissionReader(object):
         pass
 
     @abstractmethod
-    def get_emis_grid(self):
+    def get_emis_grid(self, sector=SectorEnum.INDUSTRY):
         """
         Get emission grid.
+
+        :param sector: (*SectorEnum*) Sector. Default is `INDUSTRY`.
 
         :return: (*GridDesc*) Emission grid description.
         """

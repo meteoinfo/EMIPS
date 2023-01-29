@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EMIPS_Run>
 	<Emission>
-		<Read ScriptFile="Z:\chen\git_project\toolbox\EMIPS\emips\run\run_meic_cams_htap\meic\emission.py"/>
+		<Read ScriptFile="D:\MyProgram\java\MeteoInfoDev\toolbox\EMIPS\emips\run\run_meic_cams_htap\meic\emission.py"/>
 		<Sectors>
 			<Sector Name="INDUSTRY" SCC="30100101"/>
 			<Sector Name="AGRICULTURE" SCC="28050000"/>
@@ -50,7 +50,7 @@
 		<FileName Profile="amptpro.m3.default.us+can.txt" Reference="amptref.m3.us+can.cair.txt"/>
 	</Temporal>
 	<Chemical>
-		<FileName Profile="Z:\chen\git_project\toolbox\EMIPS\emips\ge_data\gspro.cuace.radm2.txt" Reference="Z:\chen\git_project\toolbox\EMIPS\emips\ge_data\gsref.cuace.radm2.txt"/>
+		<FileName Profile="D:\MyProgram\Java\MeteoInfoDev\toolbox\EMIPS\emips\ge_data\gspro.cuace.radm2.txt" Reference="D:\MyProgram\Java\MeteoInfoDev\toolbox\EMIPS\emips\ge_data\gsref.cuace.radm2.txt"/>
 		<GridSpeciation Enable="True">
 			<Read ScriptFile="Z:\chen\git_project\toolbox\EMIPS\emips\run\run_meic_cams_htap\meic\grid_spec.py"/>
 			<ChemMech name="RADM2"/>
