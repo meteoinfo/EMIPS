@@ -211,13 +211,6 @@ class RunPanel(swing.JPanel):
         postrun = PostProcess(self)
         postrun.execute()
 
-    # def click_run_for_cuace(self, e):
-    #     postrun = RunforCUACE(self)
-    #     postrun.execute()
-    #
-    # def click_run_for_wrfchem(self, e):
-    #     postrun = RunforWRFChem(self)
-    #     postrun.execute()
 
 class RunPollutant(swing.SwingWorker):
 
@@ -296,53 +289,6 @@ class RunTotal(swing.SwingWorker):
         except ExecutionException, e:
             raise e.getCause()
 
-# class RunforCUACE(swing.SwingWorker):
-#
-#     def __init__(self, panel):
-#         self.panel = panel
-#         swing.SwingWorker.__init__(self)
-#
-#     def doInBackground(self):
-#         # Set cursor and progress bar
-#         self.panel.setCursor(awt.Cursor(awt.Cursor.WAIT_CURSOR))
-#         self.panel.frm_main.milab_app.getProgressBar().setVisible(True)
-#
-#         # Run
-#         for_CUACE(self.panel.run_config)
-#
-#     def done(self):
-#         # Set cursor and progress bar
-#         self.panel.setCursor(awt.Cursor(awt.Cursor.DEFAULT_CURSOR))
-#         self.panel.frm_main.milab_app.getProgressBar().setVisible(False)
-#
-#         try:
-#             self.get()  # raise exception if abnormal completion
-#         except ExecutionException, e:
-#             raise e.getCause()
-#
-# class RunforWRFChem(swing.SwingWorker):
-#
-#     def __init__(self, panel):
-#         self.panel = panel
-#         swing.SwingWorker.__init__(self)
-#
-#     def doInBackground(self):
-#         # Set cursor and progress bar
-#         self.panel.setCursor(awt.Cursor(awt.Cursor.WAIT_CURSOR))
-#         self.panel.frm_main.milab_app.getProgressBar().setVisible(True)
-#
-#         # Run
-#         for_WRFChem(self.panel.run_config)
-#
-#     def done(self):
-#         # Set cursor and progress bar
-#         self.panel.setCursor(awt.Cursor(awt.Cursor.DEFAULT_CURSOR))
-#         self.panel.frm_main.milab_app.getProgressBar().setVisible(False)
-#
-#         try:
-#             self.get()  # raise exception if abnormal completion
-#         except ExecutionException, e:
-#             raise e.getCause()
 
 class PostProcess(swing.SwingWorker):
 

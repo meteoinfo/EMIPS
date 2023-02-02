@@ -10,7 +10,6 @@ from mipylib import plotlib as plt
 from mipylib import numeric as np
 from mipylib import dataset
 from emips.spatial_alloc import GridDesc
-from emips.gui.emission_panel import EmissionPanel
 
 
 class SpatialPanel(swing.JPanel):
