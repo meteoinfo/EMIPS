@@ -8,7 +8,7 @@ from com.formdev.flatlaf.extras import FlatSVGIcon
 from java.io import File
 from java.util.concurrent import ExecutionException
 
-from emips.run import run_pollutant, run_sector, run_total, for_CUACE, for_WRFChem
+from emips.run import run_pollutant, run_sector, run_total
 
 
 class RunPanel(swing.JPanel):
@@ -45,7 +45,7 @@ class RunPanel(swing.JPanel):
         self.checkbox_run_vertical.actionPerformed = self.click_is_run_vertical
 
         # Single pollutant run
-        label_pre_process = swing.JLabel("Preprocess:")
+        label_run_emission = swing.JLabel("Run emission:")
         button_run_pollutant = swing.JButton("Run (single pollutant)")
         button_run_pollutant.actionPerformed = self.click_run_pollutant
 
@@ -59,18 +59,18 @@ class RunPanel(swing.JPanel):
 
         # Post process
         label_post_process = swing.JLabel("Post process:")
-        '''
+
         self.text_post_process = swing.JTextField("")
         icon = FlatSVGIcon(File(os.path.join(self.frm_main.current_path, 'image', 'file-open.svg')))
         button_post = swing.JButton("", icon)
         button_post.actionPerformed = self.click_post_process
         button_run_post = swing.JButton("Run post process")
         button_run_post.actionPerformed = self.click_run_post
-        '''
-        button_run_for_cuace = swing.JButton("For CUACE")
-        button_run_for_cuace.actionPerformed = self.click_run_for_cuace
-        button_run_for_wrfchem = swing.JButton("For WRF-Chem")
-        button_run_for_wrfchem.actionPerformed = self.click_run_for_wrfchem
+
+        # button_run_for_cuace = swing.JButton("For CUACE")
+        # button_run_for_cuace.actionPerformed = self.click_run_for_cuace
+        # button_run_for_wrfchem = swing.JButton("For WRF-Chem")
+        # button_run_for_wrfchem.actionPerformed = self.click_run_for_wrfchem
 
         # Layout
         layout = swing.GroupLayout(self)
@@ -92,23 +92,24 @@ class RunPanel(swing.JPanel):
                         .addComponent(self.combobox_sector)
                         .addComponent(self.combobox_pollutant)))
                 .addComponent(self.checkbox_run_vertical)
-                .addGap(15)
-                .addComponent(label_pre_process)
+                .addGap(10)
+                .addComponent(label_run_emission)
                 .addGroup(swing.GroupLayout.Alignment.CENTER, layout.createSequentialGroup()
                           .addComponent(button_run_pollutant)
-                          .addComponent(button_run_sector)
-                          .addComponent(button_run_total))
+                          .addComponent(button_run_sector))
+                .addGap(10)
+                .addComponent(button_run_total, swing.GroupLayout.Alignment.CENTER)
                 .addGap(15)
-                # .addGroup(layout.createSequentialGroup()
-                #           .addComponent(label_post_process)
-                #           .addComponent(self.text_post_process)
-                #           .addComponent(button_post))
-                # .addGap(15)
-                # .addComponent(button_run_post, swing.GroupLayout.Alignment.CENTER)
-                .addComponent(label_post_process)
-                .addGroup(swing.GroupLayout.Alignment.CENTER, layout.createSequentialGroup()
-                          .addComponent(button_run_for_cuace)
-                          .addComponent(button_run_for_wrfchem))
+                .addGroup(layout.createSequentialGroup()
+                          .addComponent(label_post_process)
+                          .addComponent(self.text_post_process)
+                          .addComponent(button_post))
+                .addGap(10)
+                .addComponent(button_run_post, swing.GroupLayout.Alignment.CENTER)
+                # .addComponent(label_post_process)
+                # .addGroup(swing.GroupLayout.Alignment.CENTER, layout.createSequentialGroup()
+                #           .addComponent(button_run_for_cuace)
+                #           .addComponent(button_run_for_wrfchem))
         )
         layout.setVerticalGroup(
             layout.createSequentialGroup()
@@ -124,23 +125,24 @@ class RunPanel(swing.JPanel):
                     .addComponent(label_pollutant)
                     .addComponent(self.combobox_pollutant))
                 .addComponent(self.checkbox_run_vertical)
-                .addGap(15)
-                .addComponent(label_pre_process)
+                .addGap(10)
+                .addComponent(label_run_emission)
                 .addGroup(layout.createParallelGroup(swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(button_run_pollutant)
-                    .addComponent(button_run_sector)
-                    .addComponent(button_run_total))
+                    .addComponent(button_run_sector))
+                .addGap(10)
+                .addComponent(button_run_total)
                 .addGap(15)
-                # .addGroup(layout.createParallelGroup(swing.GroupLayout.Alignment.BASELINE)
-                #           .addComponent(label_post_process)
-                #           .addComponent(self.text_post_process)
-                #           .addComponent(button_post))
-                # .addGap(15)
-                # .addComponent(button_run_post)
-                .addComponent(label_post_process)
                 .addGroup(layout.createParallelGroup(swing.GroupLayout.Alignment.BASELINE)
-                          .addComponent(button_run_for_cuace)
-                          .addComponent(button_run_for_wrfchem))
+                          .addComponent(label_post_process)
+                          .addComponent(self.text_post_process)
+                          .addComponent(button_post))
+                .addGap(10)
+                .addComponent(button_run_post)
+                # .addComponent(label_post_process)
+                # .addGroup(layout.createParallelGroup(swing.GroupLayout.Alignment.BASELINE)
+                #           .addComponent(button_run_for_cuace)
+                #           .addComponent(button_run_for_wrfchem))
         )
 
     def update_run_configure(self, run_config):
@@ -153,7 +155,7 @@ class RunPanel(swing.JPanel):
         self.text_output_dir.setText(self.run_config.run_output_dir)
         self.update_sectors()
         self.update_pollutants()
-        # self.text_post_process.setText(self.run_config.post_process_file)
+        self.text_post_process.setText(self.run_config.post_process_file)
 
     def update_sectors(self):
         self.combobox_sector.removeAllItems()
@@ -170,7 +172,6 @@ class RunPanel(swing.JPanel):
         ff = File(self.text_output_dir.text)
         if ff.isFile():
             choose_file.setCurrentDirectory(ff.getParentFile())
-        # choose_file.setFileSelectionMode(swing.JFileChooser.FILES_ONLY)
         choose_file.setFileSelectionMode(swing.JFileChooser.DIRECTORIES_ONLY)
         ret = choose_file.showOpenDialog(self)
         if ret == swing.JFileChooser.APPROVE_OPTION:
@@ -193,29 +194,23 @@ class RunPanel(swing.JPanel):
         trun = RunTotal(self)
         trun.execute()
 
-    # def click_post_process(self, e):
-    #     choose_file = swing.JFileChooser()
-    #     ff = File(self.text_post_process.text)
-    #     if ff.isFile():
-    #         choose_file.setCurrentDirectory(ff.getParentFile())
-    #     choose_file.setFileSelectionMode(swing.JFileChooser.FILES_ONLY)
-    #     ret = choose_file.showOpenDialog(self)
-    #     if ret == swing.JFileChooser.APPROVE_OPTION:
-    #         ff = choose_file.getSelectedFile()
-    #         self.text_post_process.text = ff.getAbsolutePath()
-    #         self.run_config.post_process_file = ff.getAbsolutePath()
-    #         self.run_config.load_post_process_module()
+    def click_post_process(self, e):
+        choose_file = swing.JFileChooser()
+        ff = File(self.text_post_process.text)
+        if ff.isFile():
+            choose_file.setCurrentDirectory(ff.getParentFile())
+        choose_file.setFileSelectionMode(swing.JFileChooser.FILES_ONLY)
+        ret = choose_file.showOpenDialog(self)
+        if ret == swing.JFileChooser.APPROVE_OPTION:
+            ff = choose_file.getSelectedFile()
+            self.text_post_process.text = ff.getAbsolutePath()
+            self.run_config.post_process_file = ff.getAbsolutePath()
+            self.run_config.load_post_process_module()
 
-    # def click_run_post(self, e):
-    #     self.run_config.post_process_module.run(self.run_config)
-
-    def click_run_for_cuace(self, e):
-        postrun = RunforCUACE(self)
+    def click_run_post(self, e):
+        postrun = PostProcess(self)
         postrun.execute()
 
-    def click_run_for_wrfchem(self, e):
-        postrun = RunforWRFChem(self)
-        postrun.execute()
 
 class RunPollutant(swing.SwingWorker):
 
@@ -294,7 +289,8 @@ class RunTotal(swing.SwingWorker):
         except ExecutionException, e:
             raise e.getCause()
 
-class RunforCUACE(swing.SwingWorker):
+
+class PostProcess(swing.SwingWorker):
 
     def __init__(self, panel):
         self.panel = panel
@@ -306,31 +302,7 @@ class RunforCUACE(swing.SwingWorker):
         self.panel.frm_main.milab_app.getProgressBar().setVisible(True)
 
         # Run
-        for_CUACE(self.panel.run_config)
-
-    def done(self):
-        # Set cursor and progress bar
-        self.panel.setCursor(awt.Cursor(awt.Cursor.DEFAULT_CURSOR))
-        self.panel.frm_main.milab_app.getProgressBar().setVisible(False)
-
-        try:
-            self.get()  # raise exception if abnormal completion
-        except ExecutionException, e:
-            raise e.getCause()
-
-class RunforWRFChem(swing.SwingWorker):
-
-    def __init__(self, panel):
-        self.panel = panel
-        swing.SwingWorker.__init__(self)
-
-    def doInBackground(self):
-        # Set cursor and progress bar
-        self.panel.setCursor(awt.Cursor(awt.Cursor.WAIT_CURSOR))
-        self.panel.frm_main.milab_app.getProgressBar().setVisible(True)
-
-        # Run
-        for_WRFChem(self.panel.run_config)
+        self.panel.run_config.post_process_module.run(self.panel.run_config)
 
     def done(self):
         # Set cursor and progress bar
