@@ -72,16 +72,16 @@ class RunConfigure(object):
 
         self.run_output_dir = None
         self.is_run_vertical = None
-        # self.post_process_file = None
+        self.post_process_file = None
 
         self.emission_module = None
         self.grid_spec_module = None
-        # self.post_process_module = None
+        self.post_process_module = None
 
         self.load_configure(filename)
         self.load_emission_module()
         self.load_grid_spec_module()
-        # self.load_post_process_module()
+        self.load_post_process_module()
 
     def load_configure(self, filename):
         dom = minidom.parse(filename)
@@ -90,7 +90,7 @@ class RunConfigure(object):
         # Emission
         emission = root.getElementsByTagName('Emission')[0]
         emission_read = emission.getElementsByTagName('Read')[0]
-        self.emission_read_file = emission_read.getAttribute('ScriptFile')
+        self.emission_read_file = os.path.abspath(os.path.join(dir_configure, emission_read.getAttribute('ScriptFile')))
         emission_sectors = emission.getElementsByTagName("Sectors")[0]
         sector_list = emission_sectors.getElementsByTagName("Sector")
         for sector in sector_list:
@@ -140,7 +140,7 @@ class RunConfigure(object):
         use_gsf = grid_spec.getAttribute("Enable")
         self.voc_use_grid_spec = True if use_gsf == "True" else False
         grid_spec_read = grid_spec.getElementsByTagName("Read")[0]
-        self.grid_spec_read_file = grid_spec_read.getAttribute("ScriptFile")
+        self.grid_spec_read_file = os.path.abspath(os.path.join(dir_configure,grid_spec_read.getAttribute("ScriptFile")))
         grid_spec_mech = grid_spec.getElementsByTagName("ChemMech")[0]
         self.chemical_mechanism = ChemMechEnum[grid_spec_mech.getAttribute("name")]
 
@@ -155,41 +155,43 @@ class RunConfigure(object):
         self.run_output_dir = output.getAttribute("Directory")
         steps = run.getElementsByTagName("Steps")[0]
         self.is_run_vertical = True if steps.getAttribute("RunVertical") == "True" else False
-        # post_process = run.getElementsByTagName("PostProcess")[0]
-        # self.post_process_file = post_process.getAttribute("ScriptFile")
+        post_process = run.getElementsByTagName("PostProcess")[0]
+        self.post_process_file = os.path.abspath(os.path.join(dir_configure, post_process.getAttribute("ScriptFile")))
 
     def load_emission_module(self):
-        if os.path.isfile(self.emission_read_file):
-            run_path = os.path.dirname(self.emission_read_file)
+        emission_read_file = os.path.abspath(os.path.join(dir_configure, os.pardir, self.emission_read_file))
+        if os.path.isfile(emission_read_file):
+            run_path = os.path.dirname(emission_read_file)
             if run_path not in sys.path:
                 sys.path.append(run_path)
-            run_module = os.path.basename(self.emission_read_file)
+            run_module = os.path.basename(emission_read_file)
             run_module = os.path.splitext(run_module)[0]
             self.emission_module = importlib.import_module(run_module)
         else:
-            print('Read emission script file not exist!\n {}'.format(self.emission_read_file))
+            print('Read emission script file not exist!\n {}'.format(emission_read_file))
 
     def load_grid_spec_module(self):
-        if os.path.isfile(self.grid_spec_read_file):
-            run_path = os.path.dirname(self.grid_spec_read_file)
+        grid_spec_read_file = os.path.abspath(os.path.join(dir_configure, os.pardir, self.grid_spec_read_file))
+        if os.path.isfile(grid_spec_read_file):
+            run_path = os.path.dirname(grid_spec_read_file)
             if run_path not in sys.path:
                 sys.path.append(run_path)
-            run_module = os.path.basename(self.grid_spec_read_file)
+            run_module = os.path.basename(grid_spec_read_file)
             run_module = os.path.splitext(run_module)[0]
             self.grid_spec_module = importlib.import_module(run_module)
         else:
-            print('Read grid speciation script file not exist!\n {}'.format(self.grid_spec_read_file))
+            print('Read grid speciation script file not exist!\n {}'.format(grid_spec_read_file))
 
-    # def load_post_process_module(self):
-    #     if os.path.isfile(self.post_process_file):
-    #         run_path = os.path.dirname(self.post_process_file)
-    #         if run_path not in sys.path:
-    #             sys.path.append(run_path)
-    #         run_module = os.path.basename(self.post_process_file)
-    #         run_module = os.path.splitext(run_module)[0]
-    #         self.post_process_module = importlib.import_module(run_module)
-    #     else:
-    #         print('Post process script file not exist!\n {}'.format(self.post_process_file))
+    def load_post_process_module(self):
+        if os.path.isfile(self.post_process_file):
+            run_path = os.path.dirname(self.post_process_file)
+            if run_path not in sys.path:
+                sys.path.append(run_path)
+            run_module = os.path.basename(self.post_process_file)
+            run_module = os.path.splitext(run_module)[0]
+            self.post_process_module = importlib.import_module(run_module)
+        else:
+            print('Post process script file not exist!\n {}'.format(self.post_process_file))
 
     def save_configure(self, filename=None):
         doc = minidom.Document()
@@ -201,7 +203,7 @@ class RunConfigure(object):
         # Emission
         emission = doc.createElement('Emission')
         emission_read = doc.createElement('Read')
-        emission_read.setAttribute('ScriptFile', self.emission_read_file)
+        emission_read.setAttribute('ScriptFile', os.path.relpath(self.emission_read_file, dir_configure))
         emission.appendChild(emission_read)
 
         elem_sectors = doc.createElement("Sectors")
@@ -246,21 +248,21 @@ class RunConfigure(object):
         # Temporal
         temporal = doc.createElement('Temporal')
         file_name = doc.createElement('FileName')
-        file_name.setAttribute('Profile', self.temporal_prof_file)
-        file_name.setAttribute('Reference', self.temporal_ref_file)
+        file_name.setAttribute('Profile', os.path.basename(self.temporal_prof_file))
+        file_name.setAttribute('Reference', os.path.basename(self.temporal_ref_file))
         temporal.appendChild(file_name)
         root.appendChild(temporal)
 
         # Chemical
         chemical = doc.createElement("Chemical")
         cfiles = doc.createElement("FileName")
-        cfiles.setAttribute("Profile", self.chemical_prof_file)
-        cfiles.setAttribute("Reference", self.chemical_ref_file)
+        cfiles.setAttribute("Profile", os.path.basename(self.chemical_prof_file))
+        cfiles.setAttribute("Reference", os.path.basename(self.chemical_ref_file))
         chemical.appendChild(cfiles)
         grid_spec = doc.createElement("GridSpeciation")
         grid_spec.setAttribute("Enable", "True" if self.voc_use_grid_spec else "False")
         grid_spec_read = doc.createElement("Read")
-        grid_spec_read.setAttribute("ScriptFile", self.grid_spec_read_file)
+        grid_spec_read.setAttribute("ScriptFile", os.path.relpath(self.grid_spec_read_file, dir_configure))
         grid_spec.appendChild(grid_spec_read)
         grid_spec_mech = doc.createElement("ChemMech")
         grid_spec_mech.setAttribute("name", self.chemical_mechanism.name)
@@ -283,9 +285,9 @@ class RunConfigure(object):
         steps = doc.createElement("Steps")
         steps.setAttribute("RunVertical", "True" if self.is_run_vertical else "False")
         run.appendChild(steps)
-        # post_process = doc.createElement("PostProcess")
-        # post_process.setAttribute("ScriptFile", self.post_process_file)
-        # run.appendChild(post_process)
+        post_process = doc.createElement("PostProcess")
+        post_process.setAttribute("ScriptFile", os.path.relpath(self.post_process_file, dir_configure))
+        run.appendChild(post_process)
         root.appendChild(run)
 
         # Write config file

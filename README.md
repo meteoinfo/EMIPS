@@ -51,6 +51,12 @@ email: wencong9801@outlook.com
 
 Chinese Academy of Meteorological Sciences, CMA
 
+Publication
+-----------
+
+- Chen, W.C., Wang, Y.Q., Li, J.W., YI, Z.W., Zhao, Z.C., G, B., Che, H.Z., Zhang, X.Y., 2023. 
+Description and evaluation of a newly developed emission inventory processing system (EMIPS). 
+Sci. Total Environ. 870, 161909. https://doi.org/10.1016/j.scitotenv.2023.161909
 
 License
 -------

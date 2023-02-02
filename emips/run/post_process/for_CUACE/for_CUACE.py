@@ -1,0 +1,49 @@
+"""
+# Author: Wencong Chen
+# Date: 2022-11-27
+# Purpose: Convert netcdf model-ready emission file to GrADS data format for CUACE model 
+           and write the description file of the output binary data files.
+"""
+import convert_grads
+import write_ctl
+import time
+import os
+
+def run(run_config):
+    """
+    To CUACE model ready emission data files.
+
+    :param run_config: (*RunConfigure*) The run configure.
+    """
+
+    time_start = time.time()
+
+    year = run_config.emission_year
+    months = [run_config.emission_month]
+    dir_in = run_config.run_output_dir
+    dir_out = os.path.join(dir_in, 'CUACE')
+    if not os.path.exists(dir_out):
+        os.makedirs(dir_out)
+    model_grid = run_config.spatial_model_grid
+    xn = model_grid.x_num
+    yn = model_grid.y_num
+    xmin = model_grid.x_orig
+    ymin = model_grid.y_orig
+    xdelta = model_grid.x_cell
+    ydelta = model_grid.y_cell
+    all_species = run_config.chemical_mechanism.all_species()
+
+    # Run all scripts
+    print('Convert to grads...')
+    convert_grads.run(year, months, dir_in, dir_out, xn, yn, all_species)
+
+    print('Write .ctl files...')
+    write_ctl.run(year, months, dir_out, xn, yn, xmin, ymin, xdelta, ydelta)
+
+    print('-------------------')
+    print('---All finished!---')
+    print('-------------------')
+
+    time_end = time.time()
+    time_count = (time_end - time_start) / 60
+    print('Time: {:.2f}min'.format(time_count))

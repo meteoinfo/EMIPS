@@ -10,6 +10,7 @@ from mipylib import plotlib as plt
 from mipylib import numeric as np
 from mipylib import dataset
 from emips.spatial_alloc import GridDesc
+from emips.gui.emission_panel import EmissionPanel
 
 
 class SpatialPanel(swing.JPanel):
@@ -138,9 +139,9 @@ class SpatialPanel(swing.JPanel):
         :param run_config: (*RunConfigure*) Run configure object.
         """
         self.run_config = run_config
-
+        sector = self.frm_main.panel_emission.combobox_sector.getSelectedItem()
         if self.run_config.emission_module is not None:
-            self.emis_grid = self.run_config.emission_module.get_emis_grid()
+            self.emis_grid = self.run_config.emission_module.get_emis_grid(sector)
             self.ta_emis_grid.setText(self.emis_grid.__str__())
             
         self.model_grid = self.run_config.spatial_model_grid
@@ -156,8 +157,9 @@ class SpatialPanel(swing.JPanel):
         """
         Update emission module.
         """
+        sector = self.frm_main.panel_emission.combobox_sector.getSelectedItem()
         if self.run_config.emission_module is not None:
-            self.emis_grid = self.run_config.emission_module.get_emis_grid()
+            self.emis_grid = self.run_config.emission_module.get_emis_grid(sector)
             self.ta_emis_grid.setText(self.emis_grid.__str__())
 
     def click_update(self, e):

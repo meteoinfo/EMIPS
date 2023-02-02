@@ -5,7 +5,6 @@ from .vertical_profile import VerticalProfile
 
 __all__ = ['read_file']
 
-
 def read_file(profile_fn, scc):
     """
     Read temporal profiles from profile files

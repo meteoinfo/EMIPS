@@ -8,6 +8,9 @@ from java.io import File
 import os
 from emips.chem_spec import ChemMechEnum
 from emips import ge_data_dir
+from inspect import getsourcefile
+
+dir_chemical_panel = os.path.dirname(os.path.abspath(getsourcefile(lambda: 0)))
 
 
 class ChemicalPanel(swing.JPanel):

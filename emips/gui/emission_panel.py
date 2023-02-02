@@ -12,6 +12,9 @@ from java.util.concurrent import ExecutionException
 from mipylib import plotlib as plt
 from mipylib import numeric as np
 from .form import FrmSectors, FrmPollutants
+from inspect import getsourcefile
+
+dir_emission_panel = os.path.dirname(os.path.abspath(getsourcefile(lambda: 0)))
 
 
 class EmissionPanel(swing.JPanel):
@@ -223,7 +226,7 @@ class PlotEmission(swing.SwingWorker):
         emission = self.panel.run_config.emission_module
         data = emission.read_emis(sector, pollutant, year, month)
         print(data)
-        emis_grid = emission.get_emis_grid()
+        emis_grid = emission.get_emis_grid(sector)
         lon = emis_grid.x_coord
         lat = emis_grid.y_coord
 
@@ -232,7 +235,7 @@ class PlotEmission(swing.SwingWorker):
         plt.axesm()
         plt.geoshow('country', edgecolor='k')
         levs = np.logspace(-10, 2, num=13)
-        layer = plt.imshow(lon, lat, data, levs)
+        layer = plt.imshow(lon, lat, data*1e6, levs)
         plt.colorbar(layer, shrink=0.8)
         plt.title('Emission - {} - {} - ({}-{})'.format(sector.name, pollutant.name, year, month))
 
