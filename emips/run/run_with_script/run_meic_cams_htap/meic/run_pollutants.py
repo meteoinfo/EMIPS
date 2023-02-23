@@ -61,15 +61,15 @@ def run(year, month, dir_inter, emission, model_grid):
             print(pollutant)
 
             print('Read emission data...')
-            emis_data = emission.read_emis(sector, pollutant, month)
+            emis_data = emission.read_emis(sector, pollutant, year, month)
 
             # Remove PM2.5 included in PM10, Remove BC and OC included in PM2.5
             if pollutant == PollutantEnum.PM10:
-                emis_data_pm25 = emission.read_emis(sector, PollutantEnum.PM2_5, month)
+                emis_data_pm25 = emission.read_emis(sector, PollutantEnum.PM2_5, year, month)
                 emis_data = emis_data - emis_data_pm25
             if pollutant == PollutantEnum.PM2_5:
-                emis_data_bc = emission.read_emis(sector, PollutantEnum.BC, month)
-                emis_data_oc = emission.read_emis(sector, PollutantEnum.OC, month)
+                emis_data_bc = emission.read_emis(sector, PollutantEnum.BC, year, month)
+                emis_data_oc = emission.read_emis(sector, PollutantEnum.OC, year, month)
                 emis_data = emis_data - emis_data_bc - emis_data_oc
 
             # Spatial allocation
