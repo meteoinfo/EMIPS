@@ -50,7 +50,12 @@ class SpeciesProfile(object):
         data = line.split()
         pollutant = Pollutant(data[1])
         if mechanism is None:
-            species = Species(data[2])
+			if data[2] == 'NO':
+				species = Species(data[2], molar_mass=30)
+			elif data[2] == 'NO2':
+				species = Species(data[2], molar_mass=46)
+			else:
+				species = Species(data[2])
         else:
             species = mechanism.species(data[2])
         return SpeciesProfile(pollutant, species, float(data[3]), float(data[4]), float(data[5]))
