@@ -32,7 +32,8 @@ Learn more about MeteoInfo and EMIPS in its official documentation at http://met
 Version
 -------
 
-EMIPS-1.1 was released (2023-06-24). Added support for CMAQ and bug fixes.
+EMIPS-1.1 was released (2023-06-24).   Added support for CMAQ and bug fixes.
+
 EMIPS-1.0 was released (2023-01-26).
 
 Author
