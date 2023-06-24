@@ -32,7 +32,7 @@ class MyEmissionReader(EmissionReader):
         data = data[::-1,:]
         return data
 
-    def get_emis_grid(self):
+    def get_emis_grid(self, sector=SectorEnum.INDUSTRY):
         return GridDesc(geolib.projinfo(), x_orig=70.05, x_cell=0.1, x_num=800,
                         y_orig=10.05, y_cell=0.1, y_num=500)
 

@@ -112,7 +112,7 @@ class MyEmissionReader(EmissionReader):
             print('Alarm! Emission data file not exists: {}'.format(fn))
             return None
 
-    def get_emis_grid(self, sector):
+    def get_emis_grid(self, sector=SectorEnum.INDUSTRY):
         if sector == SectorEnum.AIR:
             emis_grid = GridDesc(geolib.projinfo(), x_orig=-179.75, x_cell=0.5, x_num=720,
                                  y_orig=-89.75, y_cell=0.5, y_num=360)
