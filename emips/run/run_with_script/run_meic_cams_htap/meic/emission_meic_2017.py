@@ -40,7 +40,7 @@ def get_emis_fn(sector, pollutant, year, month):
         pollutant_name = 'PM25'
     elif pollutant == PollutantEnum.NMVOC:
         pollutant_name = 'VOC'
-    fn = '2017_{:0>2d}_{}_{}.asc'.format(month, sector_name, pollutant_name)
+    fn = '{}_{:0>2d}_{}_{}.asc'.format(year, month, sector_name, pollutant_name)
     return os.path.join(dir_emission, fn)
 
 
@@ -54,7 +54,7 @@ def read_emis(sector, pollutant, year, month):
     :param month: (*int*) The month.
     :returns: (*array*) Emission data array.
     """
-    fn = get_emis_fn(sector, pollutant, month)
+    fn = get_emis_fn(sector, pollutant, year, month)
     print('File_in:{}'.format(fn))
     f = addfile_ascii_grid(fn)
     data = f['var'][:]

@@ -50,7 +50,7 @@ def run(year, month, dir_inter, emission, model_grid):
         scc = emis_util.get_scc(sector)
 
         print('Read emission data...')
-        emis_data = emission.read_emis(sector, pollutant, month)
+        emis_data = emission.read_emis(sector, pollutant, year, month)
 
         #### Spatial allocation  
         print('Spatial allocation...')

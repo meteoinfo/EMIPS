@@ -9,7 +9,7 @@ import emips
 out_species_unit = ['PEC', 'POA', 'PMFINE', 'PNO3', 'PSO4', 'PMC']
 
 
-def run(year, month, dir_inter, model_grid, sectors, z, z_file):
+def run(year, month, dir_inter, model_grid, sectors, nlays, z_file):
     """
     Allocate data to different heights.
 
@@ -18,14 +18,14 @@ def run(year, month, dir_inter, model_grid, sectors, z, z_file):
     :param dir_inter: (*string*) The directory where data is stored.
     :param model_grid: (*GridDesc*) Model data grid describe.
     :param sectors: (*GridDesc*) The sectors need to be processed.
-    :param z: (*int*) The zdim of the output data.
+    :param nlays: (*int*) The z-dimension of the output data.
     :param z_file: (*string*) The path of the vertical allocate file.
     """
     print('Define dimension and global attributes...')
-    tdim = np.dimension(np.arange(24), 'hour')
-    ydim = np.dimension(model_grid.y_coord, 'lat', 'Y')
-    xdim = np.dimension(model_grid.x_coord, 'lon', 'X')
-    zdim = np.dimension(np.arange(z), 'emissions_zdim')
+    tdim = np.dimension(np.arange(24), 'HOUR')
+    ydim = np.dimension(model_grid.y_coord, 'ROW', 'Y')
+    xdim = np.dimension(model_grid.x_coord, 'COL', 'X')
+    zdim = np.dimension(np.arange(nlays), 'LAY')
     dims = [tdim, zdim, ydim, xdim]
 
     gattrs = OrderedDict()
@@ -63,7 +63,7 @@ def run(year, month, dir_inter, model_grid, sectors, z, z_file):
             # get vertical profiles
             scc = emis_util.get_scc(sector)
             vertical_pro = emips.vertical_alloc.read_file(z_file, scc)
-            if z != len(vertical_pro.get_ratios()):
+            if nlays != len(vertical_pro.get_ratios()):
                 print('----------Warning-----------\nThe z-dimensions in the vertical profile file and the output file do not match.\n----------Warning-----------')
             # read, merge and output
             if round(vertical_pro.get_ratios()[0], 2) != 1.0:

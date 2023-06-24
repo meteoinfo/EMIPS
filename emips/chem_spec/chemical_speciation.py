@@ -4,7 +4,7 @@ from .pollutant_profile import PollutantProfile
 from .pollutant import Pollutant
 import mipylib.numeric as np
 
-__all__ = ['get_pollutant_profile', 'read_file', 'speciation', 'get_model_species_wrf']
+__all__ = ['get_pollutant_profile', 'read_file', 'speciation', 'get_model_species_WRFChem', 'get_model_species_CMAQ']
 
 
 def get_pollutant_profile(poll_profiles, pollutant):
@@ -89,9 +89,9 @@ def speciation(data, pollutant_profile):
     return s_data
 
 
-def get_model_species_wrf(mechanism_name):
+def get_model_species_WRFChem(mechanism_name):
     """
-    Get species in wrf-chem in different chemical mechanism.
+    Get species under different chemical mechanisms in WRF-Chem.
     (E_PM10: saprc99, cb05 E_PM_10: radm2, mozart)
     :param mechanism_name: (*string*) The name of chemical mechanism.
     :return: (*list*) All species(out_species) and aerosols(out_species_aer) under chemical mechanisms.
@@ -99,7 +99,7 @@ def get_model_species_wrf(mechanism_name):
     mechanism_name = mechanism_name.lower()
     if mechanism_name == 'cb05':
         ##########################################
-        # ------CB05, emiss_opt=15, (52, 15)------#
+        #------CB05, emiss_opt=15, (52, 15)------#
         ##########################################
         out_species = ['E_ACET', 'E_PAR', 'E_ALK3', 'E_ALK4', 'E_ALK5', 'E_TOL', 'E_XYL', 'E_BALD',
                        'E_ALD2', 'E_CCOOH', 'E_CO', 'E_CRES', 'E_ETH', 'E_ETHA', 'E_GLY', 'E_FORM',
@@ -113,7 +113,7 @@ def get_model_species_wrf(mechanism_name):
 
     elif mechanism_name == 'radm2':
         ##########################################
-        # ------RADM2, emiss_opt=3, (42, 19)------#
+        #------RADM2, emiss_opt=3, (42, 19)------#
         ##########################################
         out_species = ['E_ISO', 'E_SO2', 'E_NO', 'E_NO2', 'E_CO', 'E_CH4', 'E_ETH', 'E_HC3',
                        'E_HC5', 'E_HC8', 'E_XYL', 'E_OL2', 'E_OLT', 'E_OLI', 'E_TOL', 'E_CSL',
@@ -126,7 +126,7 @@ def get_model_species_wrf(mechanism_name):
                            'E_ORGJ_BB', 'E_CLI', 'E_CLJ']
     elif mechanism_name == 'saprc99':
         ###########################################
-        # -----SAPRC99, emiss_opt=13, (55, 15)-----#
+        #-----SAPRC99, emiss_opt=13, (55, 15)-----#
         ###########################################
         out_species = ['E_SO2', 'E_C2H6', 'E_C3H8', 'E_C2H2', 'E_ALK3', 'E_ALK4', 'E_ALK5', 'E_ETHENE',
                        'E_C3H6', 'E_OLE1', 'E_OLE2', 'E_ARO1', 'E_ARO2', 'E_HCHO', 'E_CCHO', 'E_RCHO',
@@ -140,7 +140,7 @@ def get_model_species_wrf(mechanism_name):
 
     elif mechanism_name == 'mozart':
         ##########################################
-        # -----MOZART, emiss_opt=10, (53, 23)-----#
+        #-----MOZART, emiss_opt=10, (53, 23)-----#
         ##########################################
         out_species = ['E_CO', 'E_NO', 'E_NO2', 'E_BIGALK', 'E_BIGENE', 'E_C2H4', 'E_C2H5OH', 'E_C2H6',
                        'E_C3H6', 'E_C3H8', 'E_CH2O', 'E_CH3CHO', 'E_CH3COCH3', 'E_CH3OH', 'E_MEK', 'E_SO2',
@@ -154,3 +154,25 @@ def get_model_species_wrf(mechanism_name):
                            'E_CO_A', 'E_ORGI_A', 'E_ORGJ_A', 'E_CO_BB', 'E_ORGI_BB', 'E_ORGJ_BB', 'E_PM_10']
 
     return out_species, out_species_aer
+    
+
+def get_model_species_CMAQ(mechanism_name):
+	"""
+    Get species under different chemical mechanisms in CMAQ.
+    :param mechanism_name: (*string*) The name of chemical mechanism.
+    :return: (*list*) All species(out_species) and aerosols(out_species_aer) under chemical mechanisms.
+    """
+	mechanism_name = mechanism_name.lower()
+	if mechanism_name == 'cb05':
+		########################################
+		#-----CB05, emiss_opt=10, (42, 19)-----#
+		########################################
+		out_species = ['ALD2', 'CO', 'ETH', 'FORM', 'ISOP', 'NH3', 'NO', 'NO2', 'UNR',
+					   'OLE', 'PAR', 'PEC', 'PMC', 'PMOTHR', 'PNO3', 'POC', 'PSO4', 'PCL', 
+					   'PNH4', 'PNA', 'PMG', 'PK', 'PCA', 'PNCOM', 'PFE', 'PAL', 'PSI', 'PTI', 
+					   'PMN', 'PH2O', 'SO2', 'SULF', 'TERP', 'TOL', 'XYL', 'MEOH', 'ETOH', 
+					   'ETHA', 'ALDX', 'IOLE', 'CH4', 'AACD']
+		out_species_aer = ['PEC', 'PMC', 'PMOTHR', 'PNO3', 'POC', 'PSO4', 'PCL', 'PNH4', 'PNA', 
+						   'PMG', 'PK', 'PCA', 'PNCOM', 'PFE', 'PAL', 'PSI', 'PTI', 'PMN', 'PH2O']
+
+	return out_species, out_species_aer
