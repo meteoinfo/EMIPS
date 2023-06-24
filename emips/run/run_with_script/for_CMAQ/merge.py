@@ -6,7 +6,7 @@ import os
 
 out_species_aer = ['PEC', 'POA', 'PMFINE', 'PNO3', 'PSO4', 'PMC']
 
-def run(year, month, dir_inter, model_grid, sectors, z):
+def run(year, month, dir_inter, model_grid, sectors, nlays):
     """
     Combine all sectors into one file
 
@@ -15,15 +15,15 @@ def run(year, month, dir_inter, model_grid, sectors, z):
     :param dir_inter: (*string*) The directory where data is stored.
     :param model_grid: (*GridDesc*) Model data grid describe.
     :param sectors: (*list*) Sectors that needs to be merged.
-    :param z: (*int*) The zdim of the output data.
+    :param nlays: (*int*) The z-dimension of the output data.
     """
     print('Define dimension and global attributes...')
-    tdim = np.dimension(np.arange(24), 'hour')
-    zdim = np.dimension(np.arange(z), 'emissions_zdim')
-    ydim = np.dimension(model_grid.y_coord, 'lat', 'Y')
-    xdim = np.dimension(model_grid.x_coord, 'lon', 'X')
+    tdim = np.dimension(np.arange(24), 'HOUR')
+    zdim = np.dimension(np.arange(nlays), 'LAY')
+    ydim = np.dimension(model_grid.y_coord, 'ROW', 'Y')
+    xdim = np.dimension(model_grid.x_coord, 'COL', 'X')
     dims = [tdim, zdim, ydim, xdim]
-    #Set the definition of the output variable
+    #set the definition of the output variable
     print('Define variables...')
     dimvars = []
     count = []
@@ -41,7 +41,7 @@ def run(year, month, dir_inter, model_grid, sectors, z):
                     else:
                         dict_spec[var.name] = [fn]
             for var in f.varnames:
-                if var == 'lat' or var == 'lon':
+                if var == 'ROW' or var == 'COL':
                         continue
                 if var in count:
                     continue
@@ -62,7 +62,7 @@ def run(year, month, dir_inter, model_grid, sectors, z):
             print('File not exist: {}'.format(fn))
             continue
                  
-    #Set dimension and define ncfile 
+    #set dimension and define ncfile 
     out_fn = dir_inter + '\emis_{}_{}_hour.nc'.format(year, month)
     gattrs = OrderedDict()
     gattrs['Conventions'] = 'CF-1.6'

@@ -1,8 +1,6 @@
 EMIPS：EMission Inventory Processing System
 ============================================
 
-[![Join the chat at https://gitter.im/meteoinfo/community](https://badges.gitter.im/meteoinfo/community/meteoinfo.svg)](https://gitter.im/meteoinfo/community)
-
 Installation
 ------------
 
@@ -34,6 +32,7 @@ Learn more about MeteoInfo and EMIPS in its official documentation at http://met
 Version
 -------
 
+EMIPS-1.1 was released (2023-06-24). Added support for CMAQ and bug fixes.
 EMIPS-1.0 was released (2023-01-26).
 
 Author
@@ -61,7 +60,7 @@ Sci. Total Environ. 870, 161909. https://doi.org/10.1016/j.scitotenv.2023.161909
 License
 -------
 
-Copyright 2019-2022, EMIPS Developers
+Copyright 2019-2023, EMIPS Developers
 
 Licensed under the LGPL License, Version 3.0 (the "License");
 you may not use this file except in compliance with the License.

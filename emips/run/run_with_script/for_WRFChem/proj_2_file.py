@@ -90,6 +90,7 @@ def run(year, month, dir_inter, model_grid, target_grid, out_species, out_specie
                 #dd = dd.reshape(12, 1, ydim.length, xdim.length)
                 #Set default values
                 dd[dd==np.nan] = 0
+                data[:, :, :, :] = dd
             else:
                 print('{} no data!'.format(out_specie))
                 '''
@@ -101,7 +102,6 @@ def run(year, month, dir_inter, model_grid, target_grid, out_species, out_specie
                 #Set default values
                 dd[dd==np.nan] = 0
                 '''
-            data[:, :, :, :] = dd
             ncfile.write(out_specie, data)
         ncfile.close()
     f_in.close()

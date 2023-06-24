@@ -10,7 +10,7 @@ class LoadApp(PluginBase):
 
     def __init__(self):
         self.setName("EMIPS")
-        self.setAuthor("Yaqiang Wang & Wenchong Chen")
+        self.setAuthor("Yaqiang Wang & Wencong Chen")
         self.setVersion("1.0")
         self.setDescription("EMission Inventory Processing System")
         self.app_menu_item = None

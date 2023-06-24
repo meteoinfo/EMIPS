@@ -59,7 +59,7 @@ def run(year, month, dir_inter, model_grid, out_species, out_species_aer, z):
     #add data to ncfile
     print('Process data and write to file...')
     for name in out_species:
-        data = np.zeros((tdim.length, z, ydim.length, xdim.length))
+        data = np.zeros((tdim.length, zdim.length, ydim.length, xdim.length))
         sname = name[2:]
         print(sname)
         if sname in f_in.varnames:
